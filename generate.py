@@ -10,6 +10,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ap = argparse.ArgumentParser()
 ap.add_argument("--mods", required=True, help="folder of mod jars to validate against")
 ap.add_argument("--profile", default=os.path.join(HERE, "profiles", "default.json"))
+ap.add_argument("--minecraft-jar", default=os.path.expanduser(
+    "~/Library/Application Support/PrismLauncher/libraries/com/mojang/minecraft/1.21.1/minecraft-1.21.1-client.jar"),
+    help="vanilla client jar, used to check minecraft: item ids")
 ap.add_argument("out", nargs="?", default=HERE)
 args = ap.parse_args()
 MODS, OUT = args.mods, args.out
@@ -43,7 +46,11 @@ valid = set()
 for jar in sorted(os.listdir(MODS)):
     if jar.endswith(".jar"):
         valid |= scan(zipfile.ZipFile(os.path.join(MODS, jar)))
-valid |= {"minecraft:" + x for x in "torch coal bread slime_ball iron_nugget dried_kelp".split()}
+check_vanilla = os.path.exists(args.minecraft_jar)
+if check_vanilla:
+    valid |= item_ids(zipfile.ZipFile(args.minecraft_jar), "minecraft")
+else:
+    print(f"no vanilla jar at {args.minecraft_jar}; minecraft: items are not checked")
 present = {i.split(":")[0] for i in valid}
 
 
@@ -61,11 +68,12 @@ MODULES = {
 Q = []
 
 
-def q(group, qid, title, icon, deps, desc, tasks, check=False):
-    """group is the mod key; deps are quest ids from the same mod, or "mod::id" for another mod."""
+def q(group, qid, title, icon, deps, desc, tasks, check=False, needs=()):
+    """group is the mod key; deps are quest ids from the same mod, or "mod::id" for another mod.
+    needs lists extra mod namespaces this one quest requires; it is left out without them."""
     ns = lambda i: i if ":" in i else "create:" + i
     Q.append(dict(group=group, id=qid, title=title, icon=ns(icon), deps=deps, desc=desc,
-                  tasks=[(ns(t), n) for t, n in tasks], check=check))
+                  tasks=[(ns(t), n) for t, n in tasks], check=check, needs=set(needs)))
 
 
 # ---- Create --------------------------------------------------------------
@@ -286,19 +294,51 @@ q(CREATE, "netherite_diving", "Netherite Diving Gear", "netherite_diving_helmet"
    "Walk the floor of the Nether's lava seas."],
   [("netherite_backtank", 1), ("netherite_diving_helmet", 1), ("netherite_diving_boots", 1)])
 
-q(CREATE, "iron_farm", "Project: Iron Farm", "minecraft:iron_nugget", ["drill", "millstone", "fan"],
-  ["Time to put machines together. Build a cobblestone generator and mine it with a Mechanical Drill, mill the cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.",
-   "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite project needs it.",
-   "Hand in a stack of nuggets from your farm."],
-  [("minecraft:iron_nugget", 64)])
+# Projects: a checkbox for "I built it" plus a stack of its output as proof.
+q(CREATE, "cobble_gen", "Project: Cobblestone Generator", "minecraft:cobblestone", ["drill"],
+  ["Put machines together for the first time. Build a lava and water cobblestone generator and point a Mechanical Drill at it, feeding the drops into a chest.",
+   "Endless stone is the raw material for the next few projects. Tick the box and hand in a few stacks."],
+  [("minecraft:cobblestone", 256)], check=True)
+q(CREATE, "iron_farm", "Project: Iron Farm", "minecraft:iron_nugget", ["cobble_gen", "millstone", "fan"],
+  ["Mill your cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.",
+   "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite Factory needs it."],
+  [("minecraft:iron_nugget", 64)], check=True)
+q(CREATE, "gold_farm", "Project: Gold and Quartz", "minecraft:gold_nugget", ["iron_farm"],
+  ["The same washing trick works on other blocks. Washed red sand gives a 12.5% chance of 3 gold nuggets, and washed soul sand gives quartz and the odd gold nugget.",
+   "Mill granite into red sand to keep it fed."],
+  [("minecraft:gold_nugget", 64)], check=True)
+q(CREATE, "andesite_factory", "Project: Andesite Factory", "andesite_alloy", ["iron_farm", "basin"],
+  ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.",
+   "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically."],
+  [("andesite_alloy", 64)], check=True)
 q(CREATE, "kelp_farm", "Project: Kelp Farm", "minecraft:dried_kelp", ["saw", "fan"],
   ["Belts are made from dried kelp, and big factories need a lot of belts. Grow kelp underwater, cut it with Mechanical Saws, and blow it through fire with an Encased Fan to dry it.",
    "Dried kelp blocks also make good furnace fuel."],
-  [("minecraft:dried_kelp", 64)])
-q(CREATE, "andesite_factory", "Project: Andesite Factory", "andesite_alloy", ["iron_farm", "basin"],
-  ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.",
-   "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically. Hand in a stack."],
-  [("andesite_alloy", 64)])
+  [("minecraft:dried_kelp", 64)], check=True)
+q(CREATE, "crop_farm", "Project: Crop Farm", "minecraft:wheat", ["harvester", "bearing"],
+  ["Mount Harvesters and Ploughs on a moving contraption, a bearing arm or a piston sweep, and let it reap and till your fields.",
+   "Harvesters replant as they go. Collect the drops with funnels or a chest on the contraption."],
+  [("minecraft:wheat", 256)], check=True)
+q(CREATE, "tree_farm", "Project: Tree Farm", "minecraft:oak_log", ["saw", "deployer"],
+  ["A Mechanical Saw fells a whole tree at once. Add a Deployer holding saplings to replant, and bone meal to speed it up.",
+   "Wood for every casing you will ever need."],
+  [("minecraft:oak_log", 128)], check=True)
+q(CREATE, "ore_processing", "Project: Ore Processing", "crushed_raw_iron", ["crushing_wheel", "fan"],
+  ["Run your raw ore through Crushing Wheels, then wash it with a fan. Raw iron crushes into crushed iron with a chance of experience, and washing it gives 9 nuggets with a chance of redstone.",
+   "Gold gives quartz the same way. Belt it all together so your mining trips process themselves."],
+  [("crushed_raw_iron", 64)], check=True)
+q(CREATE, "brass_factory", "Project: Brass Factory", "brass_ingot", ["brass"],
+  ["Feed copper and zinc into a heated mixer automatically and belt the brass away. Keep the Blaze Burner fed.",
+   "Brass goes into almost every advanced machine, so it pays to have plenty."],
+  [("brass_ingot", 128)], check=True)
+q(CREATE, "kitchen", "Project: Automated Kitchen", "sliceanddice:slicer", ["deployer"],
+  ["Slice & Dice automates Farmer's Delight. A Slicer holding a knife does the cutting board's work, and it can work over a Basin too. Sprinklers water your crops.",
+   "Grow cabbages and turn them into leaves without lifting a knife."],
+  [("sliceanddice:slicer", 1), ("farmersdelight:cabbage_leaf", 64)], check=True, needs=("sliceanddice", "farmersdelight"))
+q(CREATE, "cargo_train", "Project: Cargo Train", "track_station", ["train_signal"],
+  ["Connect two bases with track and run a scheduled train between them, loading and unloading cargo at each station.",
+   "Send your farm output home without lifting a finger, then tick the box."],
+  [], check=True)
 
 # ---- Aeronautics ---------------------------------------------------------
 q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREATE}::casing"],
@@ -411,6 +451,10 @@ q(AERO, "ropes", "Ropes and Docking", "simulated:rope_winch", ["first_blimp", f"
   ["Right click a Rope Winch and a Rope Connector with a Rope Coupling to tie them together; the winch reels the rope with rotation. Shears cut it.",
    "Docking Connectors lock two crafts together rigidly and pass items and fluids across."],
   [("simulated:rope_winch", 1), ("simulated:rope_connector", 1), ("simulated:docking_connector", 2)])
+q(AERO, "delivery_airship", "Project: Delivery Airship", "simulated:docking_connector", ["ropes"],
+  ["Build an airship that docks at two bases and carries cargo between them, passing items across its Docking Connectors.",
+   "Tick the box when it has made a delivery."],
+  [], check=True)
 q(AERO, "navigation", "Navigation Table", "simulated:navigation_table", ["altitude", f"{CREATE}::precision"],
   ["A Navigation Table holds a navigation item and sends a redstone signal towards its destination, weaker when you're facing away.",
    "Steer by it on long flights."],
@@ -564,7 +608,9 @@ for x in Q:
         if PROFILE.get("item_rewards", True) else []
     x["xp"] = not x["check"] or x["deps"] != []
 # Projects are bigger builds, so they pay a little more XP; still no free machines.
-XP_LEVELS = {(CREATE, "iron_farm"): 3, (CREATE, "kelp_farm"): 3, (CREATE, "andesite_factory"): 3}
+XP_LEVELS = {(CREATE, p): 3 for p in "cobble_gen iron_farm gold_farm andesite_factory kelp_farm crop_farm tree_farm "
+             "ore_processing brass_factory kitchen cargo_train".split()}
+XP_LEVELS[(AERO, "delivery_airship")] = 3
 
 
 # ---------------------------------------------------------------- chapters
@@ -575,17 +621,17 @@ SUBCHAPTERS = {
         ("getting_started", "Getting Started", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox"),
         ("processing", "Processing", "millstone belt funnels press wrench goggles fan basin"),
         ("brass", "Brass", "zinc blaze_burner brass brass_casing deployer saw drill harvester"),
-        ("projects", "Projects", "iron_farm kelp_farm andesite_factory"),
+        ("projects", "Projects", "cobble_gen iron_farm gold_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
         ("contraptions", "Contraptions", "glue bearing piston pulley"),
         ("fluids", "Fluids and Steam", "fluids spout hose steam_engine"),
         ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
         ("precision", "Precision and Automation", "precision arm crafter crushing_wheel sequenced radiance"),
         ("logistics", "Logistics", "redstone display schematic vault packages"),
-        ("trains", "Trains", "train_track train_station first_train train_signal"),
+        ("trains", "Trains", "train_track train_station first_train train_signal cargo_train"),
     ],
     AERO: [
         ("basics", "Basics", "physics honey_glue steering throttle engine propeller goggles"),
-        ("blimps", "Blimps", "envelope burner altitude steam_vent levitite first_blimp ropes navigation"),
+        ("blimps", "Blimps", "envelope burner altitude steam_vent levitite first_blimp ropes delivery_airship navigation"),
         ("planes", "Planes", "sails controls first_plane flight_sensors"),
         ("helicopters", "Helicopters", "gyro first_heli heli_stability"),
         ("cars", "Cars", "wheels drivetrain first_car big_tires borehead"),
@@ -602,7 +648,8 @@ included = [c for c in wanted if MODULES[c]["requires"] <= present]
 for c in wanted:
     if c not in included:
         print(f"skipping {c}: missing mods {sorted(MODULES[c]['requires'] - present)}")
-Q = [x for x in Q if x["group"] in included]
+all_keys = {(x["group"], x["id"]) for x in Q}
+Q = [x for x in Q if x["group"] in included and x["needs"] <= present]
 
 
 # ---------------------------------------------------------------- validation
@@ -611,13 +658,14 @@ def dep_key(x, d):
 
 
 for x in Q:
-    # A cross-chapter prerequisite in a chapter that was left out just doesn't apply.
-    x["deps"] = [d for d in x["deps"] if dep_key(x, d)[0] in included]
+    # A prerequisite that was left out (its mod isn't installed) just doesn't apply.
+    kept = {(y["group"], y["id"]) for y in Q}
+    x["deps"] = [d for d in x["deps"] if dep_key(x, d) in kept or dep_key(x, d) not in all_keys]
 keys = {(x["group"], x["id"]) for x in Q}
 bad = []
 for x in Q:
     for i in [x["icon"]] + [t for t, _ in x["tasks"]] + [r for r, _ in x["rewards"]]:
-        if i not in valid:
+        if i not in valid and (check_vanilla or not i.startswith("minecraft:")):
             bad.append((x["group"], x["id"], i))
     for d in x["deps"]:
         if dep_key(x, d) not in keys:
@@ -695,7 +743,7 @@ for g in included:
     mine = {x["id"]: x for x in Q if x["group"] == g}
     if g in SUBCHAPTERS:
         for key, title, ids in SUBCHAPTERS[g]:
-            chapters.append((g, fid("chapter", g, key), f"{g}_{key}", title, group_ids[home], [mine[i] for i in ids.split()]))
+            chapters.append((g, fid("chapter", g, key), f"{g}_{key}", title, group_ids[home], [mine[i] for i in ids.split() if i in mine]))
     else:
         chapters.append((g, fid("chapter", g), g, MODULES[g]["title"], group_ids[home], list(mine.values())))
 # FTB Quests numbers chapters within each group, and rewrites the files that way on load.

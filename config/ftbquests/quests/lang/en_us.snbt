@@ -41,6 +41,8 @@
 	quest.0632092E58B014DB.title: "Schematics"
 	quest.0670829A73FDC2D7.quest_desc: ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.", "", "Check EMI for the exact recipe."]
 	quest.0670829A73FDC2D7.title: "Refined Radiance"
+	quest.077FB31FDEABA06C.quest_desc: ["Feed copper and zinc into a heated mixer automatically and belt the brass away. Keep the Blaze Burner fed.", "", "Brass goes into almost every advanced machine, so it pays to have plenty."]
+	quest.077FB31FDEABA06C.title: "Project: Brass Factory"
 	quest.07F9BA4179BC2A64.quest_desc: ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.", "", "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."]
 	quest.07F9BA4179BC2A64.title: "Borehead Miner"
 	quest.08FBC54833E131A6.quest_desc: ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.", "", "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."]
@@ -53,6 +55,8 @@
 	quest.09FC33824A470023.title: "Mechanical Belt"
 	quest.0E12C80BA8BD8588.quest_desc: ["The Modifier Worktable handles the finer modifier work, such as removing or extracting modifiers.", "", "Repair Kits patch tools up wherever you are."]
 	quest.0E12C80BA8BD8588.title: "Modifier Worktable"
+	quest.0E6A70DE20166D82.quest_desc: ["Put machines together for the first time. Build a lava and water cobblestone generator and point a Mechanical Drill at it, feeding the drops into a chest.", "", "Endless stone is the raw material for the next few projects. Tick the box and hand in a few stacks."]
+	quest.0E6A70DE20166D82.title: "Project: Cobblestone Generator"
 	quest.11213AD740BC0F9A.quest_desc: ["The Rope Pulley raises and lowers a contraption on a rope. It is the basis of elevators and cranes.", "", "A Gantry Carriage lets you do the same sideways."]
 	quest.11213AD740BC0F9A.title: "Rope Pulley"
 	quest.1208A5AF2B093ACF.quest_desc: ["Channels carry molten metal. Drains and Ducts connect the smeltery to the rest of your setup.", "", "Use them to fill many tables at once."]
@@ -69,10 +73,14 @@
 	quest.1454F911712FF513.title: "Redstone Link"
 	quest.152C465520C24558.quest_desc: ["Put a Conductor Cap on Andesite Casing to build a Conductor: a little helper that rides your trains.", "", "Conductors press buttons and flip levers they look at, and can carry a toolbox. Match cap colours to control which conductors respond."]
 	quest.152C465520C24558.title: "Conductors"
+	quest.15A355156E7A4392.quest_desc: ["Run your raw ore through Crushing Wheels, then wash it with a fan. Raw iron crushes into crushed iron with a chance of experience, and washing it gives 9 nuggets with a chance of redstone.", "", "Gold gives quartz the same way. Belt it all together so your mining trips process themselves."]
+	quest.15A355156E7A4392.title: "Project: Ore Processing"
 	quest.1706586E4251428B.quest_desc: ["Monorail track has its own bogeys and hangs a train off a single rail.", "", "Try one for a skyline line between bases."]
 	quest.1706586E4251428B.title: "Monorail"
 	quest.195EDBC057B143E8.quest_desc: ["Travel to a slime island to find slime balls and slime trees. They are the base of the slimy materials.", "", "Use them for slime boots and slimy chestplates."]
 	quest.195EDBC057B143E8.title: "Slime Islands"
+	quest.19D84EE3808D5A0D.quest_desc: ["Build an airship that docks at two bases and carries cargo between them, passing items across its Docking Connectors.", "", "Tick the box when it has made a delivery."]
+	quest.19D84EE3808D5A0D.title: "Project: Delivery Airship"
 	quest.1AF9D599B1A1865F.quest_desc: ["The Saw cuts logs into planks, chops trees down, and stonecuts items for you.", "", "Placed on a belt line it is an automatic carpentry station."]
 	quest.1AF9D599B1A1865F.title: "Mechanical Saw"
 	quest.1B22004E0F64F66E.quest_desc: ["Select a track, then place a Switch nearby. It sends trains passing its marker left, straight or right.", "", "Use it to cycle right, sneak-use to cycle left, or set it with redstone. Power the bottom to lock it."]
@@ -87,7 +95,7 @@
 	quest.21066DE443C86344.title: "Extendo Grip"
 	quest.23B5949FE40EFA2B.quest_desc: ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.", "", "If a contraption splits apart, a Slime Ball merges two contraptions back together."]
 	quest.23B5949FE40EFA2B.title: "Honey Glue"
-	quest.2449301709BD1EB2.quest_desc: ["Time to put machines together. Build a cobblestone generator and mine it with a Mechanical Drill, mill the cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.", "", "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite project needs it.", "", "Hand in a stack of nuggets from your farm."]
+	quest.2449301709BD1EB2.quest_desc: ["Mill your cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.", "", "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite Factory needs it."]
 	quest.2449301709BD1EB2.title: "Project: Iron Farm"
 	quest.246226A6919CF5ED.quest_desc: ["Casings are the frame for every machine. Right click a log with Andesite Alloy to make Andesite Casing.", "", "Casing also covers a shaft or cogwheel to make a neat, encased version."]
 	quest.246226A6919CF5ED.title: "Andesite Casing"
@@ -105,8 +113,12 @@
 	quest.2BE024A205775B96.title: "Water Wheel"
 	quest.300293F855AB765B.quest_desc: ["Mount a Tire on a Wheel Mount to give your contraption wheels.", "", "Bigger tires roll over rougher ground."]
 	quest.300293F855AB765B.title: "Wheels and Tires"
+	quest.325BA54C0E8210A8.quest_desc: ["The same washing trick works on other blocks. Washed red sand gives a 12.5% chance of 3 gold nuggets, and washed soul sand gives quartz and the odd gold nugget.", "", "Mill granite into red sand to keep it fed."]
+	quest.325BA54C0E8210A8.title: "Project: Gold and Quartz"
 	quest.35318D85DBDBF88B.quest_desc: ["Now that you can press gold sheets, make a Wrench. It rotates blocks, picks machines back up instantly, and configures many components.", "", "Sneak and right click with it to pick a block up."]
 	quest.35318D85DBDBF88B.title: "Wrench"
+	quest.36C632080F52C99B.quest_desc: ["A Mechanical Saw fells a whole tree at once. Add a Deployer holding saplings to replant, and bone meal to speed it up.", "", "Wood for every casing you will ever need."]
+	quest.36C632080F52C99B.title: "Project: Tree Farm"
 	quest.375E0E1710F35827.quest_desc: ["Large and Monstrous Tires climb over almost anything.", "", "Time for a monster truck."]
 	quest.375E0E1710F35827.title: "Bigger Tires"
 	quest.398876E1DCE7F037.quest_desc: ["A Backtank is a wearable tank of pressurised air. Place it and give it rotation to fill it; the faster it spins, the faster it fills.", "", "Wear it on your back and other Create gear draws on it: diving helmets, the Extendo Grip and the Potato Cannon."]
@@ -115,7 +127,7 @@
 	quest.39B8F8A441598265.title: "Steering Wheel"
 	quest.3A0F97042370EA0C.quest_desc: ["A Shaft carries rotation in a straight line. Place a Shaft next to a rotating block and it will spin too.", "", "Rotation has two numbers: speed (RPM) and stress. Keep both in mind."]
 	quest.3A0F97042370EA0C.title: "Shafts"
-	quest.3A4BC7716F2029B9.quest_desc: ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.", "", "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically. Hand in a stack."]
+	quest.3A4BC7716F2029B9.quest_desc: ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.", "", "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically."]
 	quest.3A4BC7716F2029B9.title: "Project: Andesite Factory"
 	quest.3A66462861B4969E.quest_desc: ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.", "", "Use a Wrench to set the direction items are passed."]
 	quest.3A66462861B4969E.title: "Mechanical Crafter"
@@ -185,6 +197,8 @@
 	quest.6117A72CBB15361C.title: "Propellers"
 	quest.62E02D28045719F9.quest_desc: ["A Pattern is the template for a tool part. The Part Builder turns a pattern and a material into that part.", "", "Make a stack of Patterns; each part you build uses one."]
 	quest.62E02D28045719F9.title: "Part Builder"
+	quest.62EB3DF59383A4A6.quest_desc: ["Slice & Dice automates Farmer's Delight. A Slicer holding a knife does the cutting board's work, and it can work over a Basin too. Sprinklers water your crops.", "", "Grow cabbages and turn them into leaves without lifting a knife."]
+	quest.62EB3DF59383A4A6.title: "Project: Automated Kitchen"
 	quest.65568FD704BF8034.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
 	quest.65568FD704BF8034.title: "Welcome to Create"
 	quest.68665C3847876EA4.quest_desc: ["Select a track, then place a Coupler nearby. It couples and decouples trains without taking them apart.", "", "Scroll with a wrench to set the gap, and click with a wrench to choose couple, decouple or both. Power it to act."]
@@ -199,6 +213,10 @@
 	quest.6B30A0EAE22BB188.title: "Hand Crank"
 	quest.6B5929DBA1583912.quest_desc: ["The Foundry is the late-game cousin of the smeltery, built from Scorched Stone.", "", "Read Fantastic Foundry for the details."]
 	quest.6B5929DBA1583912.title: "The Foundry"
+	quest.7022A5B074A327BA.quest_desc: ["Connect two bases with track and run a scheduled train between them, loading and unloading cargo at each station.", "", "Send your farm output home without lifting a finger, then tick the box."]
+	quest.7022A5B074A327BA.title: "Project: Cargo Train"
+	quest.707A1AE5256206AA.quest_desc: ["Mount Harvesters and Ploughs on a moving contraption, a bearing arm or a piston sweep, and let it reap and till your fields.", "", "Harvesters replant as they go. Collect the drops with funnels or a chest on the contraption."]
+	quest.707A1AE5256206AA.title: "Project: Crop Farm"
 	quest.717FA27DE13C70CF.quest_desc: ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.", "", "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."]
 	quest.717FA27DE13C70CF.title: "Steam Engine"
 	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats.", "", "Materials and You is your guide to all of it, and new players usually start with a copy. If you don't have one, craft a Pattern from planks and sticks and combine it with a book.", "", "Give it a read, then click the checkmark when you're ready."]

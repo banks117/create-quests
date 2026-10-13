@@ -126,6 +126,8 @@ for x in Q:
     k = key(x)
     ok = ancestors(k) | {k}
     for t, _ in x["tasks"]:
+        if t.startswith("minecraft:"):
+            continue  # obtainable in vanilla ways the mod recipes don't show (mining, smelting, drops)
         rs = recipes.get(t)
         if not rs:
             continue

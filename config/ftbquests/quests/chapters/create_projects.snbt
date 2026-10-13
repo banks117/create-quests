@@ -4,14 +4,47 @@
 	filename: "create_projects"
 	group: "36387A651839BFDA"
 	icon: {
-		id: "minecraft:iron_nugget"
+		id: "minecraft:cobblestone"
 	}
 	id: "25E1A543BDDB7923"
 	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["3F452D140A574530", "4978B86F57E43FCE", "7BAE5A98D0EA2865"]
+			dependencies: ["3F452D140A574530"]
+			icon: {
+				id: "minecraft:cobblestone"
+			}
+			id: "0E6A70DE20166D82"
+			rewards: [
+				{
+					id: "1BCC3808CDF43196"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "41A5294CAFE0E286"
+					type: "checkmark"
+				}
+				{
+					count: 256L
+					id: "64820C6441CDE5F3"
+					item: {
+						count: 1
+						id: "minecraft:cobblestone"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["0E6A70DE20166D82", "4978B86F57E43FCE", "7BAE5A98D0EA2865"]
 			icon: {
 				id: "minecraft:iron_nugget"
 			}
@@ -23,9 +56,13 @@
 					xp_levels: 3
 				}
 			]
-			shape: "gear"
-			size: 1.5d
+			shape: "hexagon"
+			size: 1.25d
 			tasks: [
+				{
+					id: "45E53E87832B099A"
+					type: "checkmark"
+				}
 				{
 					count: 64L
 					id: "21BCA8E877B8B2CA"
@@ -36,8 +73,74 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2449301709BD1EB2"]
+			icon: {
+				id: "minecraft:gold_nugget"
+			}
+			id: "325BA54C0E8210A8"
+			rewards: [
+				{
+					id: "2255478B155EF81B"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "4B7C02D7B0E4EE2C"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "1D98ABFA00946276"
+					item: {
+						count: 1
+						id: "minecraft:gold_nugget"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
 			y: -0.75d
+		}
+		{
+			dependencies: ["2449301709BD1EB2", "7DA3D76FDF9593AD"]
+			icon: {
+				id: "create:andesite_alloy"
+			}
+			id: "3A4BC7716F2029B9"
+			rewards: [
+				{
+					id: "6CDA9AA9FEA04B3B"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "70BDF0690C88A185"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "25D011988A36D7A2"
+					item: {
+						count: 1
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.75d
 		}
 		{
 			dependencies: ["1AF9D599B1A1865F", "7BAE5A98D0EA2865"]
@@ -56,6 +159,10 @@
 			size: 1.5d
 			tasks: [
 				{
+					id: "7FE1948B390BBAD5"
+					type: "checkmark"
+				}
+				{
 					count: 64L
 					id: "4C341A8AF61A8070"
 					item: {
@@ -66,34 +173,180 @@
 				}
 			]
 			x: 0.0d
-			y: 0.75d
+			y: -3.0d
 		}
 		{
-			dependencies: ["2449301709BD1EB2", "7DA3D76FDF9593AD"]
+			dependencies: ["3E13CE882E876E3A", "519DC7EB567A6482"]
 			icon: {
-				id: "create:andesite_alloy"
+				id: "minecraft:wheat"
 			}
-			id: "3A4BC7716F2029B9"
+			id: "707A1AE5256206AA"
 			rewards: [
 				{
-					id: "6CDA9AA9FEA04B3B"
+					id: "35105F974BF17F76"
 					type: "xp_levels"
 					xp_levels: 3
 				}
 			]
+			shape: "gear"
+			size: 1.5d
 			tasks: [
 				{
-					count: 64L
-					id: "25D011988A36D7A2"
+					id: "4B4F6005D211FC4B"
+					type: "checkmark"
+				}
+				{
+					count: 256L
+					id: "055B86593FD32CA1"
 					item: {
 						count: 1
-						id: "create:andesite_alloy"
+						id: "minecraft:wheat"
 					}
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1AF9D599B1A1865F", "723048BF1737D4ED"]
+			icon: {
+				id: "minecraft:oak_log"
+			}
+			id: "36C632080F52C99B"
+			rewards: [
+				{
+					id: "1AB1DFE9946B6749"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "076D8549B4798882"
+					type: "checkmark"
+				}
+				{
+					count: 128L
+					id: "248D628FAC343167"
+					item: {
+						count: 1
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["5CA9836B85D5A334", "7BAE5A98D0EA2865"]
+			icon: {
+				id: "create:crushed_raw_iron"
+			}
+			id: "15A355156E7A4392"
+			rewards: [
+				{
+					id: "66113AAA53584FB5"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "5148627CF7551005"
+					type: "checkmark"
+				}
+				{
+					count: 64L
+					id: "66B6B06D9CF5F097"
+					item: {
+						count: 1
+						id: "create:crushed_raw_iron"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["532780D9DB293403"]
+			icon: {
+				id: "create:brass_ingot"
+			}
+			id: "077FB31FDEABA06C"
+			rewards: [
+				{
+					id: "3AC8E5C8B38ED96B"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "1F6A7A57800BBD5A"
+					type: "checkmark"
+				}
+				{
+					count: 128L
+					id: "051C26752B596D2F"
+					item: {
+						count: 1
+						id: "create:brass_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["723048BF1737D4ED"]
+			icon: {
+				id: "sliceanddice:slicer"
+			}
+			id: "62EB3DF59383A4A6"
+			rewards: [
+				{
+					id: "66BA0B838CFED101"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "3AB2AFD5F68F355C"
+					type: "checkmark"
+				}
+				{
+					id: "6D6E8DADB3CEF24D"
+					item: {
+						count: 1
+						id: "sliceanddice:slicer"
+					}
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "43AD7A6ED47CBC76"
+					item: {
+						count: 1
+						id: "farmersdelight:cabbage_leaf"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.5d
 		}
 	]
 }

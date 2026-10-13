@@ -4,12 +4,12 @@ FTB Quests questlines for Create and its addons (Minecraft 1.21.1, NeoForge), wr
 
 | Chapter | Quests | Needs | Covers |
 |---|---|---|---|
-| Create | 56 | Create | Rotation and power, steam, equipment, build projects (iron, kelp, andesite), processing, brass, contraptions, fluids, precision mechanisms, logistics, trains |
-| Aeronautics | 27 | Create Aeronautics | Simulated contraptions, then four build paths: blimps, planes, helicopters and cars |
+| Create | 64 | Create | Rotation and power, steam, equipment, build projects (farms and factories, each a checkbox plus a stack of output as proof), processing, brass, contraptions, fluids, precision mechanisms, logistics, trains |
+| Aeronautics | 28 | Create Aeronautics | Simulated contraptions, then four build paths: blimps, planes, helicopters and cars |
 | Steam 'n' Rails | 10 | Steam 'n' Rails | Track gauges, monorail, switches, couplers, semaphores, conductors, locometal |
 | Modern Foundry | 14 | Modern Foundry | Tool parts, the smeltery, casting, the anvil, cobalt and the foundry |
 
-Chapters for mods that aren't installed are left out when you generate.
+Chapters for mods that aren't installed are left out when you generate, as are single quests for optional mods (the Automated Kitchen project needs Slice & Dice and Farmer's Delight).
 
 Rewards are deliberately small: a level of XP per quest, survival basics (coal, torches, bread) early on, a few raw materials at milestones, and for parts you always need in sets (shafts, tires, track) you get back as many as the quest asked for.
 

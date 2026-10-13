@@ -158,5 +158,29 @@
 			x: 6.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["5228F2C9BD73B763"]
+			icon: {
+				id: "create:track_station"
+			}
+			id: "7022A5B074A327BA"
+			rewards: [
+				{
+					id: "5E167D96FB52FEA9"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "5BCDDE65369EDF71"
+					type: "checkmark"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
 	]
 }
