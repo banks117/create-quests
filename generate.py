@@ -106,7 +106,7 @@ q(CREATE, "windmill", "Windmill", "windmill_bearing", ["cogwheel"],
   ["Not near water? A Windmill Bearing turns a structure in front of it into a windmill. It needs at least 8 sail-like blocks; Windmill Sails stick to each other without glue.",
    "Right click the bearing to start it. More sails means more speed."],
   [("windmill_bearing", 1), ("white_sail", 8)])
-q(CREATE, "goggles", "Engineer's Goggles", "goggles", ["press"],
+q(CREATE, "goggles", "Engineer's Goggles", "goggles", ["golden_sheet"],
   ["Goggles let you see speed and stress on any component you look at, and the Speedometer and Stressometer show them on a dial.",
    "If a machine will not move, the goggles will tell you why: usually overstress."],
   [("goggles", 1), ("speedometer", 1), ("stressometer", 1)])
@@ -126,27 +126,38 @@ q(CREATE, "crushing_wheel", "Crushing Wheels", "crushing_wheel", ["crafter", "mi
   ["Two Crushing Wheels placed side by side crush ore into more crushed ore than a furnace could ever give you.",
    "Make them spin into each other, then drop items in the top."],
   [("crushing_wheel", 2), ("crushed_raw_iron", 4)])
-q(CREATE, "fan", "Encased Fan", "encased_fan", ["gearbox", "press"],
+q(CREATE, "fan", "Encased Fan", "encased_fan", ["iron_sheet"],
   ["A Fan blowing through a block processes items in its path: through lava it smelts, through fire it smokes food, through water it washes.",
    "Fan speed changes the range, not how fast items are processed. It works on belts and depots too."],
   [("encased_fan", 1), ("propeller", 1)])
-q(CREATE, "belt", "Mechanical Belt", "belt_connector", ["gearbox"],
+q(CREATE, "dried_kelp", "Dried Kelp", "minecraft:dried_kelp", ["gearbox"],
+  ["Kelp is Create's rubber. Smelt or smoke it to dry it: Mechanical Belts, Funnels and Spouts all need Dried Kelp, and Hose Pulleys take a Dried Kelp Block.",
+   "Kelp grows fast underwater, so plant a patch early. Automating it is a Project of its own."],
+  [("minecraft:dried_kelp", 16)])
+q(CREATE, "belt", "Mechanical Belt", "belt_connector", ["dried_kelp"],
   ["Belts carry items between machines. Right click two shafts in a line with Belt Connectors to link them.",
    "Items on belts can be processed along the way by a Press, a Saw, or a Fan."],
   [("belt_connector", 4), ("depot", 1)])
-q(CREATE, "funnels", "Funnels and Chutes", "andesite_funnel", ["press"],
+q(CREATE, "funnels", "Funnels and Chutes", "andesite_funnel", ["iron_sheet", "dried_kelp"],
   ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.",
    "A funnel with a filter will only pass the item you set."],
   [("andesite_funnel", 2), ("chute", 2), ("filter", 1)])
 q(CREATE, "press", "Mechanical Press", "mechanical_press", ["belt", "casing"],
   ["Place the Press over a belt or depot and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.",
    "Powered by rotation from the side."],
-  [("mechanical_press", 1), ("iron_sheet", 4), ("copper_sheet", 4)])
-q(CREATE, "wrench", "Wrench", "wrench", ["press"],
+  [("mechanical_press", 1)])
+q(CREATE, "iron_sheet", "Iron Sheets", "iron_sheet", ["press"],
+  ["Press iron ingots into Iron Sheets. They go into Encased Fans, Funnels and Chutes, Super Glue, the Mixer's whisk, Saws, Harvesters and Item Vaults.",
+   "Keep a belt of ingots running under the press and you will never run short."],
+  [("iron_sheet", 8)])
+q(CREATE, "golden_sheet", "Golden Sheets", "golden_sheet", ["press"],
+  ["Gold ingots press into Golden Sheets: the Wrench, Engineer's Goggles and the Steam Engine all need one, and Precision Mechanisms are built on them."],
+  [("golden_sheet", 4)])
+q(CREATE, "wrench", "Wrench", "wrench", ["golden_sheet"],
   ["Now that you can press gold sheets, make a Wrench. It rotates blocks, picks machines back up instantly, and configures many components.",
    "Sneak and right click with it to pick a block up."],
   [("wrench", 1)])
-q(CREATE, "basin", "Basin and Mixer", "mechanical_mixer", ["press"],
+q(CREATE, "basin", "Basin and Mixer", "mechanical_mixer", ["iron_sheet"],
   ["Put a Basin on the ground and a Mechanical Mixer above it, and it will automate shapeless crafting recipes and a few special ones.",
    "Some recipes only run when the basin is heated from below. That comes later."],
   [("basin", 1), ("mechanical_mixer", 1)])
@@ -163,58 +174,68 @@ q(CREATE, "brass", "Brass", "brass_ingot", ["zinc", "blaze_burner"],
    "Brass opens a new tier of machines."],
   [("brass_ingot", 8), ("brass_sheet", 4)])
 q(CREATE, "brass_casing", "Brass Casing", "brass_casing", ["brass"],
-  ["Craft brass casing the same way as andesite casing: right click a log with a sheet of brass.",
+  ["Craft brass casing the same way as andesite casing: right click a log with a brass ingot.",
    "Brass casing is the frame for the stronger machines."],
   [("brass_casing", 8)])
-q(CREATE, "deployer", "Deployer", "deployer", ["brass_casing"],
+q(CREATE, "electron_tube", "Electron Tubes", "electron_tube", ["iron_sheet"],
+  ["Craft Rose Quartz from quartz and redstone, polish it with Sand Paper (hold right click), and put it on an Iron Sheet to make an Electron Tube.",
+   "Tubes are the brains of the smarter machines: Deployers, Mechanical Crafters, Display Boards and train signals."],
+  [("electron_tube", 2)])
+q(CREATE, "deployer", "Deployer", "deployer", ["electron_tube", "brass_casing"],
   ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.",
    "Put one next to a depot and you can combine items automatically."],
   [("deployer", 1)])
-q(CREATE, "saw", "Mechanical Saw", "mechanical_saw", ["brass_casing"],
+q(CREATE, "saw", "Mechanical Saw", "mechanical_saw", ["iron_sheet"],
   ["The Saw cuts logs into planks, chops trees down, and stonecuts items for you.",
    "Placed on a belt line it is an automatic carpentry station."],
   [("mechanical_saw", 1)])
-q(CREATE, "drill", "Mechanical Drill", "mechanical_drill", ["brass_casing"],
+q(CREATE, "drill", "Mechanical Drill", "mechanical_drill", ["casing"],
   ["The Drill breaks whatever it faces. Put it on a contraption and you have an automatic miner.",
    "Remember the stress cost: bigger machines need more power."],
   [("mechanical_drill", 1)])
-q(CREATE, "harvester", "Harvester and Plough", "mechanical_harvester", ["brass_casing"],
+q(CREATE, "harvester", "Harvester and Plough", "mechanical_harvester", ["iron_sheet"],
   ["Mounted on a contraption, the Harvester reaps crops and the Plough tills the soil. Perfect for a farm.",
    "Combine them with a Mechanical Bearing for a moving farm."],
   [("mechanical_harvester", 2), ("mechanical_plough", 2)])
-q(CREATE, "glue", "Super Glue", "super_glue", ["press"],
+q(CREATE, "glue", "Super Glue", "super_glue", ["iron_sheet"],
   ["Contraptions only move what is connected. Super Glue groups blocks together: click two corners to glue the area between them.",
    "Punch a glued area with the glue in hand to remove it."],
   [("super_glue", 1)])
-q(CREATE, "bearing", "Mechanical Bearing", "mechanical_bearing", ["glue", "brass_casing"],
+q(CREATE, "bearing", "Mechanical Bearing", "mechanical_bearing", ["glue"],
   ["The Bearing spins everything attached to its face as a contraption: windmills, drills, a rotating arm of farm equipment.",
    "Build on its face, glue the structure, and give the bearing rotation to assemble it."],
   [("mechanical_bearing", 1)])
-q(CREATE, "piston", "Mechanical Piston", "mechanical_piston", ["glue", "brass_casing"],
+q(CREATE, "piston", "Mechanical Piston", "mechanical_piston", ["glue"],
   ["A Piston pushes a structure in a line. Add Piston Extension Poles behind it to make the stroke longer.",
    "Use it for doors, elevators and anything that needs to slide."],
   [("mechanical_piston", 1), ("piston_extension_pole", 4)])
-q(CREATE, "pulley", "Rope Pulley", "rope_pulley", ["glue", "brass_casing"],
+q(CREATE, "pulley", "Rope Pulley", "rope_pulley", ["glue"],
   ["The Rope Pulley raises and lowers a contraption on a rope. It is the basis of elevators and cranes.",
    "A Gantry Carriage lets you do the same sideways."],
   [("rope_pulley", 1), ("gantry_carriage", 1), ("gantry_shaft", 2)])
-q(CREATE, "fluids", "Fluid Pipes", "fluid_pipe", ["brass_casing"],
+q(CREATE, "copper_sheet", "Copper Sheets", "copper_sheet", ["press"],
+  ["Copper ingots press into Copper Sheets, the material of plumbing: Fluid Pipes, Fluid Tanks and the Hose Pulley are made from them."],
+  [("copper_sheet", 8)])
+q(CREATE, "copper_casing", "Copper Casing", "copper_casing", ["casing"],
+  ["Right click a log with a copper ingot to make Copper Casing, the frame for fluid machines like the Spout, Item Drain and Hose Pulley."],
+  [("copper_casing", 4)])
+q(CREATE, "fluids", "Fluid Pipes", "fluid_pipe", ["copper_sheet"],
   ["Pipes move liquids. A Mechanical Pump pushes fluid through a pipe in the direction you set.",
    "Fluid Tanks store liquid and can be stacked into bigger ones."],
   [("fluid_pipe", 8), ("mechanical_pump", 1), ("fluid_tank", 1)])
-q(CREATE, "spout", "Spout and Item Drain", "spout", ["fluids", "belt"],
+q(CREATE, "spout", "Spout and Item Drain", "spout", ["copper_casing", "fluids"],
   ["A Spout fills items with liquid as they pass beneath it. An Item Drain empties them again.",
    "Use them to make potions, fill buckets, or bottle honey."],
   [("spout", 1), ("item_drain", 1)])
-q(CREATE, "steam_engine", "Steam Engine", "steam_engine", ["fluids", "blaze_burner"],
+q(CREATE, "steam_engine", "Steam Engine", "steam_engine", ["fluids", "golden_sheet", "blaze_burner"],
   ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.",
    "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."],
   [("steam_engine", 1), ("fluid_tank", 4)])
-q(CREATE, "hose", "Hose Pulley", "hose_pulley", ["fluids"],
+q(CREATE, "hose", "Hose Pulley", "hose_pulley", ["copper_casing", "fluids"],
   ["The Hose Pulley sucks up (or pours out) large bodies of fluid. Lower it into a lava lake and it will drain it.",
    "It is the right way to supply a big lava setup."],
   [("hose_pulley", 1)])
-q(CREATE, "precision", "Precision Mechanism", "precision_mechanism", ["deployer", "brass"],
+q(CREATE, "precision", "Precision Mechanism", "precision_mechanism", ["deployer", "golden_sheet"],
   ["The gate to the advanced machines. It needs a sequenced assembly: a gold sheet on a belt passes under deployers and a press in a set order.",
    "Check the recipe in EMI (R) to see each step."],
   [("precision_mechanism", 2)])
@@ -242,7 +263,7 @@ q(CREATE, "schematic", "Schematics", "schematic_table", ["precision"],
   ["Save a build as a schematic, then print it elsewhere. The Schematicannon builds it for you from your inventory and gunpowder.",
    "Use the Schematic and Quill to select an area."],
   [("schematic_and_quill", 1), ("schematic_table", 1), ("schematicannon", 1)])
-q(CREATE, "vault", "Item Vaults", "item_vault", ["precision"],
+q(CREATE, "vault", "Item Vaults", "item_vault", ["iron_sheet"],
   ["Vaults are huge storage blocks and they connect, unlike chests. Use one as the heart of a base.",
    "Pair them with funnels and arms for automatic sorting."],
   [("item_vault", 4)])
@@ -343,7 +364,7 @@ q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREAT
    "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.",
    "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."],
   [("simulated:physics_assembler", 1)])
-q(AERO, "honey_glue", "Honey Glue", "simulated:honey_glue", ["physics", f"{CREATE}::spout"],
+q(AERO, "honey_glue", "Honey Glue", "simulated:honey_glue", ["physics", f"{CREATE}::spout", f"{CREATE}::iron_sheet"],
   ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.",
    "If a contraption splits apart, a Slime Ball merges two contraptions back together."],
   [("simulated:honey_glue", 4), ("minecraft:slime_ball", 1)])
@@ -370,7 +391,7 @@ q(AERO, "envelope", "Envelope", "aeronautics:white_envelope", ["physics"],
   ["Envelope blocks make a balloon. They enclose a space that lifts when filled with hot air, so the balloon must be airtight.",
    "Blocks inside take up volume. Encase shafts in envelope to run them through the balloon airtight."],
   [("aeronautics:white_envelope", 16)])
-q(AERO, "burner", "Hot Air Burner", "aeronautics:adjustable_burner", ["envelope", f"{CREATE}::press"],
+q(AERO, "burner", "Hot Air Burner", "aeronautics:adjustable_burner", ["envelope", f"{CREATE}::iron_sheet"],
   ["Place a Hot Air Burner under the balloon. Powered with redstone, it fills the balloon from the top down.",
    "Its panel sets the maximum output and the redstone strength scales it. Several burners can feed one balloon."],
   [("aeronautics:adjustable_burner", 1)])
@@ -422,11 +443,11 @@ q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_p
   [("simulated:gimbal_sensor", 1), ("simulated:velocity_sensor", 1)])
 
 # cars
-q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["physics", f"{CREATE}::press"],
+q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["physics", f"{CREATE}::iron_sheet"],
   ["Mount a Tire on a Wheel Mount to give your contraption wheels.",
    "Bigger tires roll over rougher ground."],
   [("offroad:wheel_mount", 2), ("offroad:tire", 2)])
-q(AERO, "drivetrain", "Drivetrain", "simulated:directional_gearshift", ["wheels", "engine", f"{CREATE}::brass_casing"],
+q(AERO, "drivetrain", "Drivetrain", "simulated:directional_gearshift", ["wheels", "engine", f"{CREATE}::brass_casing", f"{CREATE}::electron_tube"],
   ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.",
    "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."],
   [("simulated:directional_gearshift", 1), ("simulated:analog_transmission", 1)])
@@ -616,11 +637,11 @@ XP_LEVELS[(AERO, "delivery_airship")] = 3
 SUBCHAPTERS = {
     CREATE: [
         ("getting_started", "Getting Started", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox"),
-        ("processing", "Processing", "millstone belt funnels press wrench goggles fan basin"),
-        ("brass", "Brass", "zinc blaze_burner brass brass_casing deployer saw drill harvester"),
+        ("processing", "Processing", "millstone dried_kelp belt press iron_sheet golden_sheet wrench goggles fan funnels basin"),
+        ("contraptions", "Contraptions", "drill glue saw harvester bearing piston pulley"),
+        ("fluids", "Fluids and Steam", "copper_sheet copper_casing fluids spout hose steam_engine"),
+        ("brass", "Brass", "zinc blaze_burner brass brass_casing electron_tube deployer"),
         ("projects", "Projects", "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
-        ("contraptions", "Contraptions", "glue bearing piston pulley"),
-        ("fluids", "Fluids and Steam", "fluids spout hose steam_engine"),
         ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
         ("precision", "Precision and Automation", "precision arm crafter crushing_wheel sequenced radiance"),
         ("logistics", "Logistics", "redstone display schematic vault packages"),
@@ -728,6 +749,13 @@ def layout(items):
     return {x["id"]: (col, n - (len(xs) - 1) / 2) for col, xs in cols.items() for n, x in enumerate(xs)}
 
 
+# Entry points: the materials and machines a branch hangs off, drawn as big gears like any quest that
+# unlocks three or more others.
+HUBS = {(CREATE, i) for i in "welcome andesite_alloy casing dried_kelp press iron_sheet golden_sheet copper_sheet "
+        "copper_casing brass brass_casing electron_tube precision train_track".split()} \
+    | {(AERO, i) for i in "envelope sails gyro wheels".split()}
+unlocks = collections.Counter(dep_key(x, d) for x in Q for d in x["deps"])
+
 FTB = f"{OUT}/config/ftbquests/quests"
 if os.path.exists(FTB):
     shutil.rmtree(FTB)
@@ -776,9 +804,9 @@ for g, cid, fname, title, gid, items in chapters:
               "tasks": tasks, "rewards": rewards, "icon": {"id": x["icon"]}}
         if x["deps"]:
             qd["dependencies"] = [fid("quest", *dep_key(x, d)) for d in x["deps"]]
-        if not local_deps(x, ids):
+        if (g, x["id"]) in HUBS or unlocks[(g, x["id"])] >= 3:
             qd["shape"] = "gear"
-            qd["size"] = 1.5
+            qd["size"] = 1.75 if unlocks[(g, x["id"])] >= 6 else 1.5
         elif x["check"]:
             qd["shape"] = "hexagon"
             qd["size"] = 1.25
