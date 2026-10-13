@@ -749,11 +749,9 @@ def layout(items):
     return {x["id"]: (col, n - (len(xs) - 1) / 2) for col, xs in cols.items() for n, x in enumerate(xs)}
 
 
-# Entry points: the materials and machines a branch hangs off, drawn as big gears like any quest that
-# unlocks three or more others.
-HUBS = {(CREATE, i) for i in "welcome andesite_alloy casing dried_kelp press iron_sheet golden_sheet copper_sheet "
-        "copper_casing brass brass_casing electron_tube precision train_track".split()} \
-    | {(AERO, i) for i in "envelope sails gyro wheels".split()}
+# Entry points: the materials a branch hangs off are drawn as gears; everything else stays plain.
+HUBS = {(CREATE, i) for i in "andesite_alloy casing dried_kelp iron_sheet golden_sheet copper_sheet copper_casing "
+        "brass brass_casing electron_tube precision".split()} | {(AERO, "physics"), (FOUNDRY, "smeltery")}
 unlocks = collections.Counter(dep_key(x, d) for x in Q for d in x["deps"])
 
 FTB = f"{OUT}/config/ftbquests/quests"
@@ -804,7 +802,7 @@ for g, cid, fname, title, gid, items in chapters:
               "tasks": tasks, "rewards": rewards, "icon": {"id": x["icon"]}}
         if x["deps"]:
             qd["dependencies"] = [fid("quest", *dep_key(x, d)) for d in x["deps"]]
-        if (g, x["id"]) in HUBS or unlocks[(g, x["id"])] >= 3:
+        if (g, x["id"]) in HUBS:
             qd["shape"] = "gear"
             qd["size"] = 1.75 if unlocks[(g, x["id"])] >= 6 else 1.5
         elif x["check"]:
