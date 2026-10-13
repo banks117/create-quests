@@ -1,0 +1,6 @@
+{
+  "group_key": "gears-and-gardens",
+  "group_title": "Gears and Gardens",
+  "chapters": ["create", "aeronautics", "railways", "modern_foundry"],
+  "item_rewards": true
+}

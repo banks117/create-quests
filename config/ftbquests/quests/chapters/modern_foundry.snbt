@@ -2,12 +2,12 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "modern_foundry"
-	group: "123A5071FB991B91"
+	group: "5818A71FD4936D3E"
 	icon: {
 		count: 1
 		id: "modernfoundry:materials_and_you"
 	}
-	id: "680AF25895429437"
+	id: "5DA09361842FADD6"
 	order_index: 3
 	quest_links: [ ]
 	quests: [
@@ -16,11 +16,11 @@
 				count: 1
 				id: "modernfoundry:materials_and_you"
 			}
-			id: "1A1865107AB12E8E"
+			id: "71D1833076DCCCDE"
 			rewards: [
 				{
 					count: 8
-					id: "6CD9DB9C8DA4BA4D"
+					id: "710178352D8B506F"
 					item: {
 						count: 1
 						id: "minecraft:torch"
@@ -28,7 +28,7 @@
 					type: "item"
 				}
 				{
-					id: "160BEB11EF1DBBC0"
+					id: "1609B9185D11EDA8"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -37,7 +37,7 @@
 			size: 1.5d
 			tasks: [
 				{
-					id: "48645C02FB773D0D"
+					id: "682DD8979757464C"
 					item: {
 						count: 1
 						id: "modernfoundry:materials_and_you"
@@ -49,16 +49,16 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["1A1865107AB12E8E"]
+			dependencies: ["71D1833076DCCCDE"]
 			icon: {
 				count: 1
 				id: "modernfoundry:pattern"
 			}
-			id: "542DE1A506F3DE5D"
+			id: "62E02D28045719F9"
 			rewards: [
 				{
 					count: 4
-					id: "7E5D89B2EA2F1E03"
+					id: "06E43C6B33218680"
 					item: {
 						count: 1
 						id: "minecraft:coal"
@@ -66,7 +66,7 @@
 					type: "item"
 				}
 				{
-					id: "47CC0E2D84FED14C"
+					id: "0679F39F02A18B3A"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -74,7 +74,7 @@
 			tasks: [
 				{
 					count: 4L
-					id: "02C9489F713580D1"
+					id: "5120D554EC61081B"
 					item: {
 						count: 1
 						id: "modernfoundry:pattern"
@@ -82,7 +82,7 @@
 					type: "item"
 				}
 				{
-					id: "55CC0C2A599CE306"
+					id: "58FF0AC1C98E2C7A"
 					item: {
 						count: 1
 						id: "modernfoundry:part_builder"
@@ -94,22 +94,22 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["542DE1A506F3DE5D"]
+			dependencies: ["62E02D28045719F9"]
 			icon: {
 				count: 1
 				id: "modernfoundry:tinker_station"
 			}
-			id: "7DD0FFCECBD22AA8"
+			id: "4C32186AFC100060"
 			rewards: [
 				{
-					id: "65F23F6DAE90DA48"
+					id: "64E749367EDCD076"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "7188FD2EB6FF8076"
+					id: "1AFAFFF1EE5E98C1"
 					item: {
 						count: 1
 						id: "modernfoundry:tinker_station"
@@ -121,22 +121,22 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["7DD0FFCECBD22AA8"]
+			dependencies: ["4C32186AFC100060"]
 			icon: {
 				count: 1
 				id: "modernfoundry:pickaxe"
 			}
-			id: "443558963A896734"
+			id: "03594763D06E9251"
 			rewards: [
 				{
-					id: "430E65C84ADE7581"
+					id: "5A09068854C0FC10"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "37ACB550CD4A3EE0"
+					id: "76ABD06FE956BD37"
 					item: {
 						count: 1
 						id: "modernfoundry:pickaxe"
@@ -148,15 +148,15 @@
 			y: -0.75d
 		}
 		{
-			dependencies: ["7DD0FFCECBD22AA8"]
+			dependencies: ["4C32186AFC100060"]
 			icon: {
 				count: 1
 				id: "modernfoundry:seared_stone"
 			}
-			id: "2B9DFD0F1B8A6978"
+			id: "7305E4A82C337CF8"
 			rewards: [
 				{
-					id: "7C8177212D7FD90C"
+					id: "18DB4EC487BE0552"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -164,7 +164,7 @@
 			tasks: [
 				{
 					count: 16L
-					id: "40556279A4E77F52"
+					id: "28DC3DF0B488D079"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_stone"
@@ -176,22 +176,22 @@
 			y: 0.75d
 		}
 		{
-			dependencies: ["2B9DFD0F1B8A6978"]
+			dependencies: ["7305E4A82C337CF8"]
 			icon: {
 				count: 1
 				id: "modernfoundry:seared_melter"
 			}
-			id: "52BF0B756C144E69"
+			id: "3C0DEF47C79C5D77"
 			rewards: [
 				{
-					id: "0C9375252BC16412"
+					id: "56505CFF56C39613"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "1DCE7EE2292911C3"
+					id: "75718F8AF30FBE64"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_melter"
@@ -199,7 +199,7 @@
 					type: "item"
 				}
 				{
-					id: "136B84359AE1EC62"
+					id: "5858D5894106BAA3"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_heater"
@@ -211,22 +211,22 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["52BF0B756C144E69"]
+			dependencies: ["3C0DEF47C79C5D77"]
 			icon: {
 				count: 1
 				id: "modernfoundry:seared_table"
 			}
-			id: "6658601E4E2CA17F"
+			id: "78BA18E9E3D67646"
 			rewards: [
 				{
-					id: "6A39D9F794F775C8"
+					id: "4C0493EC1A844FAA"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "6AB35D14C19EAC92"
+					id: "7B438D17D278F079"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_table"
@@ -234,7 +234,7 @@
 					type: "item"
 				}
 				{
-					id: "06BF353C212FAFD4"
+					id: "1DD8A4AFE3EC0D35"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_basin"
@@ -242,7 +242,7 @@
 					type: "item"
 				}
 				{
-					id: "7FD9234C64177CCB"
+					id: "7EA91A5D8ACA75C2"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_faucet"
@@ -254,16 +254,16 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["6658601E4E2CA17F"]
+			dependencies: ["78BA18E9E3D67646"]
 			icon: {
 				count: 1
 				id: "modernfoundry:smeltery_controller"
 			}
-			id: "3524AB0C2BF12C5A"
+			id: "69F5D22290E1A7D3"
 			rewards: [
 				{
 					count: 4
-					id: "21E143325B3BDA6D"
+					id: "270671BA5BC125D6"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_stone"
@@ -271,14 +271,14 @@
 					type: "item"
 				}
 				{
-					id: "62AADD805D8338D0"
+					id: "29130B80767D3501"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "1BFBA975601F7D44"
+					id: "1EFF75A4717ABFDB"
 					item: {
 						count: 1
 						id: "modernfoundry:smeltery_controller"
@@ -286,7 +286,7 @@
 					type: "item"
 				}
 				{
-					id: "39191782A0010E8B"
+					id: "7AA6AE699C1CD49C"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_fuel_tank"
@@ -298,15 +298,15 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["3524AB0C2BF12C5A"]
+			dependencies: ["69F5D22290E1A7D3"]
 			icon: {
 				count: 1
 				id: "modernfoundry:seared_channel"
 			}
-			id: "17EA99FAFE3FFBD2"
+			id: "1208A5AF2B093ACF"
 			rewards: [
 				{
-					id: "47C765CE0368732C"
+					id: "657BF586A1EFA5FF"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -314,7 +314,7 @@
 			tasks: [
 				{
 					count: 4L
-					id: "25CEF1A13F41565A"
+					id: "06BED3346A1A53F3"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_channel"
@@ -322,7 +322,7 @@
 					type: "item"
 				}
 				{
-					id: "7511316D90DF9C0A"
+					id: "5DC9071D6460F6E7"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_drain"
@@ -330,7 +330,7 @@
 					type: "item"
 				}
 				{
-					id: "724C3A6B724575F5"
+					id: "166F414C3EBDBCCB"
 					item: {
 						count: 1
 						id: "modernfoundry:seared_duct"
@@ -342,22 +342,22 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["443558963A896734", "3524AB0C2BF12C5A"]
+			dependencies: ["03594763D06E9251", "69F5D22290E1A7D3"]
 			icon: {
 				count: 1
 				id: "modernfoundry:tinkers_anvil"
 			}
-			id: "430ACC021396DB49"
+			id: "20CDB7F7BB7215DE"
 			rewards: [
 				{
-					id: "110A540BB12BCAEC"
+					id: "08721837FA3CE5CC"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "65D0A84ABD18695F"
+					id: "2CC4523421405F07"
 					item: {
 						count: 1
 						id: "modernfoundry:tinkers_anvil"
@@ -369,22 +369,22 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["430ACC021396DB49"]
+			dependencies: ["20CDB7F7BB7215DE"]
 			icon: {
 				count: 1
 				id: "modernfoundry:modifier_worktable"
 			}
-			id: "3F086A2762665A01"
+			id: "0E12C80BA8BD8588"
 			rewards: [
 				{
-					id: "5184C360F8702605"
+					id: "1EFE403371C83A98"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "0D466693B0094EFF"
+					id: "372E9644049C32B6"
 					item: {
 						count: 1
 						id: "modernfoundry:modifier_worktable"
@@ -396,15 +396,15 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["3524AB0C2BF12C5A"]
+			dependencies: ["69F5D22290E1A7D3"]
 			icon: {
 				count: 1
 				id: "modernfoundry:sky_slime_ball"
 			}
-			id: "0FC31330EE80E534"
+			id: "195EDBC057B143E8"
 			rewards: [
 				{
-					id: "419EB6A4A6C1DF43"
+					id: "05B64706406A7DAB"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -412,7 +412,7 @@
 			tasks: [
 				{
 					count: 4L
-					id: "4BBC13C06AF8EB81"
+					id: "4B73A74731E5338B"
 					item: {
 						count: 1
 						id: "modernfoundry:sky_slime_ball"
@@ -424,15 +424,15 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["0FC31330EE80E534", "3F086A2762665A01"]
+			dependencies: ["195EDBC057B143E8", "0E12C80BA8BD8588"]
 			icon: {
 				count: 1
 				id: "modernfoundry:raw_cobalt"
 			}
-			id: "29ED7968DF77A24E"
+			id: "04BE34CFD64D0B1C"
 			rewards: [
 				{
-					id: "13C3DACFDA6D71E5"
+					id: "7B1D7D6514714214"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -440,7 +440,7 @@
 			tasks: [
 				{
 					count: 4L
-					id: "5ACB3D119EC0EA06"
+					id: "2E021154D0E6D56A"
 					item: {
 						count: 1
 						id: "modernfoundry:raw_cobalt"
@@ -452,22 +452,22 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["29ED7968DF77A24E"]
+			dependencies: ["04BE34CFD64D0B1C"]
 			icon: {
 				count: 1
 				id: "modernfoundry:foundry_controller"
 			}
-			id: "5B7BC0EFD177F055"
+			id: "6B5929DBA1583912"
 			rewards: [
 				{
-					id: "6A69129D85D11985"
+					id: "5540DFE294D97F21"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "20E24B566CDD07AE"
+					id: "42F9C5B444B4AE41"
 					item: {
 						count: 1
 						id: "modernfoundry:foundry_controller"
@@ -476,7 +476,7 @@
 				}
 				{
 					count: 16L
-					id: "0034E1E46975DF21"
+					id: "600069D122995BDC"
 					item: {
 						count: 1
 						id: "modernfoundry:scorched_stone"

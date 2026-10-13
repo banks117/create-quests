@@ -2,12 +2,12 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "aeronautics"
-	group: "123A5071FB991B91"
+	group: "5818A71FD4936D3E"
 	icon: {
 		count: 1
 		id: "simulated:physics_assembler"
 	}
-	id: "76306884D896750A"
+	id: "14747A1BF6564DF9"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
@@ -16,11 +16,11 @@
 				count: 1
 				id: "simulated:physics_assembler"
 			}
-			id: "3E8CA4FF7A2974C6"
+			id: "1F7CBA4F672A8800"
 			rewards: [
 				{
 					count: 1
-					id: "6328E7BFB5AFE4BD"
+					id: "6AD136558991DE4B"
 					item: {
 						count: 1
 						id: "simulated:honey_glue"
@@ -28,7 +28,7 @@
 					type: "item"
 				}
 				{
-					id: "7F17287C87F8F957"
+					id: "5B82BF8E62F36822"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -37,7 +37,7 @@
 			size: 1.5d
 			tasks: [
 				{
-					id: "0504CE9D0440C54E"
+					id: "4844366F99AD75E0"
 					item: {
 						count: 1
 						id: "simulated:physics_assembler"
@@ -49,15 +49,15 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["3E8CA4FF7A2974C6"]
+			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
 				count: 1
 				id: "simulated:honey_glue"
 			}
-			id: "218CA1E6CB498382"
+			id: "23B5949FE40EFA2B"
 			rewards: [
 				{
-					id: "2250BEB49AC1EDD4"
+					id: "3D4C5B6FDF0B94EF"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -65,7 +65,7 @@
 			tasks: [
 				{
 					count: 4L
-					id: "5D1C00ECB6FD6EA5"
+					id: "63289DE38FA365DA"
 					item: {
 						count: 1
 						id: "simulated:honey_glue"
@@ -73,7 +73,7 @@
 					type: "item"
 				}
 				{
-					id: "27E0640A287BFEC2"
+					id: "24353011CE5A5072"
 					item: {
 						count: 1
 						id: "minecraft:slime_ball"
@@ -85,22 +85,22 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["3E8CA4FF7A2974C6"]
+			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
 				count: 1
 				id: "simulated:steering_wheel"
 			}
-			id: "3F579F8BF4EA7D96"
+			id: "39B8F8A441598265"
 			rewards: [
 				{
-					id: "304D198E32D29A51"
+					id: "4FEBF654C185238F"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "4039629C200AE449"
+					id: "0FD98911789FE0D9"
 					item: {
 						count: 1
 						id: "simulated:steering_wheel"
@@ -108,7 +108,7 @@
 					type: "item"
 				}
 				{
-					id: "151A282C97032560"
+					id: "068028BF6D12D884"
 					item: {
 						count: 1
 						id: "simulated:throttle_lever"
@@ -120,22 +120,22 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["3E8CA4FF7A2974C6"]
+			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
 				count: 1
 				id: "simulated:white_portable_engine"
 			}
-			id: "3E403689EE59AF7F"
+			id: "502BF10FD13C4EA5"
 			rewards: [
 				{
-					id: "41AD11216F095EAE"
+					id: "663D5CF0D8CE13DF"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "14515D9084525589"
+					id: "3BA565AABEA834F8"
 					item: {
 						count: 1
 						id: "simulated:white_portable_engine"
@@ -147,16 +147,16 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["3E403689EE59AF7F"]
+			dependencies: ["502BF10FD13C4EA5"]
 			icon: {
 				count: 1
 				id: "aeronautics:wooden_propeller"
 			}
-			id: "744CF638A172C14E"
+			id: "6117A72CBB15361C"
 			rewards: [
 				{
 					count: 2
-					id: "1FC524A33295B628"
+					id: "21EFB338D89EC3F6"
 					item: {
 						count: 1
 						id: "aeronautics:wooden_propeller"
@@ -164,14 +164,14 @@
 					type: "item"
 				}
 				{
-					id: "4D02389B1F555D70"
+					id: "7AE56485F30317FF"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "5644CFA62F10CBAD"
+					id: "441A9A8F4E7581EF"
 					item: {
 						count: 1
 						id: "aeronautics:propeller_bearing"
@@ -180,7 +180,7 @@
 				}
 				{
 					count: 2L
-					id: "0C949BFC2C145446"
+					id: "237F34AFDDA93619"
 					item: {
 						count: 1
 						id: "aeronautics:wooden_propeller"
@@ -192,16 +192,16 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["3E8CA4FF7A2974C6"]
+			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
 				count: 1
 				id: "aeronautics:white_envelope"
 			}
-			id: "5149F3C44F7AFE51"
+			id: "4043B5F303D667BA"
 			rewards: [
 				{
 					count: 16
-					id: "6FD82FC5934C41CC"
+					id: "644D3996D117B343"
 					item: {
 						count: 1
 						id: "aeronautics:white_envelope"
@@ -209,7 +209,7 @@
 					type: "item"
 				}
 				{
-					id: "7A67B63C119FE891"
+					id: "6EF54F7111D72EF0"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -217,7 +217,7 @@
 			tasks: [
 				{
 					count: 16L
-					id: "13ECCC30D80AAB26"
+					id: "4F7BDB24A80375A0"
 					item: {
 						count: 1
 						id: "aeronautics:white_envelope"
@@ -229,22 +229,22 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["5149F3C44F7AFE51"]
+			dependencies: ["4043B5F303D667BA"]
 			icon: {
 				count: 1
 				id: "aeronautics:adjustable_burner"
 			}
-			id: "0BC4D5588A1771BA"
+			id: "7C319C3D0115308E"
 			rewards: [
 				{
-					id: "2D610BB03BA26438"
+					id: "05C7DC4A1D176CC9"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "1A72790E75774E57"
+					id: "7B6806D9B3C42580"
 					item: {
 						count: 1
 						id: "aeronautics:adjustable_burner"
@@ -256,22 +256,22 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["0BC4D5588A1771BA"]
+			dependencies: ["7C319C3D0115308E"]
 			icon: {
 				count: 1
 				id: "simulated:altitude_sensor"
 			}
-			id: "01FB89EBFBC46B93"
+			id: "7AF0CFF014727B91"
 			rewards: [
 				{
-					id: "12135685046EE252"
+					id: "71CB5229B9E00B9E"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "268DBAF5EAA9CF59"
+					id: "5D674D5AFECCAE26"
 					item: {
 						count: 1
 						id: "simulated:altitude_sensor"
@@ -283,22 +283,22 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["0BC4D5588A1771BA"]
+			dependencies: ["7C319C3D0115308E"]
 			icon: {
 				count: 1
 				id: "aeronautics:steam_vent"
 			}
-			id: "0D27A5A87525D150"
+			id: "7F0150EDB232A99A"
 			rewards: [
 				{
-					id: "0B39E7C041750C4D"
+					id: "04730D18A3F899FF"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "2200B813E7B413D7"
+					id: "4DD256ADBE9E5AF8"
 					item: {
 						count: 1
 						id: "aeronautics:steam_vent"
@@ -310,22 +310,22 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["3E8CA4FF7A2974C6"]
+			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
 				count: 1
 				id: "aeronautics:levitite"
 			}
-			id: "57AF6FEA2D05568E"
+			id: "737BE59B311EAF17"
 			rewards: [
 				{
-					id: "07AD8B950695D3C1"
+					id: "54A7F7523524325F"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "1EE076E7A00E24FB"
+					id: "14C749730ABA00F3"
 					item: {
 						count: 1
 						id: "aeronautics:levitite_blend_bucket"
@@ -334,7 +334,7 @@
 				}
 				{
 					count: 4L
-					id: "5D531ACCB2227F04"
+					id: "48F3B12D8A2A36A9"
 					item: {
 						count: 1
 						id: "aeronautics:levitite"
@@ -346,15 +346,15 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["0BC4D5588A1771BA", "744CF638A172C14E", "3F579F8BF4EA7D96"]
+			dependencies: ["7C319C3D0115308E", "6117A72CBB15361C", "39B8F8A441598265"]
 			icon: {
 				count: 1
 				id: "aeronautics:white_envelope"
 			}
-			id: "127F314C792757C4"
+			id: "538222C5864751CC"
 			rewards: [
 				{
-					id: "5500B93AD75CC373"
+					id: "7CAE34339804AAC7"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -363,7 +363,7 @@
 			size: 1.25d
 			tasks: [
 				{
-					id: "78E5ECBCF344292F"
+					id: "192DE356D54E0F92"
 					type: "checkmark"
 				}
 			]
@@ -371,16 +371,16 @@
 			y: -3.75d
 		}
 		{
-			dependencies: ["744CF638A172C14E"]
+			dependencies: ["6117A72CBB15361C"]
 			icon: {
 				count: 1
 				id: "simulated:white_symmetric_sail"
 			}
-			id: "368AB76FED00F11A"
+			id: "4FA764B41B3AD78C"
 			rewards: [
 				{
 					count: 8
-					id: "1DA529D99EEE95DE"
+					id: "64EA5917DA52F6C4"
 					item: {
 						count: 1
 						id: "create:white_sail"
@@ -388,7 +388,7 @@
 					type: "item"
 				}
 				{
-					id: "4CF2AAD712B1F07D"
+					id: "79E0899DF5406C3F"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -396,7 +396,7 @@
 			tasks: [
 				{
 					count: 8L
-					id: "51C74F487AE6AE23"
+					id: "0BDD43C924B20930"
 					item: {
 						count: 1
 						id: "create:white_sail"
@@ -405,7 +405,7 @@
 				}
 				{
 					count: 4L
-					id: "48C2FB5B5B3C783A"
+					id: "5B31D30AD0C85F2A"
 					item: {
 						count: 1
 						id: "simulated:white_symmetric_sail"
@@ -417,22 +417,22 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["368AB76FED00F11A", "3F579F8BF4EA7D96"]
+			dependencies: ["4FA764B41B3AD78C", "39B8F8A441598265"]
 			icon: {
 				count: 1
 				id: "simulated:torsion_spring"
 			}
-			id: "41396C710307FA33"
+			id: "6AC31ACA704C3E95"
 			rewards: [
 				{
-					id: "4DDA2BE6890520D7"
+					id: "395289CDF666FCD1"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "7B77981B408531C4"
+					id: "2857D361517BD1F6"
 					item: {
 						count: 1
 						id: "simulated:swivel_bearing"
@@ -441,7 +441,7 @@
 				}
 				{
 					count: 2L
-					id: "09D18214A3DC47FC"
+					id: "47548FF9D514901F"
 					item: {
 						count: 1
 						id: "simulated:torsion_spring"
@@ -453,22 +453,22 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["744CF638A172C14E"]
+			dependencies: ["6117A72CBB15361C"]
 			icon: {
 				count: 1
 				id: "aeronautics:andesite_propeller"
 			}
-			id: "7678301FDA581E73"
+			id: "17530DAD63A8A658"
 			rewards: [
 				{
-					id: "561064A5322C62C3"
+					id: "3E5F1434B2CAD75F"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "653156E33B8DEAC0"
+					id: "7A8967921C064FCF"
 					item: {
 						count: 1
 						id: "aeronautics:andesite_propeller"
@@ -480,15 +480,15 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["41396C710307FA33", "7678301FDA581E73"]
+			dependencies: ["6AC31ACA704C3E95", "17530DAD63A8A658"]
 			icon: {
 				count: 1
 				id: "simulated:white_symmetric_sail"
 			}
-			id: "4757335AA5D85E89"
+			id: "5A2D2A0C774E7594"
 			rewards: [
 				{
-					id: "18BF0F1211171AE3"
+					id: "473F245C737C938E"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -497,7 +497,7 @@
 			size: 1.25d
 			tasks: [
 				{
-					id: "764E2DF8A7116E93"
+					id: "1C1909373903F6D8"
 					type: "checkmark"
 				}
 			]
@@ -505,22 +505,22 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["4757335AA5D85E89"]
+			dependencies: ["5A2D2A0C774E7594"]
 			icon: {
 				count: 1
 				id: "aeronautics:gyroscopic_propeller_bearing"
 			}
-			id: "0049E5C71A661C3E"
+			id: "7D09691C28E05501"
 			rewards: [
 				{
-					id: "15195DF323005410"
+					id: "5ECE2573FA62783F"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "065114CF50E29CC5"
+					id: "7FD20B15BE85021A"
 					item: {
 						count: 1
 						id: "aeronautics:gyroscopic_propeller_bearing"
@@ -532,22 +532,22 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["4757335AA5D85E89"]
+			dependencies: ["5A2D2A0C774E7594"]
 			icon: {
 				count: 1
 				id: "simulated:gimbal_sensor"
 			}
-			id: "55487028D1ED9170"
+			id: "4392ACD7BDA98B8A"
 			rewards: [
 				{
-					id: "5DF78C87DDD39A78"
+					id: "113D88E4D23F72B0"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "04EE3805EEB7402E"
+					id: "04B5E4A53E4AA836"
 					item: {
 						count: 1
 						id: "simulated:gimbal_sensor"
@@ -555,7 +555,7 @@
 					type: "item"
 				}
 				{
-					id: "46B825F0E4F452E1"
+					id: "6DCE22803E5DA739"
 					item: {
 						count: 1
 						id: "simulated:velocity_sensor"
@@ -567,16 +567,16 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["3E8CA4FF7A2974C6"]
+			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
 				count: 1
 				id: "offroad:tire"
 			}
-			id: "36D5751F6ABDA0EC"
+			id: "300293F855AB765B"
 			rewards: [
 				{
 					count: 2
-					id: "7C791A7BF9D648FE"
+					id: "0A78D322F623D494"
 					item: {
 						count: 1
 						id: "offroad:wheel_mount"
@@ -585,7 +585,7 @@
 				}
 				{
 					count: 2
-					id: "6B1C2E6DF05DEA9C"
+					id: "0EE227C159925C4A"
 					item: {
 						count: 1
 						id: "offroad:tire"
@@ -593,7 +593,7 @@
 					type: "item"
 				}
 				{
-					id: "3EFB4A16C483F4EC"
+					id: "7053ECD6AEF1E3CE"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -601,7 +601,7 @@
 			tasks: [
 				{
 					count: 2L
-					id: "73373C2BD3CBB9AA"
+					id: "24DC8657BDC30B6A"
 					item: {
 						count: 1
 						id: "offroad:wheel_mount"
@@ -610,7 +610,7 @@
 				}
 				{
 					count: 2L
-					id: "56373A18C4FB3EEB"
+					id: "49501A98F1EA312E"
 					item: {
 						count: 1
 						id: "offroad:tire"
@@ -622,22 +622,22 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["36D5751F6ABDA0EC", "3E403689EE59AF7F"]
+			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5"]
 			icon: {
 				count: 1
 				id: "simulated:directional_gearshift"
 			}
-			id: "6E9D7F82A90AC566"
+			id: "08FBC54833E131A6"
 			rewards: [
 				{
-					id: "2A367F654F06A886"
+					id: "5A7B501615CFDF43"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "22AFD7E1E074C220"
+					id: "1B02358C6D936210"
 					item: {
 						count: 1
 						id: "simulated:directional_gearshift"
@@ -645,7 +645,7 @@
 					type: "item"
 				}
 				{
-					id: "7123C272211510BB"
+					id: "4E159580D93F2CAC"
 					item: {
 						count: 1
 						id: "simulated:analog_transmission"
@@ -657,15 +657,15 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["6E9D7F82A90AC566", "3F579F8BF4EA7D96"]
+			dependencies: ["08FBC54833E131A6", "39B8F8A441598265"]
 			icon: {
 				count: 1
 				id: "offroad:large_tire"
 			}
-			id: "1CF87C49041D32BA"
+			id: "41571B487A0FA8B1"
 			rewards: [
 				{
-					id: "268B9EFBBD4B3A28"
+					id: "46BBBA402EA1E197"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -674,7 +674,7 @@
 			size: 1.25d
 			tasks: [
 				{
-					id: "51FE8C3272A9582F"
+					id: "60FBD282C6E2E639"
 					type: "checkmark"
 				}
 			]
@@ -682,15 +682,15 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["1CF87C49041D32BA"]
+			dependencies: ["41571B487A0FA8B1"]
 			icon: {
 				count: 1
 				id: "offroad:monstrous_tire"
 			}
-			id: "4B527A723C09D4D2"
+			id: "375E0E1710F35827"
 			rewards: [
 				{
-					id: "2D6E46F87A6ECA38"
+					id: "5E510E915CFC45DD"
 					type: "xp_levels"
 					xp_levels: 1
 				}
@@ -698,7 +698,7 @@
 			tasks: [
 				{
 					count: 2L
-					id: "0F62DB5484C874FF"
+					id: "741BC1F6EAA3F059"
 					item: {
 						count: 1
 						id: "offroad:large_tire"
@@ -706,7 +706,7 @@
 					type: "item"
 				}
 				{
-					id: "0E0A966A9C8E367A"
+					id: "7A40511D3FCD0EAA"
 					item: {
 						count: 1
 						id: "offroad:monstrous_tire"
@@ -718,22 +718,22 @@
 			y: 10.5d
 		}
 		{
-			dependencies: ["1CF87C49041D32BA"]
+			dependencies: ["41571B487A0FA8B1"]
 			icon: {
 				count: 1
 				id: "offroad:borehead_bearing"
 			}
-			id: "7085443DA1D0A432"
+			id: "07F9BA4179BC2A64"
 			rewards: [
 				{
-					id: "365A9A8C7C410BEC"
+					id: "3B901ACF37B371AB"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "7F8C7C73CC7ED873"
+					id: "1A62FAA911B3E6F5"
 					item: {
 						count: 1
 						id: "offroad:borehead_bearing"
@@ -742,7 +742,7 @@
 				}
 				{
 					count: 2L
-					id: "14EC16C947B25035"
+					id: "4BC62853F3C4A657"
 					item: {
 						count: 1
 						id: "offroad:rockcutting_wheel"
@@ -754,16 +754,16 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["127F314C792757C4"]
+			dependencies: ["538222C5864751CC"]
 			icon: {
 				count: 1
 				id: "simulated:rope_winch"
 			}
-			id: "50BD8DAC3E2457BA"
+			id: "76CED65183413DDA"
 			rewards: [
 				{
 					count: 2
-					id: "62D0628DEB55C8EE"
+					id: "59272FAC8C465A67"
 					item: {
 						count: 1
 						id: "simulated:docking_connector"
@@ -771,14 +771,14 @@
 					type: "item"
 				}
 				{
-					id: "35A1C6252104D78A"
+					id: "23F8500AC02BCF95"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "635DDC6A9AFCE52F"
+					id: "7585449091B08591"
 					item: {
 						count: 1
 						id: "simulated:rope_winch"
@@ -786,7 +786,7 @@
 					type: "item"
 				}
 				{
-					id: "5686D8A042D568B7"
+					id: "00041116E9BC49F8"
 					item: {
 						count: 1
 						id: "simulated:rope_connector"
@@ -795,7 +795,7 @@
 				}
 				{
 					count: 2L
-					id: "5D2229E30A228401"
+					id: "30584ABD1BB30185"
 					item: {
 						count: 1
 						id: "simulated:docking_connector"
@@ -807,22 +807,22 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["01FB89EBFBC46B93"]
+			dependencies: ["7AF0CFF014727B91"]
 			icon: {
 				count: 1
 				id: "simulated:navigation_table"
 			}
-			id: "4345D56A8105FF9E"
+			id: "777DE7F2696A8208"
 			rewards: [
 				{
-					id: "2D8C218858F50647"
+					id: "7A6EE052D514F78A"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "07A6FDF5C1E5614C"
+					id: "1630289B75AAE753"
 					item: {
 						count: 1
 						id: "simulated:navigation_table"
@@ -834,22 +834,22 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["744CF638A172C14E"]
+			dependencies: ["6117A72CBB15361C"]
 			icon: {
 				count: 1
 				id: "aeronautics:aviators_goggles"
 			}
-			id: "58BB115315E95DF7"
+			id: "49421439F3BC2FC4"
 			rewards: [
 				{
-					id: "2A2AAD803FE334CE"
+					id: "36F98558B1080CB3"
 					type: "xp_levels"
 					xp_levels: 1
 				}
 			]
 			tasks: [
 				{
-					id: "79B61E5F0B9D820A"
+					id: "67A24EDA26385DFD"
 					item: {
 						count: 1
 						id: "aeronautics:aviators_goggles"

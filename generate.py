@@ -1,13 +1,19 @@
-"""Generate the Gears and Gardens FTB Quests chapters.
+"""Generate FTB Quests chapters for Create and its addons.
 
-Usage: python3 -I generate.py [OUT_DIR]   (writes OUT_DIR/config/ftbquests/quests, default: next to this script)
-Item ids are checked against the mod jars in GG_MODS (default: the Prism instance's mods folder).
+Usage: python3 -I generate.py --mods MODS_DIR [--profile PROFILE.json] [OUT_DIR]
+Writes OUT_DIR/config/ftbquests/quests (default OUT_DIR: next to this script).
+Every item id is checked against the jars in MODS_DIR, and chapters whose mods aren't there are skipped.
 """
-import collections, hashlib, io, json, os, re, shutil, sys, zipfile
+import argparse, collections, hashlib, io, json, os, re, shutil, sys, zipfile
 
-MODS = os.environ.get("GG_MODS", os.path.expanduser(
-    "~/Library/Application Support/PrismLauncher/instances/Create- Gears and Gardens/minecraft/mods"))
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.abspath(__file__))
+ap = argparse.ArgumentParser()
+ap.add_argument("--mods", required=True, help="folder of mod jars to validate against")
+ap.add_argument("--profile", default=os.path.join(HERE, "profiles", "default.json"))
+ap.add_argument("out", nargs="?", default=HERE)
+args = ap.parse_args()
+MODS, OUT = args.mods, args.out
+PROFILE = json.load(open(args.profile))
 
 
 # ---------------------------------------------------------------- item validation
@@ -42,23 +48,28 @@ def scan(z):
 
 
 valid = set()
-for jar in ["create-1.21.1-6.0.10.jar", "ModernFoundry-1.21.1-4.1.8-NeoForge.jar",
-            "create-aeronautics-bundled-1.21.1-1.3.2.jar", "railways-0.3.0-beta.2+neoforge-mc1.21.1.jar"]:
-    valid |= scan(zipfile.ZipFile(f"{MODS}/{jar}"))
+for jar in sorted(os.listdir(MODS)):
+    if jar.endswith(".jar"):
+        valid |= scan(zipfile.ZipFile(os.path.join(MODS, jar)))
 valid |= {"minecraft:" + x for x in "torch coal bread slime_ball".split()}
+present = {i.split(":")[0] for i in valid}
 
 
 # ---------------------------------------------------------------- content
-CREATE = "Create Basics"
-AERO = "Aeronautics"
-RAILS = "Steam 'n' Rails"
-FOUNDRY = "Modern Foundry"
+# Chapter keys feed the quest ids, so never rename them; titles can change freely.
+CREATE, AERO, RAILS, FOUNDRY = "create", "aeronautics", "railways", "modern_foundry"
+CHAPTERS = {
+    CREATE: dict(title="Create", requires={"create"}),
+    AERO: dict(title="Aeronautics", requires={"create", "aeronautics", "simulated", "offroad"}),
+    RAILS: dict(title="Steam 'n' Rails", requires={"create", "railways"}),
+    FOUNDRY: dict(title="Modern Foundry", requires={"modernfoundry"}),
+}
 
 Q = []
 
 
 def q(group, qid, title, icon, deps, desc, tasks, check=False, lane=None):
-    """deps are quest ids in the same chapter, or "Chapter::id" for another chapter.
+    """deps are quest ids in the same chapter, or "chapter::id" for another chapter.
     lane pins the quest to a row; otherwise rows are assigned automatically."""
     ns = lambda i: i if ":" in i else "create:" + i
     Q.append(dict(group=group, id=qid, title=title, icon=ns(icon), deps=deps, desc=desc,
@@ -168,7 +179,7 @@ q(CREATE, "drill", "Mechanical Drill", "mechanical_drill", ["brass_casing"],
    "Remember the stress cost: bigger machines need more power."],
   [("mechanical_drill", 1)])
 q(CREATE, "harvester", "Harvester and Plough", "mechanical_harvester", ["brass_casing"],
-  ["Mounted on a contraption, the Harvester reaps crops and the Plough tills the soil. Perfect for your garden.",
+  ["Mounted on a contraption, the Harvester reaps crops and the Plough tills the soil. Perfect for a farm.",
    "Combine them with a Mechanical Bearing for a moving farm."],
   [("mechanical_harvester", 2), ("mechanical_plough", 2)])
 q(CREATE, "glue", "Super Glue", "super_glue", ["casing"],
@@ -499,8 +510,18 @@ MATCH = {
 }
 for x in Q:
     key = (x["group"], x["id"])
-    x["rewards"] = MILESTONES.get(key, []) + [(i, n) for i, n in x["tasks"] if i in MATCH.get(key, [])]
+    x["rewards"] = MILESTONES.get(key, []) + [(i, n) for i, n in x["tasks"] if i in MATCH.get(key, [])] \
+        if PROFILE.get("item_rewards", True) else []
     x["xp"] = not x["check"] or x["deps"] != []
+
+
+# ---------------------------------------------------------------- chapter selection
+wanted = PROFILE.get("chapters") or list(CHAPTERS)
+included = [c for c in wanted if CHAPTERS[c]["requires"] <= present]
+for c in wanted:
+    if c not in included:
+        print(f"skipping {c}: missing mods {sorted(CHAPTERS[c]['requires'] - present)}")
+Q = [x for x in Q if x["group"] in included]
 
 
 # ---------------------------------------------------------------- validation
@@ -508,6 +529,9 @@ def dep_key(x, d):
     return tuple(d.split("::")) if "::" in d else (x["group"], d)
 
 
+for x in Q:
+    # A cross-chapter prerequisite in a chapter that was left out just doesn't apply.
+    x["deps"] = [d for d in x["deps"] if dep_key(x, d)[0] in included]
 keys = {(x["group"], x["id"]) for x in Q}
 bad = []
 for x in Q:
@@ -586,16 +610,14 @@ if os.path.exists(FTB):
     shutil.rmtree(FTB)
 os.makedirs(f"{FTB}/chapters")
 os.makedirs(f"{FTB}/lang")
-by_group = collections.defaultdict(list)
-for x in Q:
-    by_group[x["group"]].append(x)
+by_group = {c: [x for x in Q if x["group"] == c] for c in included}
 lang = {}
-GROUP_ID = fid("group", "gears-and-gardens")
-lang[f"chapter_group.{GROUP_ID}.title"] = "Gears and Gardens"
+GROUP_ID = fid("group", PROFILE["group_key"])
+lang[f"chapter_group.{GROUP_ID}.title"] = PROFILE["group_title"]
 for order, (g, items) in enumerate(by_group.items()):
     cid = fid("chapter", g)
-    fname = re.sub(r"[^a-z0-9]+", "_", g.lower()).strip("_")
-    lang[f"chapter.{cid}.title"] = g
+    fname = g
+    lang[f"chapter.{cid}.title"] = CHAPTERS[g]["title"]
     pos = layout(items)
     quests = []
     for x in items:
@@ -633,4 +655,4 @@ open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": [{"id": GR
 open(f"{FTB}/data.snbt", "w").write(snbt({"version": 13, "default_consume_items": False,
                                           "default_autoclaim_rewards": "disabled", "fallback_locale": "en_us"}) + "\n")
 open(f"{FTB}/lang/en_us.snbt", "w").write(snbt(lang) + "\n")
-print({g: len(v) for g, v in by_group.items()}, "| total", len(Q))
+print(f"{PROFILE['group_title']}:", {g: len(v) for g, v in by_group.items()}, "| total", len(Q))

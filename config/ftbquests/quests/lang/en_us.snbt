@@ -1,195 +1,195 @@
 {
-	chapter.680AF25895429437.title: "Modern Foundry"
-	chapter.76306884D896750A.title: "Aeronautics"
-	chapter.76FBB47D7D1218A4.title: "Create Basics"
-	chapter.7A8E8FF2DD335EA2.title: "Steam 'n' Rails"
-	chapter_group.123A5071FB991B91.title: "Gears and Gardens"
-	quest.0049E5C71A661C3E.quest_desc: ["Normal propeller bearings make poor helicopters. A Gyroscopic Propeller Bearing tries to keep its propeller upright.", "", "Facing downwards it can steady a top-heavy craft; a redstone signal resets its tilt."]
-	quest.0049E5C71A661C3E.title: "Helicopters"
-	quest.008795F94CF5F662.quest_desc: ["Two Crushing Wheels placed side by side crush ore into more crushed ore than a furnace could ever give you.", "", "Make them spin into each other, then drop items in the top."]
-	quest.008795F94CF5F662.title: "Crushing Wheels"
-	quest.01FB89EBFBC46B93.quest_desc: ["Lift weakens as you climb. A balloon settles where lift equals weight, so changing the burner output changes your altitude.", "", "An Altitude Sensor turns height into a redstone signal: wire it to the burner for a blimp that holds its height."]
-	quest.01FB89EBFBC46B93.title: "Altitude Sensor"
-	quest.03AEE947CA0409F8.quest_desc: ["The Millstone grinds items: wheat into flour, ores into crushed ore, and more. Power it from the side with cogwheels.", "", "Throw items in the top, then right click it to take the result, or pull it out with a hopper or funnel."]
-	quest.03AEE947CA0409F8.title: "Millstone"
-	quest.03CE42E468AA9C82.quest_desc: ["A Blaze Burner under a basin supplies the heat many recipes need. Find a Blaze in the Nether and right click it with an empty Blaze Burner to capture it.", "", "Feed it flammable items to keep it hot. A Blaze Cake makes it burn even hotter."]
-	quest.03CE42E468AA9C82.title: "Blaze Burner"
-	quest.04105796E1F2C79C.quest_desc: ["Not near water? A Windmill Bearing turns a structure in front of it into a windmill. It needs at least 8 sail-like blocks; Windmill Sails stick to each other without glue.", "", "Right click the bearing to start it. More sails means more speed."]
-	quest.04105796E1F2C79C.title: "Windmill"
-	quest.047BBD34B7070D49.quest_desc: ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.", "", "Put one next to a depot and you can combine items automatically."]
-	quest.047BBD34B7070D49.title: "Deployer"
-	quest.0A8E6BCE32156812.quest_desc: ["Put a Conductor Cap on Andesite Casing to build a Conductor: a little helper that rides your trains.", "", "Conductors press buttons and flip levers they look at, and can carry a toolbox. Match cap colours to control which conductors respond."]
-	quest.0A8E6BCE32156812.title: "Conductors"
-	quest.0BC4D5588A1771BA.quest_desc: ["Place a Hot Air Burner under the balloon. Powered with redstone, it fills the balloon from the top down.", "", "Its panel sets the maximum output and the redstone strength scales it. Several burners can feed one balloon."]
-	quest.0BC4D5588A1771BA.title: "Hot Air Burner"
-	quest.0BD58EED09FE7BFF.quest_desc: ["Vaults are huge storage blocks and they connect, unlike chests. Use one as the heart of a base.", "", "Pair them with funnels and arms for automatic sorting."]
-	quest.0BD58EED09FE7BFF.title: "Item Vaults"
-	quest.0D27A5A87525D150.quest_desc: ["A Steam Vent lifts a balloon with steam instead of hot air. Like a Steam Engine, it needs heat, water and boiler space.", "", "Bigger airships with several vents need a stronger boiler."]
-	quest.0D27A5A87525D150.title: "Steam Vent"
-	quest.0FC31330EE80E534.quest_desc: ["Travel to a slime island to find slime balls and slime trees. They are the base of the slimy materials.", "", "Use them for slime boots and slimy chestplates."]
-	quest.0FC31330EE80E534.title: "Slime Islands"
-	quest.102D26F7A563C2F5.quest_desc: ["Put a Basin on the ground and a Mechanical Mixer above it, and it will automate shapeless crafting recipes and a few special ones.", "", "Some recipes only run when the basin is heated from below. That comes later."]
-	quest.102D26F7A563C2F5.title: "Basin and Mixer"
-	quest.127F314C792757C4.quest_desc: ["Put it together: a sealed balloon with a Hot Air Burner, a Portable Engine driving a Propeller, and a Steering Wheel to turn.", "", "Fly it, land it, and tick the box when you're done."]
-	quest.127F314C792757C4.title: "Build a Blimp"
-	quest.171B17D51DE73BFE.quest_desc: ["Now that you can press gold sheets, make a Wrench. It rotates blocks, picks machines back up instantly, and configures many components.", "", "Sneak and right click with it to pick a block up."]
-	quest.171B17D51DE73BFE.title: "Wrench"
-	quest.17EA99FAFE3FFBD2.quest_desc: ["Channels carry molten metal. Drains and Ducts connect the smeltery to the rest of your setup.", "", "Use them to fill many tables at once."]
-	quest.17EA99FAFE3FFBD2.title: "Channels and Drains"
-	quest.1A1865107AB12E8E.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes their stats.", "", "This book is your guide. Read it and keep it close."]
-	quest.1A1865107AB12E8E.title: "Materials and You"
-	quest.1AABB323E8A7E051.quest_desc: ["A Gearbox splits rotation in several directions. A Clutch cuts power when it gets a redstone signal. A Gearshift reverses it.", "", "Together they let a single power source drive many different jobs."]
-	quest.1AABB323E8A7E051.title: "Gearbox, Clutch, Gearshift"
-	quest.1CF87C49041D32BA.quest_desc: ["Four wheels, a Portable Engine, a drivetrain and a Steering Wheel. Drive it out of your base and back.", "", "Tick the box when you're done."]
-	quest.1CF87C49041D32BA.title: "Build a Car"
-	quest.1D1A3B578C3DC252.quest_desc: ["A Piston pushes a structure in a line. Add Piston Extension Poles behind it to make the stroke longer.", "", "Use it for doors, elevators and anything that needs to slide."]
-	quest.1D1A3B578C3DC252.title: "Mechanical Piston"
-	quest.1D1C5415696D99D9.quest_desc: ["A Spout fills items with liquid as they pass beneath it. An Item Drain empties them again.", "", "Use them to make potions, fill buckets, or bottle honey."]
-	quest.1D1C5415696D99D9.title: "Spout and Item Drain"
-	quest.218CA1E6CB498382.quest_desc: ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.", "", "If a contraption splits apart, a Slime Ball merges two contraptions back together."]
-	quest.218CA1E6CB498382.title: "Honey Glue"
-	quest.2374F17B2C0D841C.quest_desc: ["Redstone Links send signals wirelessly. Set a frequency with two items, and every link with the same items shares the signal.", "", "Pulse Repeaters and Timers help you shape the signal."]
-	quest.2374F17B2C0D841C.title: "Redstone Link"
-	quest.288B571CC3C6711B.quest_desc: ["You need a power source. The Hand Crank is the simplest: hold right click to turn it one way, or sneak and hold right click to turn it the other.", "", "It is not automatic, but it is perfect for testing a build."]
-	quest.288B571CC3C6711B.title: "Hand Crank"
-	quest.292B44A39CBD3A9D.quest_desc: ["Contraptions only move what is connected. Super Glue groups blocks together: click two corners to glue the area between them.", "", "Punch a glued area with the glue in hand to remove it."]
-	quest.292B44A39CBD3A9D.title: "Super Glue"
-	quest.29ED7968DF77A24E.quest_desc: ["Cobalt is found in the Nether and is the next big material tier.", "", "Melt it in the smeltery for better tools."]
-	quest.29ED7968DF77A24E.title: "Cobalt"
-	quest.2B9DFD0F1B8A6978.quest_desc: ["Seared Stone is the building material for the smeltery. Make it the way the book shows.", "", "You need a lot, so start early."]
-	quest.2B9DFD0F1B8A6978.title: "Seared Bricks"
-	quest.2E41D951C953EAC2.quest_desc: ["Belts carry items between machines. Right click two shafts in a line with Belt Connectors to link them.", "", "Items on belts can be processed along the way by a Press, a Saw, or a Fan."]
-	quest.2E41D951C953EAC2.title: "Mechanical Belt"
-	quest.2F12102142F4A351.quest_desc: ["Mounted on a contraption, the Harvester reaps crops and the Plough tills the soil. Perfect for your garden.", "", "Combine them with a Mechanical Bearing for a moving farm."]
-	quest.2F12102142F4A351.title: "Harvester and Plough"
-	quest.2F924138724CB603.quest_desc: ["The Hose Pulley sucks up (or pours out) large bodies of fluid. Lower it into a lava lake and it will drain it.", "", "It is the right way to supply a big lava setup."]
-	quest.2F924138724CB603.title: "Hose Pulley"
-	quest.2FE9ABAAFD1E7818.quest_desc: ["Display Links turn any value into text: a train schedule, a fluid level, an item count.", "", "Show it on Display Boards or Nixie Tubes."]
-	quest.2FE9ABAAFD1E7818.title: "Display Boards"
-	quest.3390BB1083693D7B.quest_desc: ["A Sequenced Gearshift runs a rotation program: turn this much, wait, then turn that much.", "", "Great for pistons and doors that need exact timing."]
-	quest.3390BB1083693D7B.title: "Sequenced Gearshift"
-	quest.3524AB0C2BF12C5A.quest_desc: ["Build a hollow box of Seared Stone, place the Controller on one side, and you have a full smeltery.", "", "It melts ores and alloys metals. Add tanks and fuel as you grow."]
-	quest.3524AB0C2BF12C5A.title: "Smeltery"
-	quest.368AB76FED00F11A.quest_desc: ["Regular Sails on a moving contraption make lift, at right angles to their surface; the faster you go, the more lift. Enough lift and you fly.", "", "Symmetric Sails only make drag. Angle them away from your direction of travel to turn or stabilise."]
-	quest.368AB76FED00F11A.title: "Wings"
-	quest.36D5751F6ABDA0EC.quest_desc: ["Mount a Tire on a Wheel Mount to give your contraption wheels.", "", "Bigger tires roll over rougher ground."]
-	quest.36D5751F6ABDA0EC.title: "Wheels and Tires"
-	quest.36EE2AF20E82DC9E.quest_desc: ["The Rope Pulley raises and lowers a contraption on a rope. It is the basis of elevators and cranes.", "", "A Gantry Carriage lets you do the same sideways."]
-	quest.36EE2AF20E82DC9E.title: "Rope Pulley"
-	quest.3AC3499970E203B3.quest_desc: ["Narrow and wide gauge tracks come in every wood type. Each gauge needs its own bogeys.", "", "Narrow gauge is great for tight mine railways; wide gauge for big mainline trains."]
-	quest.3AC3499970E203B3.title: "Narrow and Wide Gauge"
-	quest.3AEB3954658AC9FF.quest_desc: ["The gate to the advanced machines. It needs a sequenced assembly: a gold sheet on a belt passes under deployers and a press in a set order.", "", "Check the recipe in EMI (R) to see each step."]
-	quest.3AEB3954658AC9FF.title: "Precision Mechanism"
-	quest.3CF38FABD2673107.quest_desc: ["The Saw cuts logs into planks, chops trees down, and stonecuts items for you.", "", "Placed on a belt line it is an automatic carpentry station."]
-	quest.3CF38FABD2673107.title: "Mechanical Saw"
-	quest.3D154CEF0B6F9B8A.quest_desc: ["Select a track, then place a Coupler nearby. It couples and decouples trains without taking them apart.", "", "Scroll with a wrench to set the gap, and click with a wrench to choose couple, decouple or both. Power it to act."]
-	quest.3D154CEF0B6F9B8A.title: "Train Coupler"
-	quest.3D366943FF40B031.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
-	quest.3D366943FF40B031.title: "Welcome to Create"
-	quest.3E403689EE59AF7F.quest_desc: ["A Portable Engine burns fuel to make rotation, right on board your vehicle. It can run in either direction and be refuelled automatically.", "", "Feed it a Blaze Cake to superheat it for extra power."]
-	quest.3E403689EE59AF7F.title: "Portable Engine"
-	quest.3E8CA4FF7A2974C6.quest_desc: ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.", "", "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.", "", "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."]
-	quest.3E8CA4FF7A2974C6.title: "Physics Assembler"
-	quest.3F086A2762665A01.quest_desc: ["The Modifier Worktable handles the finer modifier work, such as removing or extracting modifiers.", "", "Repair Kits patch tools up wherever you are."]
-	quest.3F086A2762665A01.title: "Modifier Worktable"
-	quest.3F579F8BF4EA7D96.quest_desc: ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees. It outputs precise rotation, and you can set its maximum angle.", "", "A Throttle Lever is a precise redstone dial: right click and drag. Use it to control engines and burners."]
-	quest.3F579F8BF4EA7D96.title: "Steering Wheel and Throttle"
-	quest.408822A7F1D5F794.quest_desc: ["Mix copper and zinc ingots in a heated basin to make brass. Press it into sheets.", "", "Brass opens a new tier of machines."]
-	quest.408822A7F1D5F794.title: "Brass"
-	quest.41396C710307FA33.quest_desc: ["A Swivel Bearing turns a glued part of your craft. A Torsion Spring passes rotation within a set angle and springs back when you let go: ideal for flaps and rudders.", "", "Bearings driven like this have to be told not to disassemble."]
-	quest.41396C710307FA33.title: "Control Surfaces"
-	quest.430ACC021396DB49.quest_desc: ["The Tinkers' Anvil builds large tools such as hammers and broad axes, and is where you apply modifiers.", "", "It is cast from a block of metal; check the book for which metals work."]
-	quest.430ACC021396DB49.title: "Tinkers' Anvil"
-	quest.4345D56A8105FF9E.quest_desc: ["A Navigation Table holds a navigation item and sends a redstone signal towards its destination, weaker when you're facing away.", "", "Steer by it on long flights."]
-	quest.4345D56A8105FF9E.title: "Navigation Table"
-	quest.443558963A896734.quest_desc: ["Build a pickaxe: a pick head, a tool handle and a tool binding.", "", "Different materials give different durability, speed and traits."]
-	quest.443558963A896734.title: "First Tool"
-	quest.4757335AA5D85E89.quest_desc: ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.", "", "Tick the box when you're done."]
-	quest.4757335AA5D85E89.title: "Build a Plane"
-	quest.49F10BF610E52702.quest_desc: ["Trains are a full railway system. Click a track, then a second spot, to lay a whole run at once. Place a Train Station next to the track.", "", "Put the station in Assembly Mode, use Train Casing on the track to make bogeys, glue your train together, add Train Controls, and confirm."]
-	quest.49F10BF610E52702.title: "Train Tracks"
-	quest.4B03E5F7753C6C20.quest_desc: ["Monorail track has its own bogeys and hangs a train off a single rail.", "", "Try one for a skyline line between bases."]
-	quest.4B03E5F7753C6C20.title: "Monorail"
-	quest.4B527A723C09D4D2.quest_desc: ["Large and Monstrous Tires climb over almost anything.", "", "Time for a monster truck."]
-	quest.4B527A723C09D4D2.title: "Bigger Tires"
-	quest.4B91189CF4AF6E99.quest_desc: ["Steam 'n' Rails adds more to Create trains: new track gauges, switches, couplers, semaphores and a whole set of locomotive building blocks.", "", "You will need a working Create train first. Click the checkmark to start."]
-	quest.4B91189CF4AF6E99.title: "Steam 'n' Rails"
-	quest.4D01DCE597C0D8CD.quest_desc: ["Select a track, then place a Switch nearby. It sends trains passing its marker left, straight or right.", "", "Use it to cycle right, sneak-use to cycle left, or set it with redstone. Power the bottom to lock it."]
-	quest.4D01DCE597C0D8CD.title: "Track Switches"
-	quest.50BD8DAC3E2457BA.quest_desc: ["Right click a Rope Winch and a Rope Connector with a Rope Coupling to tie them together; the winch reels the rope with rotation. Shears cut it.", "", "Docking Connectors lock two crafts together rigidly and pass items and fluids across."]
-	quest.50BD8DAC3E2457BA.title: "Ropes and Docking"
-	quest.5149F3C44F7AFE51.quest_desc: ["Envelope blocks make a balloon. They enclose a space that lifts when filled with hot air, so the balloon must be airtight.", "", "Blocks inside take up volume. Encase shafts in envelope to run them through the balloon airtight."]
-	quest.5149F3C44F7AFE51.title: "Envelope"
-	quest.52BF0B756C144E69.quest_desc: ["A Melter turns solid items into molten metal. It needs a fuel tank or a heater underneath it.", "", "It is the small version of the smeltery."]
-	quest.52BF0B756C144E69.title: "Seared Melter"
-	quest.53BD1544E5E0F9A3.quest_desc: ["Semaphores go on a pole above a Train Signal and show its state.", "", "On a brass signal with several exits, a second semaphore above the first shows whether any or all paths are blocked."]
-	quest.53BD1544E5E0F9A3.title: "Semaphores"
-	quest.542DE1A506F3DE5D.quest_desc: ["A Pattern is a template for a tool part. Craft a Pattern and a Part Builder with it.", "", "The part builder turns a pattern and a material into a part."]
-	quest.542DE1A506F3DE5D.title: "Patterns"
-	quest.55487028D1ED9170.quest_desc: ["The Gimbal Sensor outputs redstone based on how the craft is tilted, and the Velocity Sensor based on its speed.", "", "Wire them to your control surfaces and you have an autopilot."]
-	quest.55487028D1ED9170.title: "Flight Sensors"
-	quest.56F2CB412EE4AFD4.quest_desc: ["Save a build as a schematic, then print it elsewhere. The Schematicannon builds it for you from your inventory and gunpowder.", "", "Use the Schematic and Quill to select an area."]
-	quest.56F2CB412EE4AFD4.title: "Schematics"
-	quest.57AF6FEA2D05568E.quest_desc: ["Enough Levitite keeps a contraption afloat, but it cannot climb on its own; you still need lift or thrust. It also resists slow movement.", "", "Levitite Blend crystallises into Levitite when heated, and the crystal spreads through the whole pool. Blocks used as a mould may break."]
-	quest.57AF6FEA2D05568E.title: "Levitite"
-	quest.5803758B12BD044A.quest_desc: ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.", "", "A funnel with a filter will only pass the item you set."]
-	quest.5803758B12BD044A.title: "Funnels and Chutes"
-	quest.581F2CCF84BF86D4.quest_desc: ["Craft brass casing the same way as andesite casing: right click a log with a sheet of brass.", "", "Brass casing is the frame for the stronger machines."]
-	quest.581F2CCF84BF86D4.title: "Brass Casing"
-	quest.58BB115315E95DF7.quest_desc: ["Look the part. Aviator's Goggles are goggles for pilots.", "", "They also show what Engineer's Goggles do."]
-	quest.58BB115315E95DF7.title: "Aviator's Goggles"
-	quest.5A850533E4312814.quest_desc: ["A Fan blowing through a block processes items in its path: through lava it smelts, through fire it smokes food, through water it washes.", "", "Fan speed changes the range, not how fast items are processed. It works on belts and depots too."]
-	quest.5A850533E4312814.title: "Encased Fan"
-	quest.5B7BC0EFD177F055.quest_desc: ["The Foundry is the late-game cousin of the smeltery, built from Scorched Stone.", "", "Read Fantastic Foundry for the details."]
-	quest.5B7BC0EFD177F055.title: "The Foundry"
-	quest.5C84D2250191CA8B.quest_desc: ["Pipes move liquids. A Mechanical Pump pushes fluid through a pipe in the direction you set.", "", "Fluid Tanks store liquid and can be stacked into bigger ones."]
-	quest.5C84D2250191CA8B.title: "Fluid Pipes"
-	quest.601B0FCB217EEEB5.quest_desc: ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.", "", "Check EMI for the exact recipe."]
-	quest.601B0FCB217EEEB5.title: "Refined Radiance"
-	quest.61B501D76062AF2E.quest_desc: ["Signals split the track into blocks so more than one train can run. A Schedule tells a train where to go and when.", "", "Trains run faster if they find fuel in a chest or barrel on board."]
-	quest.61B501D76062AF2E.title: "Signals and Schedules"
-	quest.645E72647B179029.quest_desc: ["Cogwheels turn rotation around corners and change direction. A large cogwheel meshed with a small one doubles the speed and halves the strength, or the other way round.", "", "Try meshing two cogwheels on adjacent shafts and watch them reverse."]
-	quest.645E72647B179029.title: "Cogwheels"
-	quest.6558134A952BDAA5.quest_desc: ["Goggles let you see speed and stress on any component you look at, and the Speedometer and Stressometer show them on a dial.", "", "If a machine will not move, the goggles will tell you why: usually overstress."]
-	quest.6558134A952BDAA5.title: "Engineer's Goggles"
-	quest.6623CC1B3BCC048D.quest_desc: ["Locometal blocks, boilers and smokeboxes make your locomotive look the part. Paint them with a Paint Brush.", "", "Smokestacks puff smoke from the top of your engine."]
-	quest.6623CC1B3BCC048D.title: "Locometal"
-	quest.6658601E4E2CA17F.quest_desc: ["Pour molten metal from a Seared Faucet into a Casting Table or Basin to make parts, ingots and blocks.", "", "Place a cast in the table first, then fill it."]
-	quest.6658601E4E2CA17F.title: "Casting"
-	quest.69F4ED55973862EB.quest_desc: ["The Arm picks up items from one place and puts them in another. Select its inputs and outputs before placing it, and it will run your factory.", "", "It is the heart of compact automation."]
-	quest.69F4ED55973862EB.title: "Mechanical Arm"
-	quest.6C8A937A04279D16.quest_desc: ["A small, simple rail cart for getting around before you have a full train.", "", "Pick it up again with a wrench."]
-	quest.6C8A937A04279D16.title: "Handcar"
-	quest.6D0CA8C8CAA914F1.quest_desc: ["The Bearing spins everything attached to its face as a contraption: windmills, drills, a rotating arm of farm equipment.", "", "Build on its face, glue the structure, and give the bearing rotation to assemble it."]
-	quest.6D0CA8C8CAA914F1.title: "Mechanical Bearing"
-	quest.6D68681510F1B85A.quest_desc: ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.", "", "You will need it for brass."]
-	quest.6D68681510F1B85A.title: "Zinc"
-	quest.6E9D7F82A90AC566.quest_desc: ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.", "", "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."]
-	quest.6E9D7F82A90AC566.title: "Drivetrain"
-	quest.703B7615FAF841DC.quest_desc: ["The Drill breaks whatever it faces. Put it on a contraption and you have an automatic miner.", "", "Remember the stress cost: bigger machines need more power."]
-	quest.703B7615FAF841DC.title: "Mechanical Drill"
-	quest.7085443DA1D0A432.quest_desc: ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.", "", "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."]
-	quest.7085443DA1D0A432.title: "Borehead Miner"
-	quest.71CD1194BA51FD74.quest_desc: ["Buffers stop trains at the end of the line. Headstocks and couplers finish off the ends of your carriages.", "", "They are decorative, but no train looks right without them."]
-	quest.71CD1194BA51FD74.title: "Buffers and Headstocks"
-	quest.744CF638A172C14E.quest_desc: ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.", "", "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow."]
-	quest.744CF638A172C14E.title: "Propellers"
-	quest.7557F48E6B00E2AC.quest_desc: ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.", "", "Use a Wrench to set the direction items are passed."]
-	quest.7557F48E6B00E2AC.title: "Mechanical Crafter"
-	quest.7678301FDA581E73.quest_desc: ["Propellers lose thrust when the air is already rushing past and as the air thins with altitude. A sturdier propeller helps a fast plane.", "", "Check thrust with your goggles."]
-	quest.7678301FDA581E73.title: "Andesite Propeller"
-	quest.78781185C89A7378.quest_desc: ["Place a Water Wheel against flowing water for free, endless power.", "", "Water wheels spin slowly but provide steady stress. Use a larger cogwheel ratio to speed things up."]
-	quest.78781185C89A7378.title: "Water Wheel"
-	quest.7990CEBDBFC8526C.quest_desc: ["A Shaft carries rotation in a straight line. Place a Shaft next to a rotating block and it will spin too.", "", "Rotation has two numbers: speed (RPM) and stress. Keep both in mind."]
-	quest.7990CEBDBFC8526C.title: "Shafts"
-	quest.7A6306A248DBB7C5.quest_desc: ["Create 6 adds a logistics network. A Stock Link on a vault joins it, a Stock Ticker orders from it, and Packagers wrap items into Packages for delivery.", "", "Factory Gauges let machines request their own supplies."]
-	quest.7A6306A248DBB7C5.title: "Packages and Logistics"
-	quest.7AD4A7AC04AED1C9.quest_desc: ["Almost everything in Create starts here. Combine andesite with an iron nugget (or a zinc nugget) to craft Andesite Alloy.", "", "Craft a stack of it now; you will use it constantly."]
-	quest.7AD4A7AC04AED1C9.title: "Andesite Alloy"
-	quest.7CE4889A92AA34E6.quest_desc: ["Casings are the frame for every machine. Right click a log with Andesite Alloy to make Andesite Casing.", "", "Casing also covers a shaft or cogwheel to make a neat, encased version."]
-	quest.7CE4889A92AA34E6.title: "Andesite Casing"
-	quest.7DD0FFCECBD22AA8.quest_desc: ["The Tinker Station assembles finished tools from parts and lets you swap them later.", "", "Combine a head, a handle and a binding."]
-	quest.7DD0FFCECBD22AA8.title: "Tinker Station"
-	quest.7F1FC55203870487.quest_desc: ["Place the Press over a belt or depot and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.", "", "Powered by rotation from the side."]
-	quest.7F1FC55203870487.title: "Mechanical Press"
+	chapter.14747A1BF6564DF9.title: "Aeronautics"
+	chapter.22342087C3E31DF2.title: "Create"
+	chapter.33BFC882B88ED125.title: "Steam 'n' Rails"
+	chapter.5DA09361842FADD6.title: "Modern Foundry"
+	chapter_group.5818A71FD4936D3E.title: "Create Quests"
+	quest.009B588D51418EAA.quest_desc: ["Display Links turn any value into text: a train schedule, a fluid level, an item count.", "", "Show it on Display Boards or Nixie Tubes."]
+	quest.009B588D51418EAA.title: "Display Boards"
+	quest.03594763D06E9251.quest_desc: ["Build a pickaxe: a pick head, a tool handle and a tool binding.", "", "Different materials give different durability, speed and traits."]
+	quest.03594763D06E9251.title: "First Tool"
+	quest.041DC559B39F9318.quest_desc: ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.", "", "You will need it for brass."]
+	quest.041DC559B39F9318.title: "Zinc"
+	quest.04BE34CFD64D0B1C.quest_desc: ["Cobalt is found in the Nether and is the next big material tier.", "", "Melt it in the smeltery for better tools."]
+	quest.04BE34CFD64D0B1C.title: "Cobalt"
+	quest.05C2800C8FB7FC81.quest_desc: ["Craft brass casing the same way as andesite casing: right click a log with a sheet of brass.", "", "Brass casing is the frame for the stronger machines."]
+	quest.05C2800C8FB7FC81.title: "Brass Casing"
+	quest.060551E84F3A2959.quest_desc: ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.", "", "A funnel with a filter will only pass the item you set."]
+	quest.060551E84F3A2959.title: "Funnels and Chutes"
+	quest.0632092E58B014DB.quest_desc: ["Save a build as a schematic, then print it elsewhere. The Schematicannon builds it for you from your inventory and gunpowder.", "", "Use the Schematic and Quill to select an area."]
+	quest.0632092E58B014DB.title: "Schematics"
+	quest.0670829A73FDC2D7.quest_desc: ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.", "", "Check EMI for the exact recipe."]
+	quest.0670829A73FDC2D7.title: "Refined Radiance"
+	quest.07F9BA4179BC2A64.quest_desc: ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.", "", "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."]
+	quest.07F9BA4179BC2A64.title: "Borehead Miner"
+	quest.08FBC54833E131A6.quest_desc: ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.", "", "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."]
+	quest.08FBC54833E131A6.title: "Drivetrain"
+	quest.093584C275BCEA9D.quest_desc: ["The Hose Pulley sucks up (or pours out) large bodies of fluid. Lower it into a lava lake and it will drain it.", "", "It is the right way to supply a big lava setup."]
+	quest.093584C275BCEA9D.title: "Hose Pulley"
+	quest.09FC33824A470023.quest_desc: ["Belts carry items between machines. Right click two shafts in a line with Belt Connectors to link them.", "", "Items on belts can be processed along the way by a Press, a Saw, or a Fan."]
+	quest.09FC33824A470023.title: "Mechanical Belt"
+	quest.0E12C80BA8BD8588.quest_desc: ["The Modifier Worktable handles the finer modifier work, such as removing or extracting modifiers.", "", "Repair Kits patch tools up wherever you are."]
+	quest.0E12C80BA8BD8588.title: "Modifier Worktable"
+	quest.11213AD740BC0F9A.quest_desc: ["The Rope Pulley raises and lowers a contraption on a rope. It is the basis of elevators and cranes.", "", "A Gantry Carriage lets you do the same sideways."]
+	quest.11213AD740BC0F9A.title: "Rope Pulley"
+	quest.1208A5AF2B093ACF.quest_desc: ["Channels carry molten metal. Drains and Ducts connect the smeltery to the rest of your setup.", "", "Use them to fill many tables at once."]
+	quest.1208A5AF2B093ACF.title: "Channels and Drains"
+	quest.12CEF6D0015D619D.quest_desc: ["A Gearbox splits rotation in several directions. A Clutch cuts power when it gets a redstone signal. A Gearshift reverses it.", "", "Together they let a single power source drive many different jobs."]
+	quest.12CEF6D0015D619D.title: "Gearbox, Clutch, Gearshift"
+	quest.13FA75146BE53137.quest_desc: ["Semaphores go on a pole above a Train Signal and show its state.", "", "On a brass signal with several exits, a second semaphore above the first shows whether any or all paths are blocked."]
+	quest.13FA75146BE53137.title: "Semaphores"
+	quest.1454F911712FF513.quest_desc: ["Redstone Links send signals wirelessly. Set a frequency with two items, and every link with the same items shares the signal.", "", "Pulse Repeaters and Timers help you shape the signal."]
+	quest.1454F911712FF513.title: "Redstone Link"
+	quest.152C465520C24558.quest_desc: ["Put a Conductor Cap on Andesite Casing to build a Conductor: a little helper that rides your trains.", "", "Conductors press buttons and flip levers they look at, and can carry a toolbox. Match cap colours to control which conductors respond."]
+	quest.152C465520C24558.title: "Conductors"
+	quest.1706586E4251428B.quest_desc: ["Monorail track has its own bogeys and hangs a train off a single rail.", "", "Try one for a skyline line between bases."]
+	quest.1706586E4251428B.title: "Monorail"
+	quest.17530DAD63A8A658.quest_desc: ["Propellers lose thrust when the air is already rushing past and as the air thins with altitude. A sturdier propeller helps a fast plane.", "", "Check thrust with your goggles."]
+	quest.17530DAD63A8A658.title: "Andesite Propeller"
+	quest.195EDBC057B143E8.quest_desc: ["Travel to a slime island to find slime balls and slime trees. They are the base of the slimy materials.", "", "Use them for slime boots and slimy chestplates."]
+	quest.195EDBC057B143E8.title: "Slime Islands"
+	quest.1AF9D599B1A1865F.quest_desc: ["The Saw cuts logs into planks, chops trees down, and stonecuts items for you.", "", "Placed on a belt line it is an automatic carpentry station."]
+	quest.1AF9D599B1A1865F.title: "Mechanical Saw"
+	quest.1B22004E0F64F66E.quest_desc: ["Select a track, then place a Switch nearby. It sends trains passing its marker left, straight or right.", "", "Use it to cycle right, sneak-use to cycle left, or set it with redstone. Power the bottom to lock it."]
+	quest.1B22004E0F64F66E.title: "Track Switches"
+	quest.1CBBD2E5FACCE72B.quest_desc: ["Locometal blocks, boilers and smokeboxes make your locomotive look the part. Paint them with a Paint Brush.", "", "Smokestacks puff smoke from the top of your engine."]
+	quest.1CBBD2E5FACCE72B.title: "Locometal"
+	quest.1F7CBA4F672A8800.quest_desc: ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.", "", "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.", "", "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."]
+	quest.1F7CBA4F672A8800.title: "Physics Assembler"
+	quest.20CDB7F7BB7215DE.quest_desc: ["The Tinkers' Anvil builds large tools such as hammers and broad axes, and is where you apply modifiers.", "", "It is cast from a block of metal; check the book for which metals work."]
+	quest.20CDB7F7BB7215DE.title: "Tinkers' Anvil"
+	quest.23B5949FE40EFA2B.quest_desc: ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.", "", "If a contraption splits apart, a Slime Ball merges two contraptions back together."]
+	quest.23B5949FE40EFA2B.title: "Honey Glue"
+	quest.246226A6919CF5ED.quest_desc: ["Casings are the frame for every machine. Right click a log with Andesite Alloy to make Andesite Casing.", "", "Casing also covers a shaft or cogwheel to make a neat, encased version."]
+	quest.246226A6919CF5ED.title: "Andesite Casing"
+	quest.2781D98AD14F4DEA.quest_desc: ["Narrow and wide gauge tracks come in every wood type. Each gauge needs its own bogeys.", "", "Narrow gauge is great for tight mine railways; wide gauge for big mainline trains."]
+	quest.2781D98AD14F4DEA.title: "Narrow and Wide Gauge"
+	quest.281652550AB417EB.quest_desc: ["Not near water? A Windmill Bearing turns a structure in front of it into a windmill. It needs at least 8 sail-like blocks; Windmill Sails stick to each other without glue.", "", "Right click the bearing to start it. More sails means more speed."]
+	quest.281652550AB417EB.title: "Windmill"
+	quest.29C4AEBBED144162.quest_desc: ["Contraptions only move what is connected. Super Glue groups blocks together: click two corners to glue the area between them.", "", "Punch a glued area with the glue in hand to remove it."]
+	quest.29C4AEBBED144162.title: "Super Glue"
+	quest.2B3EF66E55543BD8.quest_desc: ["A Sequenced Gearshift runs a rotation program: turn this much, wait, then turn that much.", "", "Great for pistons and doors that need exact timing."]
+	quest.2B3EF66E55543BD8.title: "Sequenced Gearshift"
+	quest.2B55AB4C0358AE0B.quest_desc: ["A Piston pushes a structure in a line. Add Piston Extension Poles behind it to make the stroke longer.", "", "Use it for doors, elevators and anything that needs to slide."]
+	quest.2B55AB4C0358AE0B.title: "Mechanical Piston"
+	quest.2BE024A205775B96.quest_desc: ["Place a Water Wheel against flowing water for free, endless power.", "", "Water wheels spin slowly but provide steady stress. Use a larger cogwheel ratio to speed things up."]
+	quest.2BE024A205775B96.title: "Water Wheel"
+	quest.300293F855AB765B.quest_desc: ["Mount a Tire on a Wheel Mount to give your contraption wheels.", "", "Bigger tires roll over rougher ground."]
+	quest.300293F855AB765B.title: "Wheels and Tires"
+	quest.35318D85DBDBF88B.quest_desc: ["Now that you can press gold sheets, make a Wrench. It rotates blocks, picks machines back up instantly, and configures many components.", "", "Sneak and right click with it to pick a block up."]
+	quest.35318D85DBDBF88B.title: "Wrench"
+	quest.375E0E1710F35827.quest_desc: ["Large and Monstrous Tires climb over almost anything.", "", "Time for a monster truck."]
+	quest.375E0E1710F35827.title: "Bigger Tires"
+	quest.39B8F8A441598265.quest_desc: ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees. It outputs precise rotation, and you can set its maximum angle.", "", "A Throttle Lever is a precise redstone dial: right click and drag. Use it to control engines and burners."]
+	quest.39B8F8A441598265.title: "Steering Wheel and Throttle"
+	quest.3A0F97042370EA0C.quest_desc: ["A Shaft carries rotation in a straight line. Place a Shaft next to a rotating block and it will spin too.", "", "Rotation has two numbers: speed (RPM) and stress. Keep both in mind."]
+	quest.3A0F97042370EA0C.title: "Shafts"
+	quest.3A66462861B4969E.quest_desc: ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.", "", "Use a Wrench to set the direction items are passed."]
+	quest.3A66462861B4969E.title: "Mechanical Crafter"
+	quest.3B3FF0F1BBD4D8ED.quest_desc: ["A small, simple rail cart for getting around before you have a full train.", "", "Pick it up again with a wrench."]
+	quest.3B3FF0F1BBD4D8ED.title: "Handcar"
+	quest.3C0DEF47C79C5D77.quest_desc: ["A Melter turns solid items into molten metal. It needs a fuel tank or a heater underneath it.", "", "It is the small version of the smeltery."]
+	quest.3C0DEF47C79C5D77.title: "Seared Melter"
+	quest.3E13CE882E876E3A.quest_desc: ["Mounted on a contraption, the Harvester reaps crops and the Plough tills the soil. Perfect for a farm.", "", "Combine them with a Mechanical Bearing for a moving farm."]
+	quest.3E13CE882E876E3A.title: "Harvester and Plough"
+	quest.3F452D140A574530.quest_desc: ["The Drill breaks whatever it faces. Put it on a contraption and you have an automatic miner.", "", "Remember the stress cost: bigger machines need more power."]
+	quest.3F452D140A574530.title: "Mechanical Drill"
+	quest.4043B5F303D667BA.quest_desc: ["Envelope blocks make a balloon. They enclose a space that lifts when filled with hot air, so the balloon must be airtight.", "", "Blocks inside take up volume. Encase shafts in envelope to run them through the balloon airtight."]
+	quest.4043B5F303D667BA.title: "Envelope"
+	quest.41571B487A0FA8B1.quest_desc: ["Four wheels, a Portable Engine, a drivetrain and a Steering Wheel. Drive it out of your base and back.", "", "Tick the box when you're done."]
+	quest.41571B487A0FA8B1.title: "Build a Car"
+	quest.41B89DC3CE373DEA.quest_desc: ["Place the Press over a belt or depot and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.", "", "Powered by rotation from the side."]
+	quest.41B89DC3CE373DEA.title: "Mechanical Press"
+	quest.4328CD94686BFEBA.quest_desc: ["A Spout fills items with liquid as they pass beneath it. An Item Drain empties them again.", "", "Use them to make potions, fill buckets, or bottle honey."]
+	quest.4328CD94686BFEBA.title: "Spout and Item Drain"
+	quest.4392ACD7BDA98B8A.quest_desc: ["The Gimbal Sensor outputs redstone based on how the craft is tilted, and the Velocity Sensor based on its speed.", "", "Wire them to your control surfaces and you have an autopilot."]
+	quest.4392ACD7BDA98B8A.title: "Flight Sensors"
+	quest.47E272DB2DB104B0.quest_desc: ["The Arm picks up items from one place and puts them in another. Select its inputs and outputs before placing it, and it will run your factory.", "", "It is the heart of compact automation."]
+	quest.47E272DB2DB104B0.title: "Mechanical Arm"
+	quest.49421439F3BC2FC4.quest_desc: ["Look the part. Aviator's Goggles are goggles for pilots.", "", "They also show what Engineer's Goggles do."]
+	quest.49421439F3BC2FC4.title: "Aviator's Goggles"
+	quest.4978B86F57E43FCE.quest_desc: ["The Millstone grinds items: wheat into flour, ores into crushed ore, and more. Power it from the side with cogwheels.", "", "Throw items in the top, then right click it to take the result, or pull it out with a hopper or funnel."]
+	quest.4978B86F57E43FCE.title: "Millstone"
+	quest.4B2ED97BEA0D74D3.quest_desc: ["Trains are a full railway system. Click a track, then a second spot, to lay a whole run at once. Place a Train Station next to the track.", "", "Put the station in Assembly Mode, use Train Casing on the track to make bogeys, glue your train together, add Train Controls, and confirm."]
+	quest.4B2ED97BEA0D74D3.title: "Train Tracks"
+	quest.4C32186AFC100060.quest_desc: ["The Tinker Station assembles finished tools from parts and lets you swap them later.", "", "Combine a head, a handle and a binding."]
+	quest.4C32186AFC100060.title: "Tinker Station"
+	quest.4CC768AC355A6703.quest_desc: ["A Blaze Burner under a basin supplies the heat many recipes need. Find a Blaze in the Nether and right click it with an empty Blaze Burner to capture it.", "", "Feed it flammable items to keep it hot. A Blaze Cake makes it burn even hotter."]
+	quest.4CC768AC355A6703.title: "Blaze Burner"
+	quest.4F9A91933C4AAD8D.quest_desc: ["Cogwheels turn rotation around corners and change direction. A large cogwheel meshed with a small one doubles the speed and halves the strength, or the other way round.", "", "Try meshing two cogwheels on adjacent shafts and watch them reverse."]
+	quest.4F9A91933C4AAD8D.title: "Cogwheels"
+	quest.4FA764B41B3AD78C.quest_desc: ["Regular Sails on a moving contraption make lift, at right angles to their surface; the faster you go, the more lift. Enough lift and you fly.", "", "Symmetric Sails only make drag. Angle them away from your direction of travel to turn or stabilise."]
+	quest.4FA764B41B3AD78C.title: "Wings"
+	quest.502BF10FD13C4EA5.quest_desc: ["A Portable Engine burns fuel to make rotation, right on board your vehicle. It can run in either direction and be refuelled automatically.", "", "Feed it a Blaze Cake to superheat it for extra power."]
+	quest.502BF10FD13C4EA5.title: "Portable Engine"
+	quest.519DC7EB567A6482.quest_desc: ["The Bearing spins everything attached to its face as a contraption: windmills, drills, a rotating arm of farm equipment.", "", "Build on its face, glue the structure, and give the bearing rotation to assemble it."]
+	quest.519DC7EB567A6482.title: "Mechanical Bearing"
+	quest.5228F2C9BD73B763.quest_desc: ["Signals split the track into blocks so more than one train can run. A Schedule tells a train where to go and when.", "", "Trains run faster if they find fuel in a chest or barrel on board."]
+	quest.5228F2C9BD73B763.title: "Signals and Schedules"
+	quest.532780D9DB293403.quest_desc: ["Mix copper and zinc ingots in a heated basin to make brass. Press it into sheets.", "", "Brass opens a new tier of machines."]
+	quest.532780D9DB293403.title: "Brass"
+	quest.538222C5864751CC.quest_desc: ["Put it together: a sealed balloon with a Hot Air Burner, a Portable Engine driving a Propeller, and a Steering Wheel to turn.", "", "Fly it, land it, and tick the box when you're done."]
+	quest.538222C5864751CC.title: "Build a Blimp"
+	quest.55625BFA5DD44551.quest_desc: ["Pipes move liquids. A Mechanical Pump pushes fluid through a pipe in the direction you set.", "", "Fluid Tanks store liquid and can be stacked into bigger ones."]
+	quest.55625BFA5DD44551.title: "Fluid Pipes"
+	quest.5714EBDF3126946C.quest_desc: ["Almost everything in Create starts here. Combine andesite with an iron nugget (or a zinc nugget) to craft Andesite Alloy.", "", "Craft a stack of it now; you will use it constantly."]
+	quest.5714EBDF3126946C.title: "Andesite Alloy"
+	quest.5A2D2A0C774E7594.quest_desc: ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.", "", "Tick the box when you're done."]
+	quest.5A2D2A0C774E7594.title: "Build a Plane"
+	quest.5C5A59FC97B804A8.quest_desc: ["Create 6 adds a logistics network. A Stock Link on a vault joins it, a Stock Ticker orders from it, and Packagers wrap items into Packages for delivery.", "", "Factory Gauges let machines request their own supplies."]
+	quest.5C5A59FC97B804A8.title: "Packages and Logistics"
+	quest.5CA9836B85D5A334.quest_desc: ["Two Crushing Wheels placed side by side crush ore into more crushed ore than a furnace could ever give you.", "", "Make them spin into each other, then drop items in the top."]
+	quest.5CA9836B85D5A334.title: "Crushing Wheels"
+	quest.5F71DBB1A5D94585.quest_desc: ["The gate to the advanced machines. It needs a sequenced assembly: a gold sheet on a belt passes under deployers and a press in a set order.", "", "Check the recipe in EMI (R) to see each step."]
+	quest.5F71DBB1A5D94585.title: "Precision Mechanism"
+	quest.6117A72CBB15361C.quest_desc: ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.", "", "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow."]
+	quest.6117A72CBB15361C.title: "Propellers"
+	quest.62E02D28045719F9.quest_desc: ["A Pattern is a template for a tool part. Craft a Pattern and a Part Builder with it.", "", "The part builder turns a pattern and a material into a part."]
+	quest.62E02D28045719F9.title: "Patterns"
+	quest.65568FD704BF8034.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
+	quest.65568FD704BF8034.title: "Welcome to Create"
+	quest.68665C3847876EA4.quest_desc: ["Select a track, then place a Coupler nearby. It couples and decouples trains without taking them apart.", "", "Scroll with a wrench to set the gap, and click with a wrench to choose couple, decouple or both. Power it to act."]
+	quest.68665C3847876EA4.title: "Train Coupler"
+	quest.69F5D22290E1A7D3.quest_desc: ["Build a hollow box of Seared Stone, place the Controller on one side, and you have a full smeltery.", "", "It melts ores and alloys metals. Add tanks and fuel as you grow."]
+	quest.69F5D22290E1A7D3.title: "Smeltery"
+	quest.6A7A863777ED7392.quest_desc: ["Vaults are huge storage blocks and they connect, unlike chests. Use one as the heart of a base.", "", "Pair them with funnels and arms for automatic sorting."]
+	quest.6A7A863777ED7392.title: "Item Vaults"
+	quest.6AC31ACA704C3E95.quest_desc: ["A Swivel Bearing turns a glued part of your craft. A Torsion Spring passes rotation within a set angle and springs back when you let go: ideal for flaps and rudders.", "", "Bearings driven like this have to be told not to disassemble."]
+	quest.6AC31ACA704C3E95.title: "Control Surfaces"
+	quest.6B30A0EAE22BB188.quest_desc: ["You need a power source. The Hand Crank is the simplest: hold right click to turn it one way, or sneak and hold right click to turn it the other.", "", "It is not automatic, but it is perfect for testing a build."]
+	quest.6B30A0EAE22BB188.title: "Hand Crank"
+	quest.6B5929DBA1583912.quest_desc: ["The Foundry is the late-game cousin of the smeltery, built from Scorched Stone.", "", "Read Fantastic Foundry for the details."]
+	quest.6B5929DBA1583912.title: "The Foundry"
+	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes their stats.", "", "This book is your guide. Read it and keep it close."]
+	quest.71D1833076DCCCDE.title: "Materials and You"
+	quest.723048BF1737D4ED.quest_desc: ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.", "", "Put one next to a depot and you can combine items automatically."]
+	quest.723048BF1737D4ED.title: "Deployer"
+	quest.7305E4A82C337CF8.quest_desc: ["Seared Stone is the building material for the smeltery. Make it the way the book shows.", "", "You need a lot, so start early."]
+	quest.7305E4A82C337CF8.title: "Seared Bricks"
+	quest.737BE59B311EAF17.quest_desc: ["Enough Levitite keeps a contraption afloat, but it cannot climb on its own; you still need lift or thrust. It also resists slow movement.", "", "Levitite Blend crystallises into Levitite when heated, and the crystal spreads through the whole pool. Blocks used as a mould may break."]
+	quest.737BE59B311EAF17.title: "Levitite"
+	quest.76CED65183413DDA.quest_desc: ["Right click a Rope Winch and a Rope Connector with a Rope Coupling to tie them together; the winch reels the rope with rotation. Shears cut it.", "", "Docking Connectors lock two crafts together rigidly and pass items and fluids across."]
+	quest.76CED65183413DDA.title: "Ropes and Docking"
+	quest.76D94F796AE6EC62.quest_desc: ["Steam 'n' Rails adds more to Create trains: new track gauges, switches, couplers, semaphores and a whole set of locomotive building blocks.", "", "You will need a working Create train first. Click the checkmark to start."]
+	quest.76D94F796AE6EC62.title: "Steam 'n' Rails"
+	quest.77255D3C2EA07E44.quest_desc: ["Goggles let you see speed and stress on any component you look at, and the Speedometer and Stressometer show them on a dial.", "", "If a machine will not move, the goggles will tell you why: usually overstress."]
+	quest.77255D3C2EA07E44.title: "Engineer's Goggles"
+	quest.777DE7F2696A8208.quest_desc: ["A Navigation Table holds a navigation item and sends a redstone signal towards its destination, weaker when you're facing away.", "", "Steer by it on long flights."]
+	quest.777DE7F2696A8208.title: "Navigation Table"
+	quest.78BA18E9E3D67646.quest_desc: ["Pour molten metal from a Seared Faucet into a Casting Table or Basin to make parts, ingots and blocks.", "", "Place a cast in the table first, then fill it."]
+	quest.78BA18E9E3D67646.title: "Casting"
+	quest.7AF0CFF014727B91.quest_desc: ["Lift weakens as you climb. A balloon settles where lift equals weight, so changing the burner output changes your altitude.", "", "An Altitude Sensor turns height into a redstone signal: wire it to the burner for a blimp that holds its height."]
+	quest.7AF0CFF014727B91.title: "Altitude Sensor"
+	quest.7BAE5A98D0EA2865.quest_desc: ["A Fan blowing through a block processes items in its path: through lava it smelts, through fire it smokes food, through water it washes.", "", "Fan speed changes the range, not how fast items are processed. It works on belts and depots too."]
+	quest.7BAE5A98D0EA2865.title: "Encased Fan"
+	quest.7C319C3D0115308E.quest_desc: ["Place a Hot Air Burner under the balloon. Powered with redstone, it fills the balloon from the top down.", "", "Its panel sets the maximum output and the redstone strength scales it. Several burners can feed one balloon."]
+	quest.7C319C3D0115308E.title: "Hot Air Burner"
+	quest.7D09691C28E05501.quest_desc: ["Normal propeller bearings make poor helicopters. A Gyroscopic Propeller Bearing tries to keep its propeller upright.", "", "Facing downwards it can steady a top-heavy craft; a redstone signal resets its tilt."]
+	quest.7D09691C28E05501.title: "Helicopters"
+	quest.7DA3D76FDF9593AD.quest_desc: ["Put a Basin on the ground and a Mechanical Mixer above it, and it will automate shapeless crafting recipes and a few special ones.", "", "Some recipes only run when the basin is heated from below. That comes later."]
+	quest.7DA3D76FDF9593AD.title: "Basin and Mixer"
+	quest.7DC6B9E2EF778D1B.quest_desc: ["Buffers stop trains at the end of the line. Headstocks and couplers finish off the ends of your carriages.", "", "They are decorative, but no train looks right without them."]
+	quest.7DC6B9E2EF778D1B.title: "Buffers and Headstocks"
+	quest.7F0150EDB232A99A.quest_desc: ["A Steam Vent lifts a balloon with steam instead of hot air. Like a Steam Engine, it needs heat, water and boiler space.", "", "Bigger airships with several vents need a stronger boiler."]
+	quest.7F0150EDB232A99A.title: "Steam Vent"
 }
