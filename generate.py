@@ -659,7 +659,11 @@ for g in included:
             chapters.append((g, fid("chapter", g, key), f"{g}_{key}", title, group_ids[home], [mine[i] for i in ids.split()]))
     else:
         chapters.append((g, fid("chapter", g), g, MODULES[g]["title"], group_ids[home], list(mine.values())))
-for order, (g, cid, fname, title, gid, items) in enumerate(chapters):
+# FTB Quests numbers chapters within each group, and rewrites the files that way on load.
+order_in_group = collections.Counter()
+for g, cid, fname, title, gid, items in chapters:
+    order = order_in_group[gid]
+    order_in_group[gid] += 1
     lang[f"chapter.{cid}.title"] = title
     ids = {x["id"] for x in items}
     pos = layout(items)
