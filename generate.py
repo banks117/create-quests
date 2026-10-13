@@ -262,24 +262,28 @@ q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision", "b
   [("chromatic_compound", 1)])
 
 # ---- Aeronautics: blimps (lane -3), shared (0), planes (3), cars (6) ----
-q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [],
+q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREATE}::casing"],
   ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.",
    "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.",
    "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."],
   [("simulated:physics_assembler", 1)], lane=0)
-q(AERO, "honey_glue", "Honey Glue", "simulated:honey_glue", ["physics"],
+q(AERO, "honey_glue", "Honey Glue", "simulated:honey_glue", ["physics", f"{CREATE}::spout"],
   ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.",
    "If a contraption splits apart, a Slime Ball merges two contraptions back together."],
   [("simulated:honey_glue", 4), ("minecraft:slime_ball", 1)], lane=-1)
-q(AERO, "steering", "Steering Wheel and Throttle", "simulated:steering_wheel", ["physics"],
-  ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees. It outputs precise rotation, and you can set its maximum angle.",
-   "A Throttle Lever is a precise redstone dial: right click and drag. Use it to control engines and burners."],
-  [("simulated:steering_wheel", 1), ("simulated:throttle_lever", 1)], lane=1)
+q(AERO, "steering", "Steering Wheel", "simulated:steering_wheel", ["physics", f"{CREATE}::cogwheel"],
+  ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees.",
+   "It outputs precise rotation, and you can set its maximum angle on its value panel."],
+  [("simulated:steering_wheel", 1)], lane=1)
+q(AERO, "throttle", "Throttle Lever", "simulated:throttle_lever", ["steering", f"{CREATE}::brass_casing"],
+  ["A Throttle Lever is a precise redstone dial: right click and drag to set its strength, and use a wrench to invert it.",
+   "Use it to control engines, burners and transmissions."],
+  [("simulated:throttle_lever", 1)], lane=1)
 q(AERO, "engine", "Portable Engine", "simulated:white_portable_engine", ["physics"],
   ["A Portable Engine burns fuel to make rotation, right on board your vehicle. It can run in either direction and be refuelled automatically.",
    "Feed it a Blaze Cake to superheat it for extra power."],
   [("simulated:white_portable_engine", 1)], lane=2)
-q(AERO, "propeller", "Propellers", "aeronautics:wooden_propeller", ["engine"],
+q(AERO, "propeller", "Propellers", "aeronautics:wooden_propeller", ["engine", f"{CREATE}::brass_casing", f"{CREATE}::fan"],
   ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.",
    "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow.",
    "Wooden and Andesite Propellers are the same part in two styles; craft one to swap to the other."],
@@ -290,7 +294,7 @@ q(AERO, "envelope", "Envelope", "aeronautics:white_envelope", ["physics"],
   ["Envelope blocks make a balloon. They enclose a space that lifts when filled with hot air, so the balloon must be airtight.",
    "Blocks inside take up volume. Encase shafts in envelope to run them through the balloon airtight."],
   [("aeronautics:white_envelope", 16)], lane=-3)
-q(AERO, "burner", "Hot Air Burner", "aeronautics:adjustable_burner", ["envelope"],
+q(AERO, "burner", "Hot Air Burner", "aeronautics:adjustable_burner", ["envelope", f"{CREATE}::press"],
   ["Place a Hot Air Burner under the balloon. Powered with redstone, it fills the balloon from the top down.",
    "Its panel sets the maximum output and the redstone strength scales it. Several burners can feed one balloon."],
   [("aeronautics:adjustable_burner", 1)], lane=-3)
@@ -334,11 +338,11 @@ q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_p
   [("simulated:gimbal_sensor", 1), ("simulated:velocity_sensor", 1)], lane=2)
 
 # cars
-q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["physics"],
+q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["physics", f"{CREATE}::press"],
   ["Mount a Tire on a Wheel Mount to give your contraption wheels.",
    "Bigger tires roll over rougher ground."],
   [("offroad:wheel_mount", 2), ("offroad:tire", 2)], lane=6)
-q(AERO, "drivetrain", "Drivetrain", "simulated:directional_gearshift", ["wheels", "engine"],
+q(AERO, "drivetrain", "Drivetrain", "simulated:directional_gearshift", ["wheels", "engine", f"{CREATE}::brass_casing"],
   ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.",
    "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."],
   [("simulated:directional_gearshift", 1), ("simulated:analog_transmission", 1)], lane=6)
@@ -350,21 +354,21 @@ q(AERO, "big_tires", "Bigger Tires", "offroad:monstrous_tire", ["first_car"],
   ["Large and Monstrous Tires climb over almost anything.",
    "Time for a monster truck."],
   [("offroad:large_tire", 2), ("offroad:monstrous_tire", 1)], lane=7)
-q(AERO, "borehead", "Borehead Miner", "offroad:borehead_bearing", ["first_car"],
+q(AERO, "borehead", "Borehead Miner", "offroad:borehead_bearing", ["first_car", f"{CREATE}::crushing_wheel"],
   ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.",
    "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."],
   [("offroad:borehead_bearing", 1), ("offroad:rockcutting_wheel", 2)], lane=6)
 
 # extras
-q(AERO, "ropes", "Ropes and Docking", "simulated:rope_winch", ["first_blimp"],
+q(AERO, "ropes", "Ropes and Docking", "simulated:rope_winch", ["first_blimp", f"{CREATE}::crafter", f"{CREATE}::funnels"],
   ["Right click a Rope Winch and a Rope Connector with a Rope Coupling to tie them together; the winch reels the rope with rotation. Shears cut it.",
    "Docking Connectors lock two crafts together rigidly and pass items and fluids across."],
   [("simulated:rope_winch", 1), ("simulated:rope_connector", 1), ("simulated:docking_connector", 2)], lane=-3)
-q(AERO, "navigation", "Navigation Table", "simulated:navigation_table", ["altitude"],
+q(AERO, "navigation", "Navigation Table", "simulated:navigation_table", ["altitude", f"{CREATE}::precision"],
   ["A Navigation Table holds a navigation item and sends a redstone signal towards its destination, weaker when you're facing away.",
    "Steer by it on long flights."],
   [("simulated:navigation_table", 1)], lane=-2)
-q(AERO, "goggles", "Aviator's Goggles", "aeronautics:aviators_goggles", ["propeller"],
+q(AERO, "goggles", "Aviator's Goggles", "aeronautics:aviators_goggles", ["propeller", f"{CREATE}::goggles"],
   ["Look the part. Aviator's Goggles are goggles for pilots.",
    "They also show what Engineer's Goggles do."],
   [("aeronautics:aviators_goggles", 1)], lane=1)

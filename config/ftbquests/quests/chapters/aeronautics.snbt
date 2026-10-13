@@ -12,6 +12,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["246226A6919CF5ED"]
 			icon: {
 				count: 1
 				id: "simulated:physics_assembler"
@@ -49,7 +50,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["1F7CBA4F672A8800"]
+			dependencies: ["1F7CBA4F672A8800", "4328CD94686BFEBA"]
 			icon: {
 				count: 1
 				id: "simulated:honey_glue"
@@ -85,7 +86,7 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["1F7CBA4F672A8800"]
+			dependencies: ["1F7CBA4F672A8800", "4F9A91933C4AAD8D"]
 			icon: {
 				count: 1
 				id: "simulated:steering_wheel"
@@ -107,8 +108,27 @@
 					}
 					type: "item"
 				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["39B8F8A441598265", "05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "simulated:throttle_lever"
+			}
+			id: "122B2A0D56D38529"
+			rewards: [
 				{
-					id: "068028BF6D12D884"
+					id: "22175ED60331864C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "7155D033E0CACF24"
 					item: {
 						count: 1
 						id: "simulated:throttle_lever"
@@ -116,7 +136,7 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 4.0d
 			y: 1.5d
 		}
 		{
@@ -147,7 +167,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["502BF10FD13C4EA5"]
+			dependencies: ["502BF10FD13C4EA5", "05C2800C8FB7FC81", "7BAE5A98D0EA2865"]
 			icon: {
 				count: 1
 				id: "aeronautics:wooden_propeller"
@@ -229,7 +249,7 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["4043B5F303D667BA"]
+			dependencies: ["4043B5F303D667BA", "41B89DC3CE373DEA"]
 			icon: {
 				count: 1
 				id: "aeronautics:adjustable_burner"
@@ -540,7 +560,7 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["1F7CBA4F672A8800"]
+			dependencies: ["1F7CBA4F672A8800", "41B89DC3CE373DEA"]
 			icon: {
 				count: 1
 				id: "offroad:tire"
@@ -595,7 +615,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5"]
+			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5", "05C2800C8FB7FC81"]
 			icon: {
 				count: 1
 				id: "simulated:directional_gearshift"
@@ -691,7 +711,7 @@
 			y: 10.5d
 		}
 		{
-			dependencies: ["41571B487A0FA8B1"]
+			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334"]
 			icon: {
 				count: 1
 				id: "offroad:borehead_bearing"
@@ -727,7 +747,7 @@
 			y: 9.0d
 		}
 		{
-			dependencies: ["538222C5864751CC"]
+			dependencies: ["538222C5864751CC", "3A66462861B4969E", "060551E84F3A2959"]
 			icon: {
 				count: 1
 				id: "simulated:rope_winch"
@@ -780,7 +800,7 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["7AF0CFF014727B91"]
+			dependencies: ["7AF0CFF014727B91", "5F71DBB1A5D94585"]
 			icon: {
 				count: 1
 				id: "simulated:navigation_table"
@@ -807,7 +827,7 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["6117A72CBB15361C"]
+			dependencies: ["6117A72CBB15361C", "77255D3C2EA07E44"]
 			icon: {
 				count: 1
 				id: "aeronautics:aviators_goggles"

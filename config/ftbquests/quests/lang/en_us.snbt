@@ -36,6 +36,8 @@
 	quest.11213AD740BC0F9A.title: "Rope Pulley"
 	quest.1208A5AF2B093ACF.quest_desc: ["Channels carry molten metal. Drains and Ducts connect the smeltery to the rest of your setup.", "", "Use them to fill many tables at once."]
 	quest.1208A5AF2B093ACF.title: "Channels and Drains"
+	quest.122B2A0D56D38529.quest_desc: ["A Throttle Lever is a precise redstone dial: right click and drag to set its strength, and use a wrench to invert it.", "", "Use it to control engines, burners and transmissions."]
+	quest.122B2A0D56D38529.title: "Throttle Lever"
 	quest.12CEF6D0015D619D.quest_desc: ["A Gearbox splits rotation in several directions. A Clutch cuts power when it gets a redstone signal. A Gearshift reverses it.", "", "Together they let a single power source drive many different jobs."]
 	quest.12CEF6D0015D619D.title: "Gearbox, Clutch, Gearshift"
 	quest.13FA75146BE53137.quest_desc: ["Semaphores go on a pole above a Train Signal and show its state.", "", "On a brass signal with several exits, a second semaphore above the first shows whether any or all paths are blocked."]
@@ -80,8 +82,8 @@
 	quest.35318D85DBDBF88B.title: "Wrench"
 	quest.375E0E1710F35827.quest_desc: ["Large and Monstrous Tires climb over almost anything.", "", "Time for a monster truck."]
 	quest.375E0E1710F35827.title: "Bigger Tires"
-	quest.39B8F8A441598265.quest_desc: ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees. It outputs precise rotation, and you can set its maximum angle.", "", "A Throttle Lever is a precise redstone dial: right click and drag. Use it to control engines and burners."]
-	quest.39B8F8A441598265.title: "Steering Wheel and Throttle"
+	quest.39B8F8A441598265.quest_desc: ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees.", "", "It outputs precise rotation, and you can set its maximum angle on its value panel."]
+	quest.39B8F8A441598265.title: "Steering Wheel"
 	quest.3A0F97042370EA0C.quest_desc: ["A Shaft carries rotation in a straight line. Place a Shaft next to a rotating block and it will spin too.", "", "Rotation has two numbers: speed (RPM) and stress. Keep both in mind."]
 	quest.3A0F97042370EA0C.title: "Shafts"
 	quest.3A66462861B4969E.quest_desc: ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.", "", "Use a Wrench to set the direction items are passed."]

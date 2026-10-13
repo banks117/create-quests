@@ -42,4 +42,12 @@ A profile picks the chapter group title, which chapters to include, and whether 
 
 `group_key` feeds the group id; keep it fixed once players are using it.
 
+## Checking quest order
+
+`check_order.py` reads every recipe in the mods folder and reports quests whose items need an ingredient or machine that is only taught by a quest that isn't a prerequisite:
+
+```sh
+python3 -I check_order.py --mods /path/to/instance/mods
+```
+
 Tested with Create 6.0.10, Create Aeronautics 1.3.2, Steam 'n' Rails 0.3.0-beta.2 and Modern Foundry 4.1.8.
