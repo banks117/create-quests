@@ -143,7 +143,7 @@ q(CREATE, "funnels", "Funnels and Chutes", "andesite_funnel", ["iron_sheet", "dr
   ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.",
    "A funnel with a filter will only pass the item you set."],
   [("andesite_funnel", 2), ("chute", 2), ("filter", 1)])
-q(CREATE, "press", "Mechanical Press", "mechanical_press", ["belt", "casing"],
+q(CREATE, "press", "Mechanical Press", "mechanical_press", ["belt"],
   ["Place the Press over a belt or depot and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.",
    "Powered by rotation from the side."],
   [("mechanical_press", 1)])
@@ -725,61 +725,61 @@ GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm
 # automatic layout (and gets a warning), so new quests never vanish.
 POSITIONS = {
     "create_main": """
-        welcome 0 0
-        andesite_alloy 2.5 0
-        shaft 4.5 -1.5
-        cogwheel 6.5 -1.5
-        hand_crank 5.2 -3.4
-        water_wheel 6.5 -3.9
-        windmill 7.8 -3.4
-        casing 4.5 1.5
-        gearbox 8.5 0
-        millstone 5.7 0.1
-        dried_kelp 10.5 0
-        belt 12.5 0
-        press 14.5 1.5
-        iron_sheet 17.5 -1.5
-        golden_sheet 15.5 4.5
-        wrench 16.1 2.5
-        goggles 17.6 3.3
-        fan 16 -3.6
-        funnels 14.7 -2.4
-        basin 18.9 0.5
-        drill 3.3 3.2
-        glue 20.3 -2.2
-        saw 17.6 -4.1
-        harvester 19.1 -3.5
-        bearing 20.6 -4.1
-        piston 22.1 -3.2
-        pulley 21 -0.4
-        copper_sheet 12 6.5
-        copper_casing 7.5 6
-        fluids 10.5 8.5
-        spout 9.6 6.2
-        hose 8.3 8.4
-        steam_engine 12.8 10.4
-        zinc 15.3 7.4
-        blaze_burner 18.5 10.9
-        brass 17 8.8
-        brass_casing 19.2 8.3
-        electron_tube 22.9 9
-        deployer 21 7.3
-        precision 21 4.5
-        arm 19.7 6.4
-        crafter 22.6 6.8
-        crushing_wheel 24.6 7.4
-        sequenced 23.5 5.3
-        radiance 20.2 2.3
-        redstone 23.9 3.7
-        display 25.6 4.7
-        schematic 18.2 5.4
-        vault 27.8 2
-        packages 25.9 2.6
-        train_track 22.2 2.5
-        train_station 23.6 0.6
-        first_train 25.4 -1
-        train_signal 27.4 -1
-        cargo_train 29.4 -1
+        welcome 24 -8
+        andesite_alloy 24 -5.5
+        shaft 21.5 -6.5
+        cogwheel 19 -6.5
+        hand_crank 17.5 -8.3
+        water_wheel 19 -8.8
+        windmill 20.8 -8.9
+        casing 26.5 -6.5
+        gearbox 24 -1.5
+        millstone 24 -3.5
+        dried_kelp 24 1
+        belt 26 1
+        press 28 2.5
+        iron_sheet 31 -0.5
+        golden_sheet 29 5.5
+        wrench 29.6 3.5
+        goggles 31.1 4.3
+        fan 29.5 -2.6
+        funnels 28.2 -1.4
+        basin 32.4 1.5
+        drill 28.5 -7.5
+        glue 33.8 -1.2
+        saw 31.1 -3.1
+        harvester 32.6 -2.5
+        bearing 34.1 -3.1
+        piston 35.6 -2.2
+        pulley 34.5 0.6
+        copper_sheet 25.5 7.5
+        copper_casing 21 7
+        fluids 24 9.5
+        spout 23.1 7.2
+        hose 21.8 9.4
+        steam_engine 26.3 11.4
+        zinc 28.8 8.4
+        blaze_burner 32 11.9
+        brass 30.5 9.8
+        brass_casing 32.7 9.3
+        electron_tube 36.4 10
+        deployer 34.5 8.3
+        precision 34.5 5.5
+        arm 33.2 7.4
+        crafter 36.1 7.8
+        crushing_wheel 38.1 8.4
+        sequenced 37 6.3
+        radiance 33.7 3.3
+        redstone 37.4 4.7
+        display 39.1 5.7
+        schematic 31.7 6.4
+        vault 41.3 3
+        packages 39.4 3.6
+        train_track 35.7 3.5
+        train_station 37.1 1.6
+        first_train 38.9 0
+        train_signal 40.9 0
+        cargo_train 42.9 0
     """,
     "create_equipment": """
         backtank 0 0
@@ -791,7 +791,7 @@ POSITIONS = {
 }
 # Quests whose prerequisite sits across the map: the lock still applies, but the line would cut
 # through other clusters, so it isn't drawn.
-HIDDEN_LINES = {(CREATE, i) for i in "zinc electron_tube vault blaze_burner".split()}
+HIDDEN_LINES = {(CREATE, i) for i in "zinc electron_tube vault blaze_burner copper_casing".split()}
 CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet",
                  "create_projects": "create:clipboard"}
 
