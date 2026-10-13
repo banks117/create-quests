@@ -428,14 +428,14 @@ q(RAILS, "buffers", "Buffers and Headstocks", "railways:small_buffer", ["locomet
   [("railways:small_buffer", 2), ("railways:copycat_headstock", 2)])
 
 # ---- Modern Foundry ------------------------------------------------------
-q(FOUNDRY, "book", "Materials and You", "modernfoundry:materials_and_you", ["pattern"],
-  ["Every material changes a tool's stats, and this book lists them all.",
-   "Craft it from a book and a Pattern. It is your guide, so keep it close."],
+q(FOUNDRY, "book", "Materials and You", "modernfoundry:materials_and_you", [],
+  ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats. This book lists them all.",
+   "Craft a Pattern from planks and sticks, then combine it with a book to make Materials and You. Keep it close."],
   [("modernfoundry:materials_and_you", 1)])
-q(FOUNDRY, "pattern", "Patterns", "modernfoundry:pattern", [],
-  ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts. A Pattern, crafted from planks and sticks, is the template for a part.",
-   "The part builder turns a pattern and a material into a part."],
-  [("modernfoundry:pattern", 4), ("modernfoundry:part_builder", 1)])
+q(FOUNDRY, "pattern", "Part Builder", "modernfoundry:part_builder", ["book"],
+  ["A Pattern is the template for a tool part. The Part Builder turns a pattern and a material into that part.",
+   "Make a stack of Patterns; each part you build uses one."],
+  [("modernfoundry:part_builder", 1)])
 q(FOUNDRY, "tinker_station", "Tinker Station", "modernfoundry:tinker_station", ["pattern"],
   ["The Tinker Station assembles finished tools from parts and lets you swap them later.",
    "Combine a head, a handle and a binding."],

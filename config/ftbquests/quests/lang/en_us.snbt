@@ -164,8 +164,8 @@
 	quest.5F71DBB1A5D94585.title: "Precision Mechanism"
 	quest.6117A72CBB15361C.quest_desc: ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.", "", "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow.", "", "Wooden and Andesite Propellers are the same part in two styles; craft one to swap to the other."]
 	quest.6117A72CBB15361C.title: "Propellers"
-	quest.62E02D28045719F9.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts. A Pattern, crafted from planks and sticks, is the template for a part.", "", "The part builder turns a pattern and a material into a part."]
-	quest.62E02D28045719F9.title: "Patterns"
+	quest.62E02D28045719F9.quest_desc: ["A Pattern is the template for a tool part. The Part Builder turns a pattern and a material into that part.", "", "Make a stack of Patterns; each part you build uses one."]
+	quest.62E02D28045719F9.title: "Part Builder"
 	quest.65568FD704BF8034.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
 	quest.65568FD704BF8034.title: "Welcome to Create"
 	quest.68665C3847876EA4.quest_desc: ["Select a track, then place a Coupler nearby. It couples and decouples trains without taking them apart.", "", "Scroll with a wrench to set the gap, and click with a wrench to choose couple, decouple or both. Power it to act."]
@@ -182,7 +182,7 @@
 	quest.6B5929DBA1583912.title: "The Foundry"
 	quest.717FA27DE13C70CF.quest_desc: ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.", "", "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."]
 	quest.717FA27DE13C70CF.title: "Steam Engine"
-	quest.71D1833076DCCCDE.quest_desc: ["Every material changes a tool's stats, and this book lists them all.", "", "Craft it from a book and a Pattern. It is your guide, so keep it close."]
+	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats. This book lists them all.", "", "Craft a Pattern from planks and sticks, then combine it with a book to make Materials and You. Keep it close."]
 	quest.71D1833076DCCCDE.title: "Materials and You"
 	quest.723048BF1737D4ED.quest_desc: ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.", "", "Put one next to a depot and you can combine items automatically."]
 	quest.723048BF1737D4ED.title: "Deployer"

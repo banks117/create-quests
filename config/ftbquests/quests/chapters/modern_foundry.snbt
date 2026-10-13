@@ -12,7 +12,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["62E02D28045719F9"]
 			icon: {
 				count: 1
 				id: "modernfoundry:materials_and_you"
@@ -34,6 +33,8 @@
 					xp_levels: 1
 				}
 			]
+			shape: "gear"
+			size: 1.5d
 			tasks: [
 				{
 					id: "682DD8979757464C"
@@ -44,13 +45,14 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -0.75d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
+			dependencies: ["71D1833076DCCCDE"]
 			icon: {
 				count: 1
-				id: "modernfoundry:pattern"
+				id: "modernfoundry:part_builder"
 			}
 			id: "62E02D28045719F9"
 			rewards: [
@@ -69,20 +71,9 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
-					count: 4L
 					id: "5120D554EC61081B"
-					item: {
-						count: 1
-						id: "modernfoundry:pattern"
-					}
-					type: "item"
-				}
-				{
-					id: "58FF0AC1C98E2C7A"
 					item: {
 						count: 1
 						id: "modernfoundry:part_builder"
@@ -90,7 +81,7 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -117,8 +108,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 0.75d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["4C32186AFC100060"]
@@ -144,7 +135,7 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
+			x: 6.0d
 			y: -0.75d
 		}
 		{
@@ -172,7 +163,7 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
+			x: 6.0d
 			y: 0.75d
 		}
 		{
@@ -207,7 +198,7 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
+			x: 8.0d
 			y: 0.0d
 		}
 		{
@@ -250,7 +241,7 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
@@ -294,7 +285,7 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
+			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -338,7 +329,7 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
+			x: 14.0d
 			y: -1.5d
 		}
 		{
@@ -365,7 +356,7 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
+			x: 14.0d
 			y: 0.0d
 		}
 		{
@@ -392,7 +383,7 @@
 					type: "item"
 				}
 			]
-			x: 14.0d
+			x: 16.0d
 			y: 0.0d
 		}
 		{
@@ -420,7 +411,7 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
+			x: 14.0d
 			y: 1.5d
 		}
 		{
@@ -448,7 +439,7 @@
 					type: "item"
 				}
 			]
-			x: 16.0d
+			x: 18.0d
 			y: 0.0d
 		}
 		{
@@ -484,7 +475,7 @@
 					type: "item"
 				}
 			]
-			x: 18.0d
+			x: 20.0d
 			y: 0.0d
 		}
 	]
