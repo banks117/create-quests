@@ -3,7 +3,7 @@
 	chapter.119BA69E8073FE2A.title: "Cars"
 	chapter.1EFBC95515779966.title: "Precision and Logistics"
 	chapter.25E1A543BDDB7923.title: "Projects"
-	chapter.2B284AFF27473D2B.title: "Crafts & Additions"
+	chapter.2B284AFF27473D2B.title: "Crafts \\& Additions"
 	chapter.33BFC882B88ED125.title: "Steam 'n' Rails"
 	chapter.359B4D408C98695A.title: "Andesite Age"
 	chapter.47C16CA4A1994ADA.title: "Copper and Brass"
@@ -52,7 +52,7 @@
 	quest.093584C275BCEA9D.title: "Hose Pulley"
 	quest.09FC33824A470023.quest_desc: ["Belts carry items between machines. Right click two shafts in a line with Belt Connectors to link them.", "", "Items on belts can be processed along the way by a Press, a Saw, or a Fan."]
 	quest.09FC33824A470023.title: "Mechanical Belt"
-	quest.0BBADAB4CDE5F5EC.quest_desc: ["Create: Crafts & Additions brings electricity to Create. It starts with the Rolling Mill, which rolls ingots into rods and sheets into wires.", "", "Power it with rotation and feed it from a belt with two funnels, or drop items in by hand."]
+	quest.0BBADAB4CDE5F5EC.quest_desc: ["Create: Crafts \\& Additions brings electricity to Create. It starts with the Rolling Mill, which rolls ingots into rods and sheets into wires.", "", "Power it with rotation and feed it from a belt with two funnels, or drop items in by hand."]
 	quest.0BBADAB4CDE5F5EC.title: "Rolling Mill"
 	quest.0E12C80BA8BD8588.quest_desc: ["The Modifier Worktable handles the finer modifier work, such as removing or extracting modifiers.", "", "Repair Kits patch tools up wherever you are."]
 	quest.0E12C80BA8BD8588.title: "Modifier Worktable"
@@ -226,7 +226,7 @@
 	quest.61A1ED329D7520B9.title: "Copper Spool"
 	quest.62E02D28045719F9.quest_desc: ["A Pattern is the template for a tool part. The Part Builder turns a pattern and a material into that part.", "", "Make a stack of Patterns; each part you build uses one."]
 	quest.62E02D28045719F9.title: "Part Builder"
-	quest.62EB3DF59383A4A6.quest_desc: ["Slice & Dice automates Farmer's Delight. A Slicer holding a knife does the cutting board's work, and it can work over a Basin too. Sprinklers water your crops.", "", "Grow cabbages and turn them into leaves without lifting a knife."]
+	quest.62EB3DF59383A4A6.quest_desc: ["Slice \\& Dice automates Farmer's Delight. A Slicer holding a knife does the cutting board's work, and it can work over a Basin too. Sprinklers water your crops.", "", "Grow cabbages and turn them into leaves without lifting a knife."]
 	quest.62EB3DF59383A4A6.title: "Project: Automated Kitchen"
 	quest.65568FD704BF8034.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
 	quest.65568FD704BF8034.title: "Welcome to Create"

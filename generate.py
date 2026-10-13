@@ -911,5 +911,7 @@ for g, cid, fname, title, gid, items in chapters:
 open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": [{"id": i} for i in group_ids.values()]}) + "\n")
 open(f"{FTB}/data.snbt", "w").write(snbt({"version": 13, "default_consume_items": False,
                                           "default_autoclaim_rewards": "disabled", "fallback_locale": "en_us"}) + "\n")
-open(f"{FTB}/lang/en_us.snbt", "w").write(snbt(lang) + "\n")
+# FTB Quests reads & as a formatting code (&6 for gold), so a literal one has to be escaped.
+esc = lambda v: [esc(s) for s in v] if isinstance(v, list) else v.replace("&", "\\&")
+open(f"{FTB}/lang/en_us.snbt", "w").write(snbt({k: esc(v) for k, v in lang.items()}) + "\n")
 print({g: len([x for x in Q if x["group"] == g]) for g in included}, "|", len(chapters), "chapters,", len(Q), "quests")
