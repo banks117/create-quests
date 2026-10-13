@@ -95,15 +95,15 @@ q(CREATE, "cogwheel", "Cogwheels", "cogwheel", ["shaft"],
   ["Cogwheels turn rotation around corners and change direction. A large cogwheel meshed with a small one doubles the speed and halves the strength, or the other way round.",
    "Try meshing two cogwheels on adjacent shafts and watch them reverse."],
   [("cogwheel", 4), ("large_cogwheel", 2)])
-q(CREATE, "hand_crank", "Hand Crank", "hand_crank", ["cogwheel"],
+q(CREATE, "hand_crank", "Hand Crank", "hand_crank", ["andesite_alloy"],
   ["You need a power source. The Hand Crank is the simplest: hold right click to turn it one way, or sneak and hold right click to turn it the other.",
    "It is not automatic, but it is perfect for testing a build."],
   [("hand_crank", 1)])
-q(CREATE, "water_wheel", "Water Wheel", "water_wheel", ["cogwheel"],
+q(CREATE, "water_wheel", "Water Wheel", "water_wheel", ["shaft"],
   ["Place a Water Wheel against flowing water for free, endless power.",
    "Water wheels spin slowly but provide steady stress. Use a larger cogwheel ratio to speed things up."],
   [("water_wheel", 1)])
-q(CREATE, "windmill", "Windmill", "windmill_bearing", ["cogwheel"],
+q(CREATE, "windmill", "Windmill", "windmill_bearing", ["shaft"],
   ["Not near water? A Windmill Bearing turns a structure in front of it into a windmill. It needs at least 8 sail-like blocks; Windmill Sails stick to each other without glue.",
    "Right click the bearing to start it. More sails means more speed."],
   [("windmill_bearing", 1), ("white_sail", 8)])
@@ -115,11 +115,11 @@ q(CREATE, "casing", "Andesite Casing", "andesite_casing", ["andesite_alloy"],
   ["Casings are the frame for every machine. Right click a log with Andesite Alloy to make Andesite Casing.",
    "Casing also covers a shaft or cogwheel to make a neat, encased version."],
   [("andesite_casing", 8)])
-q(CREATE, "gearbox", "Gearbox, Clutch, Gearshift", "gearbox", ["casing", "cogwheel"],
+q(CREATE, "gearbox", "Gearbox, Clutch, Gearshift", "gearbox", ["cogwheel"],
   ["A Gearbox splits rotation in several directions. A Clutch cuts power when it gets a redstone signal. A Gearshift reverses it.",
    "Together they let a single power source drive many different jobs."],
   [("gearbox", 1), ("clutch", 1), ("gearshift", 1)])
-q(CREATE, "millstone", "Millstone", "millstone", ["casing", "cogwheel"],
+q(CREATE, "millstone", "Millstone", "millstone", ["casing"],
   ["The Millstone grinds items: wheat into flour, ores into crushed ore, and more. Power it from the side with cogwheels.",
    "Throw items in the top, then right click it to take the result, or pull it out with a hopper or funnel."],
   [("millstone", 1), ("wheat_flour", 4)])
@@ -131,22 +131,22 @@ q(CREATE, "fan", "Encased Fan", "encased_fan", ["iron_sheet"],
   ["A Fan blowing through a block processes items in its path: through lava it smelts, through fire it smokes food, through water it washes.",
    "Fan speed changes the range, not how fast items are processed. It works on belts and depots too."],
   [("encased_fan", 1), ("propeller", 1)])
-q(CREATE, "dried_kelp", "Dried Kelp", "minecraft:dried_kelp", ["gearbox"],
+q(CREATE, "dried_kelp", "Dried Kelp", "minecraft:dried_kelp", ["shaft"],
   ["Kelp is Create's rubber. Smelt or smoke it to dry it: Mechanical Belts, Funnels and Spouts all need Dried Kelp, and Hose Pulleys take a Dried Kelp Block.",
    "Kelp grows fast underwater, so plant a patch early. Automating it is a Project of its own."],
   [("minecraft:dried_kelp", 16)])
 q(CREATE, "belt", "Mechanical Belt", "belt_connector", ["dried_kelp"],
   ["Belts carry items between machines. Right click two shafts in a line with Belt Connectors to link them.",
    "Items on belts can be processed along the way by a Press, a Saw, or a Fan."],
-  [("belt_connector", 4), ("depot", 1)])
-q(CREATE, "funnels", "Funnels and Chutes", "andesite_funnel", ["iron_sheet", "dried_kelp"],
-  ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.",
+  [("belt_connector", 4)])
+q(CREATE, "funnels", "Funnels", "andesite_funnel", ["dried_kelp"],
+  ["Funnels move items on and off belts and into inventories. Once you can press iron sheets, Chutes carry items up and down.",
    "A funnel with a filter will only pass the item you set."],
-  [("andesite_funnel", 2), ("chute", 2), ("filter", 1)])
-q(CREATE, "press", "Mechanical Press", "mechanical_press", ["belt"],
-  ["Place the Press over a belt or depot and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.",
-   "Powered by rotation from the side."],
-  [("mechanical_press", 1)])
+  [("andesite_funnel", 2), ("filter", 1)])
+q(CREATE, "press", "Mechanical Press", "mechanical_press", ["casing"],
+  ["Place the Press over a Depot (or a belt) and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.",
+   "It needs rotation from the side, and a Hand Crank is enough for your first few sheets: just keep cranking."],
+  [("mechanical_press", 1), ("depot", 1)])
 q(CREATE, "iron_sheet", "Iron Sheets", "iron_sheet", ["press"],
   ["Press iron ingots into Iron Sheets. They go into Encased Fans, Funnels and Chutes, Super Glue, the Mixer's whisk, Saws, Harvesters and Item Vaults.",
    "Keep a belt of ingots running under the press and you will never run short."],
@@ -166,11 +166,11 @@ q(CREATE, "zinc", "Zinc", "zinc_ingot", ["andesite_alloy"],
   ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.",
    "You will need it for brass."],
   [("zinc_ingot", 4)])
-q(CREATE, "blaze_burner", "Blaze Burner", "blaze_burner", ["basin"],
+q(CREATE, "blaze_burner", "Blaze Burner", "blaze_burner", ["iron_sheet"],
   ["A Blaze Burner under a basin supplies the heat many recipes need. Find a Blaze in the Nether and right click it with an empty Blaze Burner to capture it.",
    "Feed it flammable items to keep it hot. A Blaze Cake makes it burn even hotter."],
   [("blaze_burner", 1)])
-q(CREATE, "brass", "Brass", "brass_ingot", ["zinc", "blaze_burner"],
+q(CREATE, "brass", "Brass", "brass_ingot", ["zinc", "blaze_burner", "basin"],
   ["Mix copper and zinc ingots in a heated basin to make brass. Press it into sheets.",
    "Brass opens a new tier of machines."],
   [("brass_ingot", 8), ("brass_sheet", 4)])
@@ -182,7 +182,7 @@ q(CREATE, "electron_tube", "Electron Tubes", "electron_tube", ["iron_sheet"],
   ["Craft Rose Quartz from quartz and redstone, polish it with Sand Paper (hold right click), and put it on an Iron Sheet to make an Electron Tube.",
    "Tubes are the brains of the smarter machines: Deployers, Mechanical Crafters, Display Boards and train signals."],
   [("electron_tube", 2)])
-q(CREATE, "deployer", "Deployer", "deployer", ["electron_tube", "brass_casing"],
+q(CREATE, "deployer", "Deployer", "deployer", ["brass_casing", "electron_tube"],
   ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.",
    "Put one next to a depot and you can combine items automatically."],
   [("deployer", 1)])
@@ -217,22 +217,22 @@ q(CREATE, "pulley", "Rope Pulley", "rope_pulley", ["glue"],
 q(CREATE, "copper_sheet", "Copper Sheets", "copper_sheet", ["press"],
   ["Copper ingots press into Copper Sheets, the material of plumbing: Fluid Pipes, Fluid Tanks and the Hose Pulley are made from them."],
   [("copper_sheet", 8)])
-q(CREATE, "copper_casing", "Copper Casing", "copper_casing", ["casing"],
+q(CREATE, "copper_casing", "Copper Casing", "copper_casing", ["fluids"],
   ["Right click a log with a copper ingot to make Copper Casing, the frame for fluid machines like the Spout, Item Drain and Hose Pulley."],
   [("copper_casing", 4)])
 q(CREATE, "fluids", "Fluid Pipes", "fluid_pipe", ["copper_sheet"],
   ["Pipes move liquids. A Mechanical Pump pushes fluid through a pipe in the direction you set.",
    "Fluid Tanks store liquid and can be stacked into bigger ones."],
   [("fluid_pipe", 8), ("mechanical_pump", 1), ("fluid_tank", 1)])
-q(CREATE, "spout", "Spout and Item Drain", "spout", ["copper_casing", "fluids"],
+q(CREATE, "spout", "Spout and Item Drain", "spout", ["copper_casing"],
   ["A Spout fills items with liquid as they pass beneath it. An Item Drain empties them again.",
    "Use them to make potions, fill buckets, or bottle honey."],
   [("spout", 1), ("item_drain", 1)])
-q(CREATE, "steam_engine", "Steam Engine", "steam_engine", ["fluids", "golden_sheet", "blaze_burner"],
+q(CREATE, "steam_engine", "Steam Engine", "steam_engine", ["fluids", "golden_sheet"],
   ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.",
    "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."],
   [("steam_engine", 1), ("fluid_tank", 4)])
-q(CREATE, "hose", "Hose Pulley", "hose_pulley", ["copper_casing", "fluids"],
+q(CREATE, "hose", "Hose Pulley", "hose_pulley", ["copper_casing"],
   ["The Hose Pulley sucks up (or pours out) large bodies of fluid. Lower it into a lava lake and it will drain it.",
    "It is the right way to supply a big lava setup."],
   [("hose_pulley", 1)])
@@ -244,7 +244,7 @@ q(CREATE, "arm", "Mechanical Arm", "mechanical_arm", ["precision"],
   ["The Arm picks up items from one place and puts them in another. Select its inputs and outputs before placing it, and it will run your factory.",
    "It is the heart of compact automation."],
   [("mechanical_arm", 1)])
-q(CREATE, "crafter", "Mechanical Crafter", "mechanical_crafter", ["precision"],
+q(CREATE, "crafter", "Mechanical Crafter", "mechanical_crafter", ["deployer"],
   ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.",
    "Use a Wrench to set the direction items are passed."],
   [("mechanical_crafter", 4)])
@@ -281,7 +281,7 @@ q(CREATE, "train_station", "Train Station", "track_station", ["train_track"],
    "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station.",
    "Stations are crafted from Train Casing; make a couple of extra casings for your bogeys."],
   [("track_station", 1), ("railway_casing", 2)])
-q(CREATE, "first_train", "Your First Train", "controls", ["train_station", "glue"],
+q(CREATE, "first_train", "Your First Train", "controls", ["train_station"],
   ["With the station in Assembly Mode, use Train Casing on the track to place bogeys (click again to change their design). Build your train on top and Super Glue it together.",
    "Every train needs Train Controls on board; a second set lets it leave stations in both directions. Confirm assembly in the station menu, then take it for a ride and tick the box.",
    "Trains run faster if they find fuel in a chest or barrel on board."],
@@ -303,11 +303,11 @@ q(CREATE, "diving", "Diving Gear", "copper_diving_helmet", ["backtank"],
   ["With a Backtank, the Diving Helmet lets you breathe underwater, slowly using up the tank's air. Diving Boots let you sink quickly and walk and jump on the sea floor.",
    "The boots also stop Mechanical Belts carrying you along. Handy for underwater builds, harbours and shipwrecks."],
   [("copper_diving_helmet", 1), ("copper_diving_boots", 1)])
-q(CREATE, "extendo_grip", "Extendo Grip", "extendo_grip", ["backtank", "crafter"],
+q(CREATE, "extendo_grip", "Extendo Grip", "extendo_grip", ["backtank", "crafter", "precision"],
   ["Held in your off-hand, the Extendo Grip greatly increases your reach. It is a Mechanical Crafter recipe.",
    "While you wear a Backtank it uses air instead of durability, so it never wears out. Perfect for tall machines."],
   [("extendo_grip", 1)])
-q(CREATE, "potato_cannon", "Potato Cannon", "potato_cannon", ["backtank", "crafter", "fluids"],
+q(CREATE, "potato_cannon", "Potato Cannon", "potato_cannon", ["backtank", "crafter", "precision", "fluids"],
   ["Launch your home-grown vegetables at enemies. It fires suitable items from your inventory, and different crops hit differently.",
    "With a Backtank on, it runs on air instead of durability."],
   [("potato_cannon", 1)])
@@ -456,11 +456,11 @@ q(AERO, "first_car", "Build a Car", "offroad:large_tire", ["drivetrain", "steeri
   ["Four wheels, a Portable Engine, a drivetrain and a Steering Wheel. Drive it out of your base and back.",
    "Tick the box when you're done."],
   [], check=True)
-q(AERO, "big_tires", "Bigger Tires", "offroad:monstrous_tire", ["first_car"],
+q(AERO, "big_tires", "Bigger Tires", "offroad:monstrous_tire", ["first_car", f"{CREATE}::belt"],
   ["Large and Monstrous Tires climb over almost anything.",
    "Time for a monster truck."],
   [("offroad:large_tire", 2), ("offroad:monstrous_tire", 1)])
-q(AERO, "borehead", "Borehead Miner", "offroad:borehead_bearing", ["first_car", f"{CREATE}::crushing_wheel"],
+q(AERO, "borehead", "Borehead Miner", "offroad:borehead_bearing", ["first_car", f"{CREATE}::crushing_wheel", f"{CREATE}::gearbox"],
   ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.",
    "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."],
   [("offroad:borehead_bearing", 1), ("offroad:rockcutting_wheel", 2)])
@@ -725,61 +725,61 @@ GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm
 # automatic layout (and gets a warning), so new quests never vanish.
 POSITIONS = {
     "create_main": """
-        welcome 24 -8
-        andesite_alloy 24 -5.5
-        shaft 21.5 -6.5
-        cogwheel 19 -6.5
-        hand_crank 17.5 -8.3
-        water_wheel 19 -8.8
-        windmill 20.8 -8.9
-        casing 26.5 -6.5
-        gearbox 24 -1.5
-        millstone 24 -3.5
-        dried_kelp 24 1
-        belt 26 1
-        press 28 2.5
-        iron_sheet 31 -0.5
-        golden_sheet 29 5.5
-        wrench 29.6 3.5
-        goggles 31.1 4.3
-        fan 29.5 -2.6
-        funnels 28.2 -1.4
-        basin 32.4 1.5
-        drill 28.5 -7.5
-        glue 33.8 -1.2
-        saw 31.1 -3.1
-        harvester 32.6 -2.5
-        bearing 34.1 -3.1
-        piston 35.6 -2.2
-        pulley 34.5 0.6
-        copper_sheet 25.5 7.5
-        copper_casing 21 7
-        fluids 24 9.5
-        spout 23.1 7.2
-        hose 21.8 9.4
-        steam_engine 26.3 11.4
-        zinc 28.8 8.4
-        blaze_burner 32 11.9
-        brass 30.5 9.8
-        brass_casing 32.7 9.3
-        electron_tube 36.4 10
-        deployer 34.5 8.3
-        precision 34.5 5.5
-        arm 33.2 7.4
-        crafter 36.1 7.8
-        crushing_wheel 38.1 8.4
-        sequenced 37 6.3
-        radiance 33.7 3.3
-        redstone 37.4 4.7
-        display 39.1 5.7
-        schematic 31.7 6.4
-        vault 41.3 3
-        packages 39.4 3.6
-        train_track 35.7 3.5
-        train_station 37.1 1.6
-        first_train 38.9 0
-        train_signal 40.9 0
-        cargo_train 42.9 0
+        welcome 0 0
+        andesite_alloy 0 2.5
+        hand_crank 0 4.7
+        shaft -2.5 4
+        cogwheel -4.6 3
+        gearbox -6.8 3
+        water_wheel -1.6 6
+        windmill -3.2 6.3
+        dried_kelp -4.8 5.4
+        belt -4.6 7.5
+        funnels -6.6 6.6
+        casing 2.5 4
+        drill 2 6.3
+        millstone 3.7 6.1
+        press 5 4
+        copper_sheet 7.5 2.2
+        fluids 10 1.5
+        copper_casing 12.4 1
+        spout 13.8 -0.6
+        hose 14.2 2.4
+        steam_engine 10.8 3.6
+        golden_sheet 8.4 5.2
+        wrench 7.6 7.1
+        goggles 10.2 6
+        iron_sheet 5.6 8.6
+        fan 3.3 7.8
+        glue 2.4 9.4
+        bearing 0.6 8.4
+        piston 0.3 10.1
+        pulley 1.2 11.5
+        saw 3.6 11
+        harvester 4.8 12.1
+        basin 6.2 11.2
+        blaze_burner 8 10.8
+        electron_tube 8 8.9
+        zinc 5.4 14.2
+        brass 7.1 13.3
+        brass_casing 9.2 13.9
+        deployer 10.4 11.8
+        crafter 11.2 14.8
+        crushing_wheel 13 15.6
+        precision 12.2 9.6
+        arm 12.7 7.6
+        redstone 14.7 7.9
+        display 16.6 7.2
+        packages 16.4 9.1
+        vault 18.3 9.6
+        sequenced 14.3 9.8
+        radiance 14 11.4
+        schematic 10.2 10.1
+        train_track 12.4 12
+        train_station 14.2 13.2
+        first_train 16.2 13.6
+        train_signal 18.2 13.6
+        cargo_train 20.2 13.6
     """,
     "create_equipment": """
         backtank 0 0
@@ -791,7 +791,7 @@ POSITIONS = {
 }
 # Quests whose prerequisite sits across the map: the lock still applies, but the line would cut
 # through other clusters, so it isn't drawn.
-HIDDEN_LINES = {(CREATE, i) for i in "zinc electron_tube vault blaze_burner copper_casing".split()}
+HIDDEN_LINES = {(CREATE, i) for i in "zinc vault".split()}
 CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet",
                  "create_projects": "create:clipboard"}
 

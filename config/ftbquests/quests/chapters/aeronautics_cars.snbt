@@ -124,7 +124,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["41571B487A0FA8B1"]
+			dependencies: ["41571B487A0FA8B1", "09FC33824A470023"]
 			icon: {
 				id: "offroad:monstrous_tire"
 			}
@@ -159,7 +159,7 @@
 			y: -0.875d
 		}
 		{
-			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334"]
+			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334", "12CEF6D0015D619D"]
 			icon: {
 				id: "offroad:borehead_bearing"
 			}

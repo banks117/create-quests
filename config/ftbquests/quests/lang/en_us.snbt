@@ -31,8 +31,8 @@
 	quest.05C2800C8FB7FC81.title: "Brass Casing"
 	quest.05D4BA355ED1D001.quest_desc: ["The Alternator turns rotation into electricity (FE). It needs at least 32 RPM, and the faster it spins the more it makes.", "", "It is a Mechanical Crafter recipe. A water wheel farm or a steam engine makes a fine power plant."]
 	quest.05D4BA355ED1D001.title: "Alternator"
-	quest.060551E84F3A2959.quest_desc: ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.", "", "A funnel with a filter will only pass the item you set."]
-	quest.060551E84F3A2959.title: "Funnels and Chutes"
+	quest.060551E84F3A2959.quest_desc: ["Funnels move items on and off belts and into inventories. Once you can press iron sheets, Chutes carry items up and down.", "", "A funnel with a filter will only pass the item you set."]
+	quest.060551E84F3A2959.title: "Funnels"
 	quest.0632092E58B014DB.quest_desc: ["Save a build as a schematic, then print it elsewhere. The Schematicannon builds it for you from your inventory and gunpowder.", "", "Use the Schematic and Quill to select an area."]
 	quest.0632092E58B014DB.title: "Schematics"
 	quest.0670829A73FDC2D7.quest_desc: ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.", "", "Check EMI for the exact recipe."]
@@ -155,7 +155,7 @@
 	quest.4043B5F303D667BA.title: "Envelope"
 	quest.41571B487A0FA8B1.quest_desc: ["Four wheels, a Portable Engine, a drivetrain and a Steering Wheel. Drive it out of your base and back.", "", "Tick the box when you're done."]
 	quest.41571B487A0FA8B1.title: "Build a Car"
-	quest.41B89DC3CE373DEA.quest_desc: ["Place the Press over a belt or depot and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.", "", "Powered by rotation from the side."]
+	quest.41B89DC3CE373DEA.quest_desc: ["Place the Press over a Depot (or a belt) and feed it ingots to make sheets. Sheets unlock nearly every mid-game recipe.", "", "It needs rotation from the side, and a Hand Crank is enough for your first few sheets: just keep cranking."]
 	quest.41B89DC3CE373DEA.title: "Mechanical Press"
 	quest.4328CD94686BFEBA.quest_desc: ["A Spout fills items with liquid as they pass beneath it. An Item Drain empties them again.", "", "Use them to make potions, fill buckets, or bottle honey."]
 	quest.4328CD94686BFEBA.title: "Spout and Item Drain"

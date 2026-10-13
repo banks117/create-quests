@@ -122,10 +122,16 @@ for x in Q:
         if not t.startswith("minecraft:"):
             teaches[t].add(key(x))
 
+# The starting parts count as known once a player has Andesite Alloy:
+# each is one craft away from it, so later quests needn't list Shafts or Cogwheels to use them.
+BASICS = {"create:shaft", "create:cogwheel", "create:large_cogwheel", "create:andesite_casing"}
+ALLOY = ("create", "andesite_alloy")
+
 findings = []
 for x in Q:
     k = key(x)
     ok = ancestors(k) | {k}
+    basics = ALLOY in ok
     for t, _ in x["tasks"]:
         if t.startswith("minecraft:"):
             continue  # obtainable in vanilla ways the mod recipes don't show (mining, smelting, drops)
@@ -142,6 +148,8 @@ for x in Q:
                 p.append(f"needs Blaze Burner ({heat})")
             for ing in ings:
                 opts = options(ing)
+                if basics and opts & BASICS:
+                    continue
                 gated = [teaches[o] for o in opts if teaches.get(o)]
                 # Only a problem if every way to fill this slot is taught by a non-prerequisite quest.
                 if opts and len(gated) == len(opts) and all(not (s & ok) for s in gated):

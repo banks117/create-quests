@@ -72,7 +72,7 @@
 			y: -1.6d
 		}
 		{
-			dependencies: ["398876E1DCE7F037", "3A66462861B4969E"]
+			dependencies: ["398876E1DCE7F037", "3A66462861B4969E", "5F71DBB1A5D94585"]
 			icon: {
 				id: "create:extendo_grip"
 			}
@@ -98,7 +98,7 @@
 			y: 0.3d
 		}
 		{
-			dependencies: ["398876E1DCE7F037", "3A66462861B4969E", "55625BFA5DD44551"]
+			dependencies: ["398876E1DCE7F037", "3A66462861B4969E", "5F71DBB1A5D94585", "55625BFA5DD44551"]
 			icon: {
 				id: "create:potato_cannon"
 			}
