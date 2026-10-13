@@ -724,6 +724,22 @@ GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm
 # "id x y" per line, x right and y down in quest units; a quest missing here falls back to the
 # automatic layout (and gets a warning), so new quests never vanish.
 POSITIONS = {
+    "modern_foundry": """
+        book 0 0
+        pattern 0 2.2
+        tinker_station 0 4.4
+        first_tool -2.4 5.6
+        seared 2.4 4.4
+        melter 4.6 4.4
+        casting 6.8 4.4
+        smeltery 6.8 6.9
+        channels 8.9 7.6
+        slime 6.8 9.3
+        forge 4.4 7.2
+        anvil 2.2 8.2
+        cobalt 4.4 10.2
+        scorched 2.2 11.2
+    """,
     "create_main": """
         welcome 0 0
         andesite_alloy 0 2.5

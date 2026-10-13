@@ -39,7 +39,7 @@ Steam 'n' Rails, Crafts & Additions and Modern Foundry are single chapters. Prer
 
 Quest ids come from the mod and the quest, not the chapter, so moving a quest between chapters keeps player progress.
 
-The Create and Equipment chapters are hand-placed (`POSITIONS` in `generate.py`); the rest are laid out automatically. To adjust a layout, move quests in FTB Quests' editor, quit the world, and copy the positions back:
+The Create, Equipment and Modern Foundry chapters are hand-placed (`POSITIONS` in `generate.py`); the rest are laid out automatically. To adjust a layout, move quests in FTB Quests' editor, quit the world, and copy the positions back:
 
 ```sh
 python3 -I import_positions.py --mods /path/to/instance/mods --quests /path/to/instance/config/ftbquests/quests

@@ -70,7 +70,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.5d
+			y: 2.2d
 		}
 		{
 			dependencies: ["62E02D28045719F9"]
@@ -96,7 +96,7 @@
 				}
 			]
 			x: 0.0d
-			y: 5.0d
+			y: 4.4d
 		}
 		{
 			dependencies: ["4C32186AFC100060"]
@@ -121,8 +121,8 @@
 					type: "item"
 				}
 			]
-			x: -0.875d
-			y: 7.5d
+			x: -2.4d
+			y: 5.6d
 		}
 		{
 			dependencies: ["4C32186AFC100060"]
@@ -148,8 +148,8 @@
 					type: "item"
 				}
 			]
-			x: 0.875d
-			y: 7.5d
+			x: 2.4d
+			y: 4.4d
 		}
 		{
 			dependencies: ["7305E4A82C337CF8"]
@@ -182,8 +182,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 10.0d
+			x: 4.6d
+			y: 4.4d
 		}
 		{
 			dependencies: ["3C0DEF47C79C5D77"]
@@ -224,8 +224,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 12.5d
+			x: 6.8d
+			y: 4.4d
 		}
 		{
 			dependencies: ["78BA18E9E3D67646"]
@@ -269,8 +269,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 15.0d
+			x: 6.8d
+			y: 6.9d
 		}
 		{
 			dependencies: ["69F5D22290E1A7D3"]
@@ -312,8 +312,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 17.5d
+			x: 8.9d
+			y: 7.6d
 		}
 		{
 			dependencies: ["03594763D06E9251", "69F5D22290E1A7D3"]
@@ -338,8 +338,8 @@
 					type: "item"
 				}
 			]
-			x: -1.75d
-			y: 17.5d
+			x: 4.4d
+			y: 7.2d
 		}
 		{
 			dependencies: ["20CDB7F7BB7215DE"]
@@ -364,8 +364,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 20.0d
+			x: 2.2d
+			y: 8.2d
 		}
 		{
 			dependencies: ["69F5D22290E1A7D3"]
@@ -391,8 +391,8 @@
 					type: "item"
 				}
 			]
-			x: 1.75d
-			y: 17.5d
+			x: 6.8d
+			y: 9.3d
 		}
 		{
 			dependencies: ["195EDBC057B143E8", "0E12C80BA8BD8588"]
@@ -418,8 +418,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 22.5d
+			x: 4.4d
+			y: 10.2d
 		}
 		{
 			dependencies: ["04BE34CFD64D0B1C"]
@@ -453,8 +453,8 @@
 					type: "item"
 				}
 			]
-			x: 0.0d
-			y: 25.0d
+			x: 2.2d
+			y: 11.2d
 		}
 	]
 }
