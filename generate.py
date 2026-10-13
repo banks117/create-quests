@@ -295,16 +295,16 @@ q(CREATE, "netherite_diving", "Netherite Diving Gear", "netherite_diving_helmet"
   [("netherite_backtank", 1), ("netherite_diving_helmet", 1), ("netherite_diving_boots", 1)])
 
 # Projects: a checkbox for "I built it" plus a stack of its output as proof.
-q(CREATE, "cobble_gen", "Project: Cobblestone Generator", "minecraft:cobblestone", ["drill"],
+q(CREATE, "cobble_gen", "Project: Cobblestone Generator", "mechanical_drill", ["drill"],
   ["Put machines together for the first time. Build a lava and water cobblestone generator and point a Mechanical Drill at it, feeding the drops into a chest.",
    "Endless stone is the raw material for the next few projects. Tick the box and hand in a few stacks."],
   [("minecraft:cobblestone", 256)], check=True)
-q(CREATE, "iron_farm", "Project: Iron Farm", "minecraft:iron_nugget", ["cobble_gen", "millstone", "fan"],
+q(CREATE, "iron_farm", "Project: Iron Farm", "encased_fan", ["cobble_gen", "millstone", "fan"],
   ["Mill your cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.",
    "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite Factory needs it.",
    "The same washing trick works on other blocks: red sand (mill it from granite) gives gold nuggets, and soul sand gives quartz."],
   [("minecraft:iron_nugget", 64)], check=True)
-q(CREATE, "andesite_factory", "Project: Andesite Factory", "andesite_alloy", ["iron_farm", "basin"],
+q(CREATE, "andesite_factory", "Project: Andesite Factory", "mechanical_mixer", ["iron_farm", "basin"],
   ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.",
    "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically."],
   [("andesite_alloy", 64)], check=True)
@@ -312,19 +312,19 @@ q(CREATE, "kelp_farm", "Project: Kelp Farm", "minecraft:dried_kelp", ["saw", "fa
   ["Belts are made from dried kelp, and big factories need a lot of belts. Grow kelp underwater, cut it with Mechanical Saws, and blow it through fire with an Encased Fan to dry it.",
    "Dried kelp blocks also make good furnace fuel."],
   [("minecraft:dried_kelp", 64)], check=True)
-q(CREATE, "crop_farm", "Project: Crop Farm", "minecraft:wheat", ["harvester", "bearing"],
+q(CREATE, "crop_farm", "Project: Crop Farm", "mechanical_harvester", ["harvester", "bearing"],
   ["Mount Harvesters and Ploughs on a moving contraption, a bearing arm or a piston sweep, and let it reap and till your fields.",
    "Harvesters replant as they go. Collect the drops with funnels or a chest on the contraption."],
   [("minecraft:wheat", 256)], check=True)
-q(CREATE, "tree_farm", "Project: Tree Farm", "minecraft:oak_log", ["saw", "deployer"],
+q(CREATE, "tree_farm", "Project: Tree Farm", "mechanical_saw", ["saw", "deployer"],
   ["A Mechanical Saw fells a whole tree at once. Add a Deployer holding saplings to replant, and bone meal to speed it up.",
    "Wood for every casing you will ever need."],
   [("minecraft:oak_log", 128)], check=True)
-q(CREATE, "ore_processing", "Project: Ore Processing", "crushed_raw_iron", ["crushing_wheel", "fan"],
+q(CREATE, "ore_processing", "Project: Ore Processing", "crushing_wheel", ["crushing_wheel", "fan"],
   ["Unlike your iron farm, this handles the ore you mine, and gets extra out of every trip. Run your raw ore through Crushing Wheels, then wash it with a fan. Raw iron crushes into crushed iron with a chance of experience, and washing it gives 9 nuggets with a chance of redstone.",
    "Gold gives quartz the same way. Belt it all together so your mining trips process themselves."],
   [("crushed_raw_iron", 64)], check=True)
-q(CREATE, "brass_factory", "Project: Brass Factory", "brass_ingot", ["brass"],
+q(CREATE, "brass_factory", "Project: Brass Factory", "blaze_burner", ["brass"],
   ["Feed copper and zinc into a heated mixer automatically and belt the brass away. Keep the Blaze Burner fed.",
    "Brass goes into almost every advanced machine, so it pays to have plenty."],
   [("brass_ingot", 128)], check=True)
@@ -332,7 +332,7 @@ q(CREATE, "kitchen", "Project: Automated Kitchen", "sliceanddice:slicer", ["depl
   ["Slice & Dice automates Farmer's Delight. A Slicer holding a knife does the cutting board's work, and it can work over a Basin too. Sprinklers water your crops.",
    "Grow cabbages and turn them into leaves without lifting a knife."],
   [("sliceanddice:slicer", 1), ("farmersdelight:cabbage_leaf", 64)], check=True, needs=("sliceanddice", "farmersdelight"))
-q(CREATE, "cargo_train", "Project: Cargo Train", "track_station", ["train_signal"],
+q(CREATE, "cargo_train", "Project: Cargo Train", "controls", ["train_signal"],
   ["Connect two bases with track and run a scheduled train between them, loading and unloading cargo at each station.",
    "Send your farm output home without lifting a finger, then tick the box."],
   [], check=True)
