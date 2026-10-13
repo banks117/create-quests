@@ -1,0 +1,6 @@
+{
+	default_autoclaim_rewards: "disabled"
+	default_consume_items: false
+	fallback_locale: "en_us"
+	version: 13
+}
