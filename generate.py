@@ -20,26 +20,22 @@ PROFILE = json.load(open(args.profile))
 
 
 # ---------------------------------------------------------------- item validation
-def item_ids(z, ns):
-    # Require an item model: lang keys exist for things that aren't plain items (create:small_bogey,
-    # and create:package, which only has per-style models and shows as "?" in FTB Quests).
-    s = set()
-    for n in z.namelist():
-        m = re.match(r"assets/" + ns + r"/models/item/([a-z0-9_/]+)\.json$", n)
-        if m:
-            s.add(f"{ns}:{m.group(1)}")
-    return s
+LANG = re.compile(r"assets/([^/]+)/lang/en_us\.json$")
+ITEM_MODEL = re.compile(r"assets/([^/]+)/models/item/([a-z0-9_/]+)\.json$")
 
 
 def scan(z):
-    s = set()
+    # Require an item model: lang keys exist for things that aren't plain items (create:small_bogey,
+    # and create:package, which only has per-style models and shows as "?" in FTB Quests).
+    langs, models, s = set(), set(), set()
     for n in z.namelist():
-        m = re.match(r"assets/([^/]+)/lang/en_us\.json$", n)
-        if m:
-            s |= item_ids(z, m.group(1))
-        if n.startswith("META-INF/jarjar/") and n.endswith(".jar"):
+        if m := LANG.match(n):
+            langs.add(m.group(1))
+        elif m := ITEM_MODEL.match(n):
+            models.add(m.groups())
+        elif n.startswith("META-INF/jarjar/") and n.endswith(".jar"):
             s |= scan(zipfile.ZipFile(io.BytesIO(z.read(n))))
-    return s
+    return s | {f"{ns}:{i}" for ns, i in models if ns in langs}
 
 
 valid = set()
@@ -48,7 +44,7 @@ for jar in sorted(os.listdir(MODS)):
         valid |= scan(zipfile.ZipFile(os.path.join(MODS, jar)))
 check_vanilla = os.path.exists(args.minecraft_jar)
 if check_vanilla:
-    valid |= item_ids(zipfile.ZipFile(args.minecraft_jar), "minecraft")
+    valid |= scan(zipfile.ZipFile(args.minecraft_jar))
 else:
     print(f"no vanilla jar at {args.minecraft_jar}; minecraft: items are not checked")
 present = {i.split(":")[0] for i in valid}
@@ -724,11 +720,6 @@ for x in Q:
     x["rewards"] = MILESTONES.get(key, []) + [(i, n) for i, n in x["tasks"] if i in MATCH.get(key, [])] \
         if PROFILE.get("item_rewards", True) else []
     x["xp"] = not x["check"] or x["deps"] != []
-# Projects are bigger builds, so they pay a little more XP; still no free machines.
-XP_LEVELS = {(CREATE, p): 3 for p in "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm "
-             "ore_processing brass_factory kitchen cargo_train".split()}
-XP_LEVELS[(AERO, "delivery_airship")] = 3
-XP_LEVELS[(ADDITIONS, "power_grid")] = 3
 
 
 # ---------------------------------------------------------------- chapters
@@ -753,16 +744,22 @@ SUBCHAPTERS = {
         ("cars", "Cars", "wheels drivetrain first_car big_tires borehead auger"),
     ],
 }
-# A chapter shows its first quest's icon unless set here (keyed by chapter file name).
-# The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
-# Chapters of mostly independent quests read better as a grid than as one tall column.
-# Projects: the iron chain on top, then farms, then the later factories.
-GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm crop_farm tree_farm",
-                             "ore_processing brass_factory kitchen"]}
 # Hand-placed chapters: each hub's quests cluster around it and no lines cross.
 # "id x y" per line, x right and y down in quest units; a quest missing here falls back to the
 # automatic layout (and gets a warning), so new quests never vanish.
 POSITIONS = {
+    # Projects read better as a grid: the iron chain on top, then farms, then the later factories.
+    "create_projects": """
+        cobble_gen 0 0
+        iron_farm 2.5 0
+        andesite_factory 5 0
+        kelp_farm 0 2.5
+        crop_farm 2.5 2.5
+        tree_farm 5 2.5
+        ore_processing 0 5
+        brass_factory 2.5 5
+        kitchen 5 5
+    """,
     "createaddition": """
         rolling_mill 0 0
         liquid_fuel -2.4 0.6
@@ -865,13 +862,15 @@ POSITIONS = {
 # Quests whose prerequisite sits across the map: the lock still applies, but the line would cut
 # through other clusters, so it isn't drawn.
 HIDDEN_LINES = {(CREATE, i) for i in "zinc vault".split()}
+# A chapter shows its first quest's icon unless set here (keyed by chapter file name).
+# The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
 CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet", "aeronautics_helicopters": "aeronautics:gyroscopic_propeller_bearing",
                  "create_projects": "create:clipboard"}
 
-for mod in MODULES:
+for mod, subs in SUBCHAPTERS.items():
     ids = [x["id"] for x in Q if x["group"] == mod]
-    placed = [i for _, _, s in SUBCHAPTERS.get(mod, []) for i in s.split()]
-    if mod in SUBCHAPTERS and sorted(placed) != sorted(ids):
+    placed = [i for _, _, s in subs for i in s.split()]
+    if sorted(placed) != sorted(ids):
         sys.exit(f"{mod}: quests not placed in exactly one chapter: {sorted(set(ids) ^ set(placed))}")
 
 wanted = PROFILE.get("mods") or list(MODULES)
@@ -881,6 +880,7 @@ for c in wanted:
         print(f"skipping {c}: missing mods {sorted(MODULES[c]['requires'] - present)}")
 all_keys = {(x["group"], x["id"]) for x in Q}
 Q = [x for x in Q if x["group"] in included and x["needs"] <= present]
+keys = {(x["group"], x["id"]) for x in Q}
 
 
 # ---------------------------------------------------------------- validation
@@ -890,9 +890,7 @@ def dep_key(x, d):
 
 for x in Q:
     # A prerequisite that was left out (its mod isn't installed) just doesn't apply.
-    kept = {(y["group"], y["id"]) for y in Q}
-    x["deps"] = [d for d in x["deps"] if dep_key(x, d) in kept or dep_key(x, d) not in all_keys]
-keys = {(x["group"], x["id"]) for x in Q}
+    x["deps"] = [d for d in x["deps"] if dep_key(x, d) in keys or dep_key(x, d) not in all_keys]
 bad = []
 for x in Q:
     for i in [x["icon"]] + [t for t, _ in x["tasks"]] + [r for r, _ in x["rewards"]]:
@@ -938,25 +936,20 @@ def snbt(v, ind=0):
     return "{\n" + "\n".join(f"{inner}{k}: {snbt(x, ind + 1)}" for k, x in sorted(v.items())) + "\n" + pad + "}"
 
 
-def local_deps(x, ids):
-    return [p for p in x["deps"] if "::" not in p and p in ids]
-
-
 def layout(items, sizes):
     """Row = dependency depth within the chapter, top down. Within a row, quests are ordered next to the
     quests they connect to (a few barycenter sweeps), which keeps dependency lines from crossing."""
-    byid = {x["id"]: x for x in items}
+    ids = {x["id"] for x in items}
+    parents = {x["id"]: [p for p in x["deps"] if "::" not in p and p in ids] for x in items}
     depth = {}
 
     def d(i):
         if i not in depth:
-            local = local_deps(byid[i], byid)
-            depth[i] = 0 if not local else 1 + max(d(p) for p in local)
+            depth[i] = 0 if not parents[i] else 1 + max(d(p) for p in parents[i])
         return depth[i]
     cols = collections.defaultdict(list)
     for x in items:
         cols[d(x["id"])].append(x["id"])
-    parents = {i: local_deps(byid[i], byid) for i in byid}
     children = collections.defaultdict(list)
     for i, ps in parents.items():
         for p in ps:
@@ -994,7 +987,7 @@ HUBS = {(CREATE, i) for i in "andesite_alloy casing dried_kelp iron_sheet golden
 unlocks = collections.Counter(dep_key(x, d) for x in Q for d in x["deps"])
 
 
-def quest_size(g, x, ids):
+def quest_size(g, x):
     if (g, x["id"]) in HUBS:
         return 1.75 if unlocks[(g, x["id"])] >= 6 else 1.5
     return 1.25 if x["check"] else 1.0
@@ -1025,18 +1018,14 @@ for g, cid, fname, title, gid, items in chapters:
     order_in_group[gid] += 1
     lang[f"chapter.{cid}.title"] = title
     ids = {x["id"] for x in items}
-    sizes = {x["id"]: quest_size(g, x, ids) for x in items}
-    if fname in GRIDS:
-        # Rows of quests in reading order; quests left out for missing mods just leave a gap.
-        pos = {i: (c * 2.5, r * 2.5) for r, row in enumerate(GRIDS[fname]) for c, i in enumerate(row.split()) if i in ids}
-    else:
-        pos = layout(items, sizes)
-        if fname in POSITIONS:
-            placed = {i: (float(x), float(y)) for i, x, y in (l.split() for l in POSITIONS[fname].strip().splitlines())}
-            missing = sorted(ids - placed.keys())
-            if missing:
-                print(f"{fname}: not hand-placed yet, using the automatic layout for {missing}")
-            pos = {i: placed.get(i, pos[i]) for i in ids}
+    sizes = {x["id"]: quest_size(g, x) for x in items}
+    pos = layout(items, sizes)
+    if fname in POSITIONS:
+        placed = {i: (float(x), float(y)) for i, x, y in (l.split() for l in POSITIONS[fname].strip().splitlines())}
+        missing = sorted(ids - placed.keys())
+        if missing:
+            print(f"{fname}: not hand-placed yet, using the automatic layout for {missing}")
+        pos = {i: placed.get(i, pos[i]) for i in ids}
     quests = []
     for x in items:
         qid = fid("quest", g, x["id"])
@@ -1051,7 +1040,8 @@ for g, cid, fname, title, gid, items in chapters:
         rewards = [{"id": fid("reward", g, x["id"], str(i)), "type": "item", "count": cnt,
                     "item": {"count": 1, "id": item}} for i, (item, cnt) in enumerate(x["rewards"])]
         if x["xp"]:
-            levels = XP_LEVELS.get((g, x["id"]), 1)
+            # Projects are bigger builds, so they pay a little more XP; still no free machines.
+            levels = 3 if x["title"].startswith("Project: ") else 1
             rewards.append({"id": fid("reward", g, x["id"], "xp"), "type": "xp_levels", "xp_levels": levels})
         px, py = pos[x["id"]]
         qd = {"id": qid, "x": px, "y": py,

@@ -15,8 +15,8 @@ ap.add_argument("chapters", nargs="*")
 args = ap.parse_args()
 
 GEN = os.path.join(HERE, "generate.py")
-sys.argv = [GEN, "--mods", args.mods, "--profile", args.profile, tempfile.mkdtemp()]
-with contextlib.redirect_stdout(io.StringIO()):
+with tempfile.TemporaryDirectory() as out, contextlib.redirect_stdout(io.StringIO()):
+    sys.argv = [GEN, "--mods", args.mods, "--profile", args.profile, out]
     g = runpy.run_path(GEN)
 wanted = args.chapters or list(g["POSITIONS"])
 src = open(GEN).read()
