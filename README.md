@@ -10,7 +10,7 @@ FTB Quests questlines for Create and its addons (Minecraft 1.21.1, NeoForge), wr
 | Crafts & Additions | 14 | Create Crafts & Additions | The rolling mill, wires and spools, alternators and electric motors, a power grid project, the Tesla Coil and electrum, accumulators, powered contraptions, liquid fuel |
 | Modern Foundry | 14 | Modern Foundry | Tool parts, the smeltery, casting, the anvil, cobalt and the foundry |
 
-Chapters for mods that aren't installed are left out when you generate, as are single quests for optional mods (the Automated Kitchen project needs Slice & Dice and Farmer's Delight).
+Chapters for mods that aren't installed are left out when you generate, as are single quests for optional mods (the Automated Kitchen project needs Slice & Dice and Farmer's Delight, and Hidden Machinery needs Copycats+).
 
 Rewards are deliberately small: a level of XP per quest, survival basics (coal, torches, bread) early on, a few raw materials at milestones, and for parts you always need in sets (shafts, tires, track) you get back as many as the quest asked for.
 
