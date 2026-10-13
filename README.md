@@ -4,7 +4,7 @@ FTB Quests questlines for Create and its addons (Minecraft 1.21.1, NeoForge), wr
 
 | Chapter | Quests | Needs | Covers |
 |---|---|---|---|
-| Create | 69 | Create | Rotation and power, materials (sheets, kelp, casings, electron tubes) and what each unlocks, steam, equipment, build projects (farms and factories, each a checkbox plus a stack of output as proof), processing, brass, contraptions, fluids, precision mechanisms, logistics, trains |
+| Create | 71 | Create | Rotation and power, copycat blocks, materials (sheets, kelp, casings, electron tubes) and what each unlocks, steam, equipment, build projects (farms and factories, each a checkbox plus a stack of output as proof), processing, brass, contraptions, fluids, precision mechanisms, logistics, trains |
 | Aeronautics | 36 | Create Aeronautics | Simulated contraptions (diagrams, handles, springs), then four build paths: blimps, planes, helicopters (with keyboard flying and a mounted potato cannon) and cars |
 | Steam 'n' Rails | 10 | Steam 'n' Rails | Track gauges, monorail, switches, couplers, semaphores, conductors, locometal |
 | Crafts & Additions | 14 | Create Crafts & Additions | The rolling mill, wires and spools, alternators and electric motors, a power grid project, the Tesla Coil and electrum, accumulators, powered contraptions, liquid fuel |

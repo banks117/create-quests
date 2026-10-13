@@ -61,6 +61,8 @@
 	quest.0E12C80BA8BD8588.title: "Modifier Worktable"
 	quest.0E6A70DE20166D82.quest_desc: ["Put machines together for the first time. Build a lava and water cobblestone generator and point a Mechanical Drill at it, feeding the drops into a chest.", "", "Endless stone is the raw material for the next few projects. Tick the box and hand in a few stacks."]
 	quest.0E6A70DE20166D82.title: "Project: Cobblestone Generator"
+	quest.10A2D7D795062E1B.quest_desc: ["Copycats+ adds dozens more shapes in the Stonecutter: slopes, stairs, beams, catwalks, doors and ladders.", "", "It even has copycat Shafts and Cogwheels, so a power line can match the wall it runs through."]
+	quest.10A2D7D795062E1B.title: "Hidden Machinery"
 	quest.11213AD740BC0F9A.quest_desc: ["The Rope Pulley raises and lowers a contraption on a rope. It is the basis of elevators and cranes.", "", "A Gantry Carriage lets you do the same sideways."]
 	quest.11213AD740BC0F9A.title: "Rope Pulley"
 	quest.1187C7C8D05B3703.quest_desc: ["A Spring connects two blocks with a springy link, and it's a part in Wheel Mounts and Torsion Springs, so make a few.", "", "Try them between a car's body and its wheels for a softer ride over rough ground."]
@@ -101,6 +103,8 @@
 	quest.1DAD7B6372D9A028.title: "Mounted Potato Cannon"
 	quest.1F7CBA4F672A8800.quest_desc: ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.", "", "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.", "", "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."]
 	quest.1F7CBA4F672A8800.title: "Physics Assembler"
+	quest.2092D9D5951E48E9.quest_desc: ["Cut zinc ingots in a Stonecutter to make copycats. Right click one while holding any full block and it takes on that block's look; click again to turn it, and use a Wrench to reset it.", "", "They make your machines and airships look like part of the build instead of grey boxes."]
+	quest.2092D9D5951E48E9.title: "Copycat Blocks"
 	quest.20CDB7F7BB7215DE.quest_desc: ["The Tinkers' Anvil builds large tools such as hammers and broad axes, and is where you apply modifiers.", "", "It is cast from a block of metal; check the book for which metals work."]
 	quest.20CDB7F7BB7215DE.title: "Tinkers' Anvil"
 	quest.21066DE443C86344.quest_desc: ["Held in your off-hand, the Extendo Grip greatly increases your reach. It is a Mechanical Crafter recipe.", "", "While you wear a Backtank it uses air instead of durability, so it never wears out. Perfect for tall machines."]

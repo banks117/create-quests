@@ -166,6 +166,14 @@ q(CREATE, "zinc", "Zinc", "zinc_ingot", ["andesite_alloy"],
   ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.",
    "You will need it for brass."],
   [("zinc_ingot", 4)])
+q(CREATE, "copycats", "Copycat Blocks", "copycat_panel", ["zinc"],
+  ["Cut zinc ingots in a Stonecutter to make copycats. Right click one while holding any full block and it takes on that block's look; click again to turn it, and use a Wrench to reset it.",
+   "They make your machines and airships look like part of the build instead of grey boxes."],
+  [("copycat_panel", 2), ("copycat_step", 2)])
+q(CREATE, "copycat_machinery", "Hidden Machinery", "copycats:copycat_cogwheel", ["copycats"],
+  ["Copycats+ adds dozens more shapes in the Stonecutter: slopes, stairs, beams, catwalks, doors and ladders.",
+   "It even has copycat Shafts and Cogwheels, so a power line can match the wall it runs through."],
+  [("copycats:copycat_slope", 2), ("copycats:copycat_shaft", 2), ("copycats:copycat_cogwheel", 1)], needs=("copycats",))
 q(CREATE, "blaze_burner", "Blaze Burner", "blaze_burner", ["iron_sheet"],
   ["A Blaze Burner under a basin supplies the heat many recipes need. Find a Blaze in the Nether and right click it with an empty Blaze Burner to capture it.",
    "Feed it flammable items to keep it hot. A Blaze Cake makes it burn even hotter."],
@@ -731,7 +739,7 @@ SUBCHAPTERS = {
         ("main", "Create", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox "
          "millstone dried_kelp belt press iron_sheet golden_sheet wrench goggles fan funnels basin "
          "drill glue saw harvester bearing piston pulley "
-         "copper_sheet copper_casing fluids spout hose steam_engine zinc blaze_burner brass brass_casing electron_tube deployer "
+         "copper_sheet copper_casing fluids spout hose steam_engine zinc copycats copycat_machinery blaze_burner brass brass_casing electron_tube deployer "
          "precision arm crafter crushing_wheel sequenced radiance redstone display schematic vault packages "
          "train_track train_station first_train train_signal cargo_train"),
         ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
@@ -824,6 +832,8 @@ POSITIONS = {
         blaze_burner 8 10.8
         electron_tube 8 8.9
         zinc 5.4 14.2
+        copycats 3.6 15.4
+        copycat_machinery 1.6 16.4
         brass 7.1 13.3
         brass_casing 9.2 13.9
         deployer 10.4 11.8

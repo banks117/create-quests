@@ -1219,6 +1219,86 @@
 			y: 14.2d
 		}
 		{
+			dependencies: ["041DC559B39F9318"]
+			icon: {
+				id: "create:copycat_panel"
+			}
+			id: "2092D9D5951E48E9"
+			rewards: [
+				{
+					id: "004E742367220E46"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "652977A56830ED69"
+					item: {
+						count: 1
+						id: "create:copycat_panel"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "01A46425CD2D75FC"
+					item: {
+						count: 1
+						id: "create:copycat_step"
+					}
+					type: "item"
+				}
+			]
+			x: 3.6d
+			y: 15.4d
+		}
+		{
+			dependencies: ["2092D9D5951E48E9"]
+			icon: {
+				id: "copycats:copycat_cogwheel"
+			}
+			id: "10A2D7D795062E1B"
+			rewards: [
+				{
+					id: "18B6F8DD2772C312"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "5C41C714158926C4"
+					item: {
+						count: 1
+						id: "copycats:copycat_slope"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "41C8B2FBAA03F6CE"
+					item: {
+						count: 1
+						id: "copycats:copycat_shaft"
+					}
+					type: "item"
+				}
+				{
+					id: "44EEC7A9A72F613E"
+					item: {
+						count: 1
+						id: "copycats:copycat_cogwheel"
+					}
+					type: "item"
+				}
+			]
+			x: 1.6d
+			y: 16.4d
+		}
+		{
 			dependencies: ["35A09C5A95B9DD30"]
 			icon: {
 				id: "create:blaze_burner"
