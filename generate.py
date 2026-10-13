@@ -97,7 +97,7 @@ q(CREATE, "water_wheel", "Water Wheel", "water_wheel", ["cogwheel"],
 q(CREATE, "windmill", "Windmill", "windmill_bearing", ["cogwheel"],
   ["Not near water? A Windmill Bearing turns a structure in front of it into a windmill. It needs at least 8 sail-like blocks; Windmill Sails stick to each other without glue.",
    "Right click the bearing to start it. More sails means more speed."],
-  [("windmill_bearing", 1), ("sail_frame", 8)])
+  [("windmill_bearing", 1), ("white_sail", 8)])
 q(CREATE, "goggles", "Engineer's Goggles", "goggles", ["press"],
   ["Goggles let you see speed and stress on any component you look at, and the Speedometer and Stressometer show them on a dial.",
    "If a machine will not move, the goggles will tell you why: usually overstress."],
@@ -110,15 +110,15 @@ q(CREATE, "gearbox", "Gearbox, Clutch, Gearshift", "gearbox", ["casing", "cogwhe
   ["A Gearbox splits rotation in several directions. A Clutch cuts power when it gets a redstone signal. A Gearshift reverses it.",
    "Together they let a single power source drive many different jobs."],
   [("gearbox", 1), ("clutch", 1), ("gearshift", 1)])
-q(CREATE, "millstone", "Millstone", "millstone", ["casing"],
+q(CREATE, "millstone", "Millstone", "millstone", ["casing", "cogwheel"],
   ["The Millstone grinds items: wheat into flour, ores into crushed ore, and more. Power it from the side with cogwheels.",
    "Throw items in the top, then right click it to take the result, or pull it out with a hopper or funnel."],
   [("millstone", 1), ("wheat_flour", 4)])
-q(CREATE, "crushing_wheel", "Crushing Wheels", "crushing_wheel", ["millstone", "gearbox"],
+q(CREATE, "crushing_wheel", "Crushing Wheels", "crushing_wheel", ["crafter", "millstone"],
   ["Two Crushing Wheels placed side by side crush ore into more crushed ore than a furnace could ever give you.",
    "Make them spin into each other, then drop items in the top."],
   [("crushing_wheel", 2), ("crushed_raw_iron", 4)])
-q(CREATE, "fan", "Encased Fan", "encased_fan", ["gearbox"],
+q(CREATE, "fan", "Encased Fan", "encased_fan", ["gearbox", "press"],
   ["A Fan blowing through a block processes items in its path: through lava it smelts, through fire it smokes food, through water it washes.",
    "Fan speed changes the range, not how fast items are processed. It works on belts and depots too."],
   [("encased_fan", 1), ("propeller", 1)])
@@ -126,7 +126,7 @@ q(CREATE, "belt", "Mechanical Belt", "belt_connector", ["gearbox"],
   ["Belts carry items between machines. Right click two shafts in a line with Belt Connectors to link them.",
    "Items on belts can be processed along the way by a Press, a Saw, or a Fan."],
   [("belt_connector", 4), ("depot", 1)])
-q(CREATE, "funnels", "Funnels and Chutes", "andesite_funnel", ["belt"],
+q(CREATE, "funnels", "Funnels and Chutes", "andesite_funnel", ["press"],
   ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.",
    "A funnel with a filter will only pass the item you set."],
   [("andesite_funnel", 2), ("chute", 2), ("filter", 1)])
@@ -142,7 +142,7 @@ q(CREATE, "basin", "Basin and Mixer", "mechanical_mixer", ["press"],
   ["Put a Basin on the ground and a Mechanical Mixer above it, and it will automate shapeless crafting recipes and a few special ones.",
    "Some recipes only run when the basin is heated from below. That comes later."],
   [("basin", 1), ("mechanical_mixer", 1)])
-q(CREATE, "zinc", "Zinc", "zinc_ingot", ["crushing_wheel"],
+q(CREATE, "zinc", "Zinc", "zinc_ingot", ["andesite_alloy"],
   ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.",
    "You will need it for brass."],
   [("zinc_ingot", 4)])
@@ -174,7 +174,7 @@ q(CREATE, "harvester", "Harvester and Plough", "mechanical_harvester", ["brass_c
   ["Mounted on a contraption, the Harvester reaps crops and the Plough tills the soil. Perfect for a farm.",
    "Combine them with a Mechanical Bearing for a moving farm."],
   [("mechanical_harvester", 2), ("mechanical_plough", 2)])
-q(CREATE, "glue", "Super Glue", "super_glue", ["casing"],
+q(CREATE, "glue", "Super Glue", "super_glue", ["press"],
   ["Contraptions only move what is connected. Super Glue groups blocks together: click two corners to glue the area between them.",
    "Punch a glued area with the glue in hand to remove it."],
   [("super_glue", 1)])
@@ -244,13 +244,14 @@ q(CREATE, "train_track", "Train Tracks", "track", ["precision"],
   [("track", 16)])
 q(CREATE, "train_station", "Train Station", "track_station", ["train_track"],
   ["Stations are the stops on your network. Select a track, then place the Station beside it.",
-   "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station."],
-  [("track_station", 1)])
+   "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station.",
+   "Stations are crafted from Train Casing; make a couple of extra casings for your bogeys."],
+  [("track_station", 1), ("railway_casing", 2)])
 q(CREATE, "first_train", "Your First Train", "controls", ["train_station", "glue"],
   ["With the station in Assembly Mode, use Train Casing on the track to place bogeys (click again to change their design). Build your train on top and Super Glue it together.",
    "Every train needs Train Controls on board; a second set lets it leave stations in both directions. Confirm assembly in the station menu, then take it for a ride and tick the box.",
    "Trains run faster if they find fuel in a chest or barrel on board."],
-  [("railway_casing", 2), ("controls", 1)], check=True)
+  [("controls", 1)], check=True)
 q(CREATE, "train_signal", "Signals and Schedules", "track_signal", ["first_train"],
   ["Signals split the track into sections so more than one train can run safely. A Schedule tells a train where to go and when.",
    "Put a station at each stop, then write a schedule that visits them in turn."],
@@ -280,7 +281,8 @@ q(AERO, "engine", "Portable Engine", "simulated:white_portable_engine", ["physic
   [("simulated:white_portable_engine", 1)], lane=2)
 q(AERO, "propeller", "Propellers", "aeronautics:wooden_propeller", ["engine"],
   ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.",
-   "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow."],
+   "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow.",
+   "Wooden and Andesite Propellers are the same part in two styles; craft one to swap to the other."],
   [("aeronautics:propeller_bearing", 1), ("aeronautics:wooden_propeller", 2)], lane=0)
 
 # blimps
@@ -318,11 +320,7 @@ q(AERO, "controls", "Control Surfaces", "simulated:torsion_spring", ["sails", "s
   ["A Swivel Bearing turns a glued part of your craft. A Torsion Spring passes rotation within a set angle and springs back when you let go: ideal for flaps and rudders.",
    "Bearings driven like this have to be told not to disassemble."],
   [("simulated:swivel_bearing", 1), ("simulated:torsion_spring", 2)], lane=3)
-q(AERO, "andesite_propeller", "Andesite Propeller", "aeronautics:andesite_propeller", ["propeller"],
-  ["Propellers lose thrust when the air is already rushing past and as the air thins with altitude. A sturdier propeller helps a fast plane.",
-   "Check thrust with your goggles."],
-  [("aeronautics:andesite_propeller", 1)], lane=4)
-q(AERO, "first_plane", "Build a Plane", "simulated:white_symmetric_sail", ["controls", "andesite_propeller"],
+q(AERO, "first_plane", "Build a Plane", "simulated:white_symmetric_sail", ["controls"],
   ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.",
    "Tick the box when you're done."],
   [], check=True, lane=3)
@@ -407,19 +405,19 @@ q(RAILS, "handcar", "Handcar", "railways:handcar", ["welcome"],
 q(RAILS, "locometal", "Locometal", "railways:riveted_locometal", ["welcome"],
   ["Locometal blocks, boilers and smokeboxes make your locomotive look the part. Paint them with a Paint Brush.",
    "Smokestacks puff smoke from the top of your engine."],
-  [("railways:riveted_locometal", 16), ("railways:locometal_boiler", 4), ("railways:smokestack_coalburner", 1)])
+  [("railways:riveted_locometal", 16), ("railways:smokestack_coalburner", 1)])
 q(RAILS, "buffers", "Buffers and Headstocks", "railways:small_buffer", ["locometal"],
   ["Buffers stop trains at the end of the line. Headstocks and couplers finish off the ends of your carriages.",
    "They are decorative, but no train looks right without them."],
   [("railways:small_buffer", 2), ("railways:copycat_headstock", 2)])
 
 # ---- Modern Foundry ------------------------------------------------------
-q(FOUNDRY, "book", "Materials and You", "modernfoundry:materials_and_you", [],
-  ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes their stats.",
-   "This book is your guide. Read it and keep it close."],
+q(FOUNDRY, "book", "Materials and You", "modernfoundry:materials_and_you", ["pattern"],
+  ["Every material changes a tool's stats, and this book lists them all.",
+   "Craft it from a book and a Pattern. It is your guide, so keep it close."],
   [("modernfoundry:materials_and_you", 1)])
-q(FOUNDRY, "pattern", "Patterns", "modernfoundry:pattern", ["book"],
-  ["A Pattern is a template for a tool part. Craft a Pattern and a Part Builder with it.",
+q(FOUNDRY, "pattern", "Patterns", "modernfoundry:pattern", [],
+  ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts. A Pattern, crafted from planks and sticks, is the template for a part.",
    "The part builder turns a pattern and a material into a part."],
   [("modernfoundry:pattern", 4), ("modernfoundry:part_builder", 1)])
 q(FOUNDRY, "tinker_station", "Tinker Station", "modernfoundry:tinker_station", ["pattern"],
@@ -496,7 +494,7 @@ MILESTONES = {
 MATCH = {
     (CREATE, "shaft"): ["create:shaft"],
     (CREATE, "cogwheel"): ["create:cogwheel"],
-    (CREATE, "windmill"): ["create:sail_frame"],
+    (CREATE, "windmill"): ["create:white_sail"],
     (CREATE, "belt"): ["create:belt_connector"],
     (CREATE, "piston"): ["create:piston_extension_pole"],
     (CREATE, "fluids"): ["create:fluid_pipe"],

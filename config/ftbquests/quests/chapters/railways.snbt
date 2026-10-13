@@ -305,16 +305,7 @@
 					type: "item"
 				}
 				{
-					count: 4L
 					id: "13B1D5D56C4E641C"
-					item: {
-						count: 1
-						id: "railways:locometal_boiler"
-					}
-					type: "item"
-				}
-				{
-					id: "680AC90ED7BB8C9F"
 					item: {
 						count: 1
 						id: "railways:smokestack_coalburner"

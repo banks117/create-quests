@@ -110,7 +110,7 @@
 				}
 			]
 			x: 4.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["3A0F97042370EA0C"]
@@ -165,7 +165,7 @@
 				}
 			]
 			x: 6.0d
-			y: -1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["4F9A91933C4AAD8D"]
@@ -201,7 +201,7 @@
 				}
 			]
 			x: 8.0d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["4F9A91933C4AAD8D"]
@@ -246,7 +246,7 @@
 				}
 			]
 			x: 8.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["4F9A91933C4AAD8D"]
@@ -261,7 +261,7 @@
 					id: "4B8F402BA18F571C"
 					item: {
 						count: 1
-						id: "create:sail_frame"
+						id: "create:white_sail"
 					}
 					type: "item"
 				}
@@ -285,13 +285,13 @@
 					id: "4C07A848CB028FF8"
 					item: {
 						count: 1
-						id: "create:sail_frame"
+						id: "create:white_sail"
 					}
 					type: "item"
 				}
 			]
 			x: 8.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["41B89DC3CE373DEA"]
@@ -334,7 +334,7 @@
 				}
 			]
 			x: 14.0d
-			y: -1.5d
+			y: -3.75d
 		}
 		{
 			dependencies: ["5714EBDF3126946C"]
@@ -371,7 +371,7 @@
 				}
 			]
 			x: 4.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["246226A6919CF5ED", "4F9A91933C4AAD8D"]
@@ -414,10 +414,10 @@
 				}
 			]
 			x: 8.0d
-			y: 2.25d
+			y: 1.5d
 		}
 		{
-			dependencies: ["246226A6919CF5ED"]
+			dependencies: ["246226A6919CF5ED", "4F9A91933C4AAD8D"]
 			icon: {
 				count: 1
 				id: "create:millstone"
@@ -458,11 +458,11 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 0.0d
+			x: 8.0d
+			y: 3.0d
 		}
 		{
-			dependencies: ["4978B86F57E43FCE", "12CEF6D0015D619D"]
+			dependencies: ["3A66462861B4969E", "4978B86F57E43FCE"]
 			icon: {
 				count: 1
 				id: "create:crushing_wheel"
@@ -495,11 +495,11 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
-			y: -1.5d
+			x: 28.0d
+			y: -2.25d
 		}
 		{
-			dependencies: ["12CEF6D0015D619D"]
+			dependencies: ["12CEF6D0015D619D", "41B89DC3CE373DEA"]
 			icon: {
 				count: 1
 				id: "create:encased_fan"
@@ -530,8 +530,8 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
-			y: 0.0d
+			x: 14.0d
+			y: -2.25d
 		}
 		{
 			dependencies: ["12CEF6D0015D619D"]
@@ -576,10 +576,10 @@
 				}
 			]
 			x: 10.0d
-			y: 1.5d
+			y: 0.0d
 		}
 		{
-			dependencies: ["09FC33824A470023"]
+			dependencies: ["41B89DC3CE373DEA"]
 			icon: {
 				count: 1
 				id: "create:andesite_funnel"
@@ -620,8 +620,8 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
-			y: -1.5d
+			x: 14.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["09FC33824A470023", "246226A6919CF5ED"]
@@ -702,7 +702,7 @@
 				}
 			]
 			x: 14.0d
-			y: 0.0d
+			y: 0.75d
 		}
 		{
 			dependencies: ["41B89DC3CE373DEA"]
@@ -737,10 +737,10 @@
 				}
 			]
 			x: 14.0d
-			y: 1.5d
+			y: 2.25d
 		}
 		{
-			dependencies: ["5CA9836B85D5A334"]
+			dependencies: ["5714EBDF3126946C"]
 			icon: {
 				count: 1
 				id: "create:zinc_ingot"
@@ -773,7 +773,7 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
+			x: 4.0d
 			y: 1.5d
 		}
 		{
@@ -996,7 +996,7 @@
 			y: -0.75d
 		}
 		{
-			dependencies: ["246226A6919CF5ED"]
+			dependencies: ["41B89DC3CE373DEA"]
 			icon: {
 				count: 1
 				id: "create:super_glue"
@@ -1019,8 +1019,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 1.5d
+			x: 14.0d
+			y: 3.75d
 		}
 		{
 			dependencies: ["29C4AEBBED144162", "05C2800C8FB7FC81"]
@@ -1466,7 +1466,7 @@
 				}
 			]
 			x: 28.0d
-			y: -1.5d
+			y: -0.75d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585"]
@@ -1588,7 +1588,7 @@
 				}
 			]
 			x: 28.0d
-			y: 0.0d
+			y: 0.75d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585"]
@@ -1650,9 +1650,18 @@
 					}
 					type: "item"
 				}
+				{
+					count: 2L
+					id: "356598C6CFFC3159"
+					item: {
+						count: 1
+						id: "create:railway_casing"
+					}
+					type: "item"
+				}
 			]
 			x: 28.0d
-			y: 1.5d
+			y: 2.25d
 		}
 		{
 			dependencies: ["031C33DED2EFC5A7", "29C4AEBBED144162"]
@@ -1676,16 +1685,7 @@
 					type: "checkmark"
 				}
 				{
-					count: 2L
 					id: "27B841DAE7DB66BF"
-					item: {
-						count: 1
-						id: "create:railway_casing"
-					}
-					type: "item"
-				}
-				{
-					id: "0107BA6709C54363"
 					item: {
 						count: 1
 						id: "create:controls"

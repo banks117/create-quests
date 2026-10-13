@@ -6,7 +6,7 @@
 	chapter_group.5818A71FD4936D3E.title: "Create Quests"
 	quest.009B588D51418EAA.quest_desc: ["Display Links turn any value into text: a train schedule, a fluid level, an item count.", "", "Show it on Display Boards or Nixie Tubes."]
 	quest.009B588D51418EAA.title: "Display Boards"
-	quest.031C33DED2EFC5A7.quest_desc: ["Stations are the stops on your network. Select a track, then place the Station beside it.", "", "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station."]
+	quest.031C33DED2EFC5A7.quest_desc: ["Stations are the stops on your network. Select a track, then place the Station beside it.", "", "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station.", "", "Stations are crafted from Train Casing; make a couple of extra casings for your bogeys."]
 	quest.031C33DED2EFC5A7.title: "Train Station"
 	quest.03594763D06E9251.quest_desc: ["Build a pickaxe: a pick head, a tool handle and a tool binding.", "", "Different materials give different durability, speed and traits."]
 	quest.03594763D06E9251.title: "First Tool"
@@ -46,8 +46,6 @@
 	quest.152C465520C24558.title: "Conductors"
 	quest.1706586E4251428B.quest_desc: ["Monorail track has its own bogeys and hangs a train off a single rail.", "", "Try one for a skyline line between bases."]
 	quest.1706586E4251428B.title: "Monorail"
-	quest.17530DAD63A8A658.quest_desc: ["Propellers lose thrust when the air is already rushing past and as the air thins with altitude. A sturdier propeller helps a fast plane.", "", "Check thrust with your goggles."]
-	quest.17530DAD63A8A658.title: "Andesite Propeller"
 	quest.195EDBC057B143E8.quest_desc: ["Travel to a slime island to find slime balls and slime trees. They are the base of the slimy materials.", "", "Use them for slime boots and slimy chestplates."]
 	quest.195EDBC057B143E8.title: "Slime Islands"
 	quest.1AF9D599B1A1865F.quest_desc: ["The Saw cuts logs into planks, chops trees down, and stonecuts items for you.", "", "Placed on a belt line it is an automatic carpentry station."]
@@ -146,9 +144,9 @@
 	quest.5CA9836B85D5A334.title: "Crushing Wheels"
 	quest.5F71DBB1A5D94585.quest_desc: ["The gate to the advanced machines. It needs a sequenced assembly: a gold sheet on a belt passes under deployers and a press in a set order.", "", "Check the recipe in EMI (R) to see each step."]
 	quest.5F71DBB1A5D94585.title: "Precision Mechanism"
-	quest.6117A72CBB15361C.quest_desc: ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.", "", "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow."]
+	quest.6117A72CBB15361C.quest_desc: ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.", "", "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow.", "", "Wooden and Andesite Propellers are the same part in two styles; craft one to swap to the other."]
 	quest.6117A72CBB15361C.title: "Propellers"
-	quest.62E02D28045719F9.quest_desc: ["A Pattern is a template for a tool part. Craft a Pattern and a Part Builder with it.", "", "The part builder turns a pattern and a material into a part."]
+	quest.62E02D28045719F9.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts. A Pattern, crafted from planks and sticks, is the template for a part.", "", "The part builder turns a pattern and a material into a part."]
 	quest.62E02D28045719F9.title: "Patterns"
 	quest.65568FD704BF8034.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
 	quest.65568FD704BF8034.title: "Welcome to Create"
@@ -164,7 +162,7 @@
 	quest.6B30A0EAE22BB188.title: "Hand Crank"
 	quest.6B5929DBA1583912.quest_desc: ["The Foundry is the late-game cousin of the smeltery, built from Scorched Stone.", "", "Read Fantastic Foundry for the details."]
 	quest.6B5929DBA1583912.title: "The Foundry"
-	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes their stats.", "", "This book is your guide. Read it and keep it close."]
+	quest.71D1833076DCCCDE.quest_desc: ["Every material changes a tool's stats, and this book lists them all.", "", "Craft it from a book and a Pattern. It is your guide, so keep it close."]
 	quest.71D1833076DCCCDE.title: "Materials and You"
 	quest.723048BF1737D4ED.quest_desc: ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.", "", "Put one next to a depot and you can combine items automatically."]
 	quest.723048BF1737D4ED.title: "Deployer"
