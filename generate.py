@@ -567,10 +567,10 @@ q(ADDITIONS, "electrum", "Electrum", C + "electrum_ingot", ["tesla_coil"],
   ["Charge gold ingots under a Tesla Coil and they become Electrum. Press it into sheets and roll it into Electrum Wire.",
    "Electrum Spools carry high current, the only kind the Large Connector accepts."],
   [(C + "electrum_ingot", 4)])
-q(ADDITIONS, "high_current", "Large Connectors", C + "large_connector", ["electrum", "connectors"],
+q(ADDITIONS, "high_current", "Large Connectors", C + "large_connector", ["electrum"],
   ["Large Connectors take high-current Gold or Electrum wire and up to 6 links, for long power lines between bases."],
   [(C + "large_connector", 2), (C + "electrum_spool", 1)])
-q(ADDITIONS, "accumulator", "Modular Accumulator", C + "modular_accumulator", ["electrum", "capacitor"],
+q(ADDITIONS, "accumulator", "Modular Accumulator", C + "modular_accumulator", ["electrum"],
   ["Accumulators store electricity, and stack into bigger multiblock batteries. Give one an input connector in Push mode and an output in Pull mode.",
    "They keep your grid running when the power plant slows down."],
   [(C + "modular_accumulator", 2)])
@@ -724,6 +724,22 @@ GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm
 # "id x y" per line, x right and y down in quest units; a quest missing here falls back to the
 # automatic layout (and gets a warning), so new quests never vanish.
 POSITIONS = {
+    "createaddition": """
+        rolling_mill 0 0
+        liquid_fuel -2.4 0.6
+        wires 0 2.3
+        spool 0 4.6
+        capacitor 4.6 4.6
+        alternator -2.6 6.6
+        connectors -0.9 7.2
+        tesla_coil 2.3 5.6
+        motor 2.3 7.8
+        power_grid 0 9.8
+        electrum 2.4 3
+        high_current 2 0.8
+        accumulator 4.4 1.6
+        pei 6.4 1
+    """,
     "modern_foundry": """
         book 0 0
         pattern 0 2.2
