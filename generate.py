@@ -247,12 +247,21 @@ q(CREATE, "packages", "Packages and Logistics", "package", ["vault", "redstone"]
    "Factory Gauges let machines request their own supplies."],
   [("stock_link", 1), ("stock_ticker", 1), ("packager", 1), ("factory_gauge", 1)])
 q(CREATE, "train_track", "Train Tracks", "track", ["precision"],
-  ["Trains are a full railway system. Click a track, then a second spot, to lay a whole run at once. Place a Train Station next to the track.",
-   "Put the station in Assembly Mode, use Train Casing on the track to make bogeys, glue your train together, add Train Controls, and confirm."],
-  [("track", 16), ("track_station", 1), ("railway_casing", 2), ("controls", 1)])
-q(CREATE, "train_signal", "Signals and Schedules", "track_signal", ["train_track"],
-  ["Signals split the track into blocks so more than one train can run. A Schedule tells a train where to go and when.",
+  ["Create has a full railway system. To lay track in bulk, click an existing track, then a second spot: Create fills in the run, including turns and slopes.",
+   "Hold sprint while connecting for the longest possible bend, and keep blocks in your off-hand to pave under the track automatically."],
+  [("track", 16)])
+q(CREATE, "train_station", "Train Station", "track_station", ["train_track"],
+  ["Stations are the stops on your network. Select a track, then place the Station beside it.",
+   "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station."],
+  [("track_station", 1)])
+q(CREATE, "first_train", "Your First Train", "controls", ["train_station", "glue"],
+  ["With the station in Assembly Mode, use Train Casing on the track to place bogeys (click again to change their design). Build your train on top and Super Glue it together.",
+   "Every train needs Train Controls on board; a second set lets it leave stations in both directions. Confirm assembly in the station menu, then take it for a ride and tick the box.",
    "Trains run faster if they find fuel in a chest or barrel on board."],
+  [("railway_casing", 2), ("controls", 1)], check=True)
+q(CREATE, "train_signal", "Signals and Schedules", "track_signal", ["first_train"],
+  ["Signals split the track into sections so more than one train can run safely. A Schedule tells a train where to go and when.",
+   "Put a station at each stop, then write a schedule that visits them in turn."],
   [("track_signal", 2), ("schedule", 1), ("train_door", 1)])
 q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision", "blaze_burner"],
   ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.",
@@ -371,7 +380,7 @@ q(AERO, "goggles", "Aviator's Goggles", "aeronautics:aviators_goggles", ["propel
   [("aeronautics:aviators_goggles", 1)], lane=1)
 
 # ---- Steam 'n' Rails -----------------------------------------------------
-q(RAILS, "welcome", "Steam 'n' Rails", "railways:semaphore", [f"{CREATE}::train_track"],
+q(RAILS, "welcome", "Steam 'n' Rails", "railways:semaphore", [f"{CREATE}::first_train"],
   ["Steam 'n' Rails adds more to Create trains: new track gauges, switches, couplers, semaphores and a whole set of locomotive building blocks.",
    "You will need a working Create train first. Click the checkmark to start."],
   [], check=True)

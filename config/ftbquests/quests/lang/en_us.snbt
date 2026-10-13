@@ -6,6 +6,8 @@
 	chapter_group.5818A71FD4936D3E.title: "Create Quests"
 	quest.009B588D51418EAA.quest_desc: ["Display Links turn any value into text: a train schedule, a fluid level, an item count.", "", "Show it on Display Boards or Nixie Tubes."]
 	quest.009B588D51418EAA.title: "Display Boards"
+	quest.031C33DED2EFC5A7.quest_desc: ["Stations are the stops on your network. Select a track, then place the Station beside it.", "", "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station."]
+	quest.031C33DED2EFC5A7.title: "Train Station"
 	quest.03594763D06E9251.quest_desc: ["Build a pickaxe: a pick head, a tool handle and a tool binding.", "", "Different materials give different durability, speed and traits."]
 	quest.03594763D06E9251.title: "First Tool"
 	quest.041DC559B39F9318.quest_desc: ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.", "", "You will need it for brass."]
@@ -110,7 +112,7 @@
 	quest.49421439F3BC2FC4.title: "Aviator's Goggles"
 	quest.4978B86F57E43FCE.quest_desc: ["The Millstone grinds items: wheat into flour, ores into crushed ore, and more. Power it from the side with cogwheels.", "", "Throw items in the top, then right click it to take the result, or pull it out with a hopper or funnel."]
 	quest.4978B86F57E43FCE.title: "Millstone"
-	quest.4B2ED97BEA0D74D3.quest_desc: ["Trains are a full railway system. Click a track, then a second spot, to lay a whole run at once. Place a Train Station next to the track.", "", "Put the station in Assembly Mode, use Train Casing on the track to make bogeys, glue your train together, add Train Controls, and confirm."]
+	quest.4B2ED97BEA0D74D3.quest_desc: ["Create has a full railway system. To lay track in bulk, click an existing track, then a second spot: Create fills in the run, including turns and slopes.", "", "Hold sprint while connecting for the longest possible bend, and keep blocks in your off-hand to pave under the track automatically."]
 	quest.4B2ED97BEA0D74D3.title: "Train Tracks"
 	quest.4C32186AFC100060.quest_desc: ["The Tinker Station assembles finished tools from parts and lets you swap them later.", "", "Combine a head, a handle and a binding."]
 	quest.4C32186AFC100060.title: "Tinker Station"
@@ -124,7 +126,7 @@
 	quest.502BF10FD13C4EA5.title: "Portable Engine"
 	quest.519DC7EB567A6482.quest_desc: ["The Bearing spins everything attached to its face as a contraption: windmills, drills, a rotating arm of farm equipment.", "", "Build on its face, glue the structure, and give the bearing rotation to assemble it."]
 	quest.519DC7EB567A6482.title: "Mechanical Bearing"
-	quest.5228F2C9BD73B763.quest_desc: ["Signals split the track into blocks so more than one train can run. A Schedule tells a train where to go and when.", "", "Trains run faster if they find fuel in a chest or barrel on board."]
+	quest.5228F2C9BD73B763.quest_desc: ["Signals split the track into sections so more than one train can run safely. A Schedule tells a train where to go and when.", "", "Put a station at each stop, then write a schedule that visits them in turn."]
 	quest.5228F2C9BD73B763.title: "Signals and Schedules"
 	quest.532780D9DB293403.quest_desc: ["Mix copper and zinc ingots in a heated basin to make brass. Press it into sheets.", "", "Brass opens a new tier of machines."]
 	quest.532780D9DB293403.title: "Brass"
@@ -136,6 +138,8 @@
 	quest.5714EBDF3126946C.title: "Andesite Alloy"
 	quest.5A2D2A0C774E7594.quest_desc: ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.", "", "Tick the box when you're done."]
 	quest.5A2D2A0C774E7594.title: "Build a Plane"
+	quest.5B47D4A21842E145.quest_desc: ["With the station in Assembly Mode, use Train Casing on the track to place bogeys (click again to change their design). Build your train on top and Super Glue it together.", "", "Every train needs Train Controls on board; a second set lets it leave stations in both directions. Confirm assembly in the station menu, then take it for a ride and tick the box.", "", "Trains run faster if they find fuel in a chest or barrel on board."]
+	quest.5B47D4A21842E145.title: "Your First Train"
 	quest.5C5A59FC97B804A8.quest_desc: ["Create 6 adds a logistics network. A Stock Link on a vault joins it, a Stock Ticker orders from it, and Packagers wrap items into Packages for delivery.", "", "Factory Gauges let machines request their own supplies."]
 	quest.5C5A59FC97B804A8.title: "Packages and Logistics"
 	quest.5CA9836B85D5A334.quest_desc: ["Two Crushing Wheels placed side by side crush ore into more crushed ore than a furnace could ever give you.", "", "Make them spin into each other, then drop items in the top."]
