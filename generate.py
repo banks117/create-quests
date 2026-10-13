@@ -717,6 +717,10 @@ SUBCHAPTERS = {
 }
 # A chapter shows its first quest's icon unless set here (keyed by chapter file name).
 # The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
+# Chapters of mostly independent quests read better as a grid than as one tall column.
+# Projects: the iron chain on top, then farms, then the later factories.
+GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm crop_farm tree_farm",
+                             "ore_processing brass_factory kitchen"]}
 CHAPTER_ICONS = {"create_copper_brass": "create:brass_ingot", "create_equipment": "create:copper_diving_helmet",
                  "create_projects": "create:clipboard"}
 
@@ -878,7 +882,11 @@ for g, cid, fname, title, gid, items in chapters:
     lang[f"chapter.{cid}.title"] = title
     ids = {x["id"] for x in items}
     sizes = {x["id"]: quest_size(g, x, ids) for x in items}
-    pos = layout(items, sizes)
+    if fname in GRIDS:
+        # Rows of quests in reading order; quests left out for missing mods just leave a gap.
+        pos = {i: (c * 2.5, r * 2.5) for r, row in enumerate(GRIDS[fname]) for c, i in enumerate(row.split()) if i in ids}
+    else:
+        pos = layout(items, sizes)
     quests = []
     for x in items:
         qid = fid("quest", g, x["id"])
