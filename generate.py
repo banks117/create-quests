@@ -721,6 +721,79 @@ SUBCHAPTERS = {
 # Projects: the iron chain on top, then farms, then the later factories.
 GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm crop_farm tree_farm",
                              "ore_processing brass_factory kitchen"]}
+# Hand-placed chapters: each hub's quests cluster around it and no lines cross.
+# "id x y" per line, x right and y down in quest units; a quest missing here falls back to the
+# automatic layout (and gets a warning), so new quests never vanish.
+POSITIONS = {
+    "create_andesite": """
+        welcome 0 0
+        andesite_alloy 2.5 0
+        shaft 4.5 -1.5
+        casing 4.5 1.5
+        drill 4.5 3.5
+        cogwheel 6.5 -1.5
+        hand_crank 5.2 -3.4
+        water_wheel 6.5 -3.9
+        windmill 7.8 -3.4
+        millstone 5.7 0.1
+        gearbox 8.5 0
+        dried_kelp 10.5 0
+        belt 12.5 0
+        press 14.5 1.5
+        funnels 14.5 -2.2
+        iron_sheet 17.5 0
+        fan 16.6 -2.4
+        basin 18.2 -2.6
+        saw 19.6 -1.7
+        harvester 20.2 -0.1
+        glue 19.8 2.2
+        bearing 21.9 1.6
+        piston 22.1 3.2
+        pulley 20.9 4.3
+        golden_sheet 16.5 3.5
+        wrench 15.4 5.3
+        goggles 17.7 5.4
+    """,
+    "create_copper_brass": """
+        copper_sheet 0 -3
+        fluids 2.5 -3
+        copper_casing 2.5 -6
+        hose 0.7 -4.6
+        spout 4.3 -4.6
+        steam_engine 5 -1.5
+        blaze_burner 2.5 0
+        zinc 0 2.5
+        brass 2.5 2.5
+        brass_casing 5 2.5
+        deployer 7.5 2.5
+        electron_tube 5 5
+    """,
+    "create_precision": """
+        precision 0 0
+        arm -1.5 -2.1
+        sequenced -2.5 -0.6
+        radiance -2.4 1.1
+        schematic -1.4 2.5
+        crafter 2 -2.4
+        crushing_wheel 4.2 -2.9
+        train_track 2.6 0.2
+        train_station 4.6 0.2
+        first_train 6.6 0.2
+        train_signal 8.6 0.2
+        cargo_train 10.6 0.2
+        redstone 1.8 2.7
+        display 3.2 4.4
+        packages 4.4 2.7
+        vault 6.6 2.7
+    """,
+    "create_equipment": """
+        backtank 0 0
+        diving 2 -1.6
+        netherite_diving 4 -1.6
+        extendo_grip 2.2 0.3
+        potato_cannon 2 2
+    """,
+}
 CHAPTER_ICONS = {"create_copper_brass": "create:brass_ingot", "create_equipment": "create:copper_diving_helmet",
                  "create_projects": "create:clipboard"}
 
@@ -887,6 +960,12 @@ for g, cid, fname, title, gid, items in chapters:
         pos = {i: (c * 2.5, r * 2.5) for r, row in enumerate(GRIDS[fname]) for c, i in enumerate(row.split()) if i in ids}
     else:
         pos = layout(items, sizes)
+        if fname in POSITIONS:
+            placed = {i: (float(x), float(y)) for i, x, y in (l.split() for l in POSITIONS[fname].strip().splitlines())}
+            missing = sorted(ids - placed.keys())
+            if missing:
+                print(f"{fname}: not hand-placed yet, using the automatic layout for {missing}")
+            pos = {i: placed.get(i, pos[i]) for i in ids}
     quests = []
     for x in items:
         qid = fid("quest", g, x["id"])

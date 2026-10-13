@@ -67,8 +67,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: -1.75d
+			x: 2.0d
+			y: -1.6d
 		}
 		{
 			dependencies: ["398876E1DCE7F037", "3A66462861B4969E"]
@@ -93,8 +93,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 0.0d
+			x: 2.2d
+			y: 0.3d
 		}
 		{
 			dependencies: ["398876E1DCE7F037", "3A66462861B4969E", "55625BFA5DD44551"]
@@ -119,8 +119,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 1.75d
+			x: 2.0d
+			y: 2.0d
 		}
 		{
 			dependencies: ["132463EBF3008F15"]
@@ -161,8 +161,8 @@
 					type: "item"
 				}
 			]
-			x: 5.0d
-			y: 0.0d
+			x: 4.0d
+			y: -1.6d
 		}
 	]
 }
