@@ -14,6 +14,8 @@
 	quest.041DC559B39F9318.title: "Zinc"
 	quest.04BE34CFD64D0B1C.quest_desc: ["Cobalt is found in the Nether and is the next big material tier.", "", "Melt it in the smeltery for better tools."]
 	quest.04BE34CFD64D0B1C.title: "Cobalt"
+	quest.04C5BFBF0EF45C4D.quest_desc: ["Mount a Gyroscopic Propeller Bearing facing up with a rotor on top, power it from a Portable Engine, and use a Throttle Lever to climb and descend.", "", "Lift fades as the air thins, so you'll hover where thrust and weight balance. Take off, hover, land, and tick the box."]
+	quest.04C5BFBF0EF45C4D.title: "Build a Helicopter"
 	quest.05C2800C8FB7FC81.quest_desc: ["Craft brass casing the same way as andesite casing: right click a log with a sheet of brass.", "", "Brass casing is the frame for the stronger machines."]
 	quest.05C2800C8FB7FC81.title: "Brass Casing"
 	quest.060551E84F3A2959.quest_desc: ["Funnels move items on and off belts and into inventories. Chutes carry them up and down.", "", "A funnel with a filter will only pass the item you set."]
@@ -26,6 +28,8 @@
 	quest.07F9BA4179BC2A64.title: "Borehead Miner"
 	quest.08FBC54833E131A6.quest_desc: ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.", "", "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."]
 	quest.08FBC54833E131A6.title: "Drivetrain"
+	quest.091645822E5B10ED.quest_desc: ["Gyroscopic Propeller Bearings facing downwards can hold a top-heavy craft level.", "", "Add a second rotor or a tail to stop the craft spinning, and tune it until it flies straight. Tick the box when it does."]
+	quest.091645822E5B10ED.title: "Steady Flying"
 	quest.093584C275BCEA9D.quest_desc: ["The Hose Pulley sucks up (or pours out) large bodies of fluid. Lower it into a lava lake and it will drain it.", "", "It is the right way to supply a big lava setup."]
 	quest.093584C275BCEA9D.title: "Hose Pulley"
 	quest.09FC33824A470023.quest_desc: ["Belts carry items between machines. Right click two shafts in a line with Belt Connectors to link them.", "", "Items on belts can be processed along the way by a Press, a Saw, or a Fan."]
@@ -164,6 +168,8 @@
 	quest.6B30A0EAE22BB188.title: "Hand Crank"
 	quest.6B5929DBA1583912.quest_desc: ["The Foundry is the late-game cousin of the smeltery, built from Scorched Stone.", "", "Read Fantastic Foundry for the details."]
 	quest.6B5929DBA1583912.title: "The Foundry"
+	quest.717FA27DE13C70CF.quest_desc: ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.", "", "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."]
+	quest.717FA27DE13C70CF.title: "Steam Engine"
 	quest.71D1833076DCCCDE.quest_desc: ["Every material changes a tool's stats, and this book lists them all.", "", "Craft it from a book and a Pattern. It is your guide, so keep it close."]
 	quest.71D1833076DCCCDE.title: "Materials and You"
 	quest.723048BF1737D4ED.quest_desc: ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.", "", "Put one next to a depot and you can combine items automatically."]
@@ -188,8 +194,8 @@
 	quest.7BAE5A98D0EA2865.title: "Encased Fan"
 	quest.7C319C3D0115308E.quest_desc: ["Place a Hot Air Burner under the balloon. Powered with redstone, it fills the balloon from the top down.", "", "Its panel sets the maximum output and the redstone strength scales it. Several burners can feed one balloon."]
 	quest.7C319C3D0115308E.title: "Hot Air Burner"
-	quest.7D09691C28E05501.quest_desc: ["Normal propeller bearings make poor helicopters. A Gyroscopic Propeller Bearing tries to keep its propeller upright.", "", "Facing downwards it can steady a top-heavy craft; a redstone signal resets its tilt."]
-	quest.7D09691C28E05501.title: "Helicopters"
+	quest.7D09691C28E05501.quest_desc: ["Normal propeller bearings make poor helicopters: the rotor tips with the craft. A Gyroscopic Propeller Bearing tries to keep its propeller upright.", "", "A redstone signal resets its tilt to zero when you don't want it leaning."]
+	quest.7D09691C28E05501.title: "Gyroscopic Propeller Bearing"
 	quest.7DA3D76FDF9593AD.quest_desc: ["Put a Basin on the ground and a Mechanical Mixer above it, and it will automate shapeless crafting recipes and a few special ones.", "", "Some recipes only run when the basin is heated from below. That comes later."]
 	quest.7DA3D76FDF9593AD.title: "Basin and Mixer"
 	quest.7DC6B9E2EF778D1B.quest_desc: ["Buffers stop trains at the end of the line. Headstocks and couplers finish off the ends of your carriages.", "", "They are decorative, but no train looks right without them."]

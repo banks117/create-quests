@@ -198,6 +198,10 @@ q(CREATE, "spout", "Spout and Item Drain", "spout", ["fluids", "belt"],
   ["A Spout fills items with liquid as they pass beneath it. An Item Drain empties them again.",
    "Use them to make potions, fill buckets, or bottle honey."],
   [("spout", 1), ("item_drain", 1)])
+q(CREATE, "steam_engine", "Steam Engine", "steam_engine", ["fluids", "blaze_burner"],
+  ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.",
+   "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."],
+  [("steam_engine", 1), ("fluid_tank", 4)])
 q(CREATE, "hose", "Hose Pulley", "hose_pulley", ["fluids"],
   ["The Hose Pulley sucks up (or pours out) large bodies of fluid. Lower it into a lava lake and it will drain it.",
    "It is the right way to supply a big lava setup."],
@@ -261,7 +265,7 @@ q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision", "b
    "Check EMI for the exact recipe."],
   [("chromatic_compound", 1)])
 
-# ---- Aeronautics: blimps (lane -3), shared (0), planes (3), cars (6) ----
+# ---- Aeronautics: blimps (lane -3), shared (0), planes (3), helicopters (6), cars (9) ----
 q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREATE}::casing"],
   ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.",
    "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.",
@@ -302,7 +306,7 @@ q(AERO, "altitude", "Altitude Sensor", "simulated:altitude_sensor", ["burner"],
   ["Lift weakens as you climb. A balloon settles where lift equals weight, so changing the burner output changes your altitude.",
    "An Altitude Sensor turns height into a redstone signal: wire it to the burner for a blimp that holds its height."],
   [("simulated:altitude_sensor", 1)], lane=-3)
-q(AERO, "steam_vent", "Steam Vent", "aeronautics:steam_vent", ["burner"],
+q(AERO, "steam_vent", "Steam Vent", "aeronautics:steam_vent", ["burner", f"{CREATE}::steam_engine"],
   ["A Steam Vent lifts a balloon with steam instead of hot air. Like a Steam Engine, it needs heat, water and boiler space.",
    "Bigger airships with several vents need a stronger boiler."],
   [("aeronautics:steam_vent", 1)], lane=-4)
@@ -328,10 +332,18 @@ q(AERO, "first_plane", "Build a Plane", "simulated:white_symmetric_sail", ["cont
   ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.",
    "Tick the box when you're done."],
   [], check=True, lane=3)
-q(AERO, "gyro", "Helicopters", "aeronautics:gyroscopic_propeller_bearing", ["first_plane"],
-  ["Normal propeller bearings make poor helicopters. A Gyroscopic Propeller Bearing tries to keep its propeller upright.",
-   "Facing downwards it can steady a top-heavy craft; a redstone signal resets its tilt."],
-  [("aeronautics:gyroscopic_propeller_bearing", 1)], lane=4)
+q(AERO, "gyro", "Gyroscopic Propeller Bearing", "aeronautics:gyroscopic_propeller_bearing", ["propeller"],
+  ["Normal propeller bearings make poor helicopters: the rotor tips with the craft. A Gyroscopic Propeller Bearing tries to keep its propeller upright.",
+   "A redstone signal resets its tilt to zero when you don't want it leaning."],
+  [("aeronautics:gyroscopic_propeller_bearing", 1)], lane=6)
+q(AERO, "first_heli", "Build a Helicopter", "aeronautics:gyroscopic_propeller_bearing", ["gyro", "throttle"],
+  ["Mount a Gyroscopic Propeller Bearing facing up with a rotor on top, power it from a Portable Engine, and use a Throttle Lever to climb and descend.",
+   "Lift fades as the air thins, so you'll hover where thrust and weight balance. Take off, hover, land, and tick the box."],
+  [], check=True, lane=6)
+q(AERO, "heli_stability", "Steady Flying", "aeronautics:gyroscopic_propeller_bearing", ["first_heli"],
+  ["Gyroscopic Propeller Bearings facing downwards can hold a top-heavy craft level.",
+   "Add a second rotor or a tail to stop the craft spinning, and tune it until it flies straight. Tick the box when it does."],
+  [], check=True, lane=6)
 q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_plane"],
   ["The Gimbal Sensor outputs redstone based on how the craft is tilted, and the Velocity Sensor based on its speed.",
    "Wire them to your control surfaces and you have an autopilot."],
@@ -341,23 +353,23 @@ q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_p
 q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["physics", f"{CREATE}::press"],
   ["Mount a Tire on a Wheel Mount to give your contraption wheels.",
    "Bigger tires roll over rougher ground."],
-  [("offroad:wheel_mount", 2), ("offroad:tire", 2)], lane=6)
+  [("offroad:wheel_mount", 2), ("offroad:tire", 2)], lane=9)
 q(AERO, "drivetrain", "Drivetrain", "simulated:directional_gearshift", ["wheels", "engine", f"{CREATE}::brass_casing"],
   ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.",
    "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."],
-  [("simulated:directional_gearshift", 1), ("simulated:analog_transmission", 1)], lane=6)
+  [("simulated:directional_gearshift", 1), ("simulated:analog_transmission", 1)], lane=9)
 q(AERO, "first_car", "Build a Car", "offroad:large_tire", ["drivetrain", "steering"],
   ["Four wheels, a Portable Engine, a drivetrain and a Steering Wheel. Drive it out of your base and back.",
    "Tick the box when you're done."],
-  [], check=True, lane=6)
+  [], check=True, lane=9)
 q(AERO, "big_tires", "Bigger Tires", "offroad:monstrous_tire", ["first_car"],
   ["Large and Monstrous Tires climb over almost anything.",
    "Time for a monster truck."],
-  [("offroad:large_tire", 2), ("offroad:monstrous_tire", 1)], lane=7)
+  [("offroad:large_tire", 2), ("offroad:monstrous_tire", 1)], lane=10)
 q(AERO, "borehead", "Borehead Miner", "offroad:borehead_bearing", ["first_car", f"{CREATE}::crushing_wheel"],
   ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.",
    "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."],
-  [("offroad:borehead_bearing", 1), ("offroad:rockcutting_wheel", 2)], lane=6)
+  [("offroad:borehead_bearing", 1), ("offroad:rockcutting_wheel", 2)], lane=9)
 
 # extras
 q(AERO, "ropes", "Ropes and Docking", "simulated:rope_winch", ["first_blimp", f"{CREATE}::crafter", f"{CREATE}::funnels"],

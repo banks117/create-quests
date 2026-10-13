@@ -303,7 +303,7 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["7C319C3D0115308E"]
+			dependencies: ["7C319C3D0115308E", "717FA27DE13C70CF"]
 			icon: {
 				count: 1
 				id: "aeronautics:steam_vent"
@@ -498,7 +498,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["5A2D2A0C774E7594"]
+			dependencies: ["6117A72CBB15361C"]
 			icon: {
 				count: 1
 				id: "aeronautics:gyroscopic_propeller_bearing"
@@ -521,8 +521,58 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
-			y: 6.0d
+			x: 6.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["7D09691C28E05501", "122B2A0D56D38529"]
+			icon: {
+				count: 1
+				id: "aeronautics:gyroscopic_propeller_bearing"
+			}
+			id: "04C5BFBF0EF45C4D"
+			rewards: [
+				{
+					id: "741B7013D8774922"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "7DB293E4F5322841"
+					type: "checkmark"
+				}
+			]
+			x: 8.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["04C5BFBF0EF45C4D"]
+			icon: {
+				count: 1
+				id: "aeronautics:gyroscopic_propeller_bearing"
+			}
+			id: "091645822E5B10ED"
+			rewards: [
+				{
+					id: "2649128B9B8537C9"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "1997A8B769638420"
+					type: "checkmark"
+				}
+			]
+			x: 10.0d
+			y: 9.0d
 		}
 		{
 			dependencies: ["5A2D2A0C774E7594"]
@@ -612,7 +662,7 @@
 				}
 			]
 			x: 2.0d
-			y: 9.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5", "05C2800C8FB7FC81"]
@@ -647,7 +697,7 @@
 				}
 			]
 			x: 4.0d
-			y: 9.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["08FBC54833E131A6", "39B8F8A441598265"]
@@ -672,7 +722,7 @@
 				}
 			]
 			x: 6.0d
-			y: 9.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["41571B487A0FA8B1"]
@@ -708,7 +758,7 @@
 				}
 			]
 			x: 8.0d
-			y: 10.5d
+			y: 15.0d
 		}
 		{
 			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334"]
@@ -744,7 +794,7 @@
 				}
 			]
 			x: 8.0d
-			y: 9.0d
+			y: 13.5d
 		}
 		{
 			dependencies: ["538222C5864751CC", "3A66462861B4969E", "060551E84F3A2959"]
