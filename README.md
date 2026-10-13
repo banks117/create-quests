@@ -4,7 +4,7 @@ FTB Quests questlines for Create and its addons (Minecraft 1.21.1, NeoForge), wr
 
 | Chapter | Quests | Needs | Covers |
 |---|---|---|---|
-| Create | 48 | Create | Rotation and power, steam, processing, brass, contraptions, fluids, precision mechanisms, logistics, trains |
+| Create | 53 | Create | Rotation and power, steam, equipment, processing, brass, contraptions, fluids, precision mechanisms, logistics, trains |
 | Aeronautics | 27 | Create Aeronautics | Simulated contraptions, then four build paths: blimps, planes, helicopters and cars |
 | Steam 'n' Rails | 10 | Steam 'n' Rails | Track gauges, monorail, switches, couplers, semaphores, conductors, locometal |
 | Modern Foundry | 14 | Modern Foundry | Tool parts, the smeltery, casting, the anvil, cobalt and the foundry |
@@ -31,7 +31,7 @@ Quest ids are stable across regenerations, so updating keeps player progress.
 
 Create and Aeronautics each get a chapter group with several chapters:
 
-- **Create:** Getting Started, Processing, Brass, Contraptions, Fluids and Steam, Precision and Automation, Logistics, Trains
+- **Create:** Getting Started, Processing, Brass, Contraptions, Fluids and Steam, Equipment, Precision and Automation, Logistics, Trains, plus Steam 'n' Rails when installed
 - **Aeronautics:** Basics, Blimps, Planes, Helicopters, Cars
 
 Steam 'n' Rails and Modern Foundry are single chapters. Prerequisites cross chapters where the recipes need them.

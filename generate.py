@@ -265,6 +265,27 @@ q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision", "b
    "Check EMI for the exact recipe."],
   [("chromatic_compound", 1)])
 
+q(CREATE, "backtank", "Copper Backtank", "copper_backtank", ["hand_crank"],
+  ["A Backtank is a wearable tank of pressurised air. Place it and give it rotation to fill it; the faster it spins, the faster it fills.",
+   "Wear it on your back and other Create gear draws on it: diving helmets, the Extendo Grip and the Potato Cannon."],
+  [("copper_backtank", 1)])
+q(CREATE, "diving", "Diving Gear", "copper_diving_helmet", ["backtank"],
+  ["With a Backtank, the Diving Helmet lets you breathe underwater, slowly using up the tank's air. Diving Boots let you sink quickly and walk and jump on the sea floor.",
+   "The boots also stop Mechanical Belts carrying you along. Handy for underwater builds, harbours and shipwrecks."],
+  [("copper_diving_helmet", 1), ("copper_diving_boots", 1)])
+q(CREATE, "extendo_grip", "Extendo Grip", "extendo_grip", ["backtank", "crafter"],
+  ["Held in your off-hand, the Extendo Grip greatly increases your reach. It is a Mechanical Crafter recipe.",
+   "While you wear a Backtank it uses air instead of durability, so it never wears out. Perfect for tall machines."],
+  [("extendo_grip", 1)])
+q(CREATE, "potato_cannon", "Potato Cannon", "potato_cannon", ["backtank", "crafter", "fluids"],
+  ["Launch your home-grown vegetables at enemies. It fires suitable items from your inventory, and different crops hit differently.",
+   "With a Backtank on, it runs on air instead of durability."],
+  [("potato_cannon", 1)])
+q(CREATE, "netherite_diving", "Netherite Diving Gear", "netherite_diving_helmet", ["diving"],
+  ["Upgrade your Backtank, Diving Helmet and Diving Boots with netherite at a smithing table. With netherite leggings too, the full set makes you immune to fire and lava and lets you see in it.",
+   "Walk the floor of the Nether's lava seas."],
+  [("netherite_backtank", 1), ("netherite_diving_helmet", 1), ("netherite_diving_boots", 1)])
+
 # ---- Aeronautics ---------------------------------------------------------
 q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREATE}::casing"],
   ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.",
@@ -540,6 +561,7 @@ SUBCHAPTERS = {
         ("brass", "Brass", "zinc blaze_burner brass brass_casing deployer saw drill harvester"),
         ("contraptions", "Contraptions", "glue bearing piston pulley"),
         ("fluids", "Fluids and Steam", "fluids spout hose steam_engine"),
+        ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
         ("precision", "Precision and Automation", "precision arm crafter crushing_wheel sequenced radiance"),
         ("logistics", "Logistics", "redstone display schematic vault packages"),
         ("trains", "Trains", "train_track train_station first_train train_signal"),

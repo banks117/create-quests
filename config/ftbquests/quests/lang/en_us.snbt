@@ -14,6 +14,7 @@
 	chapter.644D6632A8E3E10E.title: "Helicopters"
 	chapter.64DF7FF5F72362B0.title: "Planes"
 	chapter.6826C0246AB74D0A.title: "Basics"
+	chapter.79CC8FA7F96C20E8.title: "Equipment"
 	chapter_group.00E85A5288E5299C.title: "Modern Foundry"
 	chapter_group.1DE8FB13B5B62D56.title: "Aeronautics"
 	chapter_group.36387A651839BFDA.title: "Create"
@@ -23,6 +24,8 @@
 	quest.031C33DED2EFC5A7.title: "Train Station"
 	quest.03594763D06E9251.quest_desc: ["Build a pickaxe: a pick head, a tool handle and a tool binding.", "", "Different materials give different durability, speed and traits."]
 	quest.03594763D06E9251.title: "First Tool"
+	quest.03D2BB4268FF1D61.quest_desc: ["Upgrade your Backtank, Diving Helmet and Diving Boots with netherite at a smithing table. With netherite leggings too, the full set makes you immune to fire and lava and lets you see in it.", "", "Walk the floor of the Nether's lava seas."]
+	quest.03D2BB4268FF1D61.title: "Netherite Diving Gear"
 	quest.041DC559B39F9318.quest_desc: ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.", "", "You will need it for brass."]
 	quest.041DC559B39F9318.title: "Zinc"
 	quest.04BE34CFD64D0B1C.quest_desc: ["Cobalt is found in the Nether and is the next big material tier.", "", "Melt it in the smeltery for better tools."]
@@ -57,6 +60,8 @@
 	quest.122B2A0D56D38529.title: "Throttle Lever"
 	quest.12CEF6D0015D619D.quest_desc: ["A Gearbox splits rotation in several directions. A Clutch cuts power when it gets a redstone signal. A Gearshift reverses it.", "", "Together they let a single power source drive many different jobs."]
 	quest.12CEF6D0015D619D.title: "Gearbox, Clutch, Gearshift"
+	quest.132463EBF3008F15.quest_desc: ["With a Backtank, the Diving Helmet lets you breathe underwater, slowly using up the tank's air. Diving Boots let you sink quickly and walk and jump on the sea floor.", "", "The boots also stop Mechanical Belts carrying you along. Handy for underwater builds, harbours and shipwrecks."]
+	quest.132463EBF3008F15.title: "Diving Gear"
 	quest.13FA75146BE53137.quest_desc: ["Semaphores go on a pole above a Train Signal and show its state.", "", "On a brass signal with several exits, a second semaphore above the first shows whether any or all paths are blocked."]
 	quest.13FA75146BE53137.title: "Semaphores"
 	quest.1454F911712FF513.quest_desc: ["Redstone Links send signals wirelessly. Set a frequency with two items, and every link with the same items shares the signal.", "", "Pulse Repeaters and Timers help you shape the signal."]
@@ -77,6 +82,8 @@
 	quest.1F7CBA4F672A8800.title: "Physics Assembler"
 	quest.20CDB7F7BB7215DE.quest_desc: ["The Tinkers' Anvil builds large tools such as hammers and broad axes, and is where you apply modifiers.", "", "It is cast from a block of metal; check the book for which metals work."]
 	quest.20CDB7F7BB7215DE.title: "Tinkers' Anvil"
+	quest.21066DE443C86344.quest_desc: ["Held in your off-hand, the Extendo Grip greatly increases your reach. It is a Mechanical Crafter recipe.", "", "While you wear a Backtank it uses air instead of durability, so it never wears out. Perfect for tall machines."]
+	quest.21066DE443C86344.title: "Extendo Grip"
 	quest.23B5949FE40EFA2B.quest_desc: ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.", "", "If a contraption splits apart, a Slime Ball merges two contraptions back together."]
 	quest.23B5949FE40EFA2B.title: "Honey Glue"
 	quest.246226A6919CF5ED.quest_desc: ["Casings are the frame for every machine. Right click a log with Andesite Alloy to make Andesite Casing.", "", "Casing also covers a shaft or cogwheel to make a neat, encased version."]
@@ -99,6 +106,8 @@
 	quest.35318D85DBDBF88B.title: "Wrench"
 	quest.375E0E1710F35827.quest_desc: ["Large and Monstrous Tires climb over almost anything.", "", "Time for a monster truck."]
 	quest.375E0E1710F35827.title: "Bigger Tires"
+	quest.398876E1DCE7F037.quest_desc: ["A Backtank is a wearable tank of pressurised air. Place it and give it rotation to fill it; the faster it spins, the faster it fills.", "", "Wear it on your back and other Create gear draws on it: diving helmets, the Extendo Grip and the Potato Cannon."]
+	quest.398876E1DCE7F037.title: "Copper Backtank"
 	quest.39B8F8A441598265.quest_desc: ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees.", "", "It outputs precise rotation, and you can set its maximum angle on its value panel."]
 	quest.39B8F8A441598265.title: "Steering Wheel"
 	quest.3A0F97042370EA0C.quest_desc: ["A Shaft carries rotation in a straight line. Place a Shaft next to a rotating block and it will spin too.", "", "Rotation has two numbers: speed (RPM) and stress. Keep both in mind."]
@@ -151,6 +160,8 @@
 	quest.538222C5864751CC.title: "Build a Blimp"
 	quest.55625BFA5DD44551.quest_desc: ["Pipes move liquids. A Mechanical Pump pushes fluid through a pipe in the direction you set.", "", "Fluid Tanks store liquid and can be stacked into bigger ones."]
 	quest.55625BFA5DD44551.title: "Fluid Pipes"
+	quest.56FB461130AF17D7.quest_desc: ["Launch your home-grown vegetables at enemies. It fires suitable items from your inventory, and different crops hit differently.", "", "With a Backtank on, it runs on air instead of durability."]
+	quest.56FB461130AF17D7.title: "Potato Cannon"
 	quest.5714EBDF3126946C.quest_desc: ["Almost everything in Create starts here. Combine andesite with an iron nugget (or a zinc nugget) to craft Andesite Alloy.", "", "Craft a stack of it now; you will use it constantly."]
 	quest.5714EBDF3126946C.title: "Andesite Alloy"
 	quest.5A2D2A0C774E7594.quest_desc: ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.", "", "Tick the box when you're done."]
