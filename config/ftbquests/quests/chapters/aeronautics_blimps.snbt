@@ -163,7 +163,7 @@
 		{
 			dependencies: ["7C319C3D0115308E", "6117A72CBB15361C", "39B8F8A441598265"]
 			icon: {
-				id: "aeronautics:white_envelope"
+				id: "simulated:white_nameplate"
 			}
 			id: "538222C5864751CC"
 			rewards: [
@@ -179,6 +179,14 @@
 				{
 					id: "192DE356D54E0F92"
 					type: "checkmark"
+				}
+				{
+					id: "36518149D0BAD91F"
+					item: {
+						count: 1
+						id: "simulated:white_nameplate"
+					}
+					type: "item"
 				}
 			]
 			x: 1.8125d

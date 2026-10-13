@@ -12,7 +12,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["1F7CBA4F672A8800", "35A09C5A95B9DD30"]
+			dependencies: ["1187C7C8D05B3703"]
 			icon: {
 				id: "offroad:tire"
 			}
@@ -192,6 +192,33 @@
 			]
 			x: 0.875d
 			y: 7.5d
+		}
+		{
+			dependencies: ["07F9BA4179BC2A64"]
+			icon: {
+				id: "simulated:auger_shaft"
+			}
+			id: "02E1015B5069D40F"
+			rewards: [
+				{
+					id: "74A94F5B8512E984"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "35950F7E6334C345"
+					item: {
+						count: 1
+						id: "simulated:auger_shaft"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 10.0d
 		}
 	]
 }

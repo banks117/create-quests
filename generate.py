@@ -365,6 +365,13 @@ q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREAT
    "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.",
    "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."],
   [("simulated:physics_assembler", 1)])
+q(AERO, "diagram", "Contraption Diagram", "simulated:contraption_diagram", ["physics"],
+  ["Craft a Physics Assembler with paper into a Contraption Diagram: a visual diagram with detailed information about a Simulated Contraption.",
+   "When a build won't fly or keeps tipping over, check its diagram first."],
+  [("simulated:contraption_diagram", 1)])
+q(AERO, "handles", "Handles", "simulated:iron_handle", ["physics"],
+  ["Attach a Handle to a block and you can grab onto it. Put a few around your craft so you can hold on while it moves. Dye them to match."],
+  [("simulated:iron_handle", 2)])
 q(AERO, "honey_glue", "Honey Glue", "simulated:honey_glue", ["physics", f"{CREATE}::spout", f"{CREATE}::iron_sheet"],
   ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.",
    "If a contraption splits apart, a Slime Ball merges two contraptions back together."],
@@ -408,24 +415,28 @@ q(AERO, "levitite", "Levitite", "aeronautics:levitite", ["physics"],
   ["Enough Levitite keeps a contraption afloat, but it cannot climb on its own; you still need lift or thrust. It also resists slow movement.",
    "Levitite Blend crystallises into Levitite when heated, and the crystal spreads through the whole pool. Blocks used as a mould may break."],
   [("aeronautics:levitite_blend_bucket", 1), ("aeronautics:levitite", 4)])
-q(AERO, "first_blimp", "Build a Blimp", "aeronautics:white_envelope", ["burner", "propeller", "steering"],
+q(AERO, "first_blimp", "Build a Blimp", "simulated:white_nameplate", ["burner", "propeller", "steering"],
   ["Put it together: a sealed balloon with a Hot Air Burner, a Portable Engine driving a Propeller, and a Steering Wheel to turn.",
-   "Fly it, land it, and tick the box when you're done."],
-  [], check=True)
+   "Give it a name with a Nameplate, then fly it, land it, and tick the box."],
+  [("simulated:white_nameplate", 1)], check=True)
 
 # planes
 q(AERO, "sails", "Wings", "simulated:white_symmetric_sail", ["propeller"],
   ["Regular Sails on a moving contraption make lift, at right angles to their surface; the faster you go, the more lift. Enough lift and you fly.",
    "Symmetric Sails only make drag. Angle them away from your direction of travel to turn or stabilise."],
   [("white_sail", 8), ("simulated:white_symmetric_sail", 4)])
-q(AERO, "controls", "Control Surfaces", "simulated:torsion_spring", ["sails", "steering"],
+q(AERO, "controls", "Control Surfaces", "simulated:torsion_spring", ["sails", "steering", "springs"],
   ["A Swivel Bearing turns a glued part of your craft. A Torsion Spring passes rotation within a set angle and springs back when you let go: ideal for flaps and rudders.",
    "Bearings driven like this have to be told not to disassemble."],
   [("simulated:swivel_bearing", 1), ("simulated:torsion_spring", 2)])
-q(AERO, "first_plane", "Build a Plane", "simulated:white_symmetric_sail", ["controls"],
+q(AERO, "first_plane", "Build a Plane", "aeronautics:propeller_bearing", ["controls"],
   ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.",
    "Tick the box when you're done."],
   [], check=True)
+q(AERO, "smooth_controls", "Smooth Controls", "simulated:redstone_inductor", ["controls", f"{CREATE}::brass", f"{CREATE}::copper_sheet"],
+  ["A Redstone Inductor outputs an analog signal that changes over time to match its input; set how fast in its value panel. Use one wherever redstone drives your flaps or engines, for smooth changes instead of sudden jumps.",
+   "Its cousin the Redstone Accumulator stores a signal you can raise and lower over time."],
+  [("simulated:redstone_inductor", 1)])
 q(AERO, "gyro_mechanism", "Gyroscopic Mechanism", "simulated:gyroscopic_mechanism", ["propeller", f"{CREATE}::precision"],
   ["Every self-levelling part starts with a Gyroscopic Mechanism, built on a sequenced assembly line from an iron sheet, like the Precision Mechanism.",
    "Check the recipe in EMI (R) to see each step. You'll want a couple."],
@@ -456,7 +467,7 @@ q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_p
   [("simulated:gimbal_sensor", 1), ("simulated:velocity_sensor", 1)])
 
 # cars
-q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["physics", f"{CREATE}::iron_sheet"],
+q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["springs"],
   ["Mount a Tire on a Wheel Mount to give your contraption wheels.",
    "Bigger tires roll over rougher ground."],
   [("offroad:wheel_mount", 2), ("offroad:tire", 2)])
@@ -472,6 +483,14 @@ q(AERO, "big_tires", "Bigger Tires", "offroad:monstrous_tire", ["first_car", f"{
   ["Large and Monstrous Tires climb over almost anything.",
    "Time for a monster truck."],
   [("offroad:large_tire", 2), ("offroad:monstrous_tire", 1)])
+q(AERO, "springs", "Springs", "simulated:spring", ["physics", f"{CREATE}::iron_sheet"],
+  ["A Spring connects two blocks with a springy link, and it's a part in Wheel Mounts and Torsion Springs, so make a few.",
+   "Try them between a car's body and its wheels for a softer ride over rough ground."],
+  [("simulated:spring", 2)])
+q(AERO, "auger", "Auger Shaft", "simulated:auger_shaft", ["borehead"],
+  ["Powered Auger Shafts carry items along and pull them out of harvesting tools on your contraption, like the Borehead, Drills and Harvesters. Every tool connected sideways is included.",
+   "Use a Wrench to switch between the Auger Shaft and the Auger Cog."],
+  [("simulated:auger_shaft", 4)])
 q(AERO, "borehead", "Borehead Miner", "offroad:borehead_bearing", ["first_car", f"{CREATE}::crushing_wheel", f"{CREATE}::gearbox"],
   ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.",
    "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."],
@@ -719,11 +738,11 @@ SUBCHAPTERS = {
         ("projects", "Projects", "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
     ],
     AERO: [
-        ("basics", "Basics", "physics honey_glue steering throttle engine propeller goggles"),
+        ("basics", "Basics", "physics diagram handles springs honey_glue steering throttle engine propeller goggles"),
         ("blimps", "Blimps", "envelope burner altitude steam_vent levitite first_blimp ropes delivery_airship navigation"),
-        ("planes", "Planes", "sails controls first_plane flight_sensors"),
+        ("planes", "Planes", "sails controls first_plane smooth_controls flight_sensors"),
         ("helicopters", "Helicopters", "gyro_mechanism gyro first_heli heli_stability remote cannon"),
-        ("cars", "Cars", "wheels drivetrain first_car big_tires borehead"),
+        ("cars", "Cars", "wheels drivetrain first_car big_tires borehead auger"),
     ],
 }
 # A chapter shows its first quest's icon unless set here (keyed by chapter file name).

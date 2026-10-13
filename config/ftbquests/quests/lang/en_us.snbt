@@ -15,6 +15,8 @@
 	chapter_group.36387A651839BFDA.title: "Create"
 	quest.009B588D51418EAA.quest_desc: ["Display Links turn any value into text: a train schedule, a fluid level, an item count.", "", "Show it on Display Boards or Nixie Tubes."]
 	quest.009B588D51418EAA.title: "Display Boards"
+	quest.02E1015B5069D40F.quest_desc: ["Powered Auger Shafts carry items along and pull them out of harvesting tools on your contraption, like the Borehead, Drills and Harvesters. Every tool connected sideways is included.", "", "Use a Wrench to switch between the Auger Shaft and the Auger Cog."]
+	quest.02E1015B5069D40F.title: "Auger Shaft"
 	quest.031C33DED2EFC5A7.quest_desc: ["Stations are the stops on your network. Select a track, then place the Station beside it.", "", "Open its menu and switch to Assembly Mode to build a train there. Trains can only be taken apart again at a station.", "", "Stations are crafted from Train Casing; make a couple of extra casings for your bogeys."]
 	quest.031C33DED2EFC5A7.title: "Train Station"
 	quest.03594763D06E9251.quest_desc: ["Build a pickaxe: a pick head, a tool handle and a tool binding.", "", "Different materials give different durability, speed and traits."]
@@ -61,6 +63,8 @@
 	quest.0E6A70DE20166D82.title: "Project: Cobblestone Generator"
 	quest.11213AD740BC0F9A.quest_desc: ["The Rope Pulley raises and lowers a contraption on a rope. It is the basis of elevators and cranes.", "", "A Gantry Carriage lets you do the same sideways."]
 	quest.11213AD740BC0F9A.title: "Rope Pulley"
+	quest.1187C7C8D05B3703.quest_desc: ["A Spring connects two blocks with a springy link, and it's a part in Wheel Mounts and Torsion Springs, so make a few.", "", "Try them between a car's body and its wheels for a softer ride over rough ground."]
+	quest.1187C7C8D05B3703.title: "Springs"
 	quest.1208A5AF2B093ACF.quest_desc: ["Channels carry molten metal. Drains and Ducts connect the smeltery to the rest of your setup.", "", "Use them to fill many tables at once."]
 	quest.1208A5AF2B093ACF.title: "Channels and Drains"
 	quest.122B2A0D56D38529.quest_desc: ["A Throttle Lever is a precise redstone dial: right click and drag to set its strength, and use a wrench to invert it.", "", "Use it to control engines, burners and transmissions."]
@@ -141,6 +145,8 @@
 	quest.3A0F97042370EA0C.title: "Shafts"
 	quest.3A4BC7716F2029B9.quest_desc: ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.", "", "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically."]
 	quest.3A4BC7716F2029B9.title: "Project: Andesite Factory"
+	quest.3A66256F6C6A294B.quest_desc: ["Craft a Physics Assembler with paper into a Contraption Diagram: a visual diagram with detailed information about a Simulated Contraption.", "", "When a build won't fly or keeps tipping over, check its diagram first."]
+	quest.3A66256F6C6A294B.title: "Contraption Diagram"
 	quest.3A66462861B4969E.quest_desc: ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.", "", "Use a Wrench to set the direction items are passed."]
 	quest.3A66462861B4969E.title: "Mechanical Crafter"
 	quest.3B3FF0F1BBD4D8ED.quest_desc: ["A small, simple rail cart for getting around before you have a full train.", "", "Pick it up again with a wrench."]
@@ -193,9 +199,11 @@
 	quest.519DC7EB567A6482.title: "Mechanical Bearing"
 	quest.5228F2C9BD73B763.quest_desc: ["Signals split the track into sections so more than one train can run safely. A Schedule tells a train where to go and when.", "", "Put a station at each stop, then write a schedule that visits them in turn."]
 	quest.5228F2C9BD73B763.title: "Signals and Schedules"
+	quest.52C8A2AD9D319C61.quest_desc: ["A Redstone Inductor outputs an analog signal that changes over time to match its input; set how fast in its value panel. Use one wherever redstone drives your flaps or engines, for smooth changes instead of sudden jumps.", "", "Its cousin the Redstone Accumulator stores a signal you can raise and lower over time."]
+	quest.52C8A2AD9D319C61.title: "Smooth Controls"
 	quest.532780D9DB293403.quest_desc: ["Mix copper and zinc ingots in a heated basin to make brass. Press it into sheets.", "", "Brass opens a new tier of machines."]
 	quest.532780D9DB293403.title: "Brass"
-	quest.538222C5864751CC.quest_desc: ["Put it together: a sealed balloon with a Hot Air Burner, a Portable Engine driving a Propeller, and a Steering Wheel to turn.", "", "Fly it, land it, and tick the box when you're done."]
+	quest.538222C5864751CC.quest_desc: ["Put it together: a sealed balloon with a Hot Air Burner, a Portable Engine driving a Propeller, and a Steering Wheel to turn.", "", "Give it a name with a Nameplate, then fly it, land it, and tick the box."]
 	quest.538222C5864751CC.title: "Build a Blimp"
 	quest.543E3B778239318E.quest_desc: ["Accumulators on a moving contraption cannot wire to the ground. Put a Portable Energy Interface on the contraption and another on the ground with a 1 or 2 block gap, and they exchange power as they pass.", "", "Charge your trains and airships at the station."]
 	quest.543E3B778239318E.title: "Powered Contraptions"
@@ -289,4 +297,6 @@
 	quest.7DF24DD5C018FABC.title: "Electron Tubes"
 	quest.7F0150EDB232A99A.quest_desc: ["A Steam Vent lifts a balloon with steam instead of hot air. Like a Steam Engine, it needs heat, water and boiler space.", "", "Bigger airships with several vents need a stronger boiler."]
 	quest.7F0150EDB232A99A.title: "Steam Vent"
+	quest.7F328D5C4F5C181C.quest_desc: ["Attach a Handle to a block and you can grab onto it. Put a few around your craft so you can hold on while it moves. Dye them to match."]
+	quest.7F328D5C4F5C181C.title: "Handles"
 }

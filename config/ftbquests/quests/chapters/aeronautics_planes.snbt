@@ -57,7 +57,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["4FA764B41B3AD78C", "39B8F8A441598265"]
+			dependencies: ["4FA764B41B3AD78C", "39B8F8A441598265", "1187C7C8D05B3703"]
 			icon: {
 				id: "simulated:torsion_spring"
 			}
@@ -94,7 +94,7 @@
 		{
 			dependencies: ["6AC31ACA704C3E95"]
 			icon: {
-				id: "simulated:white_symmetric_sail"
+				id: "aeronautics:propeller_bearing"
 			}
 			id: "5A2D2A0C774E7594"
 			rewards: [
@@ -112,7 +112,33 @@
 					type: "checkmark"
 				}
 			]
-			x: 0.0d
+			x: -0.9375d
+			y: 5.0d
+		}
+		{
+			dependencies: ["6AC31ACA704C3E95", "532780D9DB293403", "4E90904BFB21493E"]
+			icon: {
+				id: "simulated:redstone_inductor"
+			}
+			id: "52C8A2AD9D319C61"
+			rewards: [
+				{
+					id: "50CA721C7020026A"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "421377385EADB9E2"
+					item: {
+						count: 1
+						id: "simulated:redstone_inductor"
+					}
+					type: "item"
+				}
+			]
+			x: 0.9375d
 			y: 5.0d
 		}
 		{
