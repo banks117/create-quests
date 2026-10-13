@@ -634,6 +634,10 @@ SUBCHAPTERS = {
         ("cars", "Cars", "wheels drivetrain first_car big_tires borehead"),
     ],
 }
+# A chapter shows its first quest's icon unless set here (keyed by chapter file name).
+# The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
+CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet"}
+
 for mod in MODULES:
     ids = [x["id"] for x in Q if x["group"] == mod]
     placed = [i for _, _, s in SUBCHAPTERS.get(mod, []) for i in s.split()]
@@ -780,7 +784,7 @@ for g, cid, fname, title, gid, items in chapters:
             qd["size"] = 1.25
         quests.append(qd)
     chapter = {"default_hide_dependency_lines": False, "default_quest_shape": "", "filename": fname,
-               "group": gid, "icon": {"id": items[0]["icon"]}, "id": cid,
+               "group": gid, "icon": {"id": CHAPTER_ICONS.get(fname, items[0]["icon"])}, "id": cid,
                "order_index": order, "quest_links": [], "quests": quests}
     open(f"{FTB}/chapters/{fname}.snbt", "w").write(snbt(chapter) + "\n")
 open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": [{"id": i} for i in group_ids.values()]}) + "\n")
