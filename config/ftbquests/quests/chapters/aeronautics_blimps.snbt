@@ -32,8 +32,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					count: 16L
@@ -49,7 +47,7 @@
 			y: -0.75d
 		}
 		{
-			dependencies: ["4043B5F303D667BA", "41B89DC3CE373DEA"]
+			dependencies: ["4043B5F303D667BA", "35A09C5A95B9DD30"]
 			icon: {
 				id: "aeronautics:adjustable_burner"
 			}
@@ -139,8 +137,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					id: "14C749730ABA00F3"

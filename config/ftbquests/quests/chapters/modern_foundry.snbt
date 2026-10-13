@@ -16,8 +16,8 @@
 			}
 			id: "71D1833076DCCCDE"
 			rewards: [ ]
-			shape: "gear"
-			size: 1.5d
+			shape: "hexagon"
+			size: 1.25d
 			tasks: [
 				{
 					id: "11DBE2DDDBDA1A45"
@@ -248,6 +248,8 @@
 					xp_levels: 1
 				}
 			]
+			shape: "gear"
+			size: 1.5d
 			tasks: [
 				{
 					id: "1EFF75A4717ABFDB"

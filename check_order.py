@@ -91,6 +91,7 @@ MACHINE = {  # recipe type -> quest that teaches the machine
     "create:filling": ("create", "spout"), "create:emptying": ("create", "spout"),
     "create:deploying": ("create", "deployer"), "create:sequenced_assembly": ("create", "precision"),
     "create:mechanical_crafting": ("create", "crafter"), "create:cutting": ("create", "saw"),
+    "createaddition:rolling": ("createaddition", "rolling_mill"), "createaddition:charging": ("createaddition", "tesla_coil"),
 }
 
 key = lambda x: (x["group"], x["id"])

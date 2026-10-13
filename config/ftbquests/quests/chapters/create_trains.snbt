@@ -32,8 +32,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					count: 16L
@@ -161,7 +159,7 @@
 		{
 			dependencies: ["5228F2C9BD73B763"]
 			icon: {
-				id: "create:track_station"
+				id: "create:controls"
 			}
 			id: "7022A5B074A327BA"
 			rewards: [

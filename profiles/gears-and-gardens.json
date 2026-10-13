@@ -1,4 +1,4 @@
 {
-  "mods": ["create", "aeronautics", "railways", "modern_foundry"],
+  "mods": ["create", "aeronautics", "railways", "createaddition", "modern_foundry"],
   "item_rewards": true
 }

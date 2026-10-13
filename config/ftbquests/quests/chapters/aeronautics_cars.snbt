@@ -11,7 +11,7 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["1F7CBA4F672A8800", "41B89DC3CE373DEA"]
+			dependencies: ["1F7CBA4F672A8800", "35A09C5A95B9DD30"]
 			icon: {
 				id: "offroad:tire"
 			}
@@ -41,8 +41,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					count: 2L
@@ -67,7 +65,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5", "05C2800C8FB7FC81"]
+			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5", "05C2800C8FB7FC81", "7DF24DD5C018FABC"]
 			icon: {
 				id: "simulated:directional_gearshift"
 			}

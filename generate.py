@@ -57,11 +57,12 @@ present = {i.split(":")[0] for i in valid}
 # ---------------------------------------------------------------- content
 # Mod keys and quest ids feed the FTB ids, so never rename them. Titles, and which chapter a quest
 # sits in (SUBCHAPTERS, below the content), can change freely without resetting progress.
-CREATE, AERO, RAILS, FOUNDRY = "create", "aeronautics", "railways", "modern_foundry"
+CREATE, AERO, RAILS, ADDITIONS, FOUNDRY = "create", "aeronautics", "railways", "createaddition", "modern_foundry"
 MODULES = {
     CREATE: dict(title="Create", requires={"create"}),
     AERO: dict(title="Aeronautics", requires={"create", "aeronautics", "simulated", "offroad"}),
     RAILS: dict(title="Steam 'n' Rails", requires={"create", "railways"}, group=CREATE),
+    ADDITIONS: dict(title="Crafts & Additions", requires={"create", "createaddition"}, group=CREATE),
     FOUNDRY: dict(title="Modern Foundry", requires={"modernfoundry"}),
 }
 
@@ -524,6 +525,64 @@ q(RAILS, "buffers", "Buffers and Headstocks", "railways:small_buffer", ["locomet
    "They are decorative, but no train looks right without them."],
   [("railways:small_buffer", 2), ("railways:copycat_headstock", 2)])
 
+# ---- Crafts & Additions --------------------------------------------------
+C = "createaddition:"
+q(ADDITIONS, "rolling_mill", "Rolling Mill", C + "rolling_mill", [f"{CREATE}::iron_sheet"],
+  ["Create: Crafts & Additions brings electricity to Create. It starts with the Rolling Mill, which rolls ingots into rods and sheets into wires.",
+   "Power it with rotation and feed it from a belt with two funnels, or drop items in by hand."],
+  [(C + "rolling_mill", 1)])
+q(ADDITIONS, "wires", "Rods and Wires", C + "copper_wire", ["rolling_mill", f"{CREATE}::copper_sheet"],
+  ["Roll iron ingots into Iron Rods and Copper Sheets into Copper Wire. Rods and wire are the parts of every electrical machine."],
+  [(C + "iron_rod", 4), (C + "copper_wire", 4)])
+q(ADDITIONS, "spool", "Copper Spool", C + "copper_spool", ["wires"],
+  ["Wind Copper Wire onto an empty Spool. Spools are how you lay wire: right click two connectors with one to link them.",
+   "Right click both ends of a wire with an empty Spool to take it down again."],
+  [(C + "copper_spool", 2)])
+q(ADDITIONS, "capacitor", "Capacitors", C + "capacitor", [f"{CREATE}::zinc", f"{CREATE}::copper_sheet"],
+  ["Press zinc ingots into Zinc Sheets, then craft them with a Copper Sheet and a redstone torch into a Capacitor.",
+   "Capacitors go into motors, accumulators and the Tesla Coil."],
+  [(C + "capacitor", 2)])
+q(ADDITIONS, "alternator", "Alternator", C + "alternator", ["spool", f"{CREATE}::crafter"],
+  ["The Alternator turns rotation into electricity (FE). It needs at least 32 RPM, and the faster it spins the more it makes.",
+   "It is a Mechanical Crafter recipe. A water wheel farm or a steam engine makes a fine power plant."],
+  [(C + "alternator", 1)])
+q(ADDITIONS, "connectors", "Connectors", C + "connector", ["spool"],
+  ["Connectors carry power along wires. A producer like the Alternator needs a connector in Pull mode; a consumer needs one in Push mode. Use a Wrench to cycle the mode.",
+   "Connectors in None mode just relay power, so you can place them anywhere to run a line. Each one takes up to 4 wires."],
+  [(C + "connector", 4)])
+q(ADDITIONS, "motor", "Electric Motor", C + "electric_motor", ["capacitor", "spool", f"{CREATE}::crafter", f"{CREATE}::brass"],
+  ["The Electric Motor turns electricity back into rotation, in a single compact block. Scroll on its back panel to set the RPM; faster uses more power.",
+   "Run a wire from an Alternator and you can put power anywhere without long shaft lines."],
+  [(C + "electric_motor", 1)])
+q(ADDITIONS, "power_grid", "Project: Power Grid", C + "connector", ["alternator", "connectors", "motor"],
+  ["Build a power plant that spins an Alternator, run wires out to a distant Electric Motor, and use it to drive a machine.",
+   "Tick the box when the motor turns."],
+  [], check=True)
+q(ADDITIONS, "tesla_coil", "Tesla Coil", C + "tesla_coil",
+  ["capacitor", "spool", f"{CREATE}::brass_casing", f"{CREATE}::electron_tube", f"{CREATE}::crafter"],
+  ["The Tesla Coil charges items on a depot or belt below it: batteries, tools, and charging recipes. It also shocks anyone who stands too close.",
+   "Power it from a connector in Push mode."],
+  [(C + "tesla_coil", 1)])
+q(ADDITIONS, "electrum", "Electrum", C + "electrum_ingot", ["tesla_coil"],
+  ["Charge gold ingots under a Tesla Coil and they become Electrum. Press it into sheets and roll it into Electrum Wire.",
+   "Electrum Spools carry high current, the only kind the Large Connector accepts."],
+  [(C + "electrum_ingot", 4)])
+q(ADDITIONS, "high_current", "Large Connectors", C + "large_connector", ["electrum", "connectors"],
+  ["Large Connectors take high-current Gold or Electrum wire and up to 6 links, for long power lines between bases."],
+  [(C + "large_connector", 2), (C + "electrum_spool", 1)])
+q(ADDITIONS, "accumulator", "Modular Accumulator", C + "modular_accumulator", ["electrum", "capacitor"],
+  ["Accumulators store electricity, and stack into bigger multiblock batteries. Give one an input connector in Push mode and an output in Pull mode.",
+   "They keep your grid running when the power plant slows down."],
+  [(C + "modular_accumulator", 2)])
+q(ADDITIONS, "pei", "Powered Contraptions", C + "portable_energy_interface", ["accumulator", f"{CREATE}::funnels"],
+  ["Accumulators on a moving contraption cannot wire to the ground. Put a Portable Energy Interface on the contraption and another on the ground with a 1 or 2 block gap, and they exchange power as they pass.",
+   "Charge your trains and airships at the station."],
+  [(C + "portable_energy_interface", 2)])
+q(ADDITIONS, "liquid_fuel", "Liquid Fuel", C + "straw", ["rolling_mill", f"{CREATE}::blaze_burner"],
+  ["Roll bamboo or paper into a Straw and give it to a Blaze Burner: it will drink liquid fuel from buckets or pipes.",
+   "Compact seeds into Seed Oil, or mix biomass, sugar and cinder flour into Bioethanol, which burns nearly twice as long."],
+  [(C + "straw", 1), (C + "seed_oil_bucket", 1)])
+
 # ---- Modern Foundry ------------------------------------------------------
 q(FOUNDRY, "book", "Materials and You", "modernfoundry:materials_and_you", [],
   ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats.",
@@ -619,6 +678,7 @@ MATCH = {
     (AERO, "ropes"): ["simulated:docking_connector"],
     (RAILS, "gauges"): ["railways:track_oak_narrow", "railways:track_oak_wide"],
     (RAILS, "monorail"): ["railways:track_monorail"],
+    (ADDITIONS, "connectors"): ["createaddition:connector"],
 }
 for x in Q:
     key = (x["group"], x["id"])
@@ -629,6 +689,7 @@ for x in Q:
 XP_LEVELS = {(CREATE, p): 3 for p in "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm "
              "ore_processing brass_factory kitchen cargo_train".split()}
 XP_LEVELS[(AERO, "delivery_airship")] = 3
+XP_LEVELS[(ADDITIONS, "power_grid")] = 3
 
 
 # ---------------------------------------------------------------- chapters
@@ -751,7 +812,8 @@ def layout(items):
 
 # Entry points: the materials a branch hangs off are drawn as gears; everything else stays plain.
 HUBS = {(CREATE, i) for i in "andesite_alloy casing dried_kelp iron_sheet golden_sheet copper_sheet copper_casing "
-        "brass brass_casing electron_tube precision".split()} | {(AERO, "physics"), (FOUNDRY, "smeltery")}
+        "brass brass_casing electron_tube precision".split()} | {(AERO, "physics"), (FOUNDRY, "smeltery")} \
+    | {(ADDITIONS, i) for i in "rolling_mill capacitor electrum".split()}
 unlocks = collections.Counter(dep_key(x, d) for x in Q for d in x["deps"])
 
 FTB = f"{OUT}/config/ftbquests/quests"

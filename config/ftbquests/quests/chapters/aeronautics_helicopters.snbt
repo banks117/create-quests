@@ -23,8 +23,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					id: "7FD20B15BE85021A"

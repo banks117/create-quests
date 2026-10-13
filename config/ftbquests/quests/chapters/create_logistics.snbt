@@ -23,8 +23,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					count: 2L
@@ -111,8 +109,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					id: "7ED6666A577ADF4E"
@@ -143,7 +139,7 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["5F71DBB1A5D94585"]
+			dependencies: ["35A09C5A95B9DD30"]
 			icon: {
 				id: "create:item_vault"
 			}
@@ -155,8 +151,6 @@
 					xp_levels: 1
 				}
 			]
-			shape: "gear"
-			size: 1.5d
 			tasks: [
 				{
 					count: 4L

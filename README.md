@@ -7,6 +7,7 @@ FTB Quests questlines for Create and its addons (Minecraft 1.21.1, NeoForge), wr
 | Create | 69 | Create | Rotation and power, materials (sheets, kelp, casings, electron tubes) and what each unlocks, steam, equipment, build projects (farms and factories, each a checkbox plus a stack of output as proof), processing, brass, contraptions, fluids, precision mechanisms, logistics, trains |
 | Aeronautics | 28 | Create Aeronautics | Simulated contraptions, then four build paths: blimps, planes, helicopters and cars |
 | Steam 'n' Rails | 10 | Steam 'n' Rails | Track gauges, monorail, switches, couplers, semaphores, conductors, locometal |
+| Crafts & Additions | 14 | Create Crafts & Additions | The rolling mill, wires and spools, alternators and electric motors, a power grid project, the Tesla Coil and electrum, accumulators, powered contraptions, liquid fuel |
 | Modern Foundry | 14 | Modern Foundry | Tool parts, the smeltery, casting, the anvil, cobalt and the foundry |
 
 Chapters for mods that aren't installed are left out when you generate, as are single quests for optional mods (the Automated Kitchen project needs Slice & Dice and Farmer's Delight).
@@ -23,7 +24,7 @@ Generate the chapters against your pack's mods folder, then copy `config/ftbques
 python3 -I generate.py --mods /path/to/instance/mods /path/to/instance
 ```
 
-The `config/` folder in this repo is the output for all four chapters with the default profile.
+The `config/` folder in this repo is the output for all five mods with the default profile.
 
 Quest ids are stable across regenerations, so updating keeps player progress.
 
@@ -31,10 +32,10 @@ Quest ids are stable across regenerations, so updating keeps player progress.
 
 Create and Aeronautics each get a chapter group with several chapters:
 
-- **Create:** Getting Started, Processing, Brass, Projects, Contraptions, Fluids and Steam, Equipment, Precision and Automation, Logistics, Trains, plus Steam 'n' Rails when installed
+- **Create:** Getting Started, Processing, Contraptions, Fluids and Steam, Brass, Projects, Equipment, Precision and Automation, Logistics, Trains, plus Steam 'n' Rails and Crafts & Additions when installed
 - **Aeronautics:** Basics, Blimps, Planes, Helicopters, Cars
 
-Steam 'n' Rails and Modern Foundry are single chapters. Prerequisites cross chapters where the recipes need them.
+Steam 'n' Rails, Crafts & Additions and Modern Foundry are single chapters. Prerequisites cross chapters where the recipes need them.
 
 Quest ids come from the mod and the quest, not the chapter, so moving a quest between chapters keeps player progress.
 
