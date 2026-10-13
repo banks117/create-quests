@@ -994,7 +994,8 @@ for g, cid, fname, title, gid, items in chapters:
         if sizes[x["id"]] != 1.0:
             qd["size"] = sizes[x["id"]]
         quests.append(qd)
-    chapter = {"default_hide_dependency_lines": False, "default_quest_shape": "", "filename": fname,
+    # Open each chapter on its first quest rather than the middle of the map.
+    chapter = {"autofocus_id": quests[0]["id"], "default_hide_dependency_lines": False, "default_quest_shape": "", "filename": fname,
                "group": gid, "icon": {"id": CHAPTER_ICONS.get(fname, items[0]["icon"])}, "id": cid,
                "order_index": order, "quest_links": [], "quests": quests}
     open(f"{FTB}/chapters/{fname}.snbt", "w").write(snbt(chapter) + "\n")
