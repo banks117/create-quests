@@ -43,7 +43,7 @@ valid = set()
 for jar in sorted(os.listdir(MODS)):
     if jar.endswith(".jar"):
         valid |= scan(zipfile.ZipFile(os.path.join(MODS, jar)))
-valid |= {"minecraft:" + x for x in "torch coal bread slime_ball".split()}
+valid |= {"minecraft:" + x for x in "torch coal bread slime_ball iron_nugget dried_kelp".split()}
 present = {i.split(":")[0] for i in valid}
 
 
@@ -285,6 +285,20 @@ q(CREATE, "netherite_diving", "Netherite Diving Gear", "netherite_diving_helmet"
   ["Upgrade your Backtank, Diving Helmet and Diving Boots with netherite at a smithing table. With netherite leggings too, the full set makes you immune to fire and lava and lets you see in it.",
    "Walk the floor of the Nether's lava seas."],
   [("netherite_backtank", 1), ("netherite_diving_helmet", 1), ("netherite_diving_boots", 1)])
+
+q(CREATE, "iron_farm", "Project: Iron Farm", "minecraft:iron_nugget", ["drill", "millstone", "fan"],
+  ["Time to put machines together. Build a cobblestone generator and mine it with a Mechanical Drill, mill the cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.",
+   "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite project needs it.",
+   "Hand in a stack of nuggets from your farm."],
+  [("minecraft:iron_nugget", 64)])
+q(CREATE, "kelp_farm", "Project: Kelp Farm", "minecraft:dried_kelp", ["saw", "fan"],
+  ["Belts are made from dried kelp, and big factories need a lot of belts. Grow kelp underwater, cut it with Mechanical Saws, and blow it through fire with an Encased Fan to dry it.",
+   "Dried kelp blocks also make good furnace fuel."],
+  [("minecraft:dried_kelp", 64)])
+q(CREATE, "andesite_factory", "Project: Andesite Factory", "andesite_alloy", ["iron_farm", "basin"],
+  ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.",
+   "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically. Hand in a stack."],
+  [("andesite_alloy", 64)])
 
 # ---- Aeronautics ---------------------------------------------------------
 q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREATE}::casing"],
@@ -549,6 +563,8 @@ for x in Q:
     x["rewards"] = MILESTONES.get(key, []) + [(i, n) for i, n in x["tasks"] if i in MATCH.get(key, [])] \
         if PROFILE.get("item_rewards", True) else []
     x["xp"] = not x["check"] or x["deps"] != []
+# Projects are bigger builds, so they pay a little more XP; still no free machines.
+XP_LEVELS = {(CREATE, "iron_farm"): 3, (CREATE, "kelp_farm"): 3, (CREATE, "andesite_factory"): 3}
 
 
 # ---------------------------------------------------------------- chapters
@@ -559,6 +575,7 @@ SUBCHAPTERS = {
         ("getting_started", "Getting Started", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox"),
         ("processing", "Processing", "millstone belt funnels press wrench goggles fan basin"),
         ("brass", "Brass", "zinc blaze_burner brass brass_casing deployer saw drill harvester"),
+        ("projects", "Projects", "iron_farm kelp_farm andesite_factory"),
         ("contraptions", "Contraptions", "glue bearing piston pulley"),
         ("fluids", "Fluids and Steam", "fluids spout hose steam_engine"),
         ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
@@ -703,7 +720,8 @@ for g, cid, fname, title, gid, items in chapters:
         rewards = [{"id": fid("reward", g, x["id"], str(i)), "type": "item", "count": cnt,
                     "item": {"count": 1, "id": item}} for i, (item, cnt) in enumerate(x["rewards"])]
         if x["xp"]:
-            rewards.append({"id": fid("reward", g, x["id"], "xp"), "type": "xp_levels", "xp_levels": 1})
+            levels = XP_LEVELS.get((g, x["id"]), 1)
+            rewards.append({"id": fid("reward", g, x["id"], "xp"), "type": "xp_levels", "xp_levels": levels})
         col, row = pos[x["id"]]
         qd = {"id": qid, "x": float(col * 2), "y": float(row * 1.5),
               "tasks": tasks, "rewards": rewards, "icon": {"id": x["icon"]}}

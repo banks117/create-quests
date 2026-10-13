@@ -6,6 +6,7 @@
 	chapter.1909AD80DBA6FB2C.title: "Contraptions"
 	chapter.1EFBC95515779966.title: "Precision and Automation"
 	chapter.22F55E6EF2DCB855.title: "Getting Started"
+	chapter.25E1A543BDDB7923.title: "Projects"
 	chapter.33BFC882B88ED125.title: "Steam 'n' Rails"
 	chapter.3C4AE9E1582A2E70.title: "Trains"
 	chapter.5D891EA642A8EE2C.title: "Brass"
@@ -86,6 +87,8 @@
 	quest.21066DE443C86344.title: "Extendo Grip"
 	quest.23B5949FE40EFA2B.quest_desc: ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.", "", "If a contraption splits apart, a Slime Ball merges two contraptions back together."]
 	quest.23B5949FE40EFA2B.title: "Honey Glue"
+	quest.2449301709BD1EB2.quest_desc: ["Time to put machines together. Build a cobblestone generator and mine it with a Mechanical Drill, mill the cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.", "", "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite project needs it.", "", "Hand in a stack of nuggets from your farm."]
+	quest.2449301709BD1EB2.title: "Project: Iron Farm"
 	quest.246226A6919CF5ED.quest_desc: ["Casings are the frame for every machine. Right click a log with Andesite Alloy to make Andesite Casing.", "", "Casing also covers a shaft or cogwheel to make a neat, encased version."]
 	quest.246226A6919CF5ED.title: "Andesite Casing"
 	quest.2781D98AD14F4DEA.quest_desc: ["Narrow and wide gauge tracks come in every wood type. Each gauge needs its own bogeys.", "", "Narrow gauge is great for tight mine railways; wide gauge for big mainline trains."]
@@ -112,6 +115,8 @@
 	quest.39B8F8A441598265.title: "Steering Wheel"
 	quest.3A0F97042370EA0C.quest_desc: ["A Shaft carries rotation in a straight line. Place a Shaft next to a rotating block and it will spin too.", "", "Rotation has two numbers: speed (RPM) and stress. Keep both in mind."]
 	quest.3A0F97042370EA0C.title: "Shafts"
+	quest.3A4BC7716F2029B9.quest_desc: ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.", "", "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically. Hand in a stack."]
+	quest.3A4BC7716F2029B9.title: "Project: Andesite Factory"
 	quest.3A66462861B4969E.quest_desc: ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.", "", "Use a Wrench to set the direction items are passed."]
 	quest.3A66462861B4969E.title: "Mechanical Crafter"
 	quest.3B3FF0F1BBD4D8ED.quest_desc: ["A small, simple rail cart for getting around before you have a full train.", "", "Pick it up again with a wrench."]
@@ -122,6 +127,8 @@
 	quest.3E13CE882E876E3A.title: "Harvester and Plough"
 	quest.3F452D140A574530.quest_desc: ["The Drill breaks whatever it faces. Put it on a contraption and you have an automatic miner.", "", "Remember the stress cost: bigger machines need more power."]
 	quest.3F452D140A574530.title: "Mechanical Drill"
+	quest.3FBD9D7C59FC42D9.quest_desc: ["Belts are made from dried kelp, and big factories need a lot of belts. Grow kelp underwater, cut it with Mechanical Saws, and blow it through fire with an Encased Fan to dry it.", "", "Dried kelp blocks also make good furnace fuel."]
+	quest.3FBD9D7C59FC42D9.title: "Project: Kelp Farm"
 	quest.4043B5F303D667BA.quest_desc: ["Envelope blocks make a balloon. They enclose a space that lifts when filled with hot air, so the balloon must be airtight.", "", "Blocks inside take up volume. Encase shafts in envelope to run them through the balloon airtight."]
 	quest.4043B5F303D667BA.title: "Envelope"
 	quest.41571B487A0FA8B1.quest_desc: ["Four wheels, a Portable Engine, a drivetrain and a Steering Wheel. Drive it out of your base and back.", "", "Tick the box when you're done."]

@@ -7,7 +7,7 @@
 		id: "create:copper_backtank"
 	}
 	id: "79CC8FA7F96C20E8"
-	order_index: 5
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{

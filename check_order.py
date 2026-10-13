@@ -117,7 +117,9 @@ def ancestors(k):
 teaches = collections.defaultdict(set)   # item -> quests whose task asks for it
 for x in Q:
     for t, _ in x["tasks"]:
-        teaches[t].add(key(x))
+        # Vanilla items are always obtainable by hand, whatever quest happens to ask for them.
+        if not t.startswith("minecraft:"):
+            teaches[t].add(key(x))
 
 findings = []
 for x in Q:
