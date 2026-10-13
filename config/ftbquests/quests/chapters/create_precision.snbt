@@ -46,7 +46,7 @@
 				}
 			]
 			x: 0.0d
-			y: -0.9375d
+			y: 1.0625d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585"]
@@ -71,8 +71,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -4.5d
+			x: 2.5d
+			y: -5.25d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585"]
@@ -98,8 +98,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -3.0d
+			x: 2.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["3A66462861B4969E", "4978B86F57E43FCE"]
@@ -134,8 +134,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: -3.75d
+			x: 5.0d
+			y: -2.625d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585", "12CEF6D0015D619D"]
@@ -168,8 +168,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -1.5d
+			x: 2.5d
+			y: -1.75d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585", "4CC768AC355A6703"]
@@ -194,60 +194,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 2.5d
 			y: 0.0d
-		}
-		{
-			dependencies: ["398876E1DCE7F037", "3A66462861B4969E"]
-			icon: {
-				id: "create:extendo_grip"
-			}
-			id: "21066DE443C86344"
-			rewards: [
-				{
-					id: "7031E9ED2BA10E65"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			tasks: [
-				{
-					id: "7B7484BAB885F1C9"
-					item: {
-						count: 1
-						id: "create:extendo_grip"
-					}
-					type: "item"
-				}
-			]
-			x: 4.0d
-			y: -2.25d
-		}
-		{
-			dependencies: ["398876E1DCE7F037", "3A66462861B4969E", "55625BFA5DD44551"]
-			icon: {
-				id: "create:potato_cannon"
-			}
-			id: "56FB461130AF17D7"
-			rewards: [
-				{
-					id: "19689DE7A15DA6E6"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			tasks: [
-				{
-					id: "4DE4262B70663655"
-					item: {
-						count: 1
-						id: "create:potato_cannon"
-					}
-					type: "item"
-				}
-			]
-			x: 4.0d
-			y: -0.75d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585"]
@@ -289,8 +237,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 3.0d
+			x: 2.5d
+			y: 1.75d
 		}
 		{
 			dependencies: ["1454F911712FF513"]
@@ -332,8 +280,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 3.75d
+			x: 5.0d
+			y: 2.625d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585"]
@@ -374,8 +322,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 4.5d
+			x: 2.5d
+			y: 5.25d
 		}
 		{
 			dependencies: ["35A09C5A95B9DD30"]
@@ -402,7 +350,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.9375d
+			y: -1.0625d
 		}
 		{
 			dependencies: ["6A7A863777ED7392", "1454F911712FF513"]
@@ -451,8 +399,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 2.25d
+			x: 5.0d
+			y: -0.875d
 		}
 		{
 			dependencies: ["5F71DBB1A5D94585"]
@@ -487,8 +435,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 1.5d
+			x: 2.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["4B2ED97BEA0D74D3"]
@@ -522,8 +470,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 0.75d
+			x: 5.0d
+			y: 0.875d
 		}
 		{
 			dependencies: ["031C33DED2EFC5A7", "29C4AEBBED144162"]
@@ -554,7 +502,7 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
+			x: 7.5d
 			y: 0.0d
 		}
 		{
@@ -597,7 +545,7 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
+			x: 10.0d
 			y: 0.0d
 		}
 		{
@@ -621,7 +569,7 @@
 					type: "checkmark"
 				}
 			]
-			x: 10.0d
+			x: 12.5d
 			y: 0.0d
 		}
 	]

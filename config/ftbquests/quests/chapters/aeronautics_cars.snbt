@@ -95,7 +95,7 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 2.5d
 			y: 0.0d
 		}
 		{
@@ -119,7 +119,7 @@
 					type: "checkmark"
 				}
 			]
-			x: 4.0d
+			x: 5.0d
 			y: 0.0d
 		}
 		{
@@ -154,8 +154,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: -0.75d
+			x: 7.5d
+			y: -0.875d
 		}
 		{
 			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334"]
@@ -189,8 +189,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 0.75d
+			x: 7.5d
+			y: 0.875d
 		}
 	]
 }

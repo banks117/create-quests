@@ -7,7 +7,7 @@
 		id: "createaddition:rolling_mill"
 	}
 	id: "2B284AFF27473D2B"
-	order_index: 5
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
@@ -36,7 +36,7 @@
 				}
 			]
 			x: 0.0d
-			y: -1.0d
+			y: -1.125d
 		}
 		{
 			dependencies: ["0BBADAB4CDE5F5EC", "4E90904BFB21493E"]
@@ -71,8 +71,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -0.75d
+			x: 2.5d
+			y: -0.875d
 		}
 		{
 			dependencies: ["5CB599575BA77496"]
@@ -98,7 +98,7 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
+			x: 5.0d
 			y: 0.0d
 		}
 		{
@@ -128,7 +128,7 @@
 				}
 			]
 			x: 0.0d
-			y: 1.0d
+			y: 1.125d
 		}
 		{
 			dependencies: ["61A1ED329D7520B9", "3A66462861B4969E"]
@@ -153,8 +153,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: -2.25d
+			x: 7.5d
+			y: -2.625d
 		}
 		{
 			dependencies: ["61A1ED329D7520B9"]
@@ -189,8 +189,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: -0.75d
+			x: 7.5d
+			y: -0.875d
 		}
 		{
 			dependencies: ["4FAD83A2392C743D", "61A1ED329D7520B9", "3A66462861B4969E", "532780D9DB293403"]
@@ -215,8 +215,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 0.75d
+			x: 7.5d
+			y: 0.875d
 		}
 		{
 			dependencies: ["05D4BA355ED1D001", "162C08C7ED2A407A", "2D5B984199EBD5FA"]
@@ -239,8 +239,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 8.0d
-			y: -0.9375d
+			x: 10.0d
+			y: -1.0625d
 		}
 		{
 			dependencies: ["4FAD83A2392C743D", "61A1ED329D7520B9", "05C2800C8FB7FC81", "7DF24DD5C018FABC", "3A66462861B4969E"]
@@ -265,8 +265,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 2.25d
+			x: 7.5d
+			y: 2.625d
 		}
 		{
 			dependencies: ["1D8BB7C9F31570AE"]
@@ -294,8 +294,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 0.9375d
+			x: 10.0d
+			y: 1.0625d
 		}
 		{
 			dependencies: ["3BAA89FEBE221B98", "162C08C7ED2A407A"]
@@ -329,8 +329,8 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
-			y: -0.75d
+			x: 12.5d
+			y: -0.875d
 		}
 		{
 			dependencies: ["3BAA89FEBE221B98", "4FAD83A2392C743D"]
@@ -356,8 +356,8 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
-			y: 0.75d
+			x: 12.5d
+			y: 0.875d
 		}
 		{
 			dependencies: ["66386EE108FF1E9E", "060551E84F3A2959"]
@@ -383,7 +383,7 @@
 					type: "item"
 				}
 			]
-			x: 12.0d
+			x: 15.0d
 			y: 0.0d
 		}
 		{
@@ -417,8 +417,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 0.75d
+			x: 2.5d
+			y: 0.875d
 		}
 	]
 }

@@ -701,9 +701,10 @@ SUBCHAPTERS = {
          "millstone dried_kelp belt press iron_sheet golden_sheet wrench goggles fan funnels basin "
          "drill glue saw harvester bearing piston pulley"),
         ("copper_brass", "Copper and Brass", "copper_sheet copper_casing fluids spout hose steam_engine "
-         "zinc blaze_burner brass brass_casing electron_tube deployer backtank diving netherite_diving"),
-        ("precision", "Precision and Logistics", "precision arm crafter crushing_wheel sequenced radiance extendo_grip potato_cannon "
+         "zinc blaze_burner brass brass_casing electron_tube deployer"),
+        ("precision", "Precision and Logistics", "precision arm crafter crushing_wheel sequenced radiance "
          "redstone display schematic vault packages train_track train_station first_train train_signal cargo_train"),
+        ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
         ("projects", "Projects", "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
     ],
     AERO: [
@@ -715,7 +716,9 @@ SUBCHAPTERS = {
     ],
 }
 # A chapter shows its first quest's icon unless set here (keyed by chapter file name).
-CHAPTER_ICONS = {"create_copper_brass": "create:brass_ingot", "create_projects": "create:clipboard"}
+# The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
+CHAPTER_ICONS = {"create_copper_brass": "create:brass_ingot", "create_equipment": "create:copper_diving_helmet",
+                 "create_projects": "create:clipboard"}
 
 for mod in MODULES:
     ids = [x["id"] for x in Q if x["group"] == mod]
@@ -829,10 +832,10 @@ def layout(items, sizes):
         ys, y = [], 0.0
         for n, i in enumerate(xs):
             if n:
-                y += (sizes[xs[n - 1]] + sizes[i]) / 2 + 0.5
+                y += (sizes[xs[n - 1]] + sizes[i]) / 2 + 0.75
             ys.append(y)
         for i, y in zip(xs, ys):
-            pos[i] = (c * 2.0, y - ys[-1] / 2)
+            pos[i] = (c * 2.5, y - ys[-1] / 2)
     return pos
 
 

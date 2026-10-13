@@ -37,7 +37,7 @@
 				}
 			]
 			x: 0.0d
-			y: -2.375d
+			y: -1.875d
 		}
 		{
 			dependencies: ["246226A6919CF5ED"]
@@ -66,7 +66,7 @@
 				}
 			]
 			x: 0.0d
-			y: -4.375d
+			y: -4.125d
 		}
 		{
 			dependencies: ["4E90904BFB21493E"]
@@ -117,8 +117,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -1.75d
+			x: 2.5d
+			y: -1.0d
 		}
 		{
 			dependencies: ["606D7598F3CB0BAC", "55625BFA5DD44551"]
@@ -151,8 +151,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: -3.25d
+			x: 5.0d
+			y: -2.875d
 		}
 		{
 			dependencies: ["606D7598F3CB0BAC", "55625BFA5DD44551"]
@@ -177,8 +177,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: -1.75d
+			x: 5.0d
+			y: -1.125d
 		}
 		{
 			dependencies: ["55625BFA5DD44551", "5558C3CA300D1A6A", "4CC768AC355A6703"]
@@ -212,8 +212,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: -0.25d
+			x: 5.0d
+			y: 2.875d
 		}
 		{
 			dependencies: ["5714EBDF3126946C"]
@@ -249,7 +249,7 @@
 				}
 			]
 			x: 0.0d
-			y: -0.625d
+			y: 2.375d
 		}
 		{
 			dependencies: ["7DA3D76FDF9593AD"]
@@ -275,7 +275,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.875d
+			y: 4.125d
 		}
 		{
 			dependencies: ["041DC559B39F9318", "4CC768AC355A6703"]
@@ -321,8 +321,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 0.0d
+			x: 2.5d
+			y: 1.0d
 		}
 		{
 			dependencies: ["532780D9DB293403"]
@@ -350,8 +350,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 1.5d
+			x: 5.0d
+			y: 0.875d
 		}
 		{
 			dependencies: ["35A09C5A95B9DD30"]
@@ -380,7 +380,7 @@
 				}
 			]
 			x: 0.0d
-			y: 2.625d
+			y: 0.375d
 		}
 		{
 			dependencies: ["7DF24DD5C018FABC", "05C2800C8FB7FC81"]
@@ -405,110 +405,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
+			x: 7.5d
 			y: 0.0d
-		}
-		{
-			dependencies: ["6B30A0EAE22BB188"]
-			icon: {
-				id: "create:copper_backtank"
-			}
-			id: "398876E1DCE7F037"
-			rewards: [
-				{
-					id: "14017C48531EF897"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			tasks: [
-				{
-					id: "0080F61B8084B725"
-					item: {
-						count: 1
-						id: "create:copper_backtank"
-					}
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 4.375d
-		}
-		{
-			dependencies: ["398876E1DCE7F037"]
-			icon: {
-				id: "create:copper_diving_helmet"
-			}
-			id: "132463EBF3008F15"
-			rewards: [
-				{
-					id: "5106D67A8473E114"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			tasks: [
-				{
-					id: "55DF065E44805F10"
-					item: {
-						count: 1
-						id: "create:copper_diving_helmet"
-					}
-					type: "item"
-				}
-				{
-					id: "71F3242BFA407BED"
-					item: {
-						count: 1
-						id: "create:copper_diving_boots"
-					}
-					type: "item"
-				}
-			]
-			x: 2.0d
-			y: 1.75d
-		}
-		{
-			dependencies: ["132463EBF3008F15"]
-			icon: {
-				id: "create:netherite_diving_helmet"
-			}
-			id: "03D2BB4268FF1D61"
-			rewards: [
-				{
-					id: "7CBC1FD39A86FF9C"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
-			tasks: [
-				{
-					id: "30643FC413947D77"
-					item: {
-						count: 1
-						id: "create:netherite_backtank"
-					}
-					type: "item"
-				}
-				{
-					id: "695BC1CFE00DF917"
-					item: {
-						count: 1
-						id: "create:netherite_diving_helmet"
-					}
-					type: "item"
-				}
-				{
-					id: "4854C1BD96670E68"
-					item: {
-						count: 1
-						id: "create:netherite_diving_boots"
-					}
-					type: "item"
-				}
-			]
-			x: 4.0d
-			y: 3.25d
 		}
 	]
 }
