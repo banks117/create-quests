@@ -551,7 +551,7 @@
 		{
 			dependencies: ["5228F2C9BD73B763"]
 			icon: {
-				id: "create:controls"
+				id: "create:portable_storage_interface"
 			}
 			id: "7022A5B074A327BA"
 			rewards: [

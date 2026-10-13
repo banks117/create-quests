@@ -354,7 +354,7 @@ q(CREATE, "kitchen", "Project: Automated Kitchen", "sliceanddice:slicer", ["depl
   ["Slice & Dice automates Farmer's Delight. A Slicer holding a knife does the cutting board's work, and it can work over a Basin too. Sprinklers water your crops.",
    "Grow cabbages and turn them into leaves without lifting a knife."],
   [("sliceanddice:slicer", 1), ("farmersdelight:cabbage_leaf", 64)], check=True, needs=("sliceanddice", "farmersdelight"))
-q(CREATE, "cargo_train", "Project: Cargo Train", "controls", ["train_signal"],
+q(CREATE, "cargo_train", "Project: Cargo Train", "portable_storage_interface", ["train_signal"],
   ["Connect two bases with track and run a scheduled train between them, loading and unloading cargo at each station.",
    "Send your farm output home without lifting a finger, then tick the box."],
   [], check=True)
