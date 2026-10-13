@@ -2,13 +2,16 @@
 
 Usage: python3 -I check_order.py --mods MODS_DIR
 """
-import collections, io, json, os, re, runpy, sys, tempfile, zipfile
+import argparse, collections, io, json, os, re, runpy, sys, tempfile, zipfile
 
+ap = argparse.ArgumentParser()
+ap.add_argument("--mods", required=True)
+MODS = ap.parse_args().mods
 GEN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generate.py")
-MODS = sys.argv[sys.argv.index("--mods") + 1]
-sys.argv = [GEN, "--mods", MODS, tempfile.mkdtemp()]
-g = runpy.run_path(GEN)
-Q = g["Q"]
+with tempfile.TemporaryDirectory() as out:
+    sys.argv = [GEN, "--mods", MODS, out]
+    g = runpy.run_path(GEN)
+Q, dep_key = g["Q"], g["dep_key"]
 
 recipes = collections.defaultdict(list)   # output item -> [(type, heated, [ingredient alternatives])]
 tags = collections.defaultdict(set)
@@ -33,12 +36,8 @@ def walk(z):
             except Exception:
                 continue
             t = r.get("type", "")
-            outs = []
-            if "result" in r:
-                res = r["result"]
-                outs.append(res.get("id") or res.get("item") if isinstance(res, dict) else res)
-            for res in r.get("results", []) if isinstance(r.get("results"), list) else []:
-                outs.append(res.get("id") or res.get("item") if isinstance(res, dict) else res)
+            results = ([r["result"]] if "result" in r else []) + (r["results"] if isinstance(r.get("results"), list) else [])
+            outs = [res.get("id") or res.get("item") if isinstance(res, dict) else res for res in results]
             ings = []
             if "key" in r:
                 ings = list(r["key"].values())
@@ -96,21 +95,16 @@ MACHINE = {  # recipe type -> quest that teaches the machine
 
 key = lambda x: (x["group"], x["id"])
 byk = {key(x): x for x in Q}
-
-
-def deps(x):
-    return [tuple(d.split("::")) if "::" in d else (x["group"], d) for d in x["deps"]]
-
-
 anc = {}
 
 
 def ancestors(k):
     if k not in anc:
         s = set()
-        for d in deps(byk[k]):
-            if d in byk:
-                s |= {d} | ancestors(d)
+        for d in byk[k]["deps"]:
+            p = dep_key(byk[k], d)
+            if p in byk:
+                s |= {p} | ancestors(p)
         anc[k] = s
     return anc[k]
 
@@ -138,7 +132,7 @@ for x in Q:
         rs = recipes.get(t)
         if not rs:
             continue
-        problems_per_recipe = []
+        problems = []
         for typ, heat, ings in rs:
             p = []
             m = MACHINE.get(typ)
@@ -155,10 +149,9 @@ for x in Q:
                 if opts and len(gated) == len(opts) and all(not (s & ok) for s in gated):
                     later = sorted({byk[q]["title"] for s in gated for q in s})
                     p.append(f"ingredient {'/'.join(sorted(opts))[:60]} from {later}")
-            problems_per_recipe.append((typ, p))
-        if all(p for _, p in problems_per_recipe):
-            best = min(problems_per_recipe, key=lambda r: len(r[1]))
-            findings.append((x["group"], x["title"], t, best[1]))
+            problems.append(p)
+        if all(problems):
+            findings.append((x["group"], x["title"], t, min(problems, key=len)))
 
 for f in findings:
     print(f"[{f[0]}] {f[1]}: {f[2]} -> {'; '.join(f[3])}")
