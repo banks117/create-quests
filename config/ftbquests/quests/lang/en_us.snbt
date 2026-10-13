@@ -73,7 +73,7 @@
 	quest.1454F911712FF513.title: "Redstone Link"
 	quest.152C465520C24558.quest_desc: ["Put a Conductor Cap on Andesite Casing to build a Conductor: a little helper that rides your trains.", "", "Conductors press buttons and flip levers they look at, and can carry a toolbox. Match cap colours to control which conductors respond."]
 	quest.152C465520C24558.title: "Conductors"
-	quest.15A355156E7A4392.quest_desc: ["Run your raw ore through Crushing Wheels, then wash it with a fan. Raw iron crushes into crushed iron with a chance of experience, and washing it gives 9 nuggets with a chance of redstone.", "", "Gold gives quartz the same way. Belt it all together so your mining trips process themselves."]
+	quest.15A355156E7A4392.quest_desc: ["Unlike your iron farm, this handles the ore you mine, and gets extra out of every trip. Run your raw ore through Crushing Wheels, then wash it with a fan. Raw iron crushes into crushed iron with a chance of experience, and washing it gives 9 nuggets with a chance of redstone.", "", "Gold gives quartz the same way. Belt it all together so your mining trips process themselves."]
 	quest.15A355156E7A4392.title: "Project: Ore Processing"
 	quest.1706586E4251428B.quest_desc: ["Monorail track has its own bogeys and hangs a train off a single rail.", "", "Try one for a skyline line between bases."]
 	quest.1706586E4251428B.title: "Monorail"
@@ -95,7 +95,7 @@
 	quest.21066DE443C86344.title: "Extendo Grip"
 	quest.23B5949FE40EFA2B.quest_desc: ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.", "", "If a contraption splits apart, a Slime Ball merges two contraptions back together."]
 	quest.23B5949FE40EFA2B.title: "Honey Glue"
-	quest.2449301709BD1EB2.quest_desc: ["Mill your cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.", "", "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite Factory needs it."]
+	quest.2449301709BD1EB2.quest_desc: ["Mill your cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.", "", "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite Factory needs it.", "", "The same washing trick works on other blocks: red sand (mill it from granite) gives gold nuggets, and soul sand gives quartz."]
 	quest.2449301709BD1EB2.title: "Project: Iron Farm"
 	quest.246226A6919CF5ED.quest_desc: ["Casings are the frame for every machine. Right click a log with Andesite Alloy to make Andesite Casing.", "", "Casing also covers a shaft or cogwheel to make a neat, encased version."]
 	quest.246226A6919CF5ED.title: "Andesite Casing"
@@ -113,8 +113,6 @@
 	quest.2BE024A205775B96.title: "Water Wheel"
 	quest.300293F855AB765B.quest_desc: ["Mount a Tire on a Wheel Mount to give your contraption wheels.", "", "Bigger tires roll over rougher ground."]
 	quest.300293F855AB765B.title: "Wheels and Tires"
-	quest.325BA54C0E8210A8.quest_desc: ["The same washing trick works on other blocks. Washed red sand gives a 12.5% chance of 3 gold nuggets, and washed soul sand gives quartz and the odd gold nugget.", "", "Mill granite into red sand to keep it fed."]
-	quest.325BA54C0E8210A8.title: "Project: Gold and Quartz"
 	quest.35318D85DBDBF88B.quest_desc: ["Now that you can press gold sheets, make a Wrench. It rotates blocks, picks machines back up instantly, and configures many components.", "", "Sneak and right click with it to pick a block up."]
 	quest.35318D85DBDBF88B.title: "Wrench"
 	quest.36C632080F52C99B.quest_desc: ["A Mechanical Saw fells a whole tree at once. Add a Deployer holding saplings to replant, and bone meal to speed it up.", "", "Wood for every casing you will ever need."]

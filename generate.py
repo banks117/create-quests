@@ -301,12 +301,9 @@ q(CREATE, "cobble_gen", "Project: Cobblestone Generator", "minecraft:cobblestone
   [("minecraft:cobblestone", 256)], check=True)
 q(CREATE, "iron_farm", "Project: Iron Farm", "minecraft:iron_nugget", ["cobble_gen", "millstone", "fan"],
   ["Mill your cobblestone into gravel, then wash the gravel with an Encased Fan blowing through water.",
-   "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite Factory needs it."],
+   "Each gravel gives a 12.5% chance of an iron nugget and a 25% chance of flint. Keep the flint: the Andesite Factory needs it.",
+   "The same washing trick works on other blocks: red sand (mill it from granite) gives gold nuggets, and soul sand gives quartz."],
   [("minecraft:iron_nugget", 64)], check=True)
-q(CREATE, "gold_farm", "Project: Gold and Quartz", "minecraft:gold_nugget", ["iron_farm"],
-  ["The same washing trick works on other blocks. Washed red sand gives a 12.5% chance of 3 gold nuggets, and washed soul sand gives quartz and the odd gold nugget.",
-   "Mill granite into red sand to keep it fed."],
-  [("minecraft:gold_nugget", 64)], check=True)
 q(CREATE, "andesite_factory", "Project: Andesite Factory", "andesite_alloy", ["iron_farm", "basin"],
   ["Andesite is renewable in Create: a Mechanical Press over a Basin compacts 2 flint, 1 gravel and some lava into andesite. Your iron farm already makes the flint and gravel.",
    "Then mix that andesite with iron nuggets from the same farm to make Andesite Alloy, automatically."],
@@ -324,7 +321,7 @@ q(CREATE, "tree_farm", "Project: Tree Farm", "minecraft:oak_log", ["saw", "deplo
    "Wood for every casing you will ever need."],
   [("minecraft:oak_log", 128)], check=True)
 q(CREATE, "ore_processing", "Project: Ore Processing", "crushed_raw_iron", ["crushing_wheel", "fan"],
-  ["Run your raw ore through Crushing Wheels, then wash it with a fan. Raw iron crushes into crushed iron with a chance of experience, and washing it gives 9 nuggets with a chance of redstone.",
+  ["Unlike your iron farm, this handles the ore you mine, and gets extra out of every trip. Run your raw ore through Crushing Wheels, then wash it with a fan. Raw iron crushes into crushed iron with a chance of experience, and washing it gives 9 nuggets with a chance of redstone.",
    "Gold gives quartz the same way. Belt it all together so your mining trips process themselves."],
   [("crushed_raw_iron", 64)], check=True)
 q(CREATE, "brass_factory", "Project: Brass Factory", "brass_ingot", ["brass"],
@@ -608,7 +605,7 @@ for x in Q:
         if PROFILE.get("item_rewards", True) else []
     x["xp"] = not x["check"] or x["deps"] != []
 # Projects are bigger builds, so they pay a little more XP; still no free machines.
-XP_LEVELS = {(CREATE, p): 3 for p in "cobble_gen iron_farm gold_farm andesite_factory kelp_farm crop_farm tree_farm "
+XP_LEVELS = {(CREATE, p): 3 for p in "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm "
              "ore_processing brass_factory kitchen cargo_train".split()}
 XP_LEVELS[(AERO, "delivery_airship")] = 3
 
@@ -621,7 +618,7 @@ SUBCHAPTERS = {
         ("getting_started", "Getting Started", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox"),
         ("processing", "Processing", "millstone belt funnels press wrench goggles fan basin"),
         ("brass", "Brass", "zinc blaze_burner brass brass_casing deployer saw drill harvester"),
-        ("projects", "Projects", "cobble_gen iron_farm gold_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
+        ("projects", "Projects", "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
         ("contraptions", "Contraptions", "glue bearing piston pulley"),
         ("fluids", "Fluids and Steam", "fluids spout hose steam_engine"),
         ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
