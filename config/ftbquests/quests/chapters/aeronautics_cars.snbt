@@ -1,0 +1,204 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "aeronautics_cars"
+	group: "1DE8FB13B5B62D56"
+	icon: {
+		count: 1
+		id: "offroad:tire"
+	}
+	id: "119BA69E8073FE2A"
+	order_index: 12
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1F7CBA4F672A8800", "41B89DC3CE373DEA"]
+			icon: {
+				count: 1
+				id: "offroad:tire"
+			}
+			id: "300293F855AB765B"
+			rewards: [
+				{
+					count: 2
+					id: "0A78D322F623D494"
+					item: {
+						count: 1
+						id: "offroad:wheel_mount"
+					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0EE227C159925C4A"
+					item: {
+						count: 1
+						id: "offroad:tire"
+					}
+					type: "item"
+				}
+				{
+					id: "7053ECD6AEF1E3CE"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 2L
+					id: "24DC8657BDC30B6A"
+					item: {
+						count: 1
+						id: "offroad:wheel_mount"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "49501A98F1EA312E"
+					item: {
+						count: 1
+						id: "offroad:tire"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5", "05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "simulated:directional_gearshift"
+			}
+			id: "08FBC54833E131A6"
+			rewards: [
+				{
+					id: "5A7B501615CFDF43"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "1B02358C6D936210"
+					item: {
+						count: 1
+						id: "simulated:directional_gearshift"
+					}
+					type: "item"
+				}
+				{
+					id: "4E159580D93F2CAC"
+					item: {
+						count: 1
+						id: "simulated:analog_transmission"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08FBC54833E131A6", "39B8F8A441598265"]
+			icon: {
+				count: 1
+				id: "offroad:large_tire"
+			}
+			id: "41571B487A0FA8B1"
+			rewards: [
+				{
+					id: "46BBBA402EA1E197"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "60FBD282C6E2E639"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["41571B487A0FA8B1"]
+			icon: {
+				count: 1
+				id: "offroad:monstrous_tire"
+			}
+			id: "375E0E1710F35827"
+			rewards: [
+				{
+					id: "5E510E915CFC45DD"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "741BC1F6EAA3F059"
+					item: {
+						count: 1
+						id: "offroad:large_tire"
+					}
+					type: "item"
+				}
+				{
+					id: "7A40511D3FCD0EAA"
+					item: {
+						count: 1
+						id: "offroad:monstrous_tire"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334"]
+			icon: {
+				count: 1
+				id: "offroad:borehead_bearing"
+			}
+			id: "07F9BA4179BC2A64"
+			rewards: [
+				{
+					id: "3B901ACF37B371AB"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "1A62FAA911B3E6F5"
+					item: {
+						count: 1
+						id: "offroad:borehead_bearing"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "4BC62853F3C4A657"
+					item: {
+						count: 1
+						id: "offroad:rockcutting_wheel"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.75d
+		}
+	]
+}

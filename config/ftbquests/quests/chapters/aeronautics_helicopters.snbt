@@ -1,0 +1,94 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "aeronautics_helicopters"
+	group: "1DE8FB13B5B62D56"
+	icon: {
+		count: 1
+		id: "aeronautics:gyroscopic_propeller_bearing"
+	}
+	id: "644D6632A8E3E10E"
+	order_index: 11
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6117A72CBB15361C"]
+			icon: {
+				count: 1
+				id: "aeronautics:gyroscopic_propeller_bearing"
+			}
+			id: "7D09691C28E05501"
+			rewards: [
+				{
+					id: "5ECE2573FA62783F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "7FD20B15BE85021A"
+					item: {
+						count: 1
+						id: "aeronautics:gyroscopic_propeller_bearing"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D09691C28E05501", "122B2A0D56D38529"]
+			icon: {
+				count: 1
+				id: "aeronautics:gyroscopic_propeller_bearing"
+			}
+			id: "04C5BFBF0EF45C4D"
+			rewards: [
+				{
+					id: "741B7013D8774922"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "7DB293E4F5322841"
+					type: "checkmark"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04C5BFBF0EF45C4D"]
+			icon: {
+				count: 1
+				id: "aeronautics:gyroscopic_propeller_bearing"
+			}
+			id: "091645822E5B10ED"
+			rewards: [
+				{
+					id: "2649128B9B8537C9"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "1997A8B769638420"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+	]
+}

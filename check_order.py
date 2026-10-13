@@ -8,7 +8,7 @@ GEN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generate.py")
 MODS = sys.argv[sys.argv.index("--mods") + 1]
 sys.argv = [GEN, "--mods", MODS, tempfile.mkdtemp()]
 g = runpy.run_path(GEN)
-Q, CHAPTERS = g["Q"], g["CHAPTERS"]
+Q = g["Q"]
 
 recipes = collections.defaultdict(list)   # output item -> [(type, heated, [ingredient alternatives])]
 tags = collections.defaultdict(set)

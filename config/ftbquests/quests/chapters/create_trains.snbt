@@ -1,0 +1,167 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_trains"
+	group: "36387A651839BFDA"
+	icon: {
+		count: 1
+		id: "create:track"
+	}
+	id: "3C4AE9E1582A2E70"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5F71DBB1A5D94585"]
+			icon: {
+				count: 1
+				id: "create:track"
+			}
+			id: "4B2ED97BEA0D74D3"
+			rewards: [
+				{
+					count: 16
+					id: "75BFAA476FBFCA69"
+					item: {
+						count: 1
+						id: "create:track"
+					}
+					type: "item"
+				}
+				{
+					id: "5A72E5D84C63F1B0"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 16L
+					id: "12950362649D1E35"
+					item: {
+						count: 1
+						id: "create:track"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B2ED97BEA0D74D3"]
+			icon: {
+				count: 1
+				id: "create:track_station"
+			}
+			id: "031C33DED2EFC5A7"
+			rewards: [
+				{
+					id: "1FA545939C200C9D"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "40F2ECEF2002F4C9"
+					item: {
+						count: 1
+						id: "create:track_station"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "356598C6CFFC3159"
+					item: {
+						count: 1
+						id: "create:railway_casing"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["031C33DED2EFC5A7", "29C4AEBBED144162"]
+			icon: {
+				count: 1
+				id: "create:controls"
+			}
+			id: "5B47D4A21842E145"
+			rewards: [
+				{
+					id: "250C2F9BDF29FEA8"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "4ECEB8B151181F04"
+					type: "checkmark"
+				}
+				{
+					id: "27B841DAE7DB66BF"
+					item: {
+						count: 1
+						id: "create:controls"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5B47D4A21842E145"]
+			icon: {
+				count: 1
+				id: "create:track_signal"
+			}
+			id: "5228F2C9BD73B763"
+			rewards: [
+				{
+					id: "79FB2F0F5B1A05E3"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "5C512147679A12AF"
+					item: {
+						count: 1
+						id: "create:track_signal"
+					}
+					type: "item"
+				}
+				{
+					id: "7F3AE7EA9FDEB78F"
+					item: {
+						count: 1
+						id: "create:schedule"
+					}
+					type: "item"
+				}
+				{
+					id: "058F52323EC74BFB"
+					item: {
+						count: 1
+						id: "create:train_door"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+}

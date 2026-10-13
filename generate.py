@@ -48,9 +48,10 @@ present = {i.split(":")[0] for i in valid}
 
 
 # ---------------------------------------------------------------- content
-# Chapter keys feed the quest ids, so never rename them; titles can change freely.
+# Mod keys and quest ids feed the FTB ids, so never rename them. Titles, and which chapter a quest
+# sits in (SUBCHAPTERS, below the content), can change freely without resetting progress.
 CREATE, AERO, RAILS, FOUNDRY = "create", "aeronautics", "railways", "modern_foundry"
-CHAPTERS = {
+MODULES = {
     CREATE: dict(title="Create", requires={"create"}),
     AERO: dict(title="Aeronautics", requires={"create", "aeronautics", "simulated", "offroad"}),
     RAILS: dict(title="Steam 'n' Rails", requires={"create", "railways"}),
@@ -60,12 +61,11 @@ CHAPTERS = {
 Q = []
 
 
-def q(group, qid, title, icon, deps, desc, tasks, check=False, lane=None):
-    """deps are quest ids in the same chapter, or "chapter::id" for another chapter.
-    lane pins the quest to a row; otherwise rows are assigned automatically."""
+def q(group, qid, title, icon, deps, desc, tasks, check=False):
+    """group is the mod key; deps are quest ids from the same mod, or "mod::id" for another mod."""
     ns = lambda i: i if ":" in i else "create:" + i
     Q.append(dict(group=group, id=qid, title=title, icon=ns(icon), deps=deps, desc=desc,
-                  tasks=[(ns(t), n) for t, n in tasks], check=check, lane=lane))
+                  tasks=[(ns(t), n) for t, n in tasks], check=check))
 
 
 # ---- Create --------------------------------------------------------------
@@ -265,125 +265,125 @@ q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision", "b
    "Check EMI for the exact recipe."],
   [("chromatic_compound", 1)])
 
-# ---- Aeronautics: blimps (lane -3), shared (0), planes (3), helicopters (6), cars (9) ----
+# ---- Aeronautics ---------------------------------------------------------
 q(AERO, "physics", "Physics Assembler", "simulated:physics_assembler", [f"{CREATE}::casing"],
   ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.",
    "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.",
    "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."],
-  [("simulated:physics_assembler", 1)], lane=0)
+  [("simulated:physics_assembler", 1)])
 q(AERO, "honey_glue", "Honey Glue", "simulated:honey_glue", ["physics", f"{CREATE}::spout"],
   ["Honey Glue only sticks to Simulated Contraptions, so it won't catch blocks you didn't mean to. Click two corners, then Ctrl-scroll to resize the area; hold Alt to place a corner in mid-air.",
    "If a contraption splits apart, a Slime Ball merges two contraptions back together."],
-  [("simulated:honey_glue", 4), ("minecraft:slime_ball", 1)], lane=-1)
+  [("simulated:honey_glue", 4), ("minecraft:slime_ball", 1)])
 q(AERO, "steering", "Steering Wheel", "simulated:steering_wheel", ["physics", f"{CREATE}::cogwheel"],
   ["Hold right click on a Steering Wheel and move the mouse to turn it; sneak to snap to 45 degrees.",
    "It outputs precise rotation, and you can set its maximum angle on its value panel."],
-  [("simulated:steering_wheel", 1)], lane=1)
+  [("simulated:steering_wheel", 1)])
 q(AERO, "throttle", "Throttle Lever", "simulated:throttle_lever", ["steering", f"{CREATE}::brass_casing"],
   ["A Throttle Lever is a precise redstone dial: right click and drag to set its strength, and use a wrench to invert it.",
    "Use it to control engines, burners and transmissions."],
-  [("simulated:throttle_lever", 1)], lane=1)
+  [("simulated:throttle_lever", 1)])
 q(AERO, "engine", "Portable Engine", "simulated:white_portable_engine", ["physics"],
   ["A Portable Engine burns fuel to make rotation, right on board your vehicle. It can run in either direction and be refuelled automatically.",
    "Feed it a Blaze Cake to superheat it for extra power."],
-  [("simulated:white_portable_engine", 1)], lane=2)
+  [("simulated:white_portable_engine", 1)])
 q(AERO, "propeller", "Propellers", "aeronautics:wooden_propeller", ["engine", f"{CREATE}::brass_casing", f"{CREATE}::fan"],
   ["A Propeller Bearing attaches to the block in front of it and spins it as a propeller. Any structure with at least 2 sail-like blocks works, and more sails push harder.",
    "Reverse the rotation, or use a wrench, to reverse the thrust. Goggles show thrust and airflow.",
    "Wooden and Andesite Propellers are the same part in two styles; craft one to swap to the other."],
-  [("aeronautics:propeller_bearing", 1), ("aeronautics:wooden_propeller", 2)], lane=0)
+  [("aeronautics:propeller_bearing", 1), ("aeronautics:wooden_propeller", 2)])
 
 # blimps
 q(AERO, "envelope", "Envelope", "aeronautics:white_envelope", ["physics"],
   ["Envelope blocks make a balloon. They enclose a space that lifts when filled with hot air, so the balloon must be airtight.",
    "Blocks inside take up volume. Encase shafts in envelope to run them through the balloon airtight."],
-  [("aeronautics:white_envelope", 16)], lane=-3)
+  [("aeronautics:white_envelope", 16)])
 q(AERO, "burner", "Hot Air Burner", "aeronautics:adjustable_burner", ["envelope", f"{CREATE}::press"],
   ["Place a Hot Air Burner under the balloon. Powered with redstone, it fills the balloon from the top down.",
    "Its panel sets the maximum output and the redstone strength scales it. Several burners can feed one balloon."],
-  [("aeronautics:adjustable_burner", 1)], lane=-3)
+  [("aeronautics:adjustable_burner", 1)])
 q(AERO, "altitude", "Altitude Sensor", "simulated:altitude_sensor", ["burner"],
   ["Lift weakens as you climb. A balloon settles where lift equals weight, so changing the burner output changes your altitude.",
    "An Altitude Sensor turns height into a redstone signal: wire it to the burner for a blimp that holds its height."],
-  [("simulated:altitude_sensor", 1)], lane=-3)
+  [("simulated:altitude_sensor", 1)])
 q(AERO, "steam_vent", "Steam Vent", "aeronautics:steam_vent", ["burner", f"{CREATE}::steam_engine"],
   ["A Steam Vent lifts a balloon with steam instead of hot air. Like a Steam Engine, it needs heat, water and boiler space.",
    "Bigger airships with several vents need a stronger boiler."],
-  [("aeronautics:steam_vent", 1)], lane=-4)
+  [("aeronautics:steam_vent", 1)])
 q(AERO, "levitite", "Levitite", "aeronautics:levitite", ["physics"],
   ["Enough Levitite keeps a contraption afloat, but it cannot climb on its own; you still need lift or thrust. It also resists slow movement.",
    "Levitite Blend crystallises into Levitite when heated, and the crystal spreads through the whole pool. Blocks used as a mould may break."],
-  [("aeronautics:levitite_blend_bucket", 1), ("aeronautics:levitite", 4)], lane=-2)
+  [("aeronautics:levitite_blend_bucket", 1), ("aeronautics:levitite", 4)])
 q(AERO, "first_blimp", "Build a Blimp", "aeronautics:white_envelope", ["burner", "propeller", "steering"],
   ["Put it together: a sealed balloon with a Hot Air Burner, a Portable Engine driving a Propeller, and a Steering Wheel to turn.",
    "Fly it, land it, and tick the box when you're done."],
-  [], check=True, lane=-3)
+  [], check=True)
 
 # planes
 q(AERO, "sails", "Wings", "simulated:white_symmetric_sail", ["propeller"],
   ["Regular Sails on a moving contraption make lift, at right angles to their surface; the faster you go, the more lift. Enough lift and you fly.",
    "Symmetric Sails only make drag. Angle them away from your direction of travel to turn or stabilise."],
-  [("white_sail", 8), ("simulated:white_symmetric_sail", 4)], lane=3)
+  [("white_sail", 8), ("simulated:white_symmetric_sail", 4)])
 q(AERO, "controls", "Control Surfaces", "simulated:torsion_spring", ["sails", "steering"],
   ["A Swivel Bearing turns a glued part of your craft. A Torsion Spring passes rotation within a set angle and springs back when you let go: ideal for flaps and rudders.",
    "Bearings driven like this have to be told not to disassemble."],
-  [("simulated:swivel_bearing", 1), ("simulated:torsion_spring", 2)], lane=3)
+  [("simulated:swivel_bearing", 1), ("simulated:torsion_spring", 2)])
 q(AERO, "first_plane", "Build a Plane", "simulated:white_symmetric_sail", ["controls"],
   ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.",
    "Tick the box when you're done."],
-  [], check=True, lane=3)
+  [], check=True)
 q(AERO, "gyro", "Gyroscopic Propeller Bearing", "aeronautics:gyroscopic_propeller_bearing", ["propeller"],
   ["Normal propeller bearings make poor helicopters: the rotor tips with the craft. A Gyroscopic Propeller Bearing tries to keep its propeller upright.",
    "A redstone signal resets its tilt to zero when you don't want it leaning."],
-  [("aeronautics:gyroscopic_propeller_bearing", 1)], lane=6)
+  [("aeronautics:gyroscopic_propeller_bearing", 1)])
 q(AERO, "first_heli", "Build a Helicopter", "aeronautics:gyroscopic_propeller_bearing", ["gyro", "throttle"],
   ["Mount a Gyroscopic Propeller Bearing facing up with a rotor on top, power it from a Portable Engine, and use a Throttle Lever to climb and descend.",
    "Lift fades as the air thins, so you'll hover where thrust and weight balance. Take off, hover, land, and tick the box."],
-  [], check=True, lane=6)
+  [], check=True)
 q(AERO, "heli_stability", "Steady Flying", "aeronautics:gyroscopic_propeller_bearing", ["first_heli"],
   ["Gyroscopic Propeller Bearings facing downwards can hold a top-heavy craft level.",
    "Add a second rotor or a tail to stop the craft spinning, and tune it until it flies straight. Tick the box when it does."],
-  [], check=True, lane=6)
+  [], check=True)
 q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_plane"],
   ["The Gimbal Sensor outputs redstone based on how the craft is tilted, and the Velocity Sensor based on its speed.",
    "Wire them to your control surfaces and you have an autopilot."],
-  [("simulated:gimbal_sensor", 1), ("simulated:velocity_sensor", 1)], lane=2)
+  [("simulated:gimbal_sensor", 1), ("simulated:velocity_sensor", 1)])
 
 # cars
 q(AERO, "wheels", "Wheels and Tires", "offroad:tire", ["physics", f"{CREATE}::press"],
   ["Mount a Tire on a Wheel Mount to give your contraption wheels.",
    "Bigger tires roll over rougher ground."],
-  [("offroad:wheel_mount", 2), ("offroad:tire", 2)], lane=9)
+  [("offroad:wheel_mount", 2), ("offroad:tire", 2)])
 q(AERO, "drivetrain", "Drivetrain", "simulated:directional_gearshift", ["wheels", "engine", f"{CREATE}::brass_casing"],
   ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.",
    "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."],
-  [("simulated:directional_gearshift", 1), ("simulated:analog_transmission", 1)], lane=9)
+  [("simulated:directional_gearshift", 1), ("simulated:analog_transmission", 1)])
 q(AERO, "first_car", "Build a Car", "offroad:large_tire", ["drivetrain", "steering"],
   ["Four wheels, a Portable Engine, a drivetrain and a Steering Wheel. Drive it out of your base and back.",
    "Tick the box when you're done."],
-  [], check=True, lane=9)
+  [], check=True)
 q(AERO, "big_tires", "Bigger Tires", "offroad:monstrous_tire", ["first_car"],
   ["Large and Monstrous Tires climb over almost anything.",
    "Time for a monster truck."],
-  [("offroad:large_tire", 2), ("offroad:monstrous_tire", 1)], lane=10)
+  [("offroad:large_tire", 2), ("offroad:monstrous_tire", 1)])
 q(AERO, "borehead", "Borehead Miner", "offroad:borehead_bearing", ["first_car", f"{CREATE}::crushing_wheel"],
   ["A Borehead Bearing with Rock Cutting Wheels and a storage container is a drill that breaks blocks all around it. The wheels attach without glue.",
    "It spins at a quarter of its input speed and slows down when cutting lots of blocks; use several to keep up."],
-  [("offroad:borehead_bearing", 1), ("offroad:rockcutting_wheel", 2)], lane=9)
+  [("offroad:borehead_bearing", 1), ("offroad:rockcutting_wheel", 2)])
 
 # extras
 q(AERO, "ropes", "Ropes and Docking", "simulated:rope_winch", ["first_blimp", f"{CREATE}::crafter", f"{CREATE}::funnels"],
   ["Right click a Rope Winch and a Rope Connector with a Rope Coupling to tie them together; the winch reels the rope with rotation. Shears cut it.",
    "Docking Connectors lock two crafts together rigidly and pass items and fluids across."],
-  [("simulated:rope_winch", 1), ("simulated:rope_connector", 1), ("simulated:docking_connector", 2)], lane=-3)
+  [("simulated:rope_winch", 1), ("simulated:rope_connector", 1), ("simulated:docking_connector", 2)])
 q(AERO, "navigation", "Navigation Table", "simulated:navigation_table", ["altitude", f"{CREATE}::precision"],
   ["A Navigation Table holds a navigation item and sends a redstone signal towards its destination, weaker when you're facing away.",
    "Steer by it on long flights."],
-  [("simulated:navigation_table", 1)], lane=-2)
+  [("simulated:navigation_table", 1)])
 q(AERO, "goggles", "Aviator's Goggles", "aeronautics:aviators_goggles", ["propeller", f"{CREATE}::goggles"],
   ["Look the part. Aviator's Goggles are goggles for pilots.",
    "They also show what Engineer's Goggles do."],
-  [("aeronautics:aviators_goggles", 1)], lane=1)
+  [("aeronautics:aviators_goggles", 1)])
 
 # ---- Steam 'n' Rails -----------------------------------------------------
 q(RAILS, "welcome", "Steam 'n' Rails", "railways:semaphore", [f"{CREATE}::first_train"],
@@ -530,12 +530,38 @@ for x in Q:
     x["xp"] = not x["check"] or x["deps"] != []
 
 
-# ---------------------------------------------------------------- chapter selection
-wanted = PROFILE.get("chapters") or list(CHAPTERS)
-included = [c for c in wanted if CHAPTERS[c]["requires"] <= present]
+# ---------------------------------------------------------------- chapters
+# A mod with several chapters gets its own chapter group; a mod with one chapter stands alone.
+SUBCHAPTERS = {
+    CREATE: [
+        ("getting_started", "Getting Started", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox"),
+        ("processing", "Processing", "millstone belt funnels press wrench goggles fan basin"),
+        ("brass", "Brass", "zinc blaze_burner brass brass_casing deployer saw drill harvester"),
+        ("contraptions", "Contraptions", "glue bearing piston pulley"),
+        ("fluids", "Fluids and Steam", "fluids spout hose steam_engine"),
+        ("precision", "Precision and Automation", "precision arm crafter crushing_wheel sequenced radiance"),
+        ("logistics", "Logistics", "redstone display schematic vault packages"),
+        ("trains", "Trains", "train_track train_station first_train train_signal"),
+    ],
+    AERO: [
+        ("basics", "Basics", "physics honey_glue steering throttle engine propeller goggles"),
+        ("blimps", "Blimps", "envelope burner altitude steam_vent levitite first_blimp ropes navigation"),
+        ("planes", "Planes", "sails controls first_plane flight_sensors"),
+        ("helicopters", "Helicopters", "gyro first_heli heli_stability"),
+        ("cars", "Cars", "wheels drivetrain first_car big_tires borehead"),
+    ],
+}
+for mod in MODULES:
+    ids = [x["id"] for x in Q if x["group"] == mod]
+    placed = [i for _, _, s in SUBCHAPTERS.get(mod, []) for i in s.split()]
+    if mod in SUBCHAPTERS and sorted(placed) != sorted(ids):
+        sys.exit(f"{mod}: quests not placed in exactly one chapter: {sorted(set(ids) ^ set(placed))}")
+
+wanted = PROFILE.get("mods") or list(MODULES)
+included = [c for c in wanted if MODULES[c]["requires"] <= present]
 for c in wanted:
     if c not in included:
-        print(f"skipping {c}: missing mods {sorted(CHAPTERS[c]['requires'] - present)}")
+        print(f"skipping {c}: missing mods {sorted(MODULES[c]['requires'] - present)}")
 Q = [x for x in Q if x["group"] in included]
 
 
@@ -593,31 +619,24 @@ def snbt(v, ind=0):
     return "{\n" + "\n".join(f"{inner}{k}: {snbt(x, ind + 1)}" for k, x in sorted(v.items())) + "\n" + pad + "}"
 
 
+def local_deps(x, ids):
+    return [p for p in x["deps"] if "::" not in p and p in ids]
+
+
 def layout(items):
-    """Column = dependency depth within the chapter; row = lane if pinned, else spread around 0."""
+    """Column = dependency depth within the chapter; rows spread around 0."""
     byid = {x["id"]: x for x in items}
     depth = {}
 
     def d(i):
         if i not in depth:
-            local = [p for p in byid[i]["deps"] if "::" not in p]
+            local = local_deps(byid[i], byid)
             depth[i] = 0 if not local else 1 + max(d(p) for p in local)
         return depth[i]
     cols = collections.defaultdict(list)
     for x in items:
         cols[d(x["id"])].append(x)
-    pos = {}
-    for col, xs in cols.items():
-        taken = collections.Counter()
-        free = [x for x in xs if x["lane"] is None]
-        for x in xs:
-            if x["lane"] is not None:
-                row = x["lane"] + 0.5 * taken[x["lane"]]
-                taken[x["lane"]] += 1
-                pos[x["id"]] = (col, row)
-        for n, x in enumerate(free):
-            pos[x["id"]] = (col, n - (len(free) - 1) / 2)
-    return pos
+    return {x["id"]: (col, n - (len(xs) - 1) / 2) for col, xs in cols.items() for n, x in enumerate(xs)}
 
 
 FTB = f"{OUT}/config/ftbquests/quests"
@@ -625,14 +644,22 @@ if os.path.exists(FTB):
     shutil.rmtree(FTB)
 os.makedirs(f"{FTB}/chapters")
 os.makedirs(f"{FTB}/lang")
-by_group = {c: [x for x in Q if x["group"] == c] for c in included}
 lang = {}
-GROUP_ID = fid("group", PROFILE["group_key"])
-lang[f"chapter_group.{GROUP_ID}.title"] = PROFILE["group_title"]
-for order, (g, items) in enumerate(by_group.items()):
-    cid = fid("chapter", g)
-    fname = g
-    lang[f"chapter.{cid}.title"] = CHAPTERS[g]["title"]
+groups = []
+chapters = []   # (mod, chapter id, file name, title, group id, quests)
+for g in included:
+    mine = {x["id"]: x for x in Q if x["group"] == g}
+    if g in SUBCHAPTERS:
+        gid = fid("group", g)
+        groups.append({"id": gid})
+        lang[f"chapter_group.{gid}.title"] = MODULES[g]["title"]
+        for key, title, ids in SUBCHAPTERS[g]:
+            chapters.append((g, fid("chapter", g, key), f"{g}_{key}", title, gid, [mine[i] for i in ids.split()]))
+    else:
+        chapters.append((g, fid("chapter", g), g, MODULES[g]["title"], "", list(mine.values())))
+for order, (g, cid, fname, title, gid, items) in enumerate(chapters):
+    lang[f"chapter.{cid}.title"] = title
+    ids = {x["id"] for x in items}
     pos = layout(items)
     quests = []
     for x in items:
@@ -654,8 +681,7 @@ for order, (g, items) in enumerate(by_group.items()):
               "tasks": tasks, "rewards": rewards, "icon": {"count": 1, "id": x["icon"]}}
         if x["deps"]:
             qd["dependencies"] = [fid("quest", *dep_key(x, d)) for d in x["deps"]]
-        local = [p for p in x["deps"] if "::" not in p]
-        if not local:
+        if not local_deps(x, ids):
             qd["shape"] = "gear"
             qd["size"] = 1.5
         elif x["check"]:
@@ -663,11 +689,11 @@ for order, (g, items) in enumerate(by_group.items()):
             qd["size"] = 1.25
         quests.append(qd)
     chapter = {"default_hide_dependency_lines": False, "default_quest_shape": "", "filename": fname,
-               "group": GROUP_ID, "icon": {"count": 1, "id": items[0]["icon"]}, "id": cid,
+               "group": gid, "icon": {"count": 1, "id": items[0]["icon"]}, "id": cid,
                "order_index": order, "quest_links": [], "quests": quests}
     open(f"{FTB}/chapters/{fname}.snbt", "w").write(snbt(chapter) + "\n")
-open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": [{"id": GROUP_ID}]}) + "\n")
+open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": groups}) + "\n")
 open(f"{FTB}/data.snbt", "w").write(snbt({"version": 13, "default_consume_items": False,
                                           "default_autoclaim_rewards": "disabled", "fallback_locale": "en_us"}) + "\n")
 open(f"{FTB}/lang/en_us.snbt", "w").write(snbt(lang) + "\n")
-print(f"{PROFILE['group_title']}:", {g: len(v) for g, v in by_group.items()}, "| total", len(Q))
+print({g: len([x for x in Q if x["group"] == g]) for g in included}, "|", len(chapters), "chapters,", len(Q), "quests")

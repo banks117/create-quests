@@ -1,0 +1,208 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_precision"
+	group: "36387A651839BFDA"
+	icon: {
+		count: 1
+		id: "create:precision_mechanism"
+	}
+	id: "1EFBC95515779966"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["723048BF1737D4ED", "532780D9DB293403"]
+			icon: {
+				count: 1
+				id: "create:precision_mechanism"
+			}
+			id: "5F71DBB1A5D94585"
+			rewards: [
+				{
+					count: 1
+					id: "6995C6FD98617193"
+					item: {
+						count: 1
+						id: "create:electron_tube"
+					}
+					type: "item"
+				}
+				{
+					id: "48FD4C0AC005C37C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 2L
+					id: "4C9184B7E053B900"
+					item: {
+						count: 1
+						id: "create:precision_mechanism"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F71DBB1A5D94585"]
+			icon: {
+				count: 1
+				id: "create:mechanical_arm"
+			}
+			id: "47E272DB2DB104B0"
+			rewards: [
+				{
+					id: "54CD87FB83645630"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "2FF73E02AF3E1B9A"
+					item: {
+						count: 1
+						id: "create:mechanical_arm"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["5F71DBB1A5D94585"]
+			icon: {
+				count: 1
+				id: "create:mechanical_crafter"
+			}
+			id: "3A66462861B4969E"
+			rewards: [
+				{
+					id: "14FEB3280F0458CD"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "5A2BEF9DA0A48CCC"
+					item: {
+						count: 1
+						id: "create:mechanical_crafter"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3A66462861B4969E", "4978B86F57E43FCE"]
+			icon: {
+				count: 1
+				id: "create:crushing_wheel"
+			}
+			id: "5CA9836B85D5A334"
+			rewards: [
+				{
+					id: "1BEE5A9829095AF3"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "1E99F120B0863C8B"
+					item: {
+						count: 1
+						id: "create:crushing_wheel"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6BA326D382907DFD"
+					item: {
+						count: 1
+						id: "create:crushed_raw_iron"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F71DBB1A5D94585", "12CEF6D0015D619D"]
+			icon: {
+				count: 1
+				id: "create:sequenced_gearshift"
+			}
+			id: "2B3EF66E55543BD8"
+			rewards: [
+				{
+					id: "005D8112D456422F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "6F3F39124DE24655"
+					item: {
+						count: 1
+						id: "create:sequenced_gearshift"
+					}
+					type: "item"
+				}
+				{
+					id: "50AE524FBFA58E05"
+					item: {
+						count: 1
+						id: "create:rotation_speed_controller"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5F71DBB1A5D94585", "4CC768AC355A6703"]
+			icon: {
+				count: 1
+				id: "create:chromatic_compound"
+			}
+			id: "0670829A73FDC2D7"
+			rewards: [
+				{
+					id: "42A7DD9B704B3A7E"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "67B852C6F3F7EA4F"
+					item: {
+						count: 1
+						id: "create:chromatic_compound"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 2.25d
+		}
+	]
+}

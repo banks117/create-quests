@@ -1,0 +1,160 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_contraptions"
+	group: "36387A651839BFDA"
+	icon: {
+		count: 1
+		id: "create:super_glue"
+	}
+	id: "1909AD80DBA6FB2C"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["41B89DC3CE373DEA"]
+			icon: {
+				count: 1
+				id: "create:super_glue"
+			}
+			id: "29C4AEBBED144162"
+			rewards: [
+				{
+					id: "62AB84E5F2359DDE"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "50674D0E5B78AEDA"
+					item: {
+						count: 1
+						id: "create:super_glue"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29C4AEBBED144162", "05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "create:mechanical_bearing"
+			}
+			id: "519DC7EB567A6482"
+			rewards: [
+				{
+					id: "54C208936EAEABD8"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "52ACE8E90A51477B"
+					item: {
+						count: 1
+						id: "create:mechanical_bearing"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["29C4AEBBED144162", "05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "create:mechanical_piston"
+			}
+			id: "2B55AB4C0358AE0B"
+			rewards: [
+				{
+					count: 4
+					id: "78D9DDE36D0994BD"
+					item: {
+						count: 1
+						id: "create:piston_extension_pole"
+					}
+					type: "item"
+				}
+				{
+					id: "0333880009494C85"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "61259C675D9F7D0A"
+					item: {
+						count: 1
+						id: "create:mechanical_piston"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "53923BE686AF1379"
+					item: {
+						count: 1
+						id: "create:piston_extension_pole"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29C4AEBBED144162", "05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "create:rope_pulley"
+			}
+			id: "11213AD740BC0F9A"
+			rewards: [
+				{
+					id: "4CF833D885CDDCE9"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "2E86FE9A51E88404"
+					item: {
+						count: 1
+						id: "create:rope_pulley"
+					}
+					type: "item"
+				}
+				{
+					id: "7BA82CF81FB8E2B5"
+					item: {
+						count: 1
+						id: "create:gantry_carriage"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3D0FD0450F9B3513"
+					item: {
+						count: 1
+						id: "create:gantry_shaft"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+	]
+}

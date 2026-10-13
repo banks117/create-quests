@@ -2,13 +2,13 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "railways"
-	group: "5818A71FD4936D3E"
+	group: ""
 	icon: {
 		count: 1
 		id: "railways:semaphore"
 	}
 	id: "33BFC882B88ED125"
-	order_index: 2
+	order_index: 13
 	quest_links: [ ]
 	quests: [
 		{

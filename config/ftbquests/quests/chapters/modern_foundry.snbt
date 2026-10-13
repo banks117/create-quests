@@ -2,13 +2,13 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "modern_foundry"
-	group: "5818A71FD4936D3E"
+	group: ""
 	icon: {
 		count: 1
 		id: "modernfoundry:materials_and_you"
 	}
 	id: "5DA09361842FADD6"
-	order_index: 3
+	order_index: 14
 	quest_links: [ ]
 	quests: [
 		{

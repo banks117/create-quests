@@ -1,0 +1,242 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "aeronautics_basics"
+	group: "1DE8FB13B5B62D56"
+	icon: {
+		count: 1
+		id: "simulated:physics_assembler"
+	}
+	id: "6826C0246AB74D0A"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["246226A6919CF5ED"]
+			icon: {
+				count: 1
+				id: "simulated:physics_assembler"
+			}
+			id: "1F7CBA4F672A8800"
+			rewards: [
+				{
+					count: 1
+					id: "6AD136558991DE4B"
+					item: {
+						count: 1
+						id: "simulated:honey_glue"
+					}
+					type: "item"
+				}
+				{
+					id: "5B82BF8E62F36822"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "4844366F99AD75E0"
+					item: {
+						count: 1
+						id: "simulated:physics_assembler"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F7CBA4F672A8800", "4328CD94686BFEBA"]
+			icon: {
+				count: 1
+				id: "simulated:honey_glue"
+			}
+			id: "23B5949FE40EFA2B"
+			rewards: [
+				{
+					id: "3D4C5B6FDF0B94EF"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "63289DE38FA365DA"
+					item: {
+						count: 1
+						id: "simulated:honey_glue"
+					}
+					type: "item"
+				}
+				{
+					id: "24353011CE5A5072"
+					item: {
+						count: 1
+						id: "minecraft:slime_ball"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1F7CBA4F672A8800", "4F9A91933C4AAD8D"]
+			icon: {
+				count: 1
+				id: "simulated:steering_wheel"
+			}
+			id: "39B8F8A441598265"
+			rewards: [
+				{
+					id: "4FEBF654C185238F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "0FD98911789FE0D9"
+					item: {
+						count: 1
+						id: "simulated:steering_wheel"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["39B8F8A441598265", "05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "simulated:throttle_lever"
+			}
+			id: "122B2A0D56D38529"
+			rewards: [
+				{
+					id: "22175ED60331864C"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "7155D033E0CACF24"
+					item: {
+						count: 1
+						id: "simulated:throttle_lever"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["1F7CBA4F672A8800"]
+			icon: {
+				count: 1
+				id: "simulated:white_portable_engine"
+			}
+			id: "502BF10FD13C4EA5"
+			rewards: [
+				{
+					id: "663D5CF0D8CE13DF"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "3BA565AABEA834F8"
+					item: {
+						count: 1
+						id: "simulated:white_portable_engine"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["502BF10FD13C4EA5", "05C2800C8FB7FC81", "7BAE5A98D0EA2865"]
+			icon: {
+				count: 1
+				id: "aeronautics:wooden_propeller"
+			}
+			id: "6117A72CBB15361C"
+			rewards: [
+				{
+					count: 2
+					id: "21EFB338D89EC3F6"
+					item: {
+						count: 1
+						id: "aeronautics:wooden_propeller"
+					}
+					type: "item"
+				}
+				{
+					id: "7AE56485F30317FF"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "441A9A8F4E7581EF"
+					item: {
+						count: 1
+						id: "aeronautics:propeller_bearing"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "237F34AFDDA93619"
+					item: {
+						count: 1
+						id: "aeronautics:wooden_propeller"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["6117A72CBB15361C", "77255D3C2EA07E44"]
+			icon: {
+				count: 1
+				id: "aeronautics:aviators_goggles"
+			}
+			id: "49421439F3BC2FC4"
+			rewards: [
+				{
+					id: "36F98558B1080CB3"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "67A24EDA26385DFD"
+					item: {
+						count: 1
+						id: "aeronautics:aviators_goggles"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+}

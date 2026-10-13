@@ -1,0 +1,159 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "aeronautics_planes"
+	group: "1DE8FB13B5B62D56"
+	icon: {
+		count: 1
+		id: "simulated:white_symmetric_sail"
+	}
+	id: "64DF7FF5F72362B0"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["6117A72CBB15361C"]
+			icon: {
+				count: 1
+				id: "simulated:white_symmetric_sail"
+			}
+			id: "4FA764B41B3AD78C"
+			rewards: [
+				{
+					count: 8
+					id: "64EA5917DA52F6C4"
+					item: {
+						count: 1
+						id: "create:white_sail"
+					}
+					type: "item"
+				}
+				{
+					id: "79E0899DF5406C3F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 8L
+					id: "0BDD43C924B20930"
+					item: {
+						count: 1
+						id: "create:white_sail"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "5B31D30AD0C85F2A"
+					item: {
+						count: 1
+						id: "simulated:white_symmetric_sail"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4FA764B41B3AD78C", "39B8F8A441598265"]
+			icon: {
+				count: 1
+				id: "simulated:torsion_spring"
+			}
+			id: "6AC31ACA704C3E95"
+			rewards: [
+				{
+					id: "395289CDF666FCD1"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "2857D361517BD1F6"
+					item: {
+						count: 1
+						id: "simulated:swivel_bearing"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "47548FF9D514901F"
+					item: {
+						count: 1
+						id: "simulated:torsion_spring"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6AC31ACA704C3E95"]
+			icon: {
+				count: 1
+				id: "simulated:white_symmetric_sail"
+			}
+			id: "5A2D2A0C774E7594"
+			rewards: [
+				{
+					id: "473F245C737C938E"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "hexagon"
+			size: 1.25d
+			tasks: [
+				{
+					id: "1C1909373903F6D8"
+					type: "checkmark"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A2D2A0C774E7594"]
+			icon: {
+				count: 1
+				id: "simulated:gimbal_sensor"
+			}
+			id: "4392ACD7BDA98B8A"
+			rewards: [
+				{
+					id: "113D88E4D23F72B0"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "04B5E4A53E4AA836"
+					item: {
+						count: 1
+						id: "simulated:gimbal_sensor"
+					}
+					type: "item"
+				}
+				{
+					id: "6DCE22803E5DA739"
+					item: {
+						count: 1
+						id: "simulated:velocity_sensor"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+}

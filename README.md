@@ -27,20 +27,27 @@ The `config/` folder in this repo is the output for all four chapters with the d
 
 Quest ids are stable across regenerations, so updating keeps player progress.
 
+## Chapters
+
+Create and Aeronautics each get a chapter group with several chapters:
+
+- **Create:** Getting Started, Processing, Brass, Contraptions, Fluids and Steam, Precision and Automation, Logistics, Trains
+- **Aeronautics:** Basics, Blimps, Planes, Helicopters, Cars
+
+Steam 'n' Rails and Modern Foundry are single chapters. Prerequisites cross chapters where the recipes need them.
+
+Quest ids come from the mod and the quest, not the chapter, so moving a quest between chapters keeps player progress.
+
 ## Profiles
 
-A profile picks the chapter group title, which chapters to include, and whether to give item rewards. See `profiles/default.json`; pass another with `--profile`.
+A profile picks which mods' quests to include and whether to give item rewards. See `profiles/default.json`; pass another with `--profile`.
 
 ```json
 {
-  "group_key": "create-quests",
-  "group_title": "Create Quests",
-  "chapters": ["create", "aeronautics"],
+  "mods": ["create", "aeronautics"],
   "item_rewards": true
 }
 ```
-
-`group_key` feeds the group id; keep it fixed once players are using it.
 
 ## Checking quest order
 

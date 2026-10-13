@@ -1,0 +1,275 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_brass"
+	group: "36387A651839BFDA"
+	icon: {
+		count: 1
+		id: "create:zinc_ingot"
+	}
+	id: "5D891EA642A8EE2C"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["5714EBDF3126946C"]
+			icon: {
+				count: 1
+				id: "create:zinc_ingot"
+			}
+			id: "041DC559B39F9318"
+			rewards: [
+				{
+					count: 4
+					id: "69BFC87DB734D099"
+					item: {
+						count: 1
+						id: "create:zinc_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "721B5A8F5EDB250A"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 4L
+					id: "1D7265AB619497EA"
+					item: {
+						count: 1
+						id: "create:zinc_ingot"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["7DA3D76FDF9593AD"]
+			icon: {
+				count: 1
+				id: "create:blaze_burner"
+			}
+			id: "4CC768AC355A6703"
+			rewards: [
+				{
+					id: "6F52A4DD9D8C6822"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "466DF7838B2DC557"
+					item: {
+						count: 1
+						id: "create:blaze_burner"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["041DC559B39F9318", "4CC768AC355A6703"]
+			icon: {
+				count: 1
+				id: "create:brass_ingot"
+			}
+			id: "532780D9DB293403"
+			rewards: [
+				{
+					count: 4
+					id: "15CC7A3E7DF0B59B"
+					item: {
+						count: 1
+						id: "create:brass_nugget"
+					}
+					type: "item"
+				}
+				{
+					id: "77849C0A428B5634"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "5000485110DD6245"
+					item: {
+						count: 1
+						id: "create:brass_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6D7A1F19605DE188"
+					item: {
+						count: 1
+						id: "create:brass_sheet"
+					}
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["532780D9DB293403"]
+			icon: {
+				count: 1
+				id: "create:brass_casing"
+			}
+			id: "05C2800C8FB7FC81"
+			rewards: [
+				{
+					id: "656FE84A5FD38767"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "067A2CF2D1726BD4"
+					item: {
+						count: 1
+						id: "create:brass_casing"
+					}
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "create:deployer"
+			}
+			id: "723048BF1737D4ED"
+			rewards: [
+				{
+					id: "69A743D485CE48A7"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "7AFCC06E45AB4893"
+					item: {
+						count: 1
+						id: "create:deployer"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "create:mechanical_saw"
+			}
+			id: "1AF9D599B1A1865F"
+			rewards: [
+				{
+					id: "34E6289E86609F0F"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "0EA88BA2C894DBA2"
+					item: {
+						count: 1
+						id: "create:mechanical_saw"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "create:mechanical_drill"
+			}
+			id: "3F452D140A574530"
+			rewards: [
+				{
+					id: "59E753AF8124EFA9"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "3576DDA9187E2105"
+					item: {
+						count: 1
+						id: "create:mechanical_drill"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["05C2800C8FB7FC81"]
+			icon: {
+				count: 1
+				id: "create:mechanical_harvester"
+			}
+			id: "3E13CE882E876E3A"
+			rewards: [
+				{
+					id: "73F7C61AA6E01DBE"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "52B855BD42FAB49E"
+					item: {
+						count: 1
+						id: "create:mechanical_harvester"
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "774B6B98ABFC38B3"
+					item: {
+						count: 1
+						id: "create:mechanical_plough"
+					}
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 2.25d
+		}
+	]
+}
