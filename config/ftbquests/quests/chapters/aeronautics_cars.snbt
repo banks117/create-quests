@@ -96,8 +96,8 @@
 					type: "item"
 				}
 			]
-			x: 2.5d
-			y: 0.0d
+			x: 0.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["08FBC54833E131A6", "39B8F8A441598265"]
@@ -120,8 +120,8 @@
 					type: "checkmark"
 				}
 			]
-			x: 5.0d
-			y: 0.0d
+			x: 0.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["41571B487A0FA8B1", "09FC33824A470023"]
@@ -155,8 +155,8 @@
 					type: "item"
 				}
 			]
-			x: 7.5d
-			y: -0.875d
+			x: -0.875d
+			y: 7.5d
 		}
 		{
 			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334", "12CEF6D0015D619D"]
@@ -190,8 +190,8 @@
 					type: "item"
 				}
 			]
-			x: 7.5d
-			y: 0.875d
+			x: 0.875d
+			y: 7.5d
 		}
 	]
 }

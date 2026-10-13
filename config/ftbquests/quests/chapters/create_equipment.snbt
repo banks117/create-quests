@@ -68,8 +68,8 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: -1.6d
+			x: -1.6d
+			y: 2.0d
 		}
 		{
 			dependencies: ["398876E1DCE7F037", "3A66462861B4969E", "5F71DBB1A5D94585"]
@@ -94,8 +94,8 @@
 					type: "item"
 				}
 			]
-			x: 2.2d
-			y: 0.3d
+			x: 0.3d
+			y: 2.2d
 		}
 		{
 			dependencies: ["398876E1DCE7F037", "3A66462861B4969E", "5F71DBB1A5D94585", "55625BFA5DD44551"]
@@ -162,8 +162,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: -1.6d
+			x: -1.6d
+			y: 4.0d
 		}
 	]
 }

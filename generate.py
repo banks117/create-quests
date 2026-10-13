@@ -783,10 +783,10 @@ POSITIONS = {
     """,
     "create_equipment": """
         backtank 0 0
-        diving 2 -1.6
-        extendo_grip 2.2 0.3
+        diving -1.6 2
+        netherite_diving -1.6 4
+        extendo_grip 0.3 2.2
         potato_cannon 2 2
-        netherite_diving 4 -1.6
     """,
 }
 # Quests whose prerequisite sits across the map: the lock still applies, but the line would cut
@@ -870,7 +870,7 @@ def local_deps(x, ids):
 
 
 def layout(items, sizes):
-    """Column = dependency depth within the chapter. Within a column, quests are ordered next to the
+    """Row = dependency depth within the chapter, top down. Within a row, quests are ordered next to the
     quests they connect to (a few barycenter sweeps), which keeps dependency lines from crossing."""
     byid = {x["id"]: x for x in items}
     depth = {}
@@ -910,7 +910,7 @@ def layout(items, sizes):
                 y += (sizes[xs[n - 1]] + sizes[i]) / 2 + 0.75
             ys.append(y)
         for i, y in zip(xs, ys):
-            pos[i] = (c * 2.5, y - ys[-1] / 2)
+            pos[i] = (y - ys[-1] / 2, c * 2.5)
     return pos
 
 
