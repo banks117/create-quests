@@ -54,7 +54,7 @@ CREATE, AERO, RAILS, FOUNDRY = "create", "aeronautics", "railways", "modern_foun
 MODULES = {
     CREATE: dict(title="Create", requires={"create"}),
     AERO: dict(title="Aeronautics", requires={"create", "aeronautics", "simulated", "offroad"}),
-    RAILS: dict(title="Steam 'n' Rails", requires={"create", "railways"}),
+    RAILS: dict(title="Steam 'n' Rails", requires={"create", "railways"}, group=CREATE),
     FOUNDRY: dict(title="Modern Foundry", requires={"modernfoundry"}),
 }
 
@@ -531,7 +531,8 @@ for x in Q:
 
 
 # ---------------------------------------------------------------- chapters
-# A mod with several chapters gets its own chapter group; a mod with one chapter stands alone.
+# Every chapter sits in a group (named after a mod), in MODULES order: FTB Quests lists ungrouped
+# chapters above all groups, and opens the first chapter for new players, so Create has to come first.
 SUBCHAPTERS = {
     CREATE: [
         ("getting_started", "Getting Started", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox"),
@@ -645,18 +646,19 @@ if os.path.exists(FTB):
 os.makedirs(f"{FTB}/chapters")
 os.makedirs(f"{FTB}/lang")
 lang = {}
-groups = []
+group_ids = {}
 chapters = []   # (mod, chapter id, file name, title, group id, quests)
 for g in included:
+    home = MODULES[g].get("group", g)
+    if home not in group_ids:
+        group_ids[home] = fid("group", home)
+        lang[f"chapter_group.{group_ids[home]}.title"] = MODULES[home]["title"]
     mine = {x["id"]: x for x in Q if x["group"] == g}
     if g in SUBCHAPTERS:
-        gid = fid("group", g)
-        groups.append({"id": gid})
-        lang[f"chapter_group.{gid}.title"] = MODULES[g]["title"]
         for key, title, ids in SUBCHAPTERS[g]:
-            chapters.append((g, fid("chapter", g, key), f"{g}_{key}", title, gid, [mine[i] for i in ids.split()]))
+            chapters.append((g, fid("chapter", g, key), f"{g}_{key}", title, group_ids[home], [mine[i] for i in ids.split()]))
     else:
-        chapters.append((g, fid("chapter", g), g, MODULES[g]["title"], "", list(mine.values())))
+        chapters.append((g, fid("chapter", g), g, MODULES[g]["title"], group_ids[home], list(mine.values())))
 for order, (g, cid, fname, title, gid, items) in enumerate(chapters):
     lang[f"chapter.{cid}.title"] = title
     ids = {x["id"] for x in items}
@@ -692,7 +694,7 @@ for order, (g, cid, fname, title, gid, items) in enumerate(chapters):
                "group": gid, "icon": {"count": 1, "id": items[0]["icon"]}, "id": cid,
                "order_index": order, "quest_links": [], "quests": quests}
     open(f"{FTB}/chapters/{fname}.snbt", "w").write(snbt(chapter) + "\n")
-open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": groups}) + "\n")
+open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": [{"id": i} for i in group_ids.values()]}) + "\n")
 open(f"{FTB}/data.snbt", "w").write(snbt({"version": 13, "default_consume_items": False,
                                           "default_autoclaim_rewards": "disabled", "fallback_locale": "en_us"}) + "\n")
 open(f"{FTB}/lang/en_us.snbt", "w").write(snbt(lang) + "\n")

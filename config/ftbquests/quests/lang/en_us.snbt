@@ -14,6 +14,7 @@
 	chapter.644D6632A8E3E10E.title: "Helicopters"
 	chapter.64DF7FF5F72362B0.title: "Planes"
 	chapter.6826C0246AB74D0A.title: "Basics"
+	chapter_group.00E85A5288E5299C.title: "Modern Foundry"
 	chapter_group.1DE8FB13B5B62D56.title: "Aeronautics"
 	chapter_group.36387A651839BFDA.title: "Create"
 	quest.009B588D51418EAA.quest_desc: ["Display Links turn any value into text: a train schedule, a fluid level, an item count.", "", "Show it on Display Boards or Nixie Tubes."]
