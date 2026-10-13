@@ -17,32 +17,13 @@
 				id: "modernfoundry:materials_and_you"
 			}
 			id: "71D1833076DCCCDE"
-			rewards: [
-				{
-					count: 8
-					id: "710178352D8B506F"
-					item: {
-						count: 1
-						id: "minecraft:torch"
-					}
-					type: "item"
-				}
-				{
-					id: "1609B9185D11EDA8"
-					type: "xp_levels"
-					xp_levels: 1
-				}
-			]
+			rewards: [ ]
 			shape: "gear"
 			size: 1.5d
 			tasks: [
 				{
-					id: "682DD8979757464C"
-					item: {
-						count: 1
-						id: "modernfoundry:materials_and_you"
-					}
-					type: "item"
+					id: "11DBE2DDDBDA1A45"
+					type: "checkmark"
 				}
 			]
 			x: 0.0d
@@ -57,8 +38,17 @@
 			id: "62E02D28045719F9"
 			rewards: [
 				{
-					count: 4
+					count: 8
 					id: "06E43C6B33218680"
+					item: {
+						count: 1
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "129299B3D790D395"
 					item: {
 						count: 1
 						id: "minecraft:coal"

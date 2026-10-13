@@ -429,9 +429,10 @@ q(RAILS, "buffers", "Buffers and Headstocks", "railways:small_buffer", ["locomet
 
 # ---- Modern Foundry ------------------------------------------------------
 q(FOUNDRY, "book", "Materials and You", "modernfoundry:materials_and_you", [],
-  ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats. This book lists them all.",
-   "New players usually start with a copy. If you don't have one, craft a Pattern from planks and sticks and combine it with a book."],
-  [("modernfoundry:materials_and_you", 1)])
+  ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats.",
+   "Materials and You is your guide to all of it, and new players usually start with a copy. If you don't have one, craft a Pattern from planks and sticks and combine it with a book.",
+   "Give it a read, then click the checkmark when you're ready."],
+  [], check=True)
 q(FOUNDRY, "pattern", "Part Builder", "modernfoundry:part_builder", ["book"],
   ["A Pattern is the template for a tool part. The Part Builder turns a pattern and a material into that part.",
    "Make a stack of Patterns; each part you build uses one."],
@@ -502,8 +503,7 @@ MILESTONES = {
     (CREATE, "brass"): [("create:brass_nugget", 4)],
     (CREATE, "precision"): [("create:electron_tube", 1)],
     (AERO, "physics"): [("simulated:honey_glue", 1)],
-    (FOUNDRY, "book"): [("minecraft:torch", 8)],
-    (FOUNDRY, "pattern"): [("minecraft:coal", 4)],
+    (FOUNDRY, "pattern"): [("minecraft:torch", 8), ("minecraft:coal", 4)],
     (FOUNDRY, "smeltery"): [("modernfoundry:seared_stone", 4)],
 }
 # Parts you always need in sets: make N, get N more, so the first build is within reach.
