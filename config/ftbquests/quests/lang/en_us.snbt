@@ -19,6 +19,8 @@
 	quest.031C33DED2EFC5A7.title: "Train Station"
 	quest.03594763D06E9251.quest_desc: ["Build a pickaxe: a pick head, a tool handle and a tool binding.", "", "Different materials give different durability, speed and traits."]
 	quest.03594763D06E9251.title: "First Tool"
+	quest.03B2D2C9793837F0.quest_desc: ["The Linked Typewriter puts many Redstone Link frequencies on your keyboard. Right click it to take over: your movement keys and any keys you assign then drive those links.", "", "To assign a key, right click a Redstone Link receiver with the typewriter and press the key. Wire the links to your throttle and steering and fly from the pilot's seat."]
+	quest.03B2D2C9793837F0.title: "Fly by Keyboard"
 	quest.03D2BB4268FF1D61.quest_desc: ["Upgrade your Backtank, Diving Helmet and Diving Boots with netherite at a smithing table. With netherite leggings too, the full set makes you immune to fire and lava and lets you see in it.", "", "Walk the floor of the Nether's lava seas."]
 	quest.03D2BB4268FF1D61.title: "Netherite Diving Gear"
 	quest.041DC559B39F9318.quest_desc: ["Zinc is a new ore that spawns underground. Smelt it or wash crushed ore with a Fan to make ingots.", "", "You will need it for brass."]
@@ -45,7 +47,7 @@
 	quest.07F9BA4179BC2A64.title: "Borehead Miner"
 	quest.08FBC54833E131A6.quest_desc: ["A Directional Gearshift gives you forward and reverse: power one side to drive, the other to back up, both to stop.", "", "An Analog Transmission slows the wheels with redstone, like a gearbox. A Throttle Lever drives both nicely."]
 	quest.08FBC54833E131A6.title: "Drivetrain"
-	quest.091645822E5B10ED.quest_desc: ["Gyroscopic Propeller Bearings facing downwards can hold a top-heavy craft level.", "", "Add a second rotor or a tail to stop the craft spinning, and tune it until it flies straight. Tick the box when it does."]
+	quest.091645822E5B10ED.quest_desc: ["Gyroscopic Propeller Bearings facing downwards can hold a top-heavy craft level.", "", "A Smart Propeller makes thrust like any propeller but pitches itself along one axis to try to face upwards; use a Wrench on it to reverse its thrust. Add one as a tail or a second rotor to stop the craft spinning, and tune it until it flies straight. Tick the box when it does."]
 	quest.091645822E5B10ED.title: "Steady Flying"
 	quest.093584C275BCEA9D.quest_desc: ["The Hose Pulley sucks up (or pours out) large bodies of fluid. Lower it into a lava lake and it will drain it.", "", "It is the right way to supply a big lava setup."]
 	quest.093584C275BCEA9D.title: "Hose Pulley"
@@ -91,6 +93,8 @@
 	quest.1CBBD2E5FACCE72B.title: "Locometal"
 	quest.1D8BB7C9F31570AE.quest_desc: ["The Tesla Coil charges items on a depot or belt below it: batteries, tools, and charging recipes. It also shocks anyone who stands too close.", "", "Power it from a connector in Push mode."]
 	quest.1D8BB7C9F31570AE.title: "Tesla Coil"
+	quest.1DAD7B6372D9A028.quest_desc: ["A block version of the Potato Cannon for your craft. It takes the same ammo and can be loaded automatically.", "", "Charge it with rotation, then give it a redstone signal to fire; keep the signal on for automatic fire."]
+	quest.1DAD7B6372D9A028.title: "Mounted Potato Cannon"
 	quest.1F7CBA4F672A8800.quest_desc: ["Sable gives contraptions real physics: weight, lift, thrust and drag. The Physics Assembler turns a glued build into a Simulated Contraption.", "", "Glue the build with Super Glue or Honey Glue, then hold right click and pull the lever.", "", "Here is a pot of Honey Glue to start. It wears out, so make more with a Spout by filling an iron sheet with honey (see the Create chapter)."]
 	quest.1F7CBA4F672A8800.title: "Physics Assembler"
 	quest.20CDB7F7BB7215DE.quest_desc: ["The Tinkers' Anvil builds large tools such as hammers and broad axes, and is where you apply modifiers.", "", "It is cast from a block of metal; check the book for which metals work."]
@@ -249,6 +253,8 @@
 	quest.707A1AE5256206AA.title: "Project: Crop Farm"
 	quest.717FA27DE13C70CF.quest_desc: ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.", "", "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."]
 	quest.717FA27DE13C70CF.title: "Steam Engine"
+	quest.719540FF02BB2832.quest_desc: ["Every self-levelling part starts with a Gyroscopic Mechanism, built on a sequenced assembly line from an iron sheet, like the Precision Mechanism.", "", "Check the recipe in EMI (R) to see each step. You'll want a couple."]
+	quest.719540FF02BB2832.title: "Gyroscopic Mechanism"
 	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats.", "", "Materials and You is your guide to all of it, and new players usually start with a copy. If you don't have one, craft a Pattern from planks and sticks and combine it with a book.", "", "Give it a read, then click the checkmark when you're ready."]
 	quest.71D1833076DCCCDE.title: "Materials and You"
 	quest.723048BF1737D4ED.quest_desc: ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.", "", "Put one next to a depot and you can combine items automatically."]

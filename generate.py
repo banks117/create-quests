@@ -426,19 +426,31 @@ q(AERO, "first_plane", "Build a Plane", "simulated:white_symmetric_sail", ["cont
   ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.",
    "Tick the box when you're done."],
   [], check=True)
-q(AERO, "gyro", "Gyroscopic Propeller Bearing", "aeronautics:gyroscopic_propeller_bearing", ["propeller"],
+q(AERO, "gyro_mechanism", "Gyroscopic Mechanism", "simulated:gyroscopic_mechanism", ["propeller", f"{CREATE}::precision"],
+  ["Every self-levelling part starts with a Gyroscopic Mechanism, built on a sequenced assembly line from an iron sheet, like the Precision Mechanism.",
+   "Check the recipe in EMI (R) to see each step. You'll want a couple."],
+  [("simulated:gyroscopic_mechanism", 2)])
+q(AERO, "gyro", "Gyroscopic Propeller Bearing", "aeronautics:gyroscopic_propeller_bearing", ["gyro_mechanism"],
   ["Normal propeller bearings make poor helicopters: the rotor tips with the craft. A Gyroscopic Propeller Bearing tries to keep its propeller upright.",
    "A redstone signal resets its tilt to zero when you don't want it leaning."],
   [("aeronautics:gyroscopic_propeller_bearing", 1)])
-q(AERO, "first_heli", "Build a Helicopter", "aeronautics:gyroscopic_propeller_bearing", ["gyro", "throttle"],
+q(AERO, "first_heli", "Build a Helicopter", "aeronautics:andesite_propeller", ["gyro", "throttle"],
   ["Mount a Gyroscopic Propeller Bearing facing up with a rotor on top, power it from a Portable Engine, and use a Throttle Lever to climb and descend.",
    "Lift fades as the air thins, so you'll hover where thrust and weight balance. Take off, hover, land, and tick the box."],
   [], check=True)
-q(AERO, "heli_stability", "Steady Flying", "aeronautics:gyroscopic_propeller_bearing", ["first_heli"],
+q(AERO, "heli_stability", "Steady Flying", "aeronautics:smart_propeller", ["first_heli"],
   ["Gyroscopic Propeller Bearings facing downwards can hold a top-heavy craft level.",
-   "Add a second rotor or a tail to stop the craft spinning, and tune it until it flies straight. Tick the box when it does."],
-  [], check=True)
-q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_plane"],
+   "A Smart Propeller makes thrust like any propeller but pitches itself along one axis to try to face upwards; use a Wrench on it to reverse its thrust. Add one as a tail or a second rotor to stop the craft spinning, and tune it until it flies straight. Tick the box when it does."],
+  [("aeronautics:smart_propeller", 1)], check=True)
+q(AERO, "remote", "Fly by Keyboard", "simulated:linked_typewriter", ["first_heli", f"{CREATE}::redstone", f"{CREATE}::crafter"],
+  ["The Linked Typewriter puts many Redstone Link frequencies on your keyboard. Right click it to take over: your movement keys and any keys you assign then drive those links.",
+   "To assign a key, right click a Redstone Link receiver with the typewriter and press the key. Wire the links to your throttle and steering and fly from the pilot's seat."],
+  [("simulated:linked_typewriter", 1)])
+q(AERO, "cannon", "Mounted Potato Cannon", "aeronautics:mounted_potato_cannon", ["first_heli", f"{CREATE}::crafter", f"{CREATE}::fluids"],
+  ["A block version of the Potato Cannon for your craft. It takes the same ammo and can be loaded automatically.",
+   "Charge it with rotation, then give it a redstone signal to fire; keep the signal on for automatic fire."],
+  [("aeronautics:mounted_potato_cannon", 1)])
+q(AERO, "flight_sensors", "Flight Sensors", "simulated:gimbal_sensor", ["first_plane", "gyro_mechanism"],
   ["The Gimbal Sensor outputs redstone based on how the craft is tilted, and the Velocity Sensor based on its speed.",
    "Wire them to your control surfaces and you have an autopilot."],
   [("simulated:gimbal_sensor", 1), ("simulated:velocity_sensor", 1)])
@@ -710,7 +722,7 @@ SUBCHAPTERS = {
         ("basics", "Basics", "physics honey_glue steering throttle engine propeller goggles"),
         ("blimps", "Blimps", "envelope burner altitude steam_vent levitite first_blimp ropes delivery_airship navigation"),
         ("planes", "Planes", "sails controls first_plane flight_sensors"),
-        ("helicopters", "Helicopters", "gyro first_heli heli_stability"),
+        ("helicopters", "Helicopters", "gyro_mechanism gyro first_heli heli_stability remote cannon"),
         ("cars", "Cars", "wheels drivetrain first_car big_tires borehead"),
     ],
 }
@@ -824,7 +836,7 @@ POSITIONS = {
 # Quests whose prerequisite sits across the map: the lock still applies, but the line would cut
 # through other clusters, so it isn't drawn.
 HIDDEN_LINES = {(CREATE, i) for i in "zinc vault".split()}
-CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet",
+CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet", "aeronautics_helicopters": "aeronautics:gyroscopic_propeller_bearing",
                  "create_projects": "create:clipboard"}
 
 for mod in MODULES:
@@ -948,7 +960,7 @@ def layout(items, sizes):
 
 # Entry points: the materials a branch hangs off are drawn as gears; everything else stays plain.
 HUBS = {(CREATE, i) for i in "andesite_alloy casing dried_kelp iron_sheet golden_sheet copper_sheet copper_casing "
-        "brass brass_casing electron_tube precision".split()} | {(AERO, "physics"), (FOUNDRY, "smeltery")} \
+        "brass brass_casing electron_tube precision".split()} | {(AERO, "physics"), (AERO, "gyro_mechanism"), (FOUNDRY, "smeltery")} \
     | {(ADDITIONS, i) for i in "rolling_mill capacitor electrum".split()}
 unlocks = collections.Counter(dep_key(x, d) for x in Q for d in x["deps"])
 

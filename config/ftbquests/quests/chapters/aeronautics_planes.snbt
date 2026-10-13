@@ -116,7 +116,7 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["5A2D2A0C774E7594"]
+			dependencies: ["5A2D2A0C774E7594", "719540FF02BB2832"]
 			icon: {
 				id: "simulated:gimbal_sensor"
 			}

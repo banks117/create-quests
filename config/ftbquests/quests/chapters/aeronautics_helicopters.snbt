@@ -1,5 +1,5 @@
 {
-	autofocus_id: "7D09691C28E05501"
+	autofocus_id: "719540FF02BB2832"
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "aeronautics_helicopters"
@@ -12,7 +12,36 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["6117A72CBB15361C"]
+			dependencies: ["6117A72CBB15361C", "5F71DBB1A5D94585"]
+			icon: {
+				id: "simulated:gyroscopic_mechanism"
+			}
+			id: "719540FF02BB2832"
+			rewards: [
+				{
+					id: "51B3CBA698000D91"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					count: 2L
+					id: "1C66E68CC7F0B954"
+					item: {
+						count: 1
+						id: "simulated:gyroscopic_mechanism"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["719540FF02BB2832"]
 			icon: {
 				id: "aeronautics:gyroscopic_propeller_bearing"
 			}
@@ -35,12 +64,12 @@
 				}
 			]
 			x: 0.0d
-			y: 0.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["7D09691C28E05501", "122B2A0D56D38529"]
 			icon: {
-				id: "aeronautics:gyroscopic_propeller_bearing"
+				id: "aeronautics:andesite_propeller"
 			}
 			id: "04C5BFBF0EF45C4D"
 			rewards: [
@@ -59,12 +88,12 @@
 				}
 			]
 			x: 0.0d
-			y: 2.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["04C5BFBF0EF45C4D"]
 			icon: {
-				id: "aeronautics:gyroscopic_propeller_bearing"
+				id: "aeronautics:smart_propeller"
 			}
 			id: "091645822E5B10ED"
 			rewards: [
@@ -81,9 +110,69 @@
 					id: "1997A8B769638420"
 					type: "checkmark"
 				}
+				{
+					id: "452113ABECCB0A00"
+					item: {
+						count: 1
+						id: "aeronautics:smart_propeller"
+					}
+					type: "item"
+				}
 			]
-			x: 0.0d
-			y: 5.0d
+			x: -1.8125d
+			y: 7.5d
+		}
+		{
+			dependencies: ["04C5BFBF0EF45C4D", "1454F911712FF513", "3A66462861B4969E"]
+			icon: {
+				id: "simulated:linked_typewriter"
+			}
+			id: "03B2D2C9793837F0"
+			rewards: [
+				{
+					id: "67ED61EEB939D02D"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "7136025025C1C754"
+					item: {
+						count: 1
+						id: "simulated:linked_typewriter"
+					}
+					type: "item"
+				}
+			]
+			x: 0.0625d
+			y: 7.5d
+		}
+		{
+			dependencies: ["04C5BFBF0EF45C4D", "3A66462861B4969E", "55625BFA5DD44551"]
+			icon: {
+				id: "aeronautics:mounted_potato_cannon"
+			}
+			id: "1DAD7B6372D9A028"
+			rewards: [
+				{
+					id: "45CAECA5D4142316"
+					type: "xp_levels"
+					xp_levels: 1
+				}
+			]
+			tasks: [
+				{
+					id: "390865110E2B1446"
+					item: {
+						count: 1
+						id: "aeronautics:mounted_potato_cannon"
+					}
+					type: "item"
+				}
+			]
+			x: 1.8125d
+			y: 7.5d
 		}
 	]
 }
