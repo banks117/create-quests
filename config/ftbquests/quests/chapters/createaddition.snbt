@@ -7,7 +7,7 @@
 		id: "createaddition:rolling_mill"
 	}
 	id: "2B284AFF27473D2B"
-	order_index: 11
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
@@ -36,7 +36,7 @@
 				}
 			]
 			x: 0.0d
-			y: -0.75d
+			y: -1.0d
 		}
 		{
 			dependencies: ["0BBADAB4CDE5F5EC", "4E90904BFB21493E"]
@@ -128,7 +128,7 @@
 				}
 			]
 			x: 0.0d
-			y: 0.75d
+			y: 1.0d
 		}
 		{
 			dependencies: ["61A1ED329D7520B9", "3A66462861B4969E"]
@@ -240,7 +240,7 @@
 				}
 			]
 			x: 8.0d
-			y: -0.75d
+			y: -0.9375d
 		}
 		{
 			dependencies: ["4FAD83A2392C743D", "61A1ED329D7520B9", "05C2800C8FB7FC81", "7DF24DD5C018FABC", "3A66462861B4969E"]
@@ -295,7 +295,7 @@
 				}
 			]
 			x: 8.0d
-			y: 0.75d
+			y: 0.9375d
 		}
 		{
 			dependencies: ["3BAA89FEBE221B98", "162C08C7ED2A407A"]

@@ -697,16 +697,14 @@ XP_LEVELS[(ADDITIONS, "power_grid")] = 3
 # chapters above all groups, and opens the first chapter for new players, so Create has to come first.
 SUBCHAPTERS = {
     CREATE: [
-        ("getting_started", "Getting Started", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox"),
-        ("processing", "Processing", "millstone dried_kelp belt press iron_sheet golden_sheet wrench goggles fan funnels basin"),
-        ("contraptions", "Contraptions", "drill glue saw harvester bearing piston pulley"),
-        ("fluids", "Fluids and Steam", "copper_sheet copper_casing fluids spout hose steam_engine"),
-        ("brass", "Brass", "zinc blaze_burner brass brass_casing electron_tube deployer"),
+        ("andesite", "Andesite Age", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox "
+         "millstone dried_kelp belt press iron_sheet golden_sheet wrench goggles fan funnels basin "
+         "drill glue saw harvester bearing piston pulley"),
+        ("copper_brass", "Copper and Brass", "copper_sheet copper_casing fluids spout hose steam_engine "
+         "zinc blaze_burner brass brass_casing electron_tube deployer backtank diving netherite_diving"),
+        ("precision", "Precision and Logistics", "precision arm crafter crushing_wheel sequenced radiance extendo_grip potato_cannon "
+         "redstone display schematic vault packages train_track train_station first_train train_signal cargo_train"),
         ("projects", "Projects", "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
-        ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
-        ("precision", "Precision and Automation", "precision arm crafter crushing_wheel sequenced radiance"),
-        ("logistics", "Logistics", "redstone display schematic vault packages"),
-        ("trains", "Trains", "train_track train_station first_train train_signal cargo_train"),
     ],
     AERO: [
         ("basics", "Basics", "physics honey_glue steering throttle engine propeller goggles"),
@@ -717,8 +715,7 @@ SUBCHAPTERS = {
     ],
 }
 # A chapter shows its first quest's icon unless set here (keyed by chapter file name).
-# The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
-CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet", "create_projects": "create:clipboard"}
+CHAPTER_ICONS = {"create_copper_brass": "create:brass_ingot", "create_projects": "create:clipboard"}
 
 for mod in MODULES:
     ids = [x["id"] for x in Q if x["group"] == mod]
@@ -794,8 +791,9 @@ def local_deps(x, ids):
     return [p for p in x["deps"] if "::" not in p and p in ids]
 
 
-def layout(items):
-    """Column = dependency depth within the chapter; rows spread around 0."""
+def layout(items, sizes):
+    """Column = dependency depth within the chapter. Within a column, quests are ordered next to the
+    quests they connect to (a few barycenter sweeps), which keeps dependency lines from crossing."""
     byid = {x["id"]: x for x in items}
     depth = {}
 
@@ -806,8 +804,36 @@ def layout(items):
         return depth[i]
     cols = collections.defaultdict(list)
     for x in items:
-        cols[d(x["id"])].append(x)
-    return {x["id"]: (col, n - (len(xs) - 1) / 2) for col, xs in cols.items() for n, x in enumerate(xs)}
+        cols[d(x["id"])].append(x["id"])
+    parents = {i: local_deps(byid[i], byid) for i in byid}
+    children = collections.defaultdict(list)
+    for i, ps in parents.items():
+        for p in ps:
+            children[p].append(i)
+    rank = {}
+
+    def rerank():
+        for xs in cols.values():
+            for n, i in enumerate(xs):
+                rank[i] = n - (len(xs) - 1) / 2
+    rerank()
+    for _ in range(6):
+        for c in sorted(cols)[1:]:
+            cols[c].sort(key=lambda i: sum(rank[p] for p in parents[i]) / len(parents[i]))
+            rerank()
+        for c in sorted(cols, reverse=True)[1:]:
+            cols[c].sort(key=lambda i: sum(rank[k] for k in children[i]) / len(children[i]) if children[i] else rank[i])
+            rerank()
+    pos = {}
+    for c, xs in cols.items():
+        ys, y = [], 0.0
+        for n, i in enumerate(xs):
+            if n:
+                y += (sizes[xs[n - 1]] + sizes[i]) / 2 + 0.5
+            ys.append(y)
+        for i, y in zip(xs, ys):
+            pos[i] = (c * 2.0, y - ys[-1] / 2)
+    return pos
 
 
 # Entry points: the materials a branch hangs off are drawn as gears; everything else stays plain.
@@ -815,6 +841,12 @@ HUBS = {(CREATE, i) for i in "andesite_alloy casing dried_kelp iron_sheet golden
         "brass brass_casing electron_tube precision".split()} | {(AERO, "physics"), (FOUNDRY, "smeltery")} \
     | {(ADDITIONS, i) for i in "rolling_mill capacitor electrum".split()}
 unlocks = collections.Counter(dep_key(x, d) for x in Q for d in x["deps"])
+
+
+def quest_size(g, x, ids):
+    if (g, x["id"]) in HUBS:
+        return 1.75 if unlocks[(g, x["id"])] >= 6 else 1.5
+    return 1.25 if x["check"] else 1.0
 
 FTB = f"{OUT}/config/ftbquests/quests"
 if os.path.exists(FTB):
@@ -842,7 +874,8 @@ for g, cid, fname, title, gid, items in chapters:
     order_in_group[gid] += 1
     lang[f"chapter.{cid}.title"] = title
     ids = {x["id"] for x in items}
-    pos = layout(items)
+    sizes = {x["id"]: quest_size(g, x, ids) for x in items}
+    pos = layout(items, sizes)
     quests = []
     for x in items:
         qid = fid("quest", g, x["id"])
@@ -859,17 +892,17 @@ for g, cid, fname, title, gid, items in chapters:
         if x["xp"]:
             levels = XP_LEVELS.get((g, x["id"]), 1)
             rewards.append({"id": fid("reward", g, x["id"], "xp"), "type": "xp_levels", "xp_levels": levels})
-        col, row = pos[x["id"]]
-        qd = {"id": qid, "x": float(col * 2), "y": float(row * 1.5),
+        px, py = pos[x["id"]]
+        qd = {"id": qid, "x": px, "y": py,
               "tasks": tasks, "rewards": rewards, "icon": {"id": x["icon"]}}
         if x["deps"]:
             qd["dependencies"] = [fid("quest", *dep_key(x, d)) for d in x["deps"]]
         if (g, x["id"]) in HUBS:
             qd["shape"] = "gear"
-            qd["size"] = 1.75 if unlocks[(g, x["id"])] >= 6 else 1.5
         elif x["check"]:
             qd["shape"] = "hexagon"
-            qd["size"] = 1.25
+        if sizes[x["id"]] != 1.0:
+            qd["size"] = sizes[x["id"]]
         quests.append(qd)
     chapter = {"default_hide_dependency_lines": False, "default_quest_shape": "", "filename": fname,
                "group": gid, "icon": {"id": CHAPTER_ICONS.get(fname, items[0]["icon"])}, "id": cid,

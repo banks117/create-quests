@@ -7,7 +7,7 @@
 		id: "railways:semaphore"
 	}
 	id: "33BFC882B88ED125"
-	order_index: 10
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
@@ -243,7 +243,7 @@
 				}
 			]
 			x: 2.0d
-			y: 1.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["76D94F796AE6EC62"]
@@ -269,7 +269,7 @@
 				}
 			]
 			x: 2.0d
-			y: 3.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["76D94F796AE6EC62"]
@@ -304,7 +304,7 @@
 				}
 			]
 			x: 2.0d
-			y: 4.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["1CBBD2E5FACCE72B"]

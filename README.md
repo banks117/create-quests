@@ -32,7 +32,7 @@ Quest ids are stable across regenerations, so updating keeps player progress.
 
 Create and Aeronautics each get a chapter group with several chapters:
 
-- **Create:** Getting Started, Processing, Contraptions, Fluids and Steam, Brass, Projects, Equipment, Precision and Automation, Logistics, Trains, plus Steam 'n' Rails and Crafts & Additions when installed
+- **Create:** Andesite Age, Copper and Brass, Precision and Logistics, Projects, plus Steam 'n' Rails and Crafts & Additions when installed
 - **Aeronautics:** Basics, Blimps, Planes, Helicopters, Cars
 
 Steam 'n' Rails, Crafts & Additions and Modern Foundry are single chapters. Prerequisites cross chapters where the recipes need them.
