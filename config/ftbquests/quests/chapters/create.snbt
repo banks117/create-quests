@@ -1543,7 +1543,7 @@
 			dependencies: ["6A7A863777ED7392", "1454F911712FF513"]
 			icon: {
 				count: 1
-				id: "create:package"
+				id: "create:packager"
 			}
 			id: "5C5A59FC97B804A8"
 			rewards: [

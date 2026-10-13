@@ -18,17 +18,9 @@ PROFILE = json.load(open(args.profile))
 
 # ---------------------------------------------------------------- item validation
 def item_ids(z, ns):
-    # A lang key alone isn't proof of an item (block-only entries like create:small_bogey have one too),
-    # so accept item.* keys or an item model.
+    # Require an item model: lang keys exist for things that aren't plain items (create:small_bogey,
+    # and create:package, which only has per-style models and shows as "?" in FTB Quests).
     s = set()
-    try:
-        d = json.loads(z.read(f"assets/{ns}/lang/en_us.json"))
-    except KeyError:
-        d = {}
-    for k in d:
-        m = re.match(r"item\." + ns + r"\.([a-z0-9_/]+)$", k)
-        if m:
-            s.add(f"{ns}:{m.group(1)}")
     for n in z.namelist():
         m = re.match(r"assets/" + ns + r"/models/item/([a-z0-9_/]+)\.json$", n)
         if m:
@@ -242,7 +234,7 @@ q(CREATE, "vault", "Item Vaults", "item_vault", ["precision"],
   ["Vaults are huge storage blocks and they connect, unlike chests. Use one as the heart of a base.",
    "Pair them with funnels and arms for automatic sorting."],
   [("item_vault", 4)])
-q(CREATE, "packages", "Packages and Logistics", "package", ["vault", "redstone"],
+q(CREATE, "packages", "Packages and Logistics", "packager", ["vault", "redstone"],
   ["Create 6 adds a logistics network. A Stock Link on a vault joins it, a Stock Ticker orders from it, and Packagers wrap items into Packages for delivery.",
    "Factory Gauges let machines request their own supplies."],
   [("stock_link", 1), ("stock_ticker", 1), ("packager", 1), ("factory_gauge", 1)])
