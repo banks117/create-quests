@@ -123,7 +123,7 @@ q(CREATE, "millstone", "Millstone", "millstone", ["casing", "cogwheel"],
   ["The Millstone grinds items: wheat into flour, ores into crushed ore, and more. Power it from the side with cogwheels.",
    "Throw items in the top, then right click it to take the result, or pull it out with a hopper or funnel."],
   [("millstone", 1), ("wheat_flour", 4)])
-q(CREATE, "crushing_wheel", "Crushing Wheels", "crushing_wheel", ["crafter", "millstone"],
+q(CREATE, "crushing_wheel", "Crushing Wheels", "crushing_wheel", ["crafter"],
   ["Two Crushing Wheels placed side by side crush ore into more crushed ore than a furnace could ever give you.",
    "Make them spin into each other, then drop items in the top."],
   [("crushing_wheel", 2), ("crushed_raw_iron", 4)])
@@ -248,7 +248,7 @@ q(CREATE, "crafter", "Mechanical Crafter", "mechanical_crafter", ["precision"],
   ["Arrange Mechanical Crafters in the shape of a crafting grid and they will assemble any recipe you feed them.",
    "Use a Wrench to set the direction items are passed."],
   [("mechanical_crafter", 4)])
-q(CREATE, "sequenced", "Sequenced Gearshift", "sequenced_gearshift", ["precision", "gearbox"],
+q(CREATE, "sequenced", "Sequenced Gearshift", "sequenced_gearshift", ["precision"],
   ["A Sequenced Gearshift runs a rotation program: turn this much, wait, then turn that much.",
    "Great for pistons and doors that need exact timing."],
   [("sequenced_gearshift", 1), ("rotation_speed_controller", 1)])
@@ -290,7 +290,7 @@ q(CREATE, "train_signal", "Signals and Schedules", "track_signal", ["first_train
   ["Signals split the track into sections so more than one train can run safely. A Schedule tells a train where to go and when.",
    "Put a station at each stop, then write a schedule that visits them in turn."],
   [("track_signal", 2), ("schedule", 1), ("train_door", 1)])
-q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision", "blaze_burner"],
+q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision"],
   ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.",
    "Check EMI for the exact recipe."],
   [("chromatic_compound", 1)])
@@ -697,13 +697,12 @@ XP_LEVELS[(ADDITIONS, "power_grid")] = 3
 # chapters above all groups, and opens the first chapter for new players, so Create has to come first.
 SUBCHAPTERS = {
     CREATE: [
-        ("andesite", "Andesite Age", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox "
+        ("main", "Create", "welcome andesite_alloy shaft cogwheel hand_crank water_wheel windmill casing gearbox "
          "millstone dried_kelp belt press iron_sheet golden_sheet wrench goggles fan funnels basin "
-         "drill glue saw harvester bearing piston pulley"),
-        ("copper_brass", "Copper and Brass", "copper_sheet copper_casing fluids spout hose steam_engine "
-         "zinc blaze_burner brass brass_casing electron_tube deployer"),
-        ("precision", "Precision and Logistics", "precision arm crafter crushing_wheel sequenced radiance "
-         "redstone display schematic vault packages train_track train_station first_train train_signal cargo_train"),
+         "drill glue saw harvester bearing piston pulley "
+         "copper_sheet copper_casing fluids spout hose steam_engine zinc blaze_burner brass brass_casing electron_tube deployer "
+         "precision arm crafter crushing_wheel sequenced radiance redstone display schematic vault packages "
+         "train_track train_station first_train train_signal cargo_train"),
         ("equipment", "Equipment", "backtank diving extendo_grip potato_cannon netherite_diving"),
         ("projects", "Projects", "cobble_gen iron_farm andesite_factory kelp_farm crop_farm tree_farm ore_processing brass_factory kitchen"),
     ],
@@ -725,76 +724,75 @@ GRIDS = {"create_projects": ["cobble_gen iron_farm andesite_factory", "kelp_farm
 # "id x y" per line, x right and y down in quest units; a quest missing here falls back to the
 # automatic layout (and gets a warning), so new quests never vanish.
 POSITIONS = {
-    "create_andesite": """
+    "create_main": """
         welcome 0 0
         andesite_alloy 2.5 0
         shaft 4.5 -1.5
-        casing 4.5 1.5
-        drill 4.5 3.5
         cogwheel 6.5 -1.5
         hand_crank 5.2 -3.4
         water_wheel 6.5 -3.9
         windmill 7.8 -3.4
-        millstone 5.7 0.1
+        casing 4.5 1.5
         gearbox 8.5 0
+        millstone 5.7 0.1
         dried_kelp 10.5 0
         belt 12.5 0
         press 14.5 1.5
-        funnels 14.5 -2.2
-        iron_sheet 17.5 0
-        fan 16.6 -2.4
-        basin 18.2 -2.6
-        saw 19.6 -1.7
-        harvester 20.2 -0.1
-        glue 19.8 2.2
-        bearing 21.9 1.6
-        piston 22.1 3.2
-        pulley 20.9 4.3
-        golden_sheet 16.5 3.5
-        wrench 15.4 5.3
-        goggles 17.7 5.4
-    """,
-    "create_copper_brass": """
-        copper_sheet 0 -3
-        fluids 2.5 -3
-        copper_casing 2.5 -6
-        hose 0.7 -4.6
-        spout 4.3 -4.6
-        steam_engine 5 -1.5
-        blaze_burner 2.5 0
-        zinc 0 2.5
-        brass 2.5 2.5
-        brass_casing 5 2.5
-        deployer 7.5 2.5
-        electron_tube 5 5
-    """,
-    "create_precision": """
-        precision 0 0
-        arm -1.5 -2.1
-        sequenced -2.5 -0.6
-        radiance -2.4 1.1
-        schematic -1.4 2.5
-        crafter 2 -2.4
-        crushing_wheel 4.2 -2.9
-        train_track 2.6 0.2
-        train_station 4.6 0.2
-        first_train 6.6 0.2
-        train_signal 8.6 0.2
-        cargo_train 10.6 0.2
-        redstone 1.8 2.7
-        display 3.2 4.4
-        packages 4.4 2.7
-        vault 6.6 2.7
+        iron_sheet 17.5 -1.5
+        golden_sheet 15.5 4.5
+        wrench 16.1 2.5
+        goggles 17.6 3.3
+        fan 16 -3.6
+        funnels 14.7 -2.4
+        basin 18.9 0.5
+        drill 3.3 3.2
+        glue 20.3 -2.2
+        saw 17.6 -4.1
+        harvester 19.1 -3.5
+        bearing 20.6 -4.1
+        piston 22.1 -3.2
+        pulley 21 -0.4
+        copper_sheet 12 6.5
+        copper_casing 7.5 6
+        fluids 10.5 8.5
+        spout 9.6 6.2
+        hose 8.3 8.4
+        steam_engine 12.8 10.4
+        zinc 15.3 7.4
+        blaze_burner 18.5 10.9
+        brass 17 8.8
+        brass_casing 19.2 8.3
+        electron_tube 22.9 9
+        deployer 21 7.3
+        precision 21 4.5
+        arm 19.7 6.4
+        crafter 22.6 6.8
+        crushing_wheel 24.6 7.4
+        sequenced 23.5 5.3
+        radiance 20.2 2.3
+        redstone 23.9 3.7
+        display 25.6 4.7
+        schematic 18.2 5.4
+        vault 27.8 2
+        packages 25.9 2.6
+        train_track 22.2 2.5
+        train_station 23.6 0.6
+        first_train 25.4 -1
+        train_signal 27.4 -1
+        cargo_train 29.4 -1
     """,
     "create_equipment": """
         backtank 0 0
         diving 2 -1.6
-        netherite_diving 4 -1.6
         extendo_grip 2.2 0.3
         potato_cannon 2 2
+        netherite_diving 4 -1.6
     """,
 }
-CHAPTER_ICONS = {"create_copper_brass": "create:brass_ingot", "create_equipment": "create:copper_diving_helmet",
+# Quests whose prerequisite sits across the map: the lock still applies, but the line would cut
+# through other clusters, so it isn't drawn.
+HIDDEN_LINES = {(CREATE, i) for i in "zinc electron_tube vault blaze_burner".split()}
+CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet",
                  "create_projects": "create:clipboard"}
 
 for mod in MODULES:
@@ -991,6 +989,8 @@ for g, cid, fname, title, gid, items in chapters:
             qd["shape"] = "gear"
         elif x["check"]:
             qd["shape"] = "hexagon"
+        if (g, x["id"]) in HIDDEN_LINES:
+            qd["hide_dependency_lines"] = True
         if sizes[x["id"]] != 1.0:
             qd["size"] = sizes[x["id"]]
         quests.append(qd)

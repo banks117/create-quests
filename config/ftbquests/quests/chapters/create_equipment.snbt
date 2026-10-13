@@ -7,7 +7,7 @@
 		id: "create:copper_diving_helmet"
 	}
 	id: "79CC8FA7F96C20E8"
-	order_index: 3
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{

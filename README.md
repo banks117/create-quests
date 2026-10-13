@@ -32,12 +32,20 @@ Quest ids are stable across regenerations, so updating keeps player progress.
 
 Create and Aeronautics each get a chapter group with several chapters:
 
-- **Create:** Andesite Age, Copper and Brass, Precision and Logistics, Equipment, Projects, plus Steam 'n' Rails and Crafts & Additions when installed
+- **Create:** Create (the whole main progression on one hand-placed map), Equipment, Projects, plus Steam 'n' Rails and Crafts & Additions when installed
 - **Aeronautics:** Basics, Blimps, Planes, Helicopters, Cars
 
 Steam 'n' Rails, Crafts & Additions and Modern Foundry are single chapters. Prerequisites cross chapters where the recipes need them.
 
 Quest ids come from the mod and the quest, not the chapter, so moving a quest between chapters keeps player progress.
+
+The Create and Equipment chapters are hand-placed (`POSITIONS` in `generate.py`); the rest are laid out automatically. To adjust a layout, move quests in FTB Quests' editor, quit the world, and copy the positions back:
+
+```sh
+python3 -I import_positions.py --mods /path/to/instance/mods --quests /path/to/instance/config/ftbquests/quests
+```
+
+Name a chapter file (e.g. `railways`) to start hand-placing it too.
 
 ## Profiles
 
