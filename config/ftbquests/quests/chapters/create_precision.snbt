@@ -4,7 +4,6 @@
 	filename: "create_precision"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:precision_mechanism"
 	}
 	id: "1EFBC95515779966"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["723048BF1737D4ED", "532780D9DB293403"]
 			icon: {
-				count: 1
 				id: "create:precision_mechanism"
 			}
 			id: "5F71DBB1A5D94585"
@@ -53,7 +51,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585"]
 			icon: {
-				count: 1
 				id: "create:mechanical_arm"
 			}
 			id: "47E272DB2DB104B0"
@@ -80,7 +77,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585"]
 			icon: {
-				count: 1
 				id: "create:mechanical_crafter"
 			}
 			id: "3A66462861B4969E"
@@ -108,7 +104,6 @@
 		{
 			dependencies: ["3A66462861B4969E", "4978B86F57E43FCE"]
 			icon: {
-				count: 1
 				id: "create:crushing_wheel"
 			}
 			id: "5CA9836B85D5A334"
@@ -145,7 +140,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585", "12CEF6D0015D619D"]
 			icon: {
-				count: 1
 				id: "create:sequenced_gearshift"
 			}
 			id: "2B3EF66E55543BD8"
@@ -180,7 +174,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585", "4CC768AC355A6703"]
 			icon: {
-				count: 1
 				id: "create:chromatic_compound"
 			}
 			id: "0670829A73FDC2D7"

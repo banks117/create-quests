@@ -4,7 +4,6 @@
 	filename: "create_brass"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:zinc_ingot"
 	}
 	id: "5D891EA642A8EE2C"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["5714EBDF3126946C"]
 			icon: {
-				count: 1
 				id: "create:zinc_ingot"
 			}
 			id: "041DC559B39F9318"
@@ -53,7 +51,6 @@
 		{
 			dependencies: ["7DA3D76FDF9593AD"]
 			icon: {
-				count: 1
 				id: "create:blaze_burner"
 			}
 			id: "4CC768AC355A6703"
@@ -82,7 +79,6 @@
 		{
 			dependencies: ["041DC559B39F9318", "4CC768AC355A6703"]
 			icon: {
-				count: 1
 				id: "create:brass_ingot"
 			}
 			id: "532780D9DB293403"
@@ -128,7 +124,6 @@
 		{
 			dependencies: ["532780D9DB293403"]
 			icon: {
-				count: 1
 				id: "create:brass_casing"
 			}
 			id: "05C2800C8FB7FC81"
@@ -156,7 +151,6 @@
 		{
 			dependencies: ["05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:deployer"
 			}
 			id: "723048BF1737D4ED"
@@ -183,7 +177,6 @@
 		{
 			dependencies: ["05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:mechanical_saw"
 			}
 			id: "1AF9D599B1A1865F"
@@ -210,7 +203,6 @@
 		{
 			dependencies: ["05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:mechanical_drill"
 			}
 			id: "3F452D140A574530"
@@ -237,7 +229,6 @@
 		{
 			dependencies: ["05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:mechanical_harvester"
 			}
 			id: "3E13CE882E876E3A"

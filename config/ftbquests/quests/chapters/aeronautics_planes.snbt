@@ -4,7 +4,6 @@
 	filename: "aeronautics_planes"
 	group: "1DE8FB13B5B62D56"
 	icon: {
-		count: 1
 		id: "simulated:white_symmetric_sail"
 	}
 	id: "64DF7FF5F72362B0"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["6117A72CBB15361C"]
 			icon: {
-				count: 1
 				id: "simulated:white_symmetric_sail"
 			}
 			id: "4FA764B41B3AD78C"
@@ -62,7 +60,6 @@
 		{
 			dependencies: ["4FA764B41B3AD78C", "39B8F8A441598265"]
 			icon: {
-				count: 1
 				id: "simulated:torsion_spring"
 			}
 			id: "6AC31ACA704C3E95"
@@ -98,7 +95,6 @@
 		{
 			dependencies: ["6AC31ACA704C3E95"]
 			icon: {
-				count: 1
 				id: "simulated:white_symmetric_sail"
 			}
 			id: "5A2D2A0C774E7594"
@@ -123,7 +119,6 @@
 		{
 			dependencies: ["5A2D2A0C774E7594"]
 			icon: {
-				count: 1
 				id: "simulated:gimbal_sensor"
 			}
 			id: "4392ACD7BDA98B8A"

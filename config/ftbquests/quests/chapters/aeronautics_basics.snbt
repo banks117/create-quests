@@ -4,7 +4,6 @@
 	filename: "aeronautics_basics"
 	group: "1DE8FB13B5B62D56"
 	icon: {
-		count: 1
 		id: "simulated:physics_assembler"
 	}
 	id: "6826C0246AB74D0A"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["246226A6919CF5ED"]
 			icon: {
-				count: 1
 				id: "simulated:physics_assembler"
 			}
 			id: "1F7CBA4F672A8800"
@@ -52,7 +50,6 @@
 		{
 			dependencies: ["1F7CBA4F672A8800", "4328CD94686BFEBA"]
 			icon: {
-				count: 1
 				id: "simulated:honey_glue"
 			}
 			id: "23B5949FE40EFA2B"
@@ -88,7 +85,6 @@
 		{
 			dependencies: ["1F7CBA4F672A8800", "4F9A91933C4AAD8D"]
 			icon: {
-				count: 1
 				id: "simulated:steering_wheel"
 			}
 			id: "39B8F8A441598265"
@@ -115,7 +111,6 @@
 		{
 			dependencies: ["39B8F8A441598265", "05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "simulated:throttle_lever"
 			}
 			id: "122B2A0D56D38529"
@@ -142,7 +137,6 @@
 		{
 			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
-				count: 1
 				id: "simulated:white_portable_engine"
 			}
 			id: "502BF10FD13C4EA5"
@@ -169,7 +163,6 @@
 		{
 			dependencies: ["502BF10FD13C4EA5", "05C2800C8FB7FC81", "7BAE5A98D0EA2865"]
 			icon: {
-				count: 1
 				id: "aeronautics:wooden_propeller"
 			}
 			id: "6117A72CBB15361C"
@@ -214,7 +207,6 @@
 		{
 			dependencies: ["6117A72CBB15361C", "77255D3C2EA07E44"]
 			icon: {
-				count: 1
 				id: "aeronautics:aviators_goggles"
 			}
 			id: "49421439F3BC2FC4"

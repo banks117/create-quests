@@ -684,7 +684,7 @@ for g, cid, fname, title, gid, items in chapters:
             rewards.append({"id": fid("reward", g, x["id"], "xp"), "type": "xp_levels", "xp_levels": 1})
         col, row = pos[x["id"]]
         qd = {"id": qid, "x": float(col * 2), "y": float(row * 1.5),
-              "tasks": tasks, "rewards": rewards, "icon": {"count": 1, "id": x["icon"]}}
+              "tasks": tasks, "rewards": rewards, "icon": {"id": x["icon"]}}
         if x["deps"]:
             qd["dependencies"] = [fid("quest", *dep_key(x, d)) for d in x["deps"]]
         if not local_deps(x, ids):
@@ -695,7 +695,7 @@ for g, cid, fname, title, gid, items in chapters:
             qd["size"] = 1.25
         quests.append(qd)
     chapter = {"default_hide_dependency_lines": False, "default_quest_shape": "", "filename": fname,
-               "group": gid, "icon": {"count": 1, "id": items[0]["icon"]}, "id": cid,
+               "group": gid, "icon": {"id": items[0]["icon"]}, "id": cid,
                "order_index": order, "quest_links": [], "quests": quests}
     open(f"{FTB}/chapters/{fname}.snbt", "w").write(snbt(chapter) + "\n")
 open(f"{FTB}/chapter_groups.snbt", "w").write(snbt({"chapter_groups": [{"id": i} for i in group_ids.values()]}) + "\n")

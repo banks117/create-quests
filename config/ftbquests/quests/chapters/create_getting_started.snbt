@@ -4,7 +4,6 @@
 	filename: "create_getting_started"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:wrench"
 	}
 	id: "22F55E6EF2DCB855"
@@ -13,7 +12,6 @@
 	quests: [
 		{
 			icon: {
-				count: 1
 				id: "create:wrench"
 			}
 			id: "65568FD704BF8034"
@@ -32,7 +30,6 @@
 		{
 			dependencies: ["65568FD704BF8034"]
 			icon: {
-				count: 1
 				id: "create:andesite_alloy"
 			}
 			id: "5714EBDF3126946C"
@@ -69,7 +66,6 @@
 		{
 			dependencies: ["5714EBDF3126946C"]
 			icon: {
-				count: 1
 				id: "create:shaft"
 			}
 			id: "3A0F97042370EA0C"
@@ -115,7 +111,6 @@
 		{
 			dependencies: ["3A0F97042370EA0C"]
 			icon: {
-				count: 1
 				id: "create:cogwheel"
 			}
 			id: "4F9A91933C4AAD8D"
@@ -170,7 +165,6 @@
 		{
 			dependencies: ["4F9A91933C4AAD8D"]
 			icon: {
-				count: 1
 				id: "create:hand_crank"
 			}
 			id: "6B30A0EAE22BB188"
@@ -206,7 +200,6 @@
 		{
 			dependencies: ["4F9A91933C4AAD8D"]
 			icon: {
-				count: 1
 				id: "create:water_wheel"
 			}
 			id: "2BE024A205775B96"
@@ -251,7 +244,6 @@
 		{
 			dependencies: ["4F9A91933C4AAD8D"]
 			icon: {
-				count: 1
 				id: "create:windmill_bearing"
 			}
 			id: "281652550AB417EB"
@@ -296,7 +288,6 @@
 		{
 			dependencies: ["5714EBDF3126946C"]
 			icon: {
-				count: 1
 				id: "create:andesite_casing"
 			}
 			id: "246226A6919CF5ED"
@@ -333,7 +324,6 @@
 		{
 			dependencies: ["246226A6919CF5ED", "4F9A91933C4AAD8D"]
 			icon: {
-				count: 1
 				id: "create:gearbox"
 			}
 			id: "12CEF6D0015D619D"

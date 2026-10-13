@@ -4,7 +4,6 @@
 	filename: "aeronautics_helicopters"
 	group: "1DE8FB13B5B62D56"
 	icon: {
-		count: 1
 		id: "aeronautics:gyroscopic_propeller_bearing"
 	}
 	id: "644D6632A8E3E10E"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["6117A72CBB15361C"]
 			icon: {
-				count: 1
 				id: "aeronautics:gyroscopic_propeller_bearing"
 			}
 			id: "7D09691C28E05501"
@@ -43,7 +41,6 @@
 		{
 			dependencies: ["7D09691C28E05501", "122B2A0D56D38529"]
 			icon: {
-				count: 1
 				id: "aeronautics:gyroscopic_propeller_bearing"
 			}
 			id: "04C5BFBF0EF45C4D"
@@ -68,7 +65,6 @@
 		{
 			dependencies: ["04C5BFBF0EF45C4D"]
 			icon: {
-				count: 1
 				id: "aeronautics:gyroscopic_propeller_bearing"
 			}
 			id: "091645822E5B10ED"

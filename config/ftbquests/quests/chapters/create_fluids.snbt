@@ -4,7 +4,6 @@
 	filename: "create_fluids"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:fluid_pipe"
 	}
 	id: "100245BEB59EE176"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:fluid_pipe"
 			}
 			id: "55625BFA5DD44551"
@@ -69,7 +67,6 @@
 		{
 			dependencies: ["55625BFA5DD44551", "09FC33824A470023"]
 			icon: {
-				count: 1
 				id: "create:spout"
 			}
 			id: "4328CD94686BFEBA"
@@ -104,7 +101,6 @@
 		{
 			dependencies: ["55625BFA5DD44551"]
 			icon: {
-				count: 1
 				id: "create:hose_pulley"
 			}
 			id: "093584C275BCEA9D"
@@ -131,7 +127,6 @@
 		{
 			dependencies: ["55625BFA5DD44551", "4CC768AC355A6703"]
 			icon: {
-				count: 1
 				id: "create:steam_engine"
 			}
 			id: "717FA27DE13C70CF"

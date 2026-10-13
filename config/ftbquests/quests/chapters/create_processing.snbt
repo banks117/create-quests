@@ -4,7 +4,6 @@
 	filename: "create_processing"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:millstone"
 	}
 	id: "5E30A43E5C012225"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["246226A6919CF5ED", "4F9A91933C4AAD8D"]
 			icon: {
-				count: 1
 				id: "create:millstone"
 			}
 			id: "4978B86F57E43FCE"
@@ -61,7 +59,6 @@
 		{
 			dependencies: ["12CEF6D0015D619D"]
 			icon: {
-				count: 1
 				id: "create:belt_connector"
 			}
 			id: "09FC33824A470023"
@@ -108,7 +105,6 @@
 		{
 			dependencies: ["41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "create:andesite_funnel"
 			}
 			id: "060551E84F3A2959"
@@ -153,7 +149,6 @@
 		{
 			dependencies: ["09FC33824A470023", "246226A6919CF5ED"]
 			icon: {
-				count: 1
 				id: "create:mechanical_press"
 			}
 			id: "41B89DC3CE373DEA"
@@ -207,7 +202,6 @@
 		{
 			dependencies: ["41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "create:wrench"
 			}
 			id: "35318D85DBDBF88B"
@@ -234,7 +228,6 @@
 		{
 			dependencies: ["41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "create:goggles"
 			}
 			id: "77255D3C2EA07E44"
@@ -277,7 +270,6 @@
 		{
 			dependencies: ["12CEF6D0015D619D", "41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "create:encased_fan"
 			}
 			id: "7BAE5A98D0EA2865"
@@ -312,7 +304,6 @@
 		{
 			dependencies: ["41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "create:mechanical_mixer"
 			}
 			id: "7DA3D76FDF9593AD"

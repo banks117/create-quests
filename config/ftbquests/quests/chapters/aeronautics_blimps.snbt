@@ -4,7 +4,6 @@
 	filename: "aeronautics_blimps"
 	group: "1DE8FB13B5B62D56"
 	icon: {
-		count: 1
 		id: "aeronautics:white_envelope"
 	}
 	id: "0DCE51786821EC5D"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
-				count: 1
 				id: "aeronautics:white_envelope"
 			}
 			id: "4043B5F303D667BA"
@@ -53,7 +51,6 @@
 		{
 			dependencies: ["4043B5F303D667BA", "41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "aeronautics:adjustable_burner"
 			}
 			id: "7C319C3D0115308E"
@@ -80,7 +77,6 @@
 		{
 			dependencies: ["7C319C3D0115308E"]
 			icon: {
-				count: 1
 				id: "simulated:altitude_sensor"
 			}
 			id: "7AF0CFF014727B91"
@@ -107,7 +103,6 @@
 		{
 			dependencies: ["7C319C3D0115308E", "717FA27DE13C70CF"]
 			icon: {
-				count: 1
 				id: "aeronautics:steam_vent"
 			}
 			id: "7F0150EDB232A99A"
@@ -134,7 +129,6 @@
 		{
 			dependencies: ["1F7CBA4F672A8800"]
 			icon: {
-				count: 1
 				id: "aeronautics:levitite"
 			}
 			id: "737BE59B311EAF17"
@@ -172,7 +166,6 @@
 		{
 			dependencies: ["7C319C3D0115308E", "6117A72CBB15361C", "39B8F8A441598265"]
 			icon: {
-				count: 1
 				id: "aeronautics:white_envelope"
 			}
 			id: "538222C5864751CC"
@@ -197,7 +190,6 @@
 		{
 			dependencies: ["538222C5864751CC", "3A66462861B4969E", "060551E84F3A2959"]
 			icon: {
-				count: 1
 				id: "simulated:rope_winch"
 			}
 			id: "76CED65183413DDA"
@@ -250,7 +242,6 @@
 		{
 			dependencies: ["7AF0CFF014727B91", "5F71DBB1A5D94585"]
 			icon: {
-				count: 1
 				id: "simulated:navigation_table"
 			}
 			id: "777DE7F2696A8208"

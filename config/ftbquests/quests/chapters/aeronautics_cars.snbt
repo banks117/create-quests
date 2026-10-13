@@ -4,7 +4,6 @@
 	filename: "aeronautics_cars"
 	group: "1DE8FB13B5B62D56"
 	icon: {
-		count: 1
 		id: "offroad:tire"
 	}
 	id: "119BA69E8073FE2A"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["1F7CBA4F672A8800", "41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "offroad:tire"
 			}
 			id: "300293F855AB765B"
@@ -71,7 +69,6 @@
 		{
 			dependencies: ["300293F855AB765B", "502BF10FD13C4EA5", "05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "simulated:directional_gearshift"
 			}
 			id: "08FBC54833E131A6"
@@ -106,7 +103,6 @@
 		{
 			dependencies: ["08FBC54833E131A6", "39B8F8A441598265"]
 			icon: {
-				count: 1
 				id: "offroad:large_tire"
 			}
 			id: "41571B487A0FA8B1"
@@ -131,7 +127,6 @@
 		{
 			dependencies: ["41571B487A0FA8B1"]
 			icon: {
-				count: 1
 				id: "offroad:monstrous_tire"
 			}
 			id: "375E0E1710F35827"
@@ -167,7 +162,6 @@
 		{
 			dependencies: ["41571B487A0FA8B1", "5CA9836B85D5A334"]
 			icon: {
-				count: 1
 				id: "offroad:borehead_bearing"
 			}
 			id: "07F9BA4179BC2A64"

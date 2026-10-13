@@ -4,7 +4,6 @@
 	filename: "create_trains"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:track"
 	}
 	id: "3C4AE9E1582A2E70"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585"]
 			icon: {
-				count: 1
 				id: "create:track"
 			}
 			id: "4B2ED97BEA0D74D3"
@@ -53,7 +51,6 @@
 		{
 			dependencies: ["4B2ED97BEA0D74D3"]
 			icon: {
-				count: 1
 				id: "create:track_station"
 			}
 			id: "031C33DED2EFC5A7"
@@ -89,7 +86,6 @@
 		{
 			dependencies: ["031C33DED2EFC5A7", "29C4AEBBED144162"]
 			icon: {
-				count: 1
 				id: "create:controls"
 			}
 			id: "5B47D4A21842E145"
@@ -122,7 +118,6 @@
 		{
 			dependencies: ["5B47D4A21842E145"]
 			icon: {
-				count: 1
 				id: "create:track_signal"
 			}
 			id: "5228F2C9BD73B763"

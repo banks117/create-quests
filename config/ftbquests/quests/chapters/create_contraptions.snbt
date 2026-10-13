@@ -4,7 +4,6 @@
 	filename: "create_contraptions"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:super_glue"
 	}
 	id: "1909AD80DBA6FB2C"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["41B89DC3CE373DEA"]
 			icon: {
-				count: 1
 				id: "create:super_glue"
 			}
 			id: "29C4AEBBED144162"
@@ -43,7 +41,6 @@
 		{
 			dependencies: ["29C4AEBBED144162", "05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:mechanical_bearing"
 			}
 			id: "519DC7EB567A6482"
@@ -70,7 +67,6 @@
 		{
 			dependencies: ["29C4AEBBED144162", "05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:mechanical_piston"
 			}
 			id: "2B55AB4C0358AE0B"
@@ -115,7 +111,6 @@
 		{
 			dependencies: ["29C4AEBBED144162", "05C2800C8FB7FC81"]
 			icon: {
-				count: 1
 				id: "create:rope_pulley"
 			}
 			id: "11213AD740BC0F9A"

@@ -4,7 +4,6 @@
 	filename: "create_logistics"
 	group: "36387A651839BFDA"
 	icon: {
-		count: 1
 		id: "create:redstone_link"
 	}
 	id: "019952D0298CB4A2"
@@ -14,7 +13,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585"]
 			icon: {
-				count: 1
 				id: "create:redstone_link"
 			}
 			id: "1454F911712FF513"
@@ -60,7 +58,6 @@
 		{
 			dependencies: ["1454F911712FF513"]
 			icon: {
-				count: 1
 				id: "create:display_board"
 			}
 			id: "009B588D51418EAA"
@@ -104,7 +101,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585"]
 			icon: {
-				count: 1
 				id: "create:schematic_table"
 			}
 			id: "0632092E58B014DB"
@@ -149,7 +145,6 @@
 		{
 			dependencies: ["5F71DBB1A5D94585"]
 			icon: {
-				count: 1
 				id: "create:item_vault"
 			}
 			id: "6A7A863777ED7392"
@@ -179,7 +174,6 @@
 		{
 			dependencies: ["6A7A863777ED7392", "1454F911712FF513"]
 			icon: {
-				count: 1
 				id: "create:packager"
 			}
 			id: "5C5A59FC97B804A8"
