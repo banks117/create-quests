@@ -636,7 +636,7 @@ SUBCHAPTERS = {
 }
 # A chapter shows its first quest's icon unless set here (keyed by chapter file name).
 # The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
-CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet", "create_projects": "create:large_cogwheel"}
+CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet", "create_projects": "create:clipboard"}
 
 for mod in MODULES:
     ids = [x["id"] for x in Q if x["group"] == mod]
