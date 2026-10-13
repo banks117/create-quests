@@ -430,7 +430,7 @@ q(RAILS, "buffers", "Buffers and Headstocks", "railways:small_buffer", ["locomet
 # ---- Modern Foundry ------------------------------------------------------
 q(FOUNDRY, "book", "Materials and You", "modernfoundry:materials_and_you", [],
   ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats. This book lists them all.",
-   "Craft a Pattern from planks and sticks, then combine it with a book to make Materials and You. Keep it close."],
+   "New players usually start with a copy. If you don't have one, craft a Pattern from planks and sticks and combine it with a book."],
   [("modernfoundry:materials_and_you", 1)])
 q(FOUNDRY, "pattern", "Part Builder", "modernfoundry:part_builder", ["book"],
   ["A Pattern is the template for a tool part. The Part Builder turns a pattern and a material into that part.",

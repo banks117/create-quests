@@ -182,7 +182,7 @@
 	quest.6B5929DBA1583912.title: "The Foundry"
 	quest.717FA27DE13C70CF.quest_desc: ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.", "", "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."]
 	quest.717FA27DE13C70CF.title: "Steam Engine"
-	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats. This book lists them all.", "", "Craft a Pattern from planks and sticks, then combine it with a book to make Materials and You. Keep it close."]
+	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats. This book lists them all.", "", "New players usually start with a copy. If you don't have one, craft a Pattern from planks and sticks and combine it with a book."]
 	quest.71D1833076DCCCDE.title: "Materials and You"
 	quest.723048BF1737D4ED.quest_desc: ["A Deployer acts like a player: it places blocks, uses items, activates blocks, harvests and even attacks.", "", "Put one next to a depot and you can combine items automatically."]
 	quest.723048BF1737D4ED.title: "Deployer"
