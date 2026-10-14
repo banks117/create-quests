@@ -893,7 +893,7 @@ HIDDEN_LINES = {(CREATE, i) for i in "zinc vault".split()}
 # A chapter shows its first quest's icon unless set here (keyed by chapter file name).
 # The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
 CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet", "aeronautics_helicopters": "aeronautics:gyroscopic_propeller_bearing",
-                 "create_projects": "create:clipboard"}
+                 "create_projects": "create:clipboard", "modern_foundry": "modernfoundry:tinker_station"}
 
 for mod, subs in SUBCHAPTERS.items():
     ids = [x["id"] for x in Q if x["group"] == mod]
@@ -909,6 +909,16 @@ for c in wanted:
 all_keys = {(x["group"], x["id"]) for x in Q}
 Q = [x for x in Q if x["group"] in included and x["needs"] <= present]
 keys = {(x["group"], x["id"]) for x in Q}
+
+# Modern Foundry's tools help from the very start, so Welcome to Create points at them.
+if FOUNDRY in included:
+    homes = list(dict.fromkeys(MODULES[c].get("group", c) for c in included))
+    where = "Its chapter is right after this one." if homes[homes.index(CREATE) + 1:][:1] == [FOUNDRY] \
+        else "Look for its chapter in the quest book."
+    welcome = next(x for x in Q if (x["group"], x["id"]) == (CREATE, "welcome"))
+    welcome["desc"].insert(-1, "Modern Foundry lets you put your own tools together from parts and materials you choose, "
+                               "then keep modifying them as you go. They never disappear: once you make them, they're yours "
+                               f"forever. {where}")
 
 
 # ---------------------------------------------------------------- validation
