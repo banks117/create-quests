@@ -908,17 +908,18 @@ for c in wanted:
         print(f"skipping {c}: missing mods {sorted(MODULES[c]['requires'] - present)}")
 all_keys = {(x["group"], x["id"]) for x in Q}
 Q = [x for x in Q if x["group"] in included and x["needs"] <= present]
+# A profile can add its own intro chapter of checkmark quests, listed above every mod's chapters.
+# Its first quest then carries the starter kit instead of Welcome to Create.
+PACK = "pack"
+WELCOME = PROFILE.get("welcome")
+if WELCOME:
+    for x in Q:
+        if (x["group"], x["id"]) == (CREATE, "welcome"):
+            x["rewards"] = []
+    for w in WELCOME["quests"]:
+        Q.append(dict(group=PACK, id=w["id"], title=w["title"], icon=w["icon"], deps=w.get("deps", []), desc=w["desc"],
+                      tasks=[], check=True, needs=set(), rewards=[tuple(r) for r in w.get("rewards", [])], xp=False))
 keys = {(x["group"], x["id"]) for x in Q}
-
-# Modern Foundry's tools help from the very start, so Welcome to Create points at them.
-if FOUNDRY in included:
-    homes = list(dict.fromkeys(MODULES[c].get("group", c) for c in included))
-    where = "Its chapter is right after this one." if homes[homes.index(CREATE) + 1:][:1] == [FOUNDRY] \
-        else "Look for its chapter in the quest book."
-    welcome = next(x for x in Q if (x["group"], x["id"]) == (CREATE, "welcome"))
-    welcome["desc"].insert(-1, "Modern Foundry lets you put your own tools together from parts and materials you choose, "
-                               "then keep modifying them as you go. They never disappear: once you make them, they're yours "
-                               f"forever. {where}")
 
 
 # ---------------------------------------------------------------- validation
@@ -1038,6 +1039,10 @@ os.makedirs(f"{FTB}/lang")
 lang = {}
 group_ids = {}
 chapters = []   # (mod, chapter id, file name, title, group id, quests)
+if WELCOME:
+    # Ungrouped, so FTB Quests lists it first and opens it for new players.
+    chapters.append((PACK, fid("chapter", PACK), "welcome", WELCOME["title"], "", [x for x in Q if x["group"] == PACK]))
+    CHAPTER_ICONS["welcome"] = WELCOME["icon"]
 for g in included:
     home = MODULES[g].get("group", g)
     if home not in group_ids:
