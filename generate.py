@@ -148,8 +148,8 @@ q(CREATE, "iron_sheet", "Iron Sheets", "iron_sheet", ["press"],
    "Keep a belt of ingots running under the press and you will never run short."],
   [("iron_sheet", 8)])
 q(CREATE, "golden_sheet", "Golden Sheets", "golden_sheet", ["press"],
-  ["Gold ingots press into Golden Sheets: the Wrench, Engineer's Goggles and the Steam Engine all need one, and Precision Mechanisms are built on them."],
-  [("golden_sheet", 4)])
+  ["Gold ingots press into Golden Sheets. Engineer's Goggles and the Steam Engine need one each, the Wrench takes three, and Precision Mechanisms are built on them."],
+  [("golden_sheet", 3)])
 q(CREATE, "wrench", "Wrench", "wrench", ["golden_sheet"],
   ["Now that you can press gold sheets, make a Wrench. It rotates blocks, picks machines back up instantly, and configures many components.",
    "Sneak and right click with it to pick a block up."],
@@ -681,7 +681,7 @@ q(FOUNDRY, "scorched", "The Foundry", "modernfoundry:foundry_controller", ["coba
 # ---------------------------------------------------------------- rewards
 # At most one small item per quest, and only when it is fuel, food or ammo for what was just
 # built, or a material the next quests need (about a quarter of what this quest cost).
-# Never machines, tools, or anything the player is meant to find (ore, blaze, cobalt, slime).
+# Never machines, or anything the player is meant to find (ore, blaze, cobalt, slime).
 REWARDS = {
     (CREATE, "welcome"): [("minecraft:torch", 16), ("minecraft:coal", 8), ("minecraft:bread", 4)],
     (CREATE, "andesite_alloy"): [("minecraft:andesite", 16)],
