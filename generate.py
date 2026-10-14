@@ -679,57 +679,58 @@ q(FOUNDRY, "scorched", "The Foundry", "modernfoundry:foundry_controller", ["coba
 
 
 # ---------------------------------------------------------------- rewards
-# Rewards help without skipping progression or exploration: survival basics early on, materials
-# the player can already make, and set parts back. Never machines, tools, or anything found
-# further on (blaze, cobalt, slime, netherite).
-MILESTONES = {
-    (CREATE, "andesite_alloy"): [("minecraft:torch", 8), ("minecraft:andesite", 16)],
-    (CREATE, "shaft"): [("minecraft:coal", 4)],
-    (CREATE, "cogwheel"): [("minecraft:bread", 3)],
+# At most one small item per quest, and only when it is fuel, food or ammo for what was just
+# built, or a material the next quests need (about a quarter of what this quest cost).
+# Never machines, tools, or anything the player is meant to find (ore, blaze, cobalt, slime).
+REWARDS = {
+    (CREATE, "welcome"): [("minecraft:torch", 16), ("minecraft:coal", 8), ("minecraft:bread", 4)],
+    (CREATE, "andesite_alloy"): [("minecraft:andesite", 16)],
+    (CREATE, "shaft"): [("create:andesite_alloy", 4)],
+    (CREATE, "cogwheel"): [("create:cogwheel", 2)],
     (CREATE, "hand_crank"): [("minecraft:bread", 6)],  # cranking costs hunger
-    (CREATE, "casing"): [("minecraft:coal", 4), ("minecraft:stripped_oak_log", 8)],
-    (CREATE, "water_wheel"): [("create:andesite_alloy", 4), ("minecraft:bread", 3)],
-    (CREATE, "millstone"): [("minecraft:torch", 8)],
-    (CREATE, "press"): [("create:iron_sheet", 2)],
+    (CREATE, "water_wheel"): [("create:shaft", 4)],
+    (CREATE, "windmill"): [("create:white_sail", 4)],
+    (CREATE, "casing"): [("minecraft:stripped_oak_log", 8)],
+    (CREATE, "gearbox"): [("create:andesite_casing", 2)],
+    (CREATE, "millstone"): [("minecraft:gravel", 16)],  # washed, it leads to the Iron Farm
+    (CREATE, "fan"): [("create:propeller", 1)],
+    (CREATE, "dried_kelp"): [("minecraft:dried_kelp", 8)],
+    (CREATE, "belt"): [("create:belt_connector", 2)],
+    (CREATE, "funnels"): [("create:andesite_alloy", 4)],
+    (CREATE, "iron_sheet"): [("create:iron_sheet", 2)],
+    (CREATE, "golden_sheet"): [("create:golden_sheet", 1)],
+    (CREATE, "basin"): [("create:andesite_alloy", 4)],
     (CREATE, "zinc"): [("create:zinc_nugget", 4)],
-    (CREATE, "brass"): [("create:brass_nugget", 4)],
-    (CREATE, "precision"): [("create:electron_tube", 1)],
-    (AERO, "physics"): [("simulated:honey_glue", 1)],
-    (FOUNDRY, "pattern"): [("minecraft:torch", 8), ("minecraft:coal", 4)],
-    (FOUNDRY, "smeltery"): [("modernfoundry:seared_stone", 4)],
-    # What the new block consumes, for its first run.
+    (CREATE, "copycats"): [("create:zinc_nugget", 4)],
     (CREATE, "blaze_burner"): [("minecraft:coal", 8)],
+    (CREATE, "brass"): [("create:brass_nugget", 4)],
+    (CREATE, "brass_casing"): [("create:brass_casing", 2)],
+    (CREATE, "electron_tube"): [("create:electron_tube", 1)],
+    (CREATE, "deployer"): [("create:golden_sheet", 1)],
+    (CREATE, "piston"): [("create:piston_extension_pole", 2)],
+    (CREATE, "copper_sheet"): [("create:copper_sheet", 2)],
+    (CREATE, "copper_casing"): [("create:copper_casing", 2)],
+    (CREATE, "fluids"): [("create:fluid_pipe", 4)],
     (CREATE, "steam_engine"): [("minecraft:coal", 16)],
+    (CREATE, "precision"): [("create:electron_tube", 1)],
+    (CREATE, "schematic"): [("minecraft:gunpowder", 8)],  # schematicannon fuel
+    (CREATE, "train_track"): [("create:track", 8)],
+    (CREATE, "train_station"): [("create:railway_casing", 1)],
     (CREATE, "potato_cannon"): [("minecraft:potato", 16)],
+    (AERO, "physics"): [("simulated:honey_glue", 1)],
     (AERO, "engine"): [("minecraft:coal", 8)],
+    (AERO, "envelope"): [("aeronautics:white_envelope", 8)],
+    (AERO, "sails"): [("create:white_sail", 4)],
+    (AERO, "wheels"): [("offroad:tire", 2)],
+    (AERO, "big_tires"): [("offroad:large_tire", 2)],  # one axle's worth
     (AERO, "cannon"): [("minecraft:potato", 16)],
+    (RAILS, "gauges"): [("railways:track_oak_narrow", 8), ("railways:track_oak_wide", 8)],
+    (RAILS, "monorail"): [("railways:track_monorail", 8)],
+    (RAILS, "locometal"): [("railways:riveted_locometal", 4)],
+    (ADDITIONS, "wires"): [("createaddition:copper_wire", 4)],
+    (FOUNDRY, "seared"): [("modernfoundry:seared_stone", 4)],
     (FOUNDRY, "melter"): [("minecraft:coal", 8)],
-}
-# Bulk building parts: make N, get N more, so the first build is within reach. Components
-# you only place a few of don't get this.
-MATCH = {
-    (CREATE, "shaft"): ["create:shaft"],
-    (CREATE, "cogwheel"): ["create:cogwheel"],
-    (CREATE, "windmill"): ["create:white_sail"],
-    (CREATE, "belt"): ["create:belt_connector"],
-    (CREATE, "piston"): ["create:piston_extension_pole"],
-    (CREATE, "fluids"): ["create:fluid_pipe"],
-    (CREATE, "train_track"): ["create:track"],
-    (AERO, "wheels"): ["offroad:tire", "offroad:wheel_mount"],
-    (AERO, "envelope"): ["aeronautics:white_envelope"],
-    (AERO, "sails"): ["create:white_sail"],
-    (RAILS, "gauges"): ["railways:track_oak_narrow", "railways:track_oak_wide"],
-    (RAILS, "monorail"): ["railways:track_monorail"],
-    (CREATE, "casing"): ["create:andesite_casing"],
-    (CREATE, "copper_casing"): ["create:copper_casing"],
-    (CREATE, "brass_casing"): ["create:brass_casing"],
-    (CREATE, "train_station"): ["create:railway_casing"],
-    (AERO, "levitite"): ["aeronautics:levitite"],
-    (AERO, "big_tires"): ["offroad:large_tire"],
-    (RAILS, "locometal"): ["railways:riveted_locometal"],
-    (ADDITIONS, "wires"): ["createaddition:iron_rod", "createaddition:copper_wire"],
-    (FOUNDRY, "seared"): ["modernfoundry:seared_stone"],
-    (FOUNDRY, "scorched"): ["modernfoundry:scorched_stone"],
+    (FOUNDRY, "scorched"): [("modernfoundry:scorched_stone", 4)],
 }
 # XP levels; everything else gets 1, and projects 3. Capstones are the big moments of a chapter.
 CAPSTONE, MILESTONE = 5, 2
@@ -745,8 +746,7 @@ XP = {
 }
 for x in Q:
     key = (x["group"], x["id"])
-    x["rewards"] = MILESTONES.get(key, []) + [(i, n) for i, n in x["tasks"] if i in MATCH.get(key, [])] \
-        if PROFILE.get("item_rewards", True) else []
+    x["rewards"] = REWARDS.get(key, []) if PROFILE.get("item_rewards", True) else []
     x["xp"] = not x["check"] or x["deps"] != []
 
 
