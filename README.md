@@ -12,7 +12,7 @@ FTB Quests questlines for Create and its addons (Minecraft 1.21.1, NeoForge), wr
 
 Chapters for mods that aren't installed are left out when you generate, as are single quests for optional mods (the Automated Kitchen project needs Slice & Dice and Farmer's Delight, and Hidden Machinery needs Copycats+).
 
-Rewards are deliberately small: a level of XP per quest, survival basics (coal, torches, bread) early on, a few raw materials at milestones, and for parts you always need in sets (shafts, tires, track) you get back as many as the quest asked for.
+Rewards help without letting players skip progression or exploration. Every quest gives XP (1 level; 2 at milestones, 3 for projects, 5 for capstones like your first train or plane). On top of that a quest gives at most one small item, and only when it is fuel, food or ammo for what you just built (coal for a Blaze Burner, bread for a Hand Crank) or a material the next quests need, about a quarter of what the quest cost. A starter kit of torches, coal and bread comes with the first quest. No machines, or items you are meant to find yourself.
 
 ## Using the quests
 
