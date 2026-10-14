@@ -893,7 +893,7 @@ HIDDEN_LINES = {(CREATE, i) for i in "zinc vault".split()}
 # A chapter shows its first quest's icon unless set here (keyed by chapter file name).
 # The backtank draws an empty air gauge under its icon, so Equipment uses the diving helmet.
 CHAPTER_ICONS = {"create_equipment": "create:copper_diving_helmet", "aeronautics_helicopters": "aeronautics:gyroscopic_propeller_bearing",
-                 "create_projects": "create:clipboard"}
+                 "create_projects": "create:clipboard", "modern_foundry": "modernfoundry:tinker_station"}
 
 for mod, subs in SUBCHAPTERS.items():
     ids = [x["id"] for x in Q if x["group"] == mod]
@@ -908,6 +908,17 @@ for c in wanted:
         print(f"skipping {c}: missing mods {sorted(MODULES[c]['requires'] - present)}")
 all_keys = {(x["group"], x["id"]) for x in Q}
 Q = [x for x in Q if x["group"] in included and x["needs"] <= present]
+# A profile can add its own intro chapter of checkmark quests, listed above every mod's chapters.
+# Its first quest then carries the starter kit instead of Welcome to Create.
+PACK = "pack"
+WELCOME = PROFILE.get("welcome")
+if WELCOME:
+    for x in Q:
+        if (x["group"], x["id"]) == (CREATE, "welcome"):
+            x["rewards"] = []
+    for w in WELCOME["quests"]:
+        Q.append(dict(group=PACK, id=w["id"], title=w["title"], icon=w["icon"], deps=w.get("deps", []), desc=w["desc"],
+                      tasks=[], check=True, needs=set(), rewards=[tuple(r) for r in w.get("rewards", [])], xp=False))
 keys = {(x["group"], x["id"]) for x in Q}
 
 
@@ -1028,6 +1039,10 @@ os.makedirs(f"{FTB}/lang")
 lang = {}
 group_ids = {}
 chapters = []   # (mod, chapter id, file name, title, group id, quests)
+if WELCOME:
+    # Ungrouped, so FTB Quests lists it first and opens it for new players.
+    chapters.append((PACK, fid("chapter", PACK), "welcome", WELCOME["title"], "", [x for x in Q if x["group"] == PACK]))
+    CHAPTER_ICONS["welcome"] = WELCOME["icon"]
 for g in included:
     home = MODULES[g].get("group", g)
     if home not in group_ids:

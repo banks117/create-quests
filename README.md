@@ -58,6 +58,8 @@ A profile picks which mods' quests to include and whether to give item rewards. 
 }
 ```
 
+The order of `mods` is the order of the chapters in the quest book. A profile can also add a `welcome` chapter of checkmark quests introducing the pack, listed above everything else; its first quest then carries the starter kit. See `profiles/gears-and-gardens.json`.
+
 ## Checking quest order
 
 `check_order.py` reads every recipe in the mods folder and reports quests whose items need an ingredient or machine that is only taught by a quest that isn't a prerequisite:

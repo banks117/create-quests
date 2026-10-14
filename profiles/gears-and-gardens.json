@@ -1,4 +1,95 @@
 {
-  "mods": ["create", "aeronautics", "railways", "createaddition", "modern_foundry"],
-  "item_rewards": true
+  "mods": [
+    "create",
+    "modern_foundry",
+    "aeronautics",
+    "railways",
+    "createaddition"
+  ],
+  "item_rewards": true,
+  "welcome": {
+    "title": "Gears and Gardens",
+    "icon": "minecraft:sunflower",
+    "quests": [
+      {
+        "id": "welcome",
+        "title": "Welcome to Gears and Gardens",
+        "icon": "create:cogwheel",
+        "desc": [
+          "Gears and Gardens is a Create pack about building machines and growing things: farms, factories, trains and flying machines.",
+          "A few things that help everywhere: press R on any item in EMI to see how it is made and U to see what it is used in. Jade shows what you are looking at. Xaero's maps keep track of where you have been. If you die, your items wait for you in a corpse where you fell.",
+          "Click the checkmark to start, then pick whatever interests you."
+        ],
+        "rewards": [
+          [
+            "minecraft:torch",
+            16
+          ],
+          [
+            "minecraft:coal",
+            8
+          ],
+          [
+            "minecraft:bread",
+            4
+          ]
+        ]
+      },
+      {
+        "id": "create",
+        "title": "Create and Its Addons",
+        "icon": "create:andesite_alloy",
+        "deps": [
+          "welcome"
+        ],
+        "desc": [
+          "Create is the heart of the pack. Aeronautics lets you build airships, planes, helicopters and cars. Steam 'n' Rails and Bells & Whistles add more to trains. Crafts & Additions brings electricity, Copycats+ lets machines blend into your builds, and Slice & Dice automates cooking."
+        ]
+      },
+      {
+        "id": "foundry",
+        "title": "Modern Foundry",
+        "icon": "modernfoundry:tinker_station",
+        "deps": [
+          "welcome"
+        ],
+        "desc": [
+          "Modern Foundry lets you put your own tools together from parts and materials you choose, then keep modifying them as you go. They never disappear: once you make them, they're yours forever."
+        ]
+      },
+      {
+        "id": "farming",
+        "title": "Farming and Food",
+        "icon": "minecraft:wheat",
+        "deps": [
+          "welcome"
+        ],
+        "desc": [
+          "Farmer's Delight adds crops, cooking and meals that keep you fed longer. Right click a ripe crop to harvest and replant it in one go. AppleSkin shows how filling each food is, and Only Flax adds flax to grow."
+        ]
+      },
+      {
+        "id": "storage",
+        "title": "Storage",
+        "icon": "sophisticatedbackpacks:backpack",
+        "deps": [
+          "welcome"
+        ],
+        "desc": [
+          "Sophisticated Backpacks and Sophisticated Storage give you backpacks, chests and barrels you can upgrade, with upgrades that pick up items, sort, feed you and more."
+        ]
+      },
+      {
+        "id": "exploring",
+        "title": "Exploring",
+        "icon": "minecraft:map",
+        "deps": [
+          "welcome"
+        ],
+        "desc": [
+          "YUNG's mods rebuild dungeons, mineshafts and strongholds into places worth exploring. Critters and Companions and Fowl Play fill the world with new animals and birds, and trees fall over realistically when you chop them."
+        ]
+      }
+    ]
+  }
 }
