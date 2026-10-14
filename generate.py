@@ -679,14 +679,15 @@ q(FOUNDRY, "scorched", "The Foundry", "modernfoundry:foundry_controller", ["coba
 
 
 # ---------------------------------------------------------------- rewards
-# Rewards stay small so players still have to progress and gather: a level of XP per quest,
-# survival basics early on, and a few raw materials at milestones. No machines or tools.
+# Rewards help without skipping progression or exploration: survival basics early on, materials
+# the player can already make, and set parts back. Never machines, tools, or anything found
+# further on (blaze, cobalt, slime, netherite).
 MILESTONES = {
-    (CREATE, "andesite_alloy"): [("minecraft:torch", 8)],
+    (CREATE, "andesite_alloy"): [("minecraft:torch", 8), ("minecraft:andesite", 16)],
     (CREATE, "shaft"): [("minecraft:coal", 4)],
     (CREATE, "cogwheel"): [("minecraft:bread", 3)],
-    (CREATE, "hand_crank"): [("minecraft:torch", 8)],
-    (CREATE, "casing"): [("minecraft:coal", 4)],
+    (CREATE, "hand_crank"): [("minecraft:bread", 6)],  # cranking costs hunger
+    (CREATE, "casing"): [("minecraft:coal", 4), ("minecraft:stripped_oak_log", 8)],
     (CREATE, "water_wheel"): [("create:andesite_alloy", 4), ("minecraft:bread", 3)],
     (CREATE, "millstone"): [("minecraft:torch", 8)],
     (CREATE, "press"): [("create:iron_sheet", 2)],
@@ -696,8 +697,16 @@ MILESTONES = {
     (AERO, "physics"): [("simulated:honey_glue", 1)],
     (FOUNDRY, "pattern"): [("minecraft:torch", 8), ("minecraft:coal", 4)],
     (FOUNDRY, "smeltery"): [("modernfoundry:seared_stone", 4)],
+    # What the new block consumes, for its first run.
+    (CREATE, "blaze_burner"): [("minecraft:coal", 8)],
+    (CREATE, "steam_engine"): [("minecraft:coal", 16)],
+    (CREATE, "potato_cannon"): [("minecraft:potato", 16)],
+    (AERO, "engine"): [("minecraft:coal", 8)],
+    (AERO, "cannon"): [("minecraft:potato", 16)],
+    (FOUNDRY, "melter"): [("minecraft:coal", 8)],
 }
-# Parts you always need in sets: make N, get N more, so the first build is within reach.
+# Bulk building parts: make N, get N more, so the first build is within reach. Components
+# you only place a few of don't get this.
 MATCH = {
     (CREATE, "shaft"): ["create:shaft"],
     (CREATE, "cogwheel"): ["create:cogwheel"],
@@ -707,13 +716,32 @@ MATCH = {
     (CREATE, "fluids"): ["create:fluid_pipe"],
     (CREATE, "train_track"): ["create:track"],
     (AERO, "wheels"): ["offroad:tire", "offroad:wheel_mount"],
-    (AERO, "propeller"): ["aeronautics:wooden_propeller"],
     (AERO, "envelope"): ["aeronautics:white_envelope"],
     (AERO, "sails"): ["create:white_sail"],
-    (AERO, "ropes"): ["simulated:docking_connector"],
     (RAILS, "gauges"): ["railways:track_oak_narrow", "railways:track_oak_wide"],
     (RAILS, "monorail"): ["railways:track_monorail"],
-    (ADDITIONS, "connectors"): ["createaddition:connector"],
+    (CREATE, "casing"): ["create:andesite_casing"],
+    (CREATE, "copper_casing"): ["create:copper_casing"],
+    (CREATE, "brass_casing"): ["create:brass_casing"],
+    (CREATE, "train_station"): ["create:railway_casing"],
+    (AERO, "levitite"): ["aeronautics:levitite"],
+    (AERO, "big_tires"): ["offroad:large_tire"],
+    (RAILS, "locometal"): ["railways:riveted_locometal"],
+    (ADDITIONS, "wires"): ["createaddition:iron_rod", "createaddition:copper_wire"],
+    (FOUNDRY, "seared"): ["modernfoundry:seared_stone"],
+    (FOUNDRY, "scorched"): ["modernfoundry:scorched_stone"],
+}
+# XP levels; everything else gets 1, and projects 3. Capstones are the big moments of a chapter.
+CAPSTONE, MILESTONE = 5, 2
+XP = {
+    (CREATE, "first_train"): CAPSTONE, (CREATE, "radiance"): CAPSTONE, (CREATE, "netherite_diving"): CAPSTONE,
+    (CREATE, "cargo_train"): CAPSTONE, (AERO, "first_blimp"): CAPSTONE, (AERO, "first_plane"): CAPSTONE,
+    (AERO, "first_heli"): CAPSTONE, (AERO, "first_car"): CAPSTONE, (AERO, "delivery_airship"): CAPSTONE,
+    (ADDITIONS, "power_grid"): CAPSTONE, (FOUNDRY, "scorched"): CAPSTONE,
+    (CREATE, "brass"): MILESTONE, (CREATE, "blaze_burner"): MILESTONE, (CREATE, "steam_engine"): MILESTONE,
+    (CREATE, "precision"): MILESTONE, (FOUNDRY, "smeltery"): MILESTONE,
+    # Exploration pays in XP, never in the items found there.
+    (FOUNDRY, "slime"): MILESTONE, (FOUNDRY, "cobalt"): MILESTONE,
 }
 for x in Q:
     key = (x["group"], x["id"])
@@ -1040,8 +1068,7 @@ for g, cid, fname, title, gid, items in chapters:
         rewards = [{"id": fid("reward", g, x["id"], str(i)), "type": "item", "count": cnt,
                     "item": {"count": 1, "id": item}} for i, (item, cnt) in enumerate(x["rewards"])]
         if x["xp"]:
-            # Projects are bigger builds, so they pay a little more XP; still no free machines.
-            levels = 3 if x["title"].startswith("Project: ") else 1
+            levels = XP.get((x["group"], x["id"]), 3 if x["title"].startswith("Project: ") else 1)
             rewards.append({"id": fid("reward", g, x["id"], "xp"), "type": "xp_levels", "xp_levels": levels})
         px, py = pos[x["id"]]
         qd = {"id": qid, "x": px, "y": py,
