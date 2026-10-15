@@ -17,7 +17,7 @@
         "icon": "create:cogwheel",
         "desc": [
           "Gears and Gardens is a Create pack about building machines and growing things: farms, factories, trains and flying machines.",
-          "A few things that help everywhere: press R on any item in EMI to see how it is made and U to see what it is used in. Jade shows what you are looking at. Xaero's maps keep track of where you have been. If you die, your items wait for you in a corpse where you fell.",
+          "A few things that help everywhere: press R on any item in EMI to see how it is made or U to see what it is used in, and click an item in a quest to see its recipe. Jade shows what you are looking at. Xaero's maps keep track of where you have been. If you die, your items wait for you in a corpse where you fell.",
           "Click the checkmark to start, then pick whatever interests you."
         ],
         "rewards": [

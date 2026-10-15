@@ -76,7 +76,7 @@
 				{
 					id: "741B7013D8774922"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"
@@ -155,6 +155,15 @@
 			}
 			id: "1DAD7B6372D9A028"
 			rewards: [
+				{
+					count: 16
+					id: "720D5D114FD7241B"
+					item: {
+						count: 1
+						id: "minecraft:potato"
+					}
+					type: "item"
+				}
 				{
 					id: "45CAECA5D4142316"
 					type: "xp_levels"

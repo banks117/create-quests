@@ -23,15 +23,6 @@
 					id: "0A78D322F623D494"
 					item: {
 						count: 1
-						id: "offroad:wheel_mount"
-					}
-					type: "item"
-				}
-				{
-					count: 2
-					id: "0EE227C159925C4A"
-					item: {
-						count: 1
 						id: "offroad:tire"
 					}
 					type: "item"
@@ -109,7 +100,7 @@
 				{
 					id: "46BBBA402EA1E197"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"
@@ -130,6 +121,15 @@
 			}
 			id: "375E0E1710F35827"
 			rewards: [
+				{
+					count: 2
+					id: "166BD0DAC179CD1B"
+					item: {
+						count: 1
+						id: "offroad:large_tire"
+					}
+					type: "item"
+				}
 				{
 					id: "5E510E915CFC45DD"
 					type: "xp_levels"

@@ -19,7 +19,7 @@
 			id: "4043B5F303D667BA"
 			rewards: [
 				{
-					count: 16
+					count: 8
 					id: "644D3996D117B343"
 					item: {
 						count: 1
@@ -170,7 +170,7 @@
 				{
 					id: "7CAE34339804AAC7"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"
@@ -199,15 +199,6 @@
 			}
 			id: "76CED65183413DDA"
 			rewards: [
-				{
-					count: 2
-					id: "59272FAC8C465A67"
-					item: {
-						count: 1
-						id: "simulated:docking_connector"
-					}
-					type: "item"
-				}
 				{
 					id: "23F8500AC02BCF95"
 					type: "xp_levels"
@@ -254,7 +245,7 @@
 				{
 					id: "0DF529A4D1FECFC4"
 					type: "xp_levels"
-					xp_levels: 3
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"

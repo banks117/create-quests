@@ -16,7 +16,7 @@ Rewards help without letting players skip progression or exploration. Every ques
 
 ## Using the quests
 
-Requires FTB Quests, FTB Library and FTB Teams (FTB XMod Compat is recommended for recipe links).
+Requires FTB Quests, FTB Library and FTB Teams (FTB XMod Compat is recommended for recipe links; it needs JEI or REI, and works alongside EMI).
 
 Generate the chapters against your pack's mods folder, then copy `config/ftbquests/quests/` into your instance:
 

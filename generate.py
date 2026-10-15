@@ -76,13 +76,13 @@ def q(group, qid, title, icon, deps, desc, tasks, check=False, needs=()):
 # ---- Create --------------------------------------------------------------
 q(CREATE, "welcome", "Welcome to Create", "wrench", [],
   ["Create is a mod about building machines out of spinning shafts, belts and pipes.",
-   "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.",
+   "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R over any item in your recipe viewer (JEI or EMI) to see how it is made, and wear Engineer's Goggles to read what a machine is doing.",
    "Click the checkmark when you are ready to start."],
   [], check=True)
 q(CREATE, "andesite_alloy", "Andesite Alloy", "andesite_alloy", ["welcome"],
   ["Almost everything in Create starts here. Combine andesite with an iron nugget (or a zinc nugget) to craft Andesite Alloy.",
-   "Craft a stack of it now; you will use it constantly."],
-  [("andesite_alloy", 16)])
+   "Craft two now, enough for your first Shafts. You will use it constantly."],
+  [("andesite_alloy", 2)])
 q(CREATE, "shaft", "Shafts", "shaft", ["andesite_alloy"],
   ["A Shaft carries rotation in a straight line. Place a Shaft next to a rotating block and it will spin too.",
    "Rotation has two numbers: speed (RPM) and stress. Keep both in mind."],
@@ -242,7 +242,7 @@ q(CREATE, "hose", "Hose Pulley", "hose_pulley", ["copper_casing"],
   [("hose_pulley", 1)])
 q(CREATE, "precision", "Precision Mechanism", "precision_mechanism", ["deployer", "golden_sheet"],
   ["The gate to the advanced machines. It needs a sequenced assembly: a gold sheet on a belt passes under deployers and a press in a set order.",
-   "Check the recipe in EMI (R) to see each step."],
+   "Look up its recipe (R in your recipe viewer) to see each step."],
   [("precision_mechanism", 2)])
 q(CREATE, "arm", "Mechanical Arm", "mechanical_arm", ["precision"],
   ["The Arm picks up items from one place and puts them in another. Select its inputs and outputs before placing it, and it will run your factory.",
@@ -296,7 +296,7 @@ q(CREATE, "train_signal", "Signals and Schedules", "track_signal", ["first_train
   [("track_signal", 2), ("schedule", 1), ("train_door", 1)])
 q(CREATE, "radiance", "Refined Radiance", "chromatic_compound", ["precision"],
   ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.",
-   "Check EMI for the exact recipe."],
+   "Check your recipe viewer for the exact recipe."],
   [("chromatic_compound", 1)])
 
 q(CREATE, "backtank", "Copper Backtank", "copper_backtank", ["hand_crank"],
@@ -443,7 +443,7 @@ q(AERO, "smooth_controls", "Smooth Controls", "simulated:redstone_inductor", ["c
   [("simulated:redstone_inductor", 1)])
 q(AERO, "gyro_mechanism", "Gyroscopic Mechanism", "simulated:gyroscopic_mechanism", ["propeller", f"{CREATE}::precision"],
   ["Every self-levelling part starts with a Gyroscopic Mechanism, built on a sequenced assembly line from an iron sheet, like the Precision Mechanism.",
-   "Check the recipe in EMI (R) to see each step. You'll want a couple."],
+   "Look up its recipe (R in your recipe viewer) to see each step. You'll want a couple."],
   [("simulated:gyroscopic_mechanism", 2)])
 q(AERO, "gyro", "Gyroscopic Propeller Bearing", "aeronautics:gyroscopic_propeller_bearing", ["gyro_mechanism"],
   ["Normal propeller bearings make poor helicopters: the rotor tips with the craft. A Gyroscopic Propeller Bearing tries to keep its propeller upright.",
@@ -684,8 +684,8 @@ q(FOUNDRY, "scorched", "The Foundry", "modernfoundry:foundry_controller", ["coba
 # Never machines, or anything the player is meant to find (ore, blaze, cobalt, slime).
 REWARDS = {
     (CREATE, "welcome"): [("minecraft:torch", 16), ("minecraft:coal", 8), ("minecraft:bread", 4)],
-    (CREATE, "andesite_alloy"): [("minecraft:andesite", 16)],
-    (CREATE, "shaft"): [("create:andesite_alloy", 4)],
+    (CREATE, "andesite_alloy"): [("minecraft:iron_nugget", 4)],
+    (CREATE, "shaft"): [("create:andesite_alloy", 1)],
     (CREATE, "cogwheel"): [("create:cogwheel", 2)],
     (CREATE, "hand_crank"): [("minecraft:bread", 6)],  # cranking costs hunger
     (CREATE, "water_wheel"): [("create:shaft", 4)],

@@ -47,6 +47,15 @@
 			id: "5CB599575BA77496"
 			rewards: [
 				{
+					count: 4
+					id: "4A0A64D1AEBA35F0"
+					item: {
+						count: 1
+						id: "createaddition:copper_wire"
+					}
+					type: "item"
+				}
+				{
 					id: "11D18953A1937D6A"
 					type: "xp_levels"
 					xp_levels: 1
@@ -165,15 +174,6 @@
 			id: "162C08C7ED2A407A"
 			rewards: [
 				{
-					count: 4
-					id: "3512C3CF627F9D72"
-					item: {
-						count: 1
-						id: "createaddition:connector"
-					}
-					type: "item"
-				}
-				{
 					id: "20B9BDEE96DE79FC"
 					type: "xp_levels"
 					xp_levels: 1
@@ -229,7 +229,7 @@
 				{
 					id: "2E32C76B2AF63916"
 					type: "xp_levels"
-					xp_levels: 3
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"
