@@ -43,7 +43,7 @@
 			id: "2781D98AD14F4DEA"
 			rewards: [
 				{
-					count: 16
+					count: 8
 					id: "6280476C52139702"
 					item: {
 						count: 1
@@ -52,7 +52,7 @@
 					type: "item"
 				}
 				{
-					count: 16
+					count: 8
 					id: "7FDEB05E57452096"
 					item: {
 						count: 1
@@ -97,7 +97,7 @@
 			id: "1706586E4251428B"
 			rewards: [
 				{
-					count: 16
+					count: 8
 					id: "5BADE40EC38E0CD8"
 					item: {
 						count: 1
@@ -279,6 +279,15 @@
 			}
 			id: "1CBBD2E5FACCE72B"
 			rewards: [
+				{
+					count: 4
+					id: "37323CDD37773483"
+					item: {
+						count: 1
+						id: "railways:riveted_locometal"
+					}
+					type: "item"
+				}
 				{
 					id: "1B1EF4961AE9B268"
 					type: "xp_levels"

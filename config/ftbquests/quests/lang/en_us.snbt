@@ -39,7 +39,7 @@
 	quest.060551E84F3A2959.title: "Funnels"
 	quest.0632092E58B014DB.quest_desc: ["Save a build as a schematic, then print it elsewhere. The Schematicannon builds it for you from your inventory and gunpowder.", "", "Use the Schematic and Quill to select an area."]
 	quest.0632092E58B014DB.title: "Schematics"
-	quest.0670829A73FDC2D7.quest_desc: ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.", "", "Check EMI for the exact recipe."]
+	quest.0670829A73FDC2D7.quest_desc: ["The end of the tree. Chromatic Compound is made in a heated basin and, after absorbing enough light, becomes Refined Radiance.", "", "Check your recipe viewer for the exact recipe."]
 	quest.0670829A73FDC2D7.title: "Refined Radiance"
 	quest.076806F77B35EBFB.quest_desc: ["Build a power plant that spins an Alternator, run wires out to a distant Electric Motor, and use it to drive a machine.", "", "Tick the box when the motor turns."]
 	quest.076806F77B35EBFB.title: "Project: Power Grid"
@@ -211,13 +211,13 @@
 	quest.538222C5864751CC.title: "Build a Blimp"
 	quest.543E3B778239318E.quest_desc: ["Accumulators on a moving contraption cannot wire to the ground. Put a Portable Energy Interface on the contraption and another on the ground with a 1 or 2 block gap, and they exchange power as they pass.", "", "Charge your trains and airships at the station."]
 	quest.543E3B778239318E.title: "Powered Contraptions"
-	quest.5558C3CA300D1A6A.quest_desc: ["Gold ingots press into Golden Sheets: the Wrench, Engineer's Goggles and the Steam Engine all need one, and Precision Mechanisms are built on them."]
+	quest.5558C3CA300D1A6A.quest_desc: ["Gold ingots press into Golden Sheets. Engineer's Goggles and the Steam Engine need one each, the Wrench takes three, and Precision Mechanisms are built on them."]
 	quest.5558C3CA300D1A6A.title: "Golden Sheets"
 	quest.55625BFA5DD44551.quest_desc: ["Pipes move liquids. A Mechanical Pump pushes fluid through a pipe in the direction you set.", "", "Fluid Tanks store liquid and can be stacked into bigger ones."]
 	quest.55625BFA5DD44551.title: "Fluid Pipes"
 	quest.56FB461130AF17D7.quest_desc: ["Launch your home-grown vegetables at enemies. It fires suitable items from your inventory, and different crops hit differently.", "", "With a Backtank on, it runs on air instead of durability."]
 	quest.56FB461130AF17D7.title: "Potato Cannon"
-	quest.5714EBDF3126946C.quest_desc: ["Almost everything in Create starts here. Combine andesite with an iron nugget (or a zinc nugget) to craft Andesite Alloy.", "", "Craft a stack of it now; you will use it constantly."]
+	quest.5714EBDF3126946C.quest_desc: ["Almost everything in Create starts here. Combine andesite with an iron nugget (or a zinc nugget) to craft Andesite Alloy.", "", "Craft two now, enough for your first Shafts. You will use it constantly."]
 	quest.5714EBDF3126946C.title: "Andesite Alloy"
 	quest.5A2D2A0C774E7594.quest_desc: ["A propeller for thrust, wings for lift, and control surfaces to steer. Take off, fly a loop of your base, and land.", "", "Tick the box when you're done."]
 	quest.5A2D2A0C774E7594.title: "Build a Plane"
@@ -231,7 +231,7 @@
 	quest.5CB599575BA77496.title: "Rods and Wires"
 	quest.5D1ACF36F184BF2B.quest_desc: ["Roll bamboo or paper into a Straw and give it to a Blaze Burner: it will drink liquid fuel from buckets or pipes.", "", "Compact seeds into Seed Oil, or mix biomass, sugar and cinder flour into Bioethanol, which burns nearly twice as long."]
 	quest.5D1ACF36F184BF2B.title: "Liquid Fuel"
-	quest.5F71DBB1A5D94585.quest_desc: ["The gate to the advanced machines. It needs a sequenced assembly: a gold sheet on a belt passes under deployers and a press in a set order.", "", "Check the recipe in EMI (R) to see each step."]
+	quest.5F71DBB1A5D94585.quest_desc: ["The gate to the advanced machines. It needs a sequenced assembly: a gold sheet on a belt passes under deployers and a press in a set order.", "", "Look up its recipe (R in your recipe viewer) to see each step."]
 	quest.5F71DBB1A5D94585.title: "Precision Mechanism"
 	quest.606D7598F3CB0BAC.quest_desc: ["Right click a log with a copper ingot to make Copper Casing, the frame for fluid machines like the Spout, Item Drain and Hose Pulley."]
 	quest.606D7598F3CB0BAC.title: "Copper Casing"
@@ -243,7 +243,7 @@
 	quest.62E02D28045719F9.title: "Part Builder"
 	quest.62EB3DF59383A4A6.quest_desc: ["Slice \\& Dice automates Farmer's Delight. A Slicer holding a knife does the cutting board's work, and it can work over a Basin too. Sprinklers water your crops.", "", "Grow cabbages and turn them into leaves without lifting a knife."]
 	quest.62EB3DF59383A4A6.title: "Project: Automated Kitchen"
-	quest.65568FD704BF8034.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R on an item in EMI to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
+	quest.65568FD704BF8034.quest_desc: ["Create is a mod about building machines out of spinning shafts, belts and pipes.", "", "Three habits will carry you: hold W over any item to open its Ponder (a short animated lesson), press R over any item in your recipe viewer (JEI or EMI) to see how it is made, and wear Engineer's Goggles to read what a machine is doing.", "", "Click the checkmark when you are ready to start."]
 	quest.65568FD704BF8034.title: "Welcome to Create"
 	quest.66386EE108FF1E9E.quest_desc: ["Accumulators store electricity, and stack into bigger multiblock batteries. Give one an input connector in Push mode and an output in Pull mode.", "", "They keep your grid running when the power plant slows down."]
 	quest.66386EE108FF1E9E.title: "Modular Accumulator"
@@ -265,7 +265,7 @@
 	quest.707A1AE5256206AA.title: "Project: Crop Farm"
 	quest.717FA27DE13C70CF.quest_desc: ["Steam is Create's big power source. Build a boiler from at least 4 Fluid Tanks, fill it with water, heat it from below, and attach Steam Engines to its sides.", "", "Blaze Burners raise the boiler's power level, and each level lets one more engine run at full strength. Bigger levels need more water, size and heat; goggles show the current level."]
 	quest.717FA27DE13C70CF.title: "Steam Engine"
-	quest.719540FF02BB2832.quest_desc: ["Every self-levelling part starts with a Gyroscopic Mechanism, built on a sequenced assembly line from an iron sheet, like the Precision Mechanism.", "", "Check the recipe in EMI (R) to see each step. You'll want a couple."]
+	quest.719540FF02BB2832.quest_desc: ["Every self-levelling part starts with a Gyroscopic Mechanism, built on a sequenced assembly line from an iron sheet, like the Precision Mechanism.", "", "Look up its recipe (R in your recipe viewer) to see each step. You'll want a couple."]
 	quest.719540FF02BB2832.title: "Gyroscopic Mechanism"
 	quest.71D1833076DCCCDE.quest_desc: ["Modern Foundry is a port of Tinkers' Construct: you build tools from parts, and every material changes a tool's stats.", "", "Materials and You is your guide to all of it, and new players usually start with a copy. If you don't have one, craft a Pattern from planks and sticks and combine it with a book.", "", "Give it a read, then click the checkmark when you're ready."]
 	quest.71D1833076DCCCDE.title: "Materials and You"

@@ -105,6 +105,15 @@
 			id: "56FB461130AF17D7"
 			rewards: [
 				{
+					count: 16
+					id: "140371C8DD3456F8"
+					item: {
+						count: 1
+						id: "minecraft:potato"
+					}
+					type: "item"
+				}
+				{
 					id: "19689DE7A15DA6E6"
 					type: "xp_levels"
 					xp_levels: 1
@@ -133,7 +142,7 @@
 				{
 					id: "7CBC1FD39A86FF9C"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			tasks: [

@@ -5,7 +5,7 @@
 	filename: "modern_foundry"
 	group: "00E85A5288E5299C"
 	icon: {
-		id: "modernfoundry:materials_and_you"
+		id: "modernfoundry:tinker_station"
 	}
 	id: "5DA09361842FADD6"
 	order_index: 0
@@ -35,24 +35,6 @@
 			}
 			id: "62E02D28045719F9"
 			rewards: [
-				{
-					count: 8
-					id: "06E43C6B33218680"
-					item: {
-						count: 1
-						id: "minecraft:torch"
-					}
-					type: "item"
-				}
-				{
-					count: 4
-					id: "129299B3D790D395"
-					item: {
-						count: 1
-						id: "minecraft:coal"
-					}
-					type: "item"
-				}
 				{
 					id: "0679F39F02A18B3A"
 					type: "xp_levels"
@@ -132,6 +114,15 @@
 			id: "7305E4A82C337CF8"
 			rewards: [
 				{
+					count: 4
+					id: "3FDE07A2BB4A46E0"
+					item: {
+						count: 1
+						id: "modernfoundry:seared_stone"
+					}
+					type: "item"
+				}
+				{
 					id: "18DB4EC487BE0552"
 					type: "xp_levels"
 					xp_levels: 1
@@ -158,6 +149,15 @@
 			}
 			id: "3C0DEF47C79C5D77"
 			rewards: [
+				{
+					count: 8
+					id: "757B06B7AE3061B7"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
 				{
 					id: "56505CFF56C39613"
 					type: "xp_levels"
@@ -235,18 +235,9 @@
 			id: "69F5D22290E1A7D3"
 			rewards: [
 				{
-					count: 4
-					id: "270671BA5BC125D6"
-					item: {
-						count: 1
-						id: "modernfoundry:seared_stone"
-					}
-					type: "item"
-				}
-				{
 					id: "29130B80767D3501"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 2
 				}
 			]
 			shape: "gear"
@@ -377,7 +368,7 @@
 				{
 					id: "05B64706406A7DAB"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 2
 				}
 			]
 			tasks: [
@@ -404,7 +395,7 @@
 				{
 					id: "7B1D7D6514714214"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 2
 				}
 			]
 			tasks: [
@@ -429,9 +420,18 @@
 			id: "6B5929DBA1583912"
 			rewards: [
 				{
+					count: 4
+					id: "0001E01C5FB6E5E6"
+					item: {
+						count: 1
+						id: "modernfoundry:scorched_stone"
+					}
+					type: "item"
+				}
+				{
 					id: "5540DFE294D97F21"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			tasks: [

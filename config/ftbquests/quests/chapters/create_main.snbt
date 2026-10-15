@@ -16,7 +16,35 @@
 				id: "create:wrench"
 			}
 			id: "65568FD704BF8034"
-			rewards: [ ]
+			rewards: [
+				{
+					count: 16
+					id: "131997A5545621AC"
+					item: {
+						count: 1
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "75A82B1E86502A85"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "69D9771ABAD00F19"
+					item: {
+						count: 1
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+			]
 			shape: "hexagon"
 			size: 1.25d
 			tasks: [
@@ -36,11 +64,11 @@
 			id: "5714EBDF3126946C"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "43A19B43BC49366D"
 					item: {
 						count: 1
-						id: "minecraft:torch"
+						id: "minecraft:iron_nugget"
 					}
 					type: "item"
 				}
@@ -54,7 +82,7 @@
 			size: 1.5d
 			tasks: [
 				{
-					count: 16L
+					count: 2L
 					id: "5FF80D48378F5400"
 					item: {
 						count: 1
@@ -74,20 +102,11 @@
 			id: "3A0F97042370EA0C"
 			rewards: [
 				{
-					count: 4
+					count: 1
 					id: "0AD85722BCA21FAF"
 					item: {
 						count: 1
-						id: "minecraft:coal"
-					}
-					type: "item"
-				}
-				{
-					count: 8
-					id: "4267318810D5CA20"
-					item: {
-						count: 1
-						id: "create:shaft"
+						id: "create:andesite_alloy"
 					}
 					type: "item"
 				}
@@ -119,17 +138,8 @@
 			id: "4F9A91933C4AAD8D"
 			rewards: [
 				{
-					count: 3
+					count: 2
 					id: "69A3085846F04F2D"
-					item: {
-						count: 1
-						id: "minecraft:bread"
-					}
-					type: "item"
-				}
-				{
-					count: 4
-					id: "2EAE07C9DB4B3FDB"
 					item: {
 						count: 1
 						id: "create:cogwheel"
@@ -173,11 +183,11 @@
 			id: "6B30A0EAE22BB188"
 			rewards: [
 				{
-					count: 8
+					count: 6
 					id: "58EC09E9362E740D"
 					item: {
 						count: 1
-						id: "minecraft:torch"
+						id: "minecraft:bread"
 					}
 					type: "item"
 				}
@@ -212,16 +222,7 @@
 					id: "74C448B991426825"
 					item: {
 						count: 1
-						id: "create:andesite_alloy"
-					}
-					type: "item"
-				}
-				{
-					count: 3
-					id: "7327F086DBBD39AD"
-					item: {
-						count: 1
-						id: "minecraft:bread"
+						id: "create:shaft"
 					}
 					type: "item"
 				}
@@ -252,7 +253,7 @@
 			id: "281652550AB417EB"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "4B8F402BA18F571C"
 					item: {
 						count: 1
@@ -296,11 +297,11 @@
 			id: "246226A6919CF5ED"
 			rewards: [
 				{
-					count: 4
+					count: 8
 					id: "02F492C7ACCEEDC6"
 					item: {
 						count: 1
-						id: "minecraft:coal"
+						id: "minecraft:stripped_oak_log"
 					}
 					type: "item"
 				}
@@ -333,6 +334,15 @@
 			}
 			id: "12CEF6D0015D619D"
 			rewards: [
+				{
+					count: 2
+					id: "106F237BBB6E62FC"
+					item: {
+						count: 1
+						id: "create:andesite_casing"
+					}
+					type: "item"
+				}
 				{
 					id: "449844EAD2C22C23"
 					type: "xp_levels"
@@ -376,11 +386,11 @@
 			id: "4978B86F57E43FCE"
 			rewards: [
 				{
-					count: 8
+					count: 16
 					id: "10DCB3159E8D9A39"
 					item: {
 						count: 1
-						id: "minecraft:torch"
+						id: "minecraft:gravel"
 					}
 					type: "item"
 				}
@@ -420,6 +430,15 @@
 			id: "3576EEDB9CCAE062"
 			rewards: [
 				{
+					count: 8
+					id: "1A4E7EB93907E3E1"
+					item: {
+						count: 1
+						id: "minecraft:dried_kelp"
+					}
+					type: "item"
+				}
+				{
 					id: "04A414C98A295563"
 					type: "xp_levels"
 					xp_levels: 1
@@ -449,7 +468,7 @@
 			id: "09FC33824A470023"
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "019FDDA000B53EF2"
 					item: {
 						count: 1
@@ -485,15 +504,6 @@
 			id: "41B89DC3CE373DEA"
 			rewards: [
 				{
-					count: 2
-					id: "392A2CEAE2A3B86E"
-					item: {
-						count: 1
-						id: "create:iron_sheet"
-					}
-					type: "item"
-				}
-				{
 					id: "66A5E9F0BB0714C6"
 					type: "xp_levels"
 					xp_levels: 1
@@ -528,6 +538,15 @@
 			id: "35A09C5A95B9DD30"
 			rewards: [
 				{
+					count: 2
+					id: "78C09DA5BE612D35"
+					item: {
+						count: 1
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+				{
 					id: "280C0B58BA7F74A6"
 					type: "xp_levels"
 					xp_levels: 1
@@ -557,6 +576,15 @@
 			id: "5558C3CA300D1A6A"
 			rewards: [
 				{
+					count: 1
+					id: "6464808D54D10DC1"
+					item: {
+						count: 1
+						id: "create:golden_sheet"
+					}
+					type: "item"
+				}
+				{
 					id: "03B53F585E2D8270"
 					type: "xp_levels"
 					xp_levels: 1
@@ -566,7 +594,7 @@
 			size: 1.5d
 			tasks: [
 				{
-					count: 4L
+					count: 3L
 					id: "74EB3444F5C0BA54"
 					item: {
 						count: 1
@@ -654,6 +682,15 @@
 			id: "7BAE5A98D0EA2865"
 			rewards: [
 				{
+					count: 1
+					id: "1CD093637880E191"
+					item: {
+						count: 1
+						id: "create:propeller"
+					}
+					type: "item"
+				}
+				{
 					id: "54AB2A7F55B17A9C"
 					type: "xp_levels"
 					xp_levels: 1
@@ -687,6 +724,15 @@
 			}
 			id: "060551E84F3A2959"
 			rewards: [
+				{
+					count: 4
+					id: "4487E657E3BD6F15"
+					item: {
+						count: 1
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
 				{
 					id: "16B42E97D132A68D"
 					type: "xp_levels"
@@ -722,6 +768,15 @@
 			}
 			id: "7DA3D76FDF9593AD"
 			rewards: [
+				{
+					count: 4
+					id: "286EA0E3511AB95C"
+					item: {
+						count: 1
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
 				{
 					id: "45CA8FA5F9E9CDF3"
 					type: "xp_levels"
@@ -897,7 +952,7 @@
 			id: "2B55AB4C0358AE0B"
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "78D9DDE36D0994BD"
 					item: {
 						count: 1
@@ -984,6 +1039,15 @@
 			id: "4E90904BFB21493E"
 			rewards: [
 				{
+					count: 2
+					id: "525232E1B0FB92DA"
+					item: {
+						count: 1
+						id: "create:copper_sheet"
+					}
+					type: "item"
+				}
+				{
 					id: "78BF7BB7B00C1624"
 					type: "xp_levels"
 					xp_levels: 1
@@ -1012,6 +1076,15 @@
 			}
 			id: "606D7598F3CB0BAC"
 			rewards: [
+				{
+					count: 2
+					id: "602BFF0E5AA8DCB4"
+					item: {
+						count: 1
+						id: "create:copper_casing"
+					}
+					type: "item"
+				}
 				{
 					id: "24E16B30EEF705C4"
 					type: "xp_levels"
@@ -1042,7 +1115,7 @@
 			id: "55625BFA5DD44551"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "5F1FBCD032075F1B"
 					item: {
 						count: 1
@@ -1154,9 +1227,18 @@
 			id: "717FA27DE13C70CF"
 			rewards: [
 				{
+					count: 16
+					id: "29EB2955274B0CC9"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
 					id: "01FB6639AE453946"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 2
 				}
 			]
 			tasks: [
@@ -1225,6 +1307,15 @@
 			}
 			id: "2092D9D5951E48E9"
 			rewards: [
+				{
+					count: 4
+					id: "6932865C6C8A23D4"
+					item: {
+						count: 1
+						id: "create:zinc_nugget"
+					}
+					type: "item"
+				}
 				{
 					id: "004E742367220E46"
 					type: "xp_levels"
@@ -1306,9 +1397,18 @@
 			id: "4CC768AC355A6703"
 			rewards: [
 				{
+					count: 8
+					id: "0CD803E547F84E6C"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
 					id: "6F52A4DD9D8C6822"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 2
 				}
 			]
 			tasks: [
@@ -1343,7 +1443,7 @@
 				{
 					id: "77849C0A428B5634"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 2
 				}
 			]
 			shape: "gear"
@@ -1379,6 +1479,15 @@
 			id: "05C2800C8FB7FC81"
 			rewards: [
 				{
+					count: 2
+					id: "5BFCF307C5D354AE"
+					item: {
+						count: 1
+						id: "create:brass_casing"
+					}
+					type: "item"
+				}
+				{
 					id: "656FE84A5FD38767"
 					type: "xp_levels"
 					xp_levels: 1
@@ -1408,6 +1517,15 @@
 			id: "7DF24DD5C018FABC"
 			rewards: [
 				{
+					count: 1
+					id: "6F19B99D737A9E7E"
+					item: {
+						count: 1
+						id: "create:electron_tube"
+					}
+					type: "item"
+				}
+				{
 					id: "40926C7E25209C32"
 					type: "xp_levels"
 					xp_levels: 1
@@ -1436,6 +1554,15 @@
 			}
 			id: "723048BF1737D4ED"
 			rewards: [
+				{
+					count: 1
+					id: "5E2630F804808F9E"
+					item: {
+						count: 1
+						id: "create:golden_sheet"
+					}
+					type: "item"
+				}
 				{
 					id: "69A743D485CE48A7"
 					type: "xp_levels"
@@ -1474,7 +1601,7 @@
 				{
 					id: "48FD4C0AC005C37C"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 2
 				}
 			]
 			shape: "gear"
@@ -1626,7 +1753,7 @@
 				{
 					id: "42A7DD9B704B3A7E"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			tasks: [
@@ -1735,6 +1862,15 @@
 			}
 			id: "0632092E58B014DB"
 			rewards: [
+				{
+					count: 8
+					id: "107A5062180DDF1F"
+					item: {
+						count: 1
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
 				{
 					id: "7A1E1DCEFD6E64B6"
 					type: "xp_levels"
@@ -1856,7 +1992,7 @@
 			id: "4B2ED97BEA0D74D3"
 			rewards: [
 				{
-					count: 16
+					count: 8
 					id: "75BFAA476FBFCA69"
 					item: {
 						count: 1
@@ -1891,6 +2027,15 @@
 			}
 			id: "031C33DED2EFC5A7"
 			rewards: [
+				{
+					count: 1
+					id: "51435F8FCDB6433B"
+					item: {
+						count: 1
+						id: "create:railway_casing"
+					}
+					type: "item"
+				}
 				{
 					id: "1FA545939C200C9D"
 					type: "xp_levels"
@@ -1929,7 +2074,7 @@
 				{
 					id: "250C2F9BDF29FEA8"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"
@@ -2004,7 +2149,7 @@
 				{
 					id: "5E167D96FB52FEA9"
 					type: "xp_levels"
-					xp_levels: 3
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"

@@ -19,7 +19,7 @@
 			id: "4FA764B41B3AD78C"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "64EA5917DA52F6C4"
 					item: {
 						count: 1
@@ -101,7 +101,7 @@
 				{
 					id: "473F245C737C938E"
 					type: "xp_levels"
-					xp_levels: 1
+					xp_levels: 5
 				}
 			]
 			shape: "hexagon"

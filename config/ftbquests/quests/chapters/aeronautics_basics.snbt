@@ -223,6 +223,15 @@
 			id: "502BF10FD13C4EA5"
 			rewards: [
 				{
+					count: 8
+					id: "5D621ED762DA63CD"
+					item: {
+						count: 1
+						id: "minecraft:coal"
+					}
+					type: "item"
+				}
+				{
 					id: "663D5CF0D8CE13DF"
 					type: "xp_levels"
 					xp_levels: 1
@@ -248,15 +257,6 @@
 			}
 			id: "6117A72CBB15361C"
 			rewards: [
-				{
-					count: 2
-					id: "21EFB338D89EC3F6"
-					item: {
-						count: 1
-						id: "aeronautics:wooden_propeller"
-					}
-					type: "item"
-				}
 				{
 					id: "7AE56485F30317FF"
 					type: "xp_levels"
