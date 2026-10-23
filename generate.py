@@ -668,6 +668,15 @@ q(FOUNDRY, "slime", "Slime Islands", "modernfoundry:sky_slime_ball", ["smeltery"
   ["Travel to a slime island to find slime balls and slime trees. They are the base of the slimy materials.",
    "Use them for slime boots and slimy chestplates."],
   [("modernfoundry:sky_slime_ball", 4)])
+q(FOUNDRY, "skyroot", "Skyroot", "modernfoundry:skyroot_log", ["slime"],
+  ["The blue trees on sky slime islands are Skyroot. It is a slimewood, a tool material whose parts slowly regenerate overslime.",
+   "Bring some home: skyroot handles and bindings make your tools tougher between repairs."],
+  [("modernfoundry:skyroot_log", 8)])
+q(FOUNDRY, "slimewoods", "Every Slimewood", "modernfoundry:enderbark_log", ["skyroot"],
+  ["Each kind of slime island grows its own tree: Greenheart on earth slime islands in the ocean, Skyroot in the sky, Bloodshroom on blood islands in the Nether and Enderbark on the islands of the End.",
+   "Collect a log of each. Every slimewood is a tool material, and a long journey to finish."],
+  [("modernfoundry:greenheart_log", 1), ("modernfoundry:skyroot_log", 1),
+   ("modernfoundry:bloodshroom_log", 1), ("modernfoundry:enderbark_log", 1)])
 q(FOUNDRY, "cobalt", "Cobalt", "modernfoundry:raw_cobalt", ["slime", "anvil"],
   ["Cobalt is found in the Nether and is the next big material tier.",
    "Melt it in the smeltery for better tools."],
@@ -742,7 +751,7 @@ XP = {
     (CREATE, "brass"): MILESTONE, (CREATE, "blaze_burner"): MILESTONE, (CREATE, "steam_engine"): MILESTONE,
     (CREATE, "precision"): MILESTONE, (FOUNDRY, "smeltery"): MILESTONE,
     # Exploration pays in XP, never in the items found there.
-    (FOUNDRY, "slime"): MILESTONE, (FOUNDRY, "cobalt"): MILESTONE,
+    (FOUNDRY, "slime"): MILESTONE, (FOUNDRY, "skyroot"): MILESTONE, (FOUNDRY, "slimewoods"): CAPSTONE,(FOUNDRY, "cobalt"): MILESTONE,
 }
 for x in Q:
     key = (x["group"], x["id"])
@@ -815,6 +824,8 @@ POSITIONS = {
         smeltery 6.8 6.9
         channels 8.9 7.6
         slime 6.8 9.3
+        skyroot 8.9 10.2
+        slimewoods 8.9 12.5
         forge 4.4 7.2
         anvil 2.2 8.2
         cobalt 4.4 10.2
